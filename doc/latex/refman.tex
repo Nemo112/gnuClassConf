@@ -1,0 +1,123 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[czech]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large G\-N\-Uškola konfigurační prostředí }\\
+\vspace*{1cm}
+{\large Generováno programem Doxygen 1.8.1.2}\\
+\vspace*{0.5cm}
+{\small so 6. zář 2014 16.56:00}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Úvod k dokumentaci}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{Rejstřík tříd}
+\input{annotated}
+\chapter{Rejstřík souborů}
+\input{files}
+\chapter{Dokumentace tříd}
+\input{df/df9/classcloseSetup_1_1App}
+\input{da/dc1/classitWindow_1_1App}
+\input{d2/dbc/classmnShare_1_1App}
+\input{d4/d8e/classmnWindow_1_1App}
+\input{d0/dec/classtestsConf_1_1App}
+\input{d7/df4/classtestsServices_1_1App}
+\input{dc/dd1/classmnClean_1_1App}
+\input{d3/d4e/classmnEnDis_1_1App}
+\input{db/d36/classmnFocus_1_1App}
+\input{da/ddf/classmnRepair_1_1App}
+\input{d2/dbd/classmain_1_1Chdir}
+\input{d5/d13/classclImaOs_1_1clImaOs}
+\input{db/d32/classtestsConf_1_1ConfCheck}
+\input{d0/d38/classConfSys_1_1ConfSys}
+\input{d9/d30/classConsSys_1_1ConsSys}
+\input{df/db0/classDhcpCheck_1_1DhcpCheck}
+\input{dd/dd2/classfwSetUp_1_1fwSetUp}
+\input{d3/d33/classinFocus_1_1inFocus}
+\input{dc/de8/classiTaHand_1_1iTaHand}
+\input{d5/d2f/classLogWrk_1_1LogWrk}
+\input{d4/d51/classParConfFl_1_1ParConfFl}
+\input{d1/dce/classShrFol_1_1ShrFol}
+\input{d0/d3a/classSysLoad_1_1SysLoad}
+\input{db/ddc/classxmlFocPar_1_1xmlFocPar}
+\chapter{Dokumentace souborů}
+\input{df/d49/clImaOs_8py}
+\input{dd/d82/closeSetup_8py}
+\input{d0/de0/ConfSys_8py}
+\input{da/dce/ConsSys_8py}
+\input{d0/db9/DhcpCheck_8py}
+\input{d0/d7b/fwSetUp_8py}
+\input{dd/de9/inFocus_8py}
+\input{d0/d4b/iTaHand_8py}
+\input{d5/de2/LogWrk_8py}
+\input{dc/dba/main_8py}
+\input{d6/d86/mnClean_8py}
+\input{da/da9/mnEnDis_8py}
+\input{da/dc1/mnFocus_8py}
+\input{d5/d23/mnShare_8py}
+\input{dd/dbe/mnWindow_8py}
+\input{d7/d25/ParConfFl_8py}
+\input{dd/d08/ShrFol_8py}
+\input{d5/df0/SysLoad_8py}
+\input{d8/d73/testsConf_8py}
+\input{db/d26/testsServices_8py}
+\input{d0/de2/xmlFocPar_8py}
+\printindex
+\end{document}

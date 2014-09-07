@@ -1,0 +1,40 @@
+\hypertarget{mnWindow_8py}{\section{Dokumentace souboru mn\-Window.\-py}
+\label{dd/dbe/mnWindow_8py}\index{mn\-Window.\-py@{mn\-Window.\-py}}
+}
+
+
+Hlavní okno aplikace.  
+
+
+\subsection*{Třídy}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmnWindow_1_1App}{mn\-Window.\-App}
+\begin{DoxyCompactList}\small\item\em Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries mn\-Window.\-gen\-Out}
+\begin{DoxyCompactList}\small\item\em Funkce vlákna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacemnWindow_aa69ffdfc007f38a07abc631d74ce258c}{tuple {\bfseries mn\-Window.\-qi} = multiprocessing.\-Queue()}\label{d0/dea/namespacemnWindow_aa69ffdfc007f38a07abc631d74ce258c}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnWindow_ac0a75abf466ec6c0547465ea3edccb2e}{tuple {\bfseries mn\-Window.\-qo} = multiprocessing.\-Queue()}\label{d0/dea/namespacemnWindow_ac0a75abf466ec6c0547465ea3edccb2e}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnWindow_a62391e0264e24cd0320feb1c2584af81}{tuple {\bfseries mn\-Window.\-t} = multiprocessing.\-Process(target=gen\-Out,args=(qi,qo,))}\label{d0/dea/namespacemnWindow_a62391e0264e24cd0320feb1c2584af81}
+
+\begin{DoxyCompactList}\small\item\em Pracovní vlákno. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnWindow_a168223f86efbcbd0098cee49d8ef6826}{tuple {\bfseries mn\-Window.\-win} = Tk()}\label{d0/dea/namespacemnWindow_a168223f86efbcbd0098cee49d8ef6826}
+
+\begin{DoxyCompactList}\small\item\em Hlavní instance okna T\-K. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnWindow_a5e853ed4c4617aa688e4df92f03299cd}{tuple {\bfseries mn\-Window.\-pp} = App(win,qi,qo)}\label{d0/dea/namespacemnWindow_a5e853ed4c4617aa688e4df92f03299cd}
+
+\begin{DoxyCompactList}\small\item\em Instance okna třídy aplikace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Hlavní okno aplikace. 

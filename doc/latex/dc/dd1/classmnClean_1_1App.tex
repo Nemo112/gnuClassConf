@@ -1,0 +1,178 @@
+\hypertarget{classmnClean_1_1App}{\section{Dokumentace třídy mn\-Clean.\-App}
+\label{dc/dd1/classmnClean_1_1App}\index{mn\-Clean.\-App@{mn\-Clean.\-App}}
+}
+
+
+Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník.  
+
+
+\subsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmnClean_1_1App_a931a30b2de92a4244b7c14adb54a65b4}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
+def \hyperlink{classmnClean_1_1App_aff635cca8d9951ee777f6a5804c3feff}{erase}
+\begin{DoxyCompactList}\small\item\em Smaže systém -\/ resp zašle signál vláknu, aby smazal systém. \end{DoxyCompactList}\item 
+def \hyperlink{classmnClean_1_1App_a7f88384497c1aec6b34293edb587209e}{clear}
+\begin{DoxyCompactList}\small\item\em Vyčistí systém -\/ resp zašle signál vláknu, aby vyčistil systém. \end{DoxyCompactList}\item 
+def \hyperlink{classmnClean_1_1App_aa2c2d530936cfd44307b73a2a8759642}{update}
+\begin{DoxyCompactList}\small\item\em Aktualizuje systém -\/ resp zašle signál vláknu, aby aktualizoval systém. \end{DoxyCompactList}\item 
+def \hyperlink{classmnClean_1_1App_af3ba2608854c91607c2a194b478d194b}{paint\-Layout}
+\begin{DoxyCompactList}\small\item\em Metoda vykreslující grafické prvky okna Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem. \end{DoxyCompactList}\item 
+def \hyperlink{classmnClean_1_1App_a7e0a0a24e1044ddb6749a380e109f84a}{mv\-Bar}
+\begin{DoxyCompactList}\small\item\em Metoda pro vypisování obsahu výstupní fronty. \end{DoxyCompactList}\item 
+def \hyperlink{classmnClean_1_1App_a1d63ab1d7fe79b555e86748976675a42}{qquit}
+\begin{DoxyCompactList}\small\item\em Metoda pro ukončení okna Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmnClean_1_1App_ae2c3e708349860bf01847f7d91a6b68c}{\hyperlink{classmnClean_1_1App_ae2c3e708349860bf01847f7d91a6b68c}{root}}\label{dc/dd1/classmnClean_1_1App_ae2c3e708349860bf01847f7d91a6b68c}
+
+\begin{DoxyCompactList}\small\item\em Ukazatel na okno Tk. \end{DoxyCompactList}\item 
+\hypertarget{classmnClean_1_1App_aff506d49c1b70304ed8d1ab71c0867f4}{\hyperlink{classmnClean_1_1App_aff506d49c1b70304ed8d1ab71c0867f4}{qi}}\label{dc/dd1/classmnClean_1_1App_aff506d49c1b70304ed8d1ab71c0867f4}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta. \end{DoxyCompactList}\item 
+\hypertarget{classmnClean_1_1App_a2c55a4f46b8330a59ecda0d304337126}{\hyperlink{classmnClean_1_1App_a2c55a4f46b8330a59ecda0d304337126}{qo}}\label{dc/dd1/classmnClean_1_1App_a2c55a4f46b8330a59ecda0d304337126}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta. \end{DoxyCompactList}\item 
+\hypertarget{classmnClean_1_1App_a0488ae03eb3544bfd12d9a82eddfa58d}{\hyperlink{classmnClean_1_1App_a0488ae03eb3544bfd12d9a82eddfa58d}{to}}\label{dc/dd1/classmnClean_1_1App_a0488ae03eb3544bfd12d9a82eddfa58d}
+
+\begin{DoxyCompactList}\small\item\em List pro výpisy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník. 
+
+\subsection{Dokumentace konstruktoru a destruktoru}
+\hypertarget{classmnClean_1_1App_a931a30b2de92a4244b7c14adb54a65b4}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{r, }
+\item[{}]{qi, }
+\item[{}]{qo}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_a931a30b2de92a4244b7c14adb54a65b4}
+
+
+Konstruktor třídy okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em r} & Ukazatel na Tkinker okno \\
+\hline
+{\em qi} & Vstupní fronta \\
+\hline
+{\em qo} & Výstupní fronta \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentace k metodám}
+\hypertarget{classmnClean_1_1App_a7f88384497c1aec6b34293edb587209e}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!clear@{clear}}
+\index{clear@{clear}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-clear (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_a7f88384497c1aec6b34293edb587209e}
+
+
+Vyčistí systém -\/ resp zašle signál vláknu, aby vyčistil systém. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnClean_1_1App_aff635cca8d9951ee777f6a5804c3feff}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!erase@{erase}}
+\index{erase@{erase}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-erase (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_aff635cca8d9951ee777f6a5804c3feff}
+
+
+Smaže systém -\/ resp zašle signál vláknu, aby smazal systém. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnClean_1_1App_a7e0a0a24e1044ddb6749a380e109f84a}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!mv\-Bar@{mv\-Bar}}
+\index{mv\-Bar@{mv\-Bar}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{mv\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-mv\-Bar (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{qc}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_a7e0a0a24e1044ddb6749a380e109f84a}
+
+
+Metoda pro vypisování obsahu výstupní fronty. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em qc} & Výstupní fronta pro výpis do listu \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnClean_1_1App_af3ba2608854c91607c2a194b478d194b}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!paint\-Layout@{paint\-Layout}}
+\index{paint\-Layout@{paint\-Layout}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{paint\-Layout}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-paint\-Layout (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_af3ba2608854c91607c2a194b478d194b}
+
+
+Metoda vykreslující grafické prvky okna Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnClean_1_1App_a1d63ab1d7fe79b555e86748976675a42}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!qquit@{qquit}}
+\index{qquit@{qquit}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{qquit}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-qquit (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_a1d63ab1d7fe79b555e86748976675a42}
+
+
+Metoda pro ukončení okna Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnClean_1_1App_aa2c2d530936cfd44307b73a2a8759642}{\index{mn\-Clean\-::\-App@{mn\-Clean\-::\-App}!update@{update}}
+\index{update@{update}!mnClean::App@{mn\-Clean\-::\-App}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Clean.\-App.\-update (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dc/dd1/classmnClean_1_1App_aa2c2d530936cfd44307b73a2a8759642}
+
+
+Aktualizuje systém -\/ resp zašle signál vláknu, aby aktualizoval systém. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentace pro tuto třídu byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mnClean_8py}{mn\-Clean.\-py}\end{DoxyCompactItemize}

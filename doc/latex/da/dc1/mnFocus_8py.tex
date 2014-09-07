@@ -1,0 +1,40 @@
+\hypertarget{mnFocus_8py}{\section{Dokumentace souboru mn\-Focus.\-py}
+\label{da/dc1/mnFocus_8py}\index{mn\-Focus.\-py@{mn\-Focus.\-py}}
+}
+
+
+Okno pro volbu účelu učebny.  
+
+
+\subsection*{Třídy}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmnFocus_1_1App}{mn\-Focus.\-App}
+\begin{DoxyCompactList}\small\item\em Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries mn\-Focus.\-gen\-Out}
+\begin{DoxyCompactList}\small\item\em Funkce vlákna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacemnFocus_a12b29b11921c923dc8353759aa82951d}{tuple {\bfseries mn\-Focus.\-win} = Tk()}\label{d5/d01/namespacemnFocus_a12b29b11921c923dc8353759aa82951d}
+
+\begin{DoxyCompactList}\small\item\em Hlavní instance okna T\-K. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnFocus_ae28e62a5ff5bb0af79bce80595529605}{tuple {\bfseries mn\-Focus.\-qi} = multiprocessing.\-Queue()}\label{d5/d01/namespacemnFocus_ae28e62a5ff5bb0af79bce80595529605}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnFocus_a026085a0fe1de1e0c64d99f367d70141}{tuple {\bfseries mn\-Focus.\-qo} = multiprocessing.\-Queue()}\label{d5/d01/namespacemnFocus_a026085a0fe1de1e0c64d99f367d70141}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnFocus_a9a6cc0fe1c0837e1d60dac626cd7df34}{tuple {\bfseries mn\-Focus.\-t} = multiprocessing.\-Process(target=gen\-Out,args=(qi,qo,))}\label{d5/d01/namespacemnFocus_a9a6cc0fe1c0837e1d60dac626cd7df34}
+
+\begin{DoxyCompactList}\small\item\em Vlákna pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnFocus_ace99eb4789b54a61267e1aa23f53f095}{tuple {\bfseries mn\-Focus.\-pp} = App(win,qo)}\label{d5/d01/namespacemnFocus_ace99eb4789b54a61267e1aa23f53f095}
+
+\begin{DoxyCompactList}\small\item\em Instance okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Okno pro volbu účelu učebny. 

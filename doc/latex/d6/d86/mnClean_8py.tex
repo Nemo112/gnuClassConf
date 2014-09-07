@@ -1,0 +1,40 @@
+\hypertarget{mnClean_8py}{\section{Dokumentace souboru mn\-Clean.\-py}
+\label{d6/d86/mnClean_8py}\index{mn\-Clean.\-py@{mn\-Clean.\-py}}
+}
+
+
+Okénko čištění systému.  
+
+
+\subsection*{Třídy}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmnClean_1_1App}{mn\-Clean.\-App}
+\begin{DoxyCompactList}\small\item\em Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries mn\-Clean.\-gen\-Out}
+\begin{DoxyCompactList}\small\item\em Funkce vlákna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacemnClean_ad1e2a77e6a7c369d887872defa0a415b}{tuple {\bfseries mn\-Clean.\-qi} = multiprocessing.\-Queue()}\label{d2/de3/namespacemnClean_ad1e2a77e6a7c369d887872defa0a415b}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnClean_a69cd6fdedcf9d6022877f80d5b728005}{tuple {\bfseries mn\-Clean.\-qo} = multiprocessing.\-Queue()}\label{d2/de3/namespacemnClean_a69cd6fdedcf9d6022877f80d5b728005}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnClean_a465c2ddf5652c53239fb5eba352a6491}{tuple {\bfseries mn\-Clean.\-t} = multiprocessing.\-Process(target=gen\-Out,args=(qi,qo,))}\label{d2/de3/namespacemnClean_a465c2ddf5652c53239fb5eba352a6491}
+
+\begin{DoxyCompactList}\small\item\em Vlákno procesu pro vykonávání příkazů \end{DoxyCompactList}\item 
+\hypertarget{namespacemnClean_a0333e1eacbef0929fb635177e9a18410}{tuple {\bfseries mn\-Clean.\-win} = Tk()}\label{d2/de3/namespacemnClean_a0333e1eacbef0929fb635177e9a18410}
+
+\begin{DoxyCompactList}\small\item\em Hlavní okno. \end{DoxyCompactList}\item 
+\hypertarget{namespacemnClean_a46f943f8b508c0527a1883743a66b152}{tuple {\bfseries mn\-Clean.\-pp} = App(win,qi,qo)}\label{d2/de3/namespacemnClean_a46f943f8b508c0527a1883743a66b152}
+
+\begin{DoxyCompactList}\small\item\em Vlastní instance okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Okénko čištění systému. Okénko opravování připojení

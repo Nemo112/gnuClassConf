@@ -1,0 +1,217 @@
+\hypertarget{classmnRepair_1_1App}{\section{Dokumentace třídy mn\-Repair.\-App}
+\label{da/ddf/classmnRepair_1_1App}\index{mn\-Repair.\-App@{mn\-Repair.\-App}}
+}
+
+
+Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník.  
+
+
+\subsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmnRepair_1_1App_a5a8d5ea1368378f2755fcc20230e27a6}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_a7e4f7349d3f5fee1cc593b7d38147fd2}{net}
+\begin{DoxyCompactList}\small\item\em Zasílá signál k opravě připojení \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_afcfba60bb485b55d5ca918506f886378}{fat}
+\begin{DoxyCompactList}\small\item\em Zasílá signál k opravě fatalní chyby. \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_a4cef9252fd6d9bcf259cca1e8d3f08cd}{gra}
+\begin{DoxyCompactList}\small\item\em Zasílá signál k opravě grafického prostředí \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_ad5cc6771937862ebd8110a614a411d61}{stu}
+\begin{DoxyCompactList}\small\item\em Zasílá signál k opravě přihlašování \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_abfb89605b4971931e140b872e21472b4}{pac}
+\begin{DoxyCompactList}\small\item\em Zasílá signál k opravě balíčků \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_a6cf047a184898cb1292ae1bd1ccaf13a}{paint\-Layout}
+\begin{DoxyCompactList}\small\item\em Metoda vykreslující grafické prvky okna Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem. \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_a963ecf0c9c288defa111ff9500e27674}{load\-Progs}
+\begin{DoxyCompactList}\small\item\em Metoda pro načítání progressbaru a výpisu stavu aplikace. \end{DoxyCompactList}\item 
+def \hyperlink{classmnRepair_1_1App_aab47754f19f445adbd8723030d1b93ef}{qquit}
+\begin{DoxyCompactList}\small\item\em Metoda pro ukončení okna Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmnRepair_1_1App_a6625cd61e8f5be57f55b7b665d74e371}{\hyperlink{classmnRepair_1_1App_a6625cd61e8f5be57f55b7b665d74e371}{root}}\label{da/ddf/classmnRepair_1_1App_a6625cd61e8f5be57f55b7b665d74e371}
+
+\begin{DoxyCompactList}\small\item\em Ukazatel na okno Tk. \end{DoxyCompactList}\item 
+\hypertarget{classmnRepair_1_1App_aedba5e2d1f8af4e1ea8cb8fae90c5beb}{\hyperlink{classmnRepair_1_1App_aedba5e2d1f8af4e1ea8cb8fae90c5beb}{qo}}\label{da/ddf/classmnRepair_1_1App_aedba5e2d1f8af4e1ea8cb8fae90c5beb}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta. \end{DoxyCompactList}\item 
+\hypertarget{classmnRepair_1_1App_a1892b820ecae78b8c38f303009f8c257}{\hyperlink{classmnRepair_1_1App_a1892b820ecae78b8c38f303009f8c257}{qi}}\label{da/ddf/classmnRepair_1_1App_a1892b820ecae78b8c38f303009f8c257}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta. \end{DoxyCompactList}\item 
+\hypertarget{classmnRepair_1_1App_ab7bc6c2c656a8c1be4f02456279b4b0d}{\hyperlink{classmnRepair_1_1App_ab7bc6c2c656a8c1be4f02456279b4b0d}{to}}\label{da/ddf/classmnRepair_1_1App_ab7bc6c2c656a8c1be4f02456279b4b0d}
+
+\begin{DoxyCompactList}\small\item\em List pro výpisy. \end{DoxyCompactList}\item 
+\hypertarget{classmnRepair_1_1App_a60bf34e480b9e94fbc42c14033f5ab6e}{\hyperlink{classmnRepair_1_1App_a60bf34e480b9e94fbc42c14033f5ab6e}{progressbar}}\label{da/ddf/classmnRepair_1_1App_a60bf34e480b9e94fbc42c14033f5ab6e}
+
+\begin{DoxyCompactList}\small\item\em Ukazatel vytížení počítače. \end{DoxyCompactList}\item 
+\hypertarget{classmnRepair_1_1App_af80db154ea45d463c153b24e58fadb8b}{\hyperlink{classmnRepair_1_1App_af80db154ea45d463c153b24e58fadb8b}{sl}}\label{da/ddf/classmnRepair_1_1App_af80db154ea45d463c153b24e58fadb8b}
+
+\begin{DoxyCompactList}\small\item\em Obsahuje instanci vytížení systému. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jako rozcestník. 
+
+\subsection{Dokumentace konstruktoru a destruktoru}
+\hypertarget{classmnRepair_1_1App_a5a8d5ea1368378f2755fcc20230e27a6}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{r, }
+\item[{}]{qi, }
+\item[{}]{qo}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_a5a8d5ea1368378f2755fcc20230e27a6}
+
+
+Konstruktor třídy okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em qi} & Vstupní fronta \\
+\hline
+{\em qo} & Výstupní fronta \\
+\hline
+{\em r} & Ukazatel na Tkinker okno \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentace k metodám}
+\hypertarget{classmnRepair_1_1App_afcfba60bb485b55d5ca918506f886378}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!fat@{fat}}
+\index{fat@{fat}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{fat}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-fat (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_afcfba60bb485b55d5ca918506f886378}
+
+
+Zasílá signál k opravě fatalní chyby. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_a4cef9252fd6d9bcf259cca1e8d3f08cd}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!gra@{gra}}
+\index{gra@{gra}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{gra}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-gra (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_a4cef9252fd6d9bcf259cca1e8d3f08cd}
+
+
+Zasílá signál k opravě grafického prostředí 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_a963ecf0c9c288defa111ff9500e27674}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!load\-Progs@{load\-Progs}}
+\index{load\-Progs@{load\-Progs}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{load\-Progs}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-load\-Progs (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_a963ecf0c9c288defa111ff9500e27674}
+
+
+Metoda pro načítání progressbaru a výpisu stavu aplikace. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_a7e4f7349d3f5fee1cc593b7d38147fd2}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!net@{net}}
+\index{net@{net}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{net}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-net (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_a7e4f7349d3f5fee1cc593b7d38147fd2}
+
+
+Zasílá signál k opravě připojení 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_abfb89605b4971931e140b872e21472b4}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!pac@{pac}}
+\index{pac@{pac}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{pac}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-pac (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_abfb89605b4971931e140b872e21472b4}
+
+
+Zasílá signál k opravě balíčků 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_a6cf047a184898cb1292ae1bd1ccaf13a}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!paint\-Layout@{paint\-Layout}}
+\index{paint\-Layout@{paint\-Layout}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{paint\-Layout}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-paint\-Layout (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_a6cf047a184898cb1292ae1bd1ccaf13a}
+
+
+Metoda vykreslující grafické prvky okna Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_aab47754f19f445adbd8723030d1b93ef}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!qquit@{qquit}}
+\index{qquit@{qquit}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{qquit}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-qquit (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_aab47754f19f445adbd8723030d1b93ef}
+
+
+Metoda pro ukončení okna Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnRepair_1_1App_ad5cc6771937862ebd8110a614a411d61}{\index{mn\-Repair\-::\-App@{mn\-Repair\-::\-App}!stu@{stu}}
+\index{stu@{stu}!mnRepair::App@{mn\-Repair\-::\-App}}
+\subsubsection[{stu}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-Repair.\-App.\-stu (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{da/ddf/classmnRepair_1_1App_ad5cc6771937862ebd8110a614a411d61}
+
+
+Zasílá signál k opravě přihlašování 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentace pro tuto třídu byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+mn\-Repair.\-py\end{DoxyCompactItemize}

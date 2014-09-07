@@ -1,0 +1,58 @@
+\hypertarget{closeSetup_8py}{\section{Dokumentace souboru close\-Setup.\-py}
+\label{dd/d82/closeSetup_8py}\index{close\-Setup.\-py@{close\-Setup.\-py}}
+}
+
+
+Grafické prostředí pro nastavení základních vlastností systému.  
+
+
+\subsection*{Třídy}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcloseSetup_1_1App}{close\-Setup.\-App}
+\begin{DoxyCompactList}\small\item\em Třída obsahující metody s prací s oknem Obsahuje hlavně metody okna skriptu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries close\-Setup.\-gen\-Out}
+\begin{DoxyCompactList}\small\item\em Funkce pro spuštění nového vlákna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Proměnné}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacecloseSetup_a14b405e6bef20fcc115c07ba3722c0a5}{tuple {\bfseries close\-Setup.\-win} = Tk()}\label{d5/da9/namespacecloseSetup_a14b405e6bef20fcc115c07ba3722c0a5}
+
+\begin{DoxyCompactList}\small\item\em Proměnná obsahující okno Tk. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a6fbe38e77b368cff0ec6335c1a85711e}{tuple {\bfseries close\-Setup.\-np} = Boolean\-Var()}\label{d5/da9/namespacecloseSetup_a6fbe38e77b368cff0ec6335c1a85711e}
+
+\begin{DoxyCompactList}\small\item\em Proměnná pro volbu nastavení připojení -\/ true bude se řešit připojení, jinak ne. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a6ef06c8dbdd449b3cf42f5b68977df47}{tuple {\bfseries close\-Setup.\-nn} = Boolean\-Var()}\label{d5/da9/namespacecloseSetup_a6ef06c8dbdd449b3cf42f5b68977df47}
+
+\begin{DoxyCompactList}\small\item\em Proměnná pro volbu nastavení služeb -\/ true budou se řešit služby, jinak ne. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a84d49a7d4f9d37afc1824a8950efd28c}{tuple {\bfseries close\-Setup.\-im} = Boolean\-Var()}\label{d5/da9/namespacecloseSetup_a84d49a7d4f9d37afc1824a8950efd28c}
+
+\begin{DoxyCompactList}\small\item\em Proměnná pro volbu nastavení obrazu -\/ true bude se řešit obraz, jinak ne. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_ac8498a08f9bae92e037579b92676e2c9}{tuple {\bfseries close\-Setup.\-ig} = Boolean\-Var()}\label{d5/da9/namespacecloseSetup_ac8498a08f9bae92e037579b92676e2c9}
+
+\begin{DoxyCompactList}\small\item\em Proměnná pro volbu nastavení Xek -\/ true budou se řešit Xka, jinak ne. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a4b9a9b96f013feca0cace9777f98101a}{tuple {\bfseries close\-Setup.\-ib} = Boolean\-Var()}\label{d5/da9/namespacecloseSetup_a4b9a9b96f013feca0cace9777f98101a}
+
+\begin{DoxyCompactList}\small\item\em Proměnná pro volbu nastavení browseru -\/ true bude se řešit browser, jinak ne. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a8ad8e23cf9d2c00e0608f339b59e769b}{tuple {\bfseries close\-Setup.\-su} = Boolean\-Var()}\label{d5/da9/namespacecloseSetup_a8ad8e23cf9d2c00e0608f339b59e769b}
+
+\begin{DoxyCompactList}\small\item\em Proměnná pro volbu nastavení uživatelů -\/ true bude se řešit uživatele, jinak ne. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a0fd6be302acbd3165e4666fb45632030}{tuple {\bfseries close\-Setup.\-qi} = multiprocessing.\-Queue()}\label{d5/da9/namespacecloseSetup_a0fd6be302acbd3165e4666fb45632030}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a4731a3e2b5c275d2df54a8a7031c2c84}{tuple {\bfseries close\-Setup.\-qo} = multiprocessing.\-Queue()}\label{d5/da9/namespacecloseSetup_a4731a3e2b5c275d2df54a8a7031c2c84}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta pracovního vlákna. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a22773244ea7b23a9c3b3a82aa4c1332f}{tuple {\bfseries close\-Setup.\-pp} = App(win,qi,qo)}\label{d5/da9/namespacecloseSetup_a22773244ea7b23a9c3b3a82aa4c1332f}
+
+\begin{DoxyCompactList}\small\item\em Instance okna, které vykonává celou aplikaci. \end{DoxyCompactList}\item 
+\hypertarget{namespacecloseSetup_a8a18e73a2729a501e88ce9b4c6f9f3f4}{tuple {\bfseries close\-Setup.\-t} = multiprocessing.\-Process(target=gen\-Out,args=(qi,qo,))}\label{d5/da9/namespacecloseSetup_a8a18e73a2729a501e88ce9b4c6f9f3f4}
+
+\begin{DoxyCompactList}\small\item\em Instance procesu, kterému je zaslána vstupní a výstupní fronta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Grafické prostředí pro nastavení základních vlastností systému. 

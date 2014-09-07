@@ -1,0 +1,266 @@
+\select@language {czech}
+\contentsline {chapter}{\numberline {1}Rejst\IeC {\v r}\IeC {\'\i }k t\IeC {\v r}\IeC {\'\i }d}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Seznam t\IeC {\v r}\IeC {\'\i }d}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Rejst\IeC {\v r}\IeC {\'\i }k soubor\IeC {\r u}}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Seznam soubor\IeC {\r u}}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Dokumentace t\IeC {\v r}\IeC {\'\i }d}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Dokumentace t\IeC {\v r}\IeC {\'\i }dy close\discretionary {-}{}{}Setup.\discretionary {-}{}{}App}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detailn\IeC {\'\i } popis}{6}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Dokumentace konstruktoru a destruktoru}{6}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{6}{subsubsection.3.1.2.1}
+\contentsline {subsection}{\numberline {3.1.3}Dokumentace k metod\IeC {\'a}m}{6}{subsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3.1}Check\discretionary {-}{}{}Txt\discretionary {-}{}{}F}{6}{subsubsection.3.1.3.1}
+\contentsline {subsubsection}{\numberline {3.1.3.2}chg}{7}{subsubsection.3.1.3.2}
+\contentsline {subsubsection}{\numberline {3.1.3.3}chge}{7}{subsubsection.3.1.3.3}
+\contentsline {subsubsection}{\numberline {3.1.3.4}paint\discretionary {-}{}{}Layout}{7}{subsubsection.3.1.3.4}
+\contentsline {subsubsection}{\numberline {3.1.3.5}qquit}{7}{subsubsection.3.1.3.5}
+\contentsline {subsubsection}{\numberline {3.1.3.6}st\discretionary {-}{}{}Inst}{7}{subsubsection.3.1.3.6}
+\contentsline {subsubsection}{\numberline {3.1.3.7}st\discretionary {-}{}{}Set}{8}{subsubsection.3.1.3.7}
+\contentsline {subsubsection}{\numberline {3.1.3.8}swi}{8}{subsubsection.3.1.3.8}
+\contentsline {section}{\numberline {3.2}Dokumentace t\IeC {\v r}\IeC {\'\i }dy it\discretionary {-}{}{}Window.\discretionary {-}{}{}App}{8}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Detailn\IeC {\'\i } popis}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Dokumentace konstruktoru a destruktoru}{9}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{9}{subsubsection.3.2.2.1}
+\contentsline {subsection}{\numberline {3.2.3}Dokumentace k metod\IeC {\'a}m}{9}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}ins}{9}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}i\discretionary {-}{}{}Tl}{9}{subsubsection.3.2.3.2}
+\contentsline {subsubsection}{\numberline {3.2.3.3}paint\discretionary {-}{}{}Layout}{9}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}qquit}{9}{subsubsection.3.2.3.4}
+\contentsline {section}{\numberline {3.3}Dokumentace t\IeC {\v r}\IeC {\'\i }dy tests\discretionary {-}{}{}Conf.\discretionary {-}{}{}App}{10}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Detailn\IeC {\'\i } popis}{10}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Dokumentace konstruktoru a destruktoru}{10}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{10}{subsubsection.3.3.2.1}
+\contentsline {subsection}{\numberline {3.3.3}Dokumentace k metod\IeC {\'a}m}{10}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}check\discretionary {-}{}{}D\discretionary {-}{}{}H\discretionary {-}{}{}C\discretionary {-}{}{}P}{10}{subsubsection.3.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.3.2}check\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}S}{11}{subsubsection.3.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3.3}check\discretionary {-}{}{}T\discretionary {-}{}{}F\discretionary {-}{}{}T\discretionary {-}{}{}P\discretionary {-}{}{}D}{11}{subsubsection.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.4}print\discretionary {-}{}{}Fot\discretionary {-}{}{}Note}{11}{subsubsection.3.3.3.4}
+\contentsline {section}{\numberline {3.4}Dokumentace t\IeC {\v r}\IeC {\'\i }dy tests\discretionary {-}{}{}Services.\discretionary {-}{}{}App}{11}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Detailn\IeC {\'\i } popis}{12}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Dokumentace konstruktoru a destruktoru}{12}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{12}{subsubsection.3.4.2.1}
+\contentsline {subsection}{\numberline {3.4.3}Dokumentace k metod\IeC {\'a}m}{12}{subsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.3.1}checs\discretionary {-}{}{}D\discretionary {-}{}{}H\discretionary {-}{}{}C\discretionary {-}{}{}P}{12}{subsubsection.3.4.3.1}
+\contentsline {subsubsection}{\numberline {3.4.3.2}checs\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}S}{12}{subsubsection.3.4.3.2}
+\contentsline {subsubsection}{\numberline {3.4.3.3}checs\discretionary {-}{}{}T\discretionary {-}{}{}F\discretionary {-}{}{}T\discretionary {-}{}{}P\discretionary {-}{}{}D}{12}{subsubsection.3.4.3.3}
+\contentsline {subsubsection}{\numberline {3.4.3.4}print\discretionary {-}{}{}Fot\discretionary {-}{}{}Note}{13}{subsubsection.3.4.3.4}
+\contentsline {section}{\numberline {3.5}Dokumentace t\IeC {\v r}\IeC {\'\i }dy mn\discretionary {-}{}{}Clean.\discretionary {-}{}{}App}{13}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Detailn\IeC {\'\i } popis}{13}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Dokumentace konstruktoru a destruktoru}{14}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{14}{subsubsection.3.5.2.1}
+\contentsline {subsection}{\numberline {3.5.3}Dokumentace k metod\IeC {\'a}m}{14}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}clear}{14}{subsubsection.3.5.3.1}
+\contentsline {subsubsection}{\numberline {3.5.3.2}erase}{14}{subsubsection.3.5.3.2}
+\contentsline {subsubsection}{\numberline {3.5.3.3}mv\discretionary {-}{}{}Bar}{14}{subsubsection.3.5.3.3}
+\contentsline {subsubsection}{\numberline {3.5.3.4}paint\discretionary {-}{}{}Layout}{14}{subsubsection.3.5.3.4}
+\contentsline {subsubsection}{\numberline {3.5.3.5}qquit}{14}{subsubsection.3.5.3.5}
+\contentsline {subsubsection}{\numberline {3.5.3.6}update}{15}{subsubsection.3.5.3.6}
+\contentsline {section}{\numberline {3.6}Dokumentace t\IeC {\v r}\IeC {\'\i }dy mn\discretionary {-}{}{}En\discretionary {-}{}{}Dis.\discretionary {-}{}{}App}{15}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Detailn\IeC {\'\i } popis}{16}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Dokumentace konstruktoru a destruktoru}{16}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{16}{subsubsection.3.6.2.1}
+\contentsline {subsection}{\numberline {3.6.3}Dokumentace k metod\IeC {\'a}m}{16}{subsection.3.6.3}
+\contentsline {subsubsection}{\numberline {3.6.3.1}cl\discretionary {-}{}{}Set}{16}{subsubsection.3.6.3.1}
+\contentsline {subsubsection}{\numberline {3.6.3.2}key\discretionary {-}{}{}En}{16}{subsubsection.3.6.3.2}
+\contentsline {subsubsection}{\numberline {3.6.3.3}load\discretionary {-}{}{}Items}{16}{subsubsection.3.6.3.3}
+\contentsline {subsubsection}{\numberline {3.6.3.4}on\discretionary {-}{}{}Select}{16}{subsubsection.3.6.3.4}
+\contentsline {subsubsection}{\numberline {3.6.3.5}paint\discretionary {-}{}{}Layout}{17}{subsubsection.3.6.3.5}
+\contentsline {subsubsection}{\numberline {3.6.3.6}qquit}{17}{subsubsection.3.6.3.6}
+\contentsline {subsubsection}{\numberline {3.6.3.7}set\discretionary {-}{}{}N}{17}{subsubsection.3.6.3.7}
+\contentsline {subsubsection}{\numberline {3.6.3.8}sw\discretionary {-}{}{}B\discretionary {-}{}{}N}{17}{subsubsection.3.6.3.8}
+\contentsline {section}{\numberline {3.7}Dokumentace t\IeC {\v r}\IeC {\'\i }dy mn\discretionary {-}{}{}Window.\discretionary {-}{}{}App}{17}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Detailn\IeC {\'\i } popis}{18}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Dokumentace konstruktoru a destruktoru}{18}{subsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{18}{subsubsection.3.7.2.1}
+\contentsline {subsection}{\numberline {3.7.3}Dokumentace k metod\IeC {\'a}m}{19}{subsection.3.7.3}
+\contentsline {subsubsection}{\numberline {3.7.3.1}cl\discretionary {-}{}{}Set}{19}{subsubsection.3.7.3.1}
+\contentsline {subsubsection}{\numberline {3.7.3.2}en\discretionary {-}{}{}Dis}{19}{subsubsection.3.7.3.2}
+\contentsline {subsubsection}{\numberline {3.7.3.3}i\discretionary {-}{}{}Ta}{19}{subsubsection.3.7.3.3}
+\contentsline {subsubsection}{\numberline {3.7.3.4}load\discretionary {-}{}{}Progs}{19}{subsubsection.3.7.3.4}
+\contentsline {subsubsection}{\numberline {3.7.3.5}paint\discretionary {-}{}{}Layout}{19}{subsubsection.3.7.3.5}
+\contentsline {subsubsection}{\numberline {3.7.3.6}qquit}{19}{subsubsection.3.7.3.6}
+\contentsline {subsubsection}{\numberline {3.7.3.7}st\discretionary {-}{}{}Cle}{20}{subsubsection.3.7.3.7}
+\contentsline {subsubsection}{\numberline {3.7.3.8}st\discretionary {-}{}{}Foc}{20}{subsubsection.3.7.3.8}
+\contentsline {subsubsection}{\numberline {3.7.3.9}st\discretionary {-}{}{}Rep}{20}{subsubsection.3.7.3.9}
+\contentsline {section}{\numberline {3.8}Dokumentace t\IeC {\v r}\IeC {\'\i }dy mn\discretionary {-}{}{}Focus.\discretionary {-}{}{}App}{20}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Detailn\IeC {\'\i } popis}{21}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Dokumentace konstruktoru a destruktoru}{21}{subsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{21}{subsubsection.3.8.2.1}
+\contentsline {subsection}{\numberline {3.8.3}Dokumentace k metod\IeC {\'a}m}{21}{subsection.3.8.3}
+\contentsline {subsubsection}{\numberline {3.8.3.1}call\discretionary {-}{}{}Page}{21}{subsubsection.3.8.3.1}
+\contentsline {subsubsection}{\numberline {3.8.3.2}ins\discretionary {-}{}{}Set}{21}{subsubsection.3.8.3.2}
+\contentsline {subsubsection}{\numberline {3.8.3.3}load\discretionary {-}{}{}N\discretionary {-}{}{}Xml}{22}{subsubsection.3.8.3.3}
+\contentsline {subsubsection}{\numberline {3.8.3.4}mv\discretionary {-}{}{}Bar}{22}{subsubsection.3.8.3.4}
+\contentsline {subsubsection}{\numberline {3.8.3.5}on\discretionary {-}{}{}Select}{22}{subsubsection.3.8.3.5}
+\contentsline {subsubsection}{\numberline {3.8.3.6}paint\discretionary {-}{}{}Layout}{22}{subsubsection.3.8.3.6}
+\contentsline {subsubsection}{\numberline {3.8.3.7}qquit}{22}{subsubsection.3.8.3.7}
+\contentsline {section}{\numberline {3.9}Dokumentace t\IeC {\v r}\IeC {\'\i }dy mn\discretionary {-}{}{}Repair.\discretionary {-}{}{}App}{23}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Detailn\IeC {\'\i } popis}{23}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2}Dokumentace konstruktoru a destruktoru}{23}{subsection.3.9.2}
+\contentsline {subsubsection}{\numberline {3.9.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{23}{subsubsection.3.9.2.1}
+\contentsline {subsection}{\numberline {3.9.3}Dokumentace k metod\IeC {\'a}m}{23}{subsection.3.9.3}
+\contentsline {subsubsection}{\numberline {3.9.3.1}load\discretionary {-}{}{}Progs}{23}{subsubsection.3.9.3.1}
+\contentsline {subsubsection}{\numberline {3.9.3.2}paint\discretionary {-}{}{}Layout}{24}{subsubsection.3.9.3.2}
+\contentsline {subsubsection}{\numberline {3.9.3.3}qquit}{24}{subsubsection.3.9.3.3}
+\contentsline {section}{\numberline {3.10}Dokumentace t\IeC {\v r}\IeC {\'\i }dy main.\discretionary {-}{}{}Chdir}{24}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Detailn\IeC {\'\i } popis}{24}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Dokumentace konstruktoru a destruktoru}{24}{subsection.3.10.2}
+\contentsline {subsubsection}{\numberline {3.10.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{24}{subsubsection.3.10.2.1}
+\contentsline {subsubsection}{\numberline {3.10.2.2}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}del\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{25}{subsubsection.3.10.2.2}
+\contentsline {section}{\numberline {3.11}Dokumentace t\IeC {\v r}\IeC {\'\i }dy cl\discretionary {-}{}{}Ima\discretionary {-}{}{}Os.\discretionary {-}{}{}cl\discretionary {-}{}{}Ima\discretionary {-}{}{}Os}{25}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Detailn\IeC {\'\i } popis}{25}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}Dokumentace konstruktoru a destruktoru}{25}{subsection.3.11.2}
+\contentsline {subsubsection}{\numberline {3.11.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{25}{subsubsection.3.11.2.1}
+\contentsline {subsection}{\numberline {3.11.3}Dokumentace k metod\IeC {\'a}m}{25}{subsection.3.11.3}
+\contentsline {subsubsection}{\numberline {3.11.3.1}clean\discretionary {-}{}{}Image}{25}{subsubsection.3.11.3.1}
+\contentsline {subsubsection}{\numberline {3.11.3.2}clean\discretionary {-}{}{}System}{26}{subsubsection.3.11.3.2}
+\contentsline {section}{\numberline {3.12}Dokumentace t\IeC {\v r}\IeC {\'\i }dy tests\discretionary {-}{}{}Conf.\discretionary {-}{}{}Conf\discretionary {-}{}{}Check}{26}{section.3.12}
+\contentsline {subsection}{\numberline {3.12.1}Detailn\IeC {\'\i } popis}{26}{subsection.3.12.1}
+\contentsline {subsection}{\numberline {3.12.2}Dokumentace k metod\IeC {\'a}m}{26}{subsection.3.12.2}
+\contentsline {subsubsection}{\numberline {3.12.2.1}check}{26}{subsubsection.3.12.2.1}
+\contentsline {section}{\numberline {3.13}Dokumentace t\IeC {\v r}\IeC {\'\i }dy Conf\discretionary {-}{}{}Sys.\discretionary {-}{}{}Conf\discretionary {-}{}{}Sys}{26}{section.3.13}
+\contentsline {subsection}{\numberline {3.13.1}Detailn\IeC {\'\i } popis}{27}{subsection.3.13.1}
+\contentsline {subsection}{\numberline {3.13.2}Dokumentace konstruktoru a destruktoru}{28}{subsection.3.13.2}
+\contentsline {subsubsection}{\numberline {3.13.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{28}{subsubsection.3.13.2.1}
+\contentsline {subsection}{\numberline {3.13.3}Dokumentace k metod\IeC {\'a}m}{28}{subsection.3.13.3}
+\contentsline {subsubsection}{\numberline {3.13.3.1}copy\discretionary {-}{}{}X\discretionary {-}{}{}Bac}{28}{subsubsection.3.13.3.1}
+\contentsline {subsubsection}{\numberline {3.13.3.2}copy\discretionary {-}{}{}Xorg\discretionary {-}{}{}Co}{28}{subsubsection.3.13.3.2}
+\contentsline {subsubsection}{\numberline {3.13.3.3}create\discretionary {-}{}{}Ker}{28}{subsubsection.3.13.3.3}
+\contentsline {subsubsection}{\numberline {3.13.3.4}create\discretionary {-}{}{}Student}{28}{subsubsection.3.13.3.4}
+\contentsline {subsubsection}{\numberline {3.13.3.5}install\discretionary {-}{}{}Dm}{28}{subsubsection.3.13.3.5}
+\contentsline {subsubsection}{\numberline {3.13.3.6}install\discretionary {-}{}{}Ice}{29}{subsubsection.3.13.3.6}
+\contentsline {subsubsection}{\numberline {3.13.3.7}install\discretionary {-}{}{}Sys\discretionary {-}{}{}Debs}{29}{subsubsection.3.13.3.7}
+\contentsline {subsubsection}{\numberline {3.13.3.8}install\discretionary {-}{}{}Xfce}{29}{subsubsection.3.13.3.8}
+\contentsline {subsubsection}{\numberline {3.13.3.9}reset\discretionary {-}{}{}All\discretionary {-}{}{}Serv}{29}{subsubsection.3.13.3.9}
+\contentsline {subsubsection}{\numberline {3.13.3.10}reset\discretionary {-}{}{}Net}{29}{subsubsection.3.13.3.10}
+\contentsline {subsubsection}{\numberline {3.13.3.11}set\discretionary {-}{}{}Up\discretionary {-}{}{}D\discretionary {-}{}{}H}{29}{subsubsection.3.13.3.11}
+\contentsline {subsubsection}{\numberline {3.13.3.12}set\discretionary {-}{}{}Up\discretionary {-}{}{}Fst}{30}{subsubsection.3.13.3.12}
+\contentsline {subsubsection}{\numberline {3.13.3.13}set\discretionary {-}{}{}Up\discretionary {-}{}{}Key}{30}{subsubsection.3.13.3.13}
+\contentsline {subsubsection}{\numberline {3.13.3.14}set\discretionary {-}{}{}Up\discretionary {-}{}{}Loc}{30}{subsubsection.3.13.3.14}
+\contentsline {subsubsection}{\numberline {3.13.3.15}set\discretionary {-}{}{}Up\discretionary {-}{}{}Masq}{30}{subsubsection.3.13.3.15}
+\contentsline {subsubsection}{\numberline {3.13.3.16}set\discretionary {-}{}{}Up\discretionary {-}{}{}Nets}{30}{subsubsection.3.13.3.16}
+\contentsline {subsubsection}{\numberline {3.13.3.17}set\discretionary {-}{}{}Up\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}S}{30}{subsubsection.3.13.3.17}
+\contentsline {section}{\numberline {3.14}Dokumentace t\IeC {\v r}\IeC {\'\i }dy Cons\discretionary {-}{}{}Sys.\discretionary {-}{}{}Cons\discretionary {-}{}{}Sys}{31}{section.3.14}
+\contentsline {subsection}{\numberline {3.14.1}Detailn\IeC {\'\i } popis}{32}{subsection.3.14.1}
+\contentsline {subsection}{\numberline {3.14.2}Dokumentace k metod\IeC {\'a}m}{32}{subsection.3.14.2}
+\contentsline {subsubsection}{\numberline {3.14.2.1}chg\discretionary {-}{}{}Passwd}{32}{subsubsection.3.14.2.1}
+\contentsline {subsubsection}{\numberline {3.14.2.2}comp\discretionary {-}{}{}Ip\discretionary {-}{}{}By\discretionary {-}{}{}Mask}{32}{subsubsection.3.14.2.2}
+\contentsline {subsubsection}{\numberline {3.14.2.3}copy\discretionary {-}{}{}Large\discretionary {-}{}{}File}{32}{subsubsection.3.14.2.3}
+\contentsline {subsubsection}{\numberline {3.14.2.4}er\discretionary {-}{}{}All}{33}{subsubsection.3.14.2.4}
+\contentsline {subsubsection}{\numberline {3.14.2.5}ext\discretionary {-}{}{}Gz\discretionary {-}{}{}Tar}{33}{subsubsection.3.14.2.5}
+\contentsline {subsubsection}{\numberline {3.14.2.6}get\discretionary {-}{}{}Bro}{33}{subsubsection.3.14.2.6}
+\contentsline {subsubsection}{\numberline {3.14.2.7}get\discretionary {-}{}{}Def\discretionary {-}{}{}G\discretionary {-}{}{}W}{33}{subsubsection.3.14.2.7}
+\contentsline {subsubsection}{\numberline {3.14.2.8}get\discretionary {-}{}{}Df\discretionary {-}{}{}Il\discretionary {-}{}{}Int}{33}{subsubsection.3.14.2.8}
+\contentsline {subsubsection}{\numberline {3.14.2.9}get\discretionary {-}{}{}Dns\discretionary {-}{}{}Ser}{34}{subsubsection.3.14.2.9}
+\contentsline {subsubsection}{\numberline {3.14.2.10}get\discretionary {-}{}{}Eth\discretionary {-}{}{}Ip}{34}{subsubsection.3.14.2.10}
+\contentsline {subsubsection}{\numberline {3.14.2.11}get\discretionary {-}{}{}Eths}{34}{subsubsection.3.14.2.11}
+\contentsline {subsubsection}{\numberline {3.14.2.12}get\discretionary {-}{}{}Net}{34}{subsubsection.3.14.2.12}
+\contentsline {subsubsection}{\numberline {3.14.2.13}get\discretionary {-}{}{}Netmsk}{35}{subsubsection.3.14.2.13}
+\contentsline {subsubsection}{\numberline {3.14.2.14}is\discretionary {-}{}{}Cnt}{35}{subsubsection.3.14.2.14}
+\contentsline {subsubsection}{\numberline {3.14.2.15}make\discretionary {-}{}{}Dir}{35}{subsubsection.3.14.2.15}
+\contentsline {subsubsection}{\numberline {3.14.2.16}remove\discretionary {-}{}{}Fl}{35}{subsubsection.3.14.2.16}
+\contentsline {subsubsection}{\numberline {3.14.2.17}run\discretionary {-}{}{}Process}{35}{subsubsection.3.14.2.17}
+\contentsline {subsubsection}{\numberline {3.14.2.18}serv}{36}{subsubsection.3.14.2.18}
+\contentsline {subsubsection}{\numberline {3.14.2.19}sets}{36}{subsubsection.3.14.2.19}
+\contentsline {subsubsection}{\numberline {3.14.2.20}update\discretionary {-}{}{}Img}{36}{subsubsection.3.14.2.20}
+\contentsline {subsubsection}{\numberline {3.14.2.21}update\discretionary {-}{}{}Sys}{36}{subsubsection.3.14.2.21}
+\contentsline {section}{\numberline {3.15}Dokumentace t\IeC {\v r}\IeC {\'\i }dy Dhcp\discretionary {-}{}{}Check.\discretionary {-}{}{}Dhcp\discretionary {-}{}{}Check}{36}{section.3.15}
+\contentsline {subsection}{\numberline {3.15.1}Detailn\IeC {\'\i } popis}{37}{subsection.3.15.1}
+\contentsline {subsection}{\numberline {3.15.2}Dokumentace konstruktoru a destruktoru}{37}{subsection.3.15.2}
+\contentsline {subsubsection}{\numberline {3.15.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{37}{subsubsection.3.15.2.1}
+\contentsline {subsection}{\numberline {3.15.3}Dokumentace k metod\IeC {\'a}m}{37}{subsection.3.15.3}
+\contentsline {subsubsection}{\numberline {3.15.3.1}chc\discretionary {-}{}{}New}{37}{subsubsection.3.15.3.1}
+\contentsline {subsubsection}{\numberline {3.15.3.2}get\discretionary {-}{}{}Cl\discretionary {-}{}{}List}{37}{subsubsection.3.15.3.2}
+\contentsline {subsubsection}{\numberline {3.15.3.3}get\discretionary {-}{}{}Mac\discretionary {-}{}{}By\discretionary {-}{}{}Ip\discretionary {-}{}{}Dh}{38}{subsubsection.3.15.3.3}
+\contentsline {section}{\numberline {3.16}Dokumentace t\IeC {\v r}\IeC {\'\i }dy fw\discretionary {-}{}{}Set\discretionary {-}{}{}Up.\discretionary {-}{}{}fw\discretionary {-}{}{}Set\discretionary {-}{}{}Up}{38}{section.3.16}
+\contentsline {subsection}{\numberline {3.16.1}Detailn\IeC {\'\i } popis}{38}{subsection.3.16.1}
+\contentsline {subsection}{\numberline {3.16.2}Dokumentace konstruktoru a destruktoru}{38}{subsection.3.16.2}
+\contentsline {subsubsection}{\numberline {3.16.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{38}{subsubsection.3.16.2.1}
+\contentsline {subsection}{\numberline {3.16.3}Dokumentace k metod\IeC {\'a}m}{39}{subsection.3.16.3}
+\contentsline {subsubsection}{\numberline {3.16.3.1}bl\discretionary {-}{}{}Dom}{39}{subsubsection.3.16.3.1}
+\contentsline {subsubsection}{\numberline {3.16.3.2}bl\discretionary {-}{}{}Net}{39}{subsubsection.3.16.3.2}
+\contentsline {subsubsection}{\numberline {3.16.3.3}get\discretionary {-}{}{}Lst\discretionary {-}{}{}Bl}{39}{subsubsection.3.16.3.3}
+\contentsline {subsubsection}{\numberline {3.16.3.4}is\discretionary {-}{}{}Net}{39}{subsubsection.3.16.3.4}
+\contentsline {subsubsection}{\numberline {3.16.3.5}un\discretionary {-}{}{}Bl\discretionary {-}{}{}Net}{40}{subsubsection.3.16.3.5}
+\contentsline {subsubsection}{\numberline {3.16.3.6}un\discretionary {-}{}{}Dom}{40}{subsubsection.3.16.3.6}
+\contentsline {section}{\numberline {3.17}Dokumentace t\IeC {\v r}\IeC {\'\i }dy in\discretionary {-}{}{}Focus.\discretionary {-}{}{}in\discretionary {-}{}{}Focus}{40}{section.3.17}
+\contentsline {subsection}{\numberline {3.17.1}Detailn\IeC {\'\i } popis}{41}{subsection.3.17.1}
+\contentsline {subsection}{\numberline {3.17.2}Dokumentace konstruktoru a destruktoru}{41}{subsection.3.17.2}
+\contentsline {subsubsection}{\numberline {3.17.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{41}{subsubsection.3.17.2.1}
+\contentsline {subsection}{\numberline {3.17.3}Dokumentace k metod\IeC {\'a}m}{41}{subsection.3.17.3}
+\contentsline {subsubsection}{\numberline {3.17.3.1}dpkg\discretionary {-}{}{}Conf\discretionary {-}{}{}A}{41}{subsubsection.3.17.3.1}
+\contentsline {subsubsection}{\numberline {3.17.3.2}ex\discretionary {-}{}{}Com}{41}{subsubsection.3.17.3.2}
+\contentsline {subsubsection}{\numberline {3.17.3.3}get\discretionary {-}{}{}Lst\discretionary {-}{}{}Inst}{41}{subsubsection.3.17.3.3}
+\contentsline {subsubsection}{\numberline {3.17.3.4}inst\discretionary {-}{}{}Xml\discretionary {-}{}{}Co}{42}{subsubsection.3.17.3.4}
+\contentsline {subsubsection}{\numberline {3.17.3.5}uni\discretionary {-}{}{}Xml\discretionary {-}{}{}Co}{42}{subsubsection.3.17.3.5}
+\contentsline {section}{\numberline {3.18}Dokumentace t\IeC {\v r}\IeC {\'\i }dy i\discretionary {-}{}{}Ta\discretionary {-}{}{}Hand.\discretionary {-}{}{}i\discretionary {-}{}{}Ta\discretionary {-}{}{}Hand}{42}{section.3.18}
+\contentsline {subsection}{\numberline {3.18.1}Detailn\IeC {\'\i } popis}{42}{subsection.3.18.1}
+\contentsline {subsection}{\numberline {3.18.2}Dokumentace konstruktoru a destruktoru}{43}{subsection.3.18.2}
+\contentsline {subsubsection}{\numberline {3.18.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{43}{subsubsection.3.18.2.1}
+\contentsline {subsection}{\numberline {3.18.3}Dokumentace k metod\IeC {\'a}m}{43}{subsection.3.18.3}
+\contentsline {subsubsection}{\numberline {3.18.3.1}gen\discretionary {-}{}{}Keys}{43}{subsubsection.3.18.3.1}
+\contentsline {subsubsection}{\numberline {3.18.3.2}inst\discretionary {-}{}{}Clie}{43}{subsubsection.3.18.3.2}
+\contentsline {subsubsection}{\numberline {3.18.3.3}inst\discretionary {-}{}{}Serv}{43}{subsubsection.3.18.3.3}
+\contentsline {subsubsection}{\numberline {3.18.3.4}set\discretionary {-}{}{}Cli\discretionary {-}{}{}Sc}{43}{subsubsection.3.18.3.4}
+\contentsline {subsubsection}{\numberline {3.18.3.5}sta\discretionary {-}{}{}Win}{43}{subsubsection.3.18.3.5}
+\contentsline {subsubsection}{\numberline {3.18.3.6}tst\discretionary {-}{}{}Italc}{44}{subsubsection.3.18.3.6}
+\contentsline {section}{\numberline {3.19}Dokumentace t\IeC {\v r}\IeC {\'\i }dy Sys\discretionary {-}{}{}Load.\discretionary {-}{}{}Sys\discretionary {-}{}{}Load}{44}{section.3.19}
+\contentsline {subsection}{\numberline {3.19.1}Detailn\IeC {\'\i } popis}{44}{subsection.3.19.1}
+\contentsline {subsection}{\numberline {3.19.2}Dokumentace konstruktoru a destruktoru}{45}{subsection.3.19.2}
+\contentsline {subsubsection}{\numberline {3.19.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{45}{subsubsection.3.19.2.1}
+\contentsline {subsection}{\numberline {3.19.3}Dokumentace k metod\IeC {\'a}m}{45}{subsection.3.19.3}
+\contentsline {subsubsection}{\numberline {3.19.3.1}delta\discretionary {-}{}{}Time}{45}{subsubsection.3.19.3.1}
+\contentsline {subsubsection}{\numberline {3.19.3.2}diskstats\discretionary {-}{}{}Parse}{45}{subsubsection.3.19.3.2}
+\contentsline {subsubsection}{\numberline {3.19.3.3}get\discretionary {-}{}{}Cpu\discretionary {-}{}{}Load}{45}{subsubsection.3.19.3.3}
+\contentsline {subsubsection}{\numberline {3.19.3.4}get\discretionary {-}{}{}Load\discretionary {-}{}{}Avg}{45}{subsubsection.3.19.3.4}
+\contentsline {subsubsection}{\numberline {3.19.3.5}get\discretionary {-}{}{}Perc\discretionary {-}{}{}Cpu\discretionary {-}{}{}Load}{46}{subsubsection.3.19.3.5}
+\contentsline {subsubsection}{\numberline {3.19.3.6}get\discretionary {-}{}{}Perc\discretionary {-}{}{}Sda\discretionary {-}{}{}Load}{46}{subsubsection.3.19.3.6}
+\contentsline {subsubsection}{\numberline {3.19.3.7}get\discretionary {-}{}{}Time\discretionary {-}{}{}List}{46}{subsubsection.3.19.3.7}
+\contentsline {section}{\numberline {3.20}Dokumentace t\IeC {\v r}\IeC {\'\i }dy xml\discretionary {-}{}{}Foc\discretionary {-}{}{}Par.\discretionary {-}{}{}xml\discretionary {-}{}{}Foc\discretionary {-}{}{}Par}{46}{section.3.20}
+\contentsline {subsection}{\numberline {3.20.1}Detailn\IeC {\'\i } popis}{47}{subsection.3.20.1}
+\contentsline {subsection}{\numberline {3.20.2}Dokumentace konstruktoru a destruktoru}{47}{subsection.3.20.2}
+\contentsline {subsubsection}{\numberline {3.20.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}init\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}}{47}{subsubsection.3.20.2.1}
+\contentsline {subsection}{\numberline {3.20.3}Dokumentace k metod\IeC {\'a}m}{47}{subsection.3.20.3}
+\contentsline {subsubsection}{\numberline {3.20.3.1}apps}{47}{subsubsection.3.20.3.1}
+\contentsline {subsubsection}{\numberline {3.20.3.2}get\discretionary {-}{}{}Foc}{48}{subsubsection.3.20.3.2}
+\contentsline {subsubsection}{\numberline {3.20.3.3}get\discretionary {-}{}{}Lst\discretionary {-}{}{}Foc}{48}{subsubsection.3.20.3.3}
+\contentsline {subsubsection}{\numberline {3.20.3.4}get\discretionary {-}{}{}Text}{48}{subsubsection.3.20.3.4}
+\contentsline {subsubsection}{\numberline {3.20.3.5}handle\discretionary {-}{}{}Aps}{48}{subsubsection.3.20.3.5}
+\contentsline {subsubsection}{\numberline {3.20.3.6}ld\discretionary {-}{}{}Foc}{49}{subsubsection.3.20.3.6}
+\contentsline {subsubsection}{\numberline {3.20.3.7}par\discretionary {-}{}{}Foc}{49}{subsubsection.3.20.3.7}
+\contentsline {subsubsection}{\numberline {3.20.3.8}rel\discretionary {-}{}{}Foc}{49}{subsubsection.3.20.3.8}
+\contentsline {chapter}{\numberline {4}Dokumentace soubor\IeC {\r u}}{51}{chapter.4}
+\contentsline {section}{\numberline {4.1}Dokumentace souboru cl\discretionary {-}{}{}Ima\discretionary {-}{}{}Os.\discretionary {-}{}{}py}{51}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailn\IeC {\'\i } popis}{51}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Dokumentace souboru close\discretionary {-}{}{}Setup.\discretionary {-}{}{}py}{51}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailn\IeC {\'\i } popis}{52}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Dokumentace souboru Conf\discretionary {-}{}{}Sys.\discretionary {-}{}{}py}{52}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailn\IeC {\'\i } popis}{52}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Dokumentace souboru Cons\discretionary {-}{}{}Sys.\discretionary {-}{}{}py}{52}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailn\IeC {\'\i } popis}{52}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Dokumentace souboru Dhcp\discretionary {-}{}{}Check.\discretionary {-}{}{}py}{53}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailn\IeC {\'\i } popis}{53}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Dokumentace souboru fw\discretionary {-}{}{}Set\discretionary {-}{}{}Up.\discretionary {-}{}{}py}{53}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailn\IeC {\'\i } popis}{53}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Dokumentace souboru in\discretionary {-}{}{}Focus.\discretionary {-}{}{}py}{53}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Detailn\IeC {\'\i } popis}{53}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.8}Dokumentace souboru i\discretionary {-}{}{}Ta\discretionary {-}{}{}Hand.\discretionary {-}{}{}py}{53}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Detailn\IeC {\'\i } popis}{54}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Dokumentace souboru main.\discretionary {-}{}{}py}{54}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Detailn\IeC {\'\i } popis}{54}{subsection.4.9.1}
+\contentsline {section}{\numberline {4.10}Dokumentace souboru mn\discretionary {-}{}{}Clean.\discretionary {-}{}{}py}{54}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailn\IeC {\'\i } popis}{55}{subsection.4.10.1}
+\contentsline {section}{\numberline {4.11}Dokumentace souboru mn\discretionary {-}{}{}En\discretionary {-}{}{}Dis.\discretionary {-}{}{}py}{55}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Detailn\IeC {\'\i } popis}{55}{subsection.4.11.1}
+\contentsline {section}{\numberline {4.12}Dokumentace souboru mn\discretionary {-}{}{}Focus.\discretionary {-}{}{}py}{55}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Detailn\IeC {\'\i } popis}{56}{subsection.4.12.1}
+\contentsline {section}{\numberline {4.13}Dokumentace souboru mn\discretionary {-}{}{}Window.\discretionary {-}{}{}py}{56}{section.4.13}
+\contentsline {subsection}{\numberline {4.13.1}Detailn\IeC {\'\i } popis}{57}{subsection.4.13.1}
+\contentsline {section}{\numberline {4.14}Dokumentace souboru Sys\discretionary {-}{}{}Load.\discretionary {-}{}{}py}{57}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Detailn\IeC {\'\i } popis}{57}{subsection.4.14.1}
+\contentsline {section}{\numberline {4.15}Dokumentace souboru tests\discretionary {-}{}{}Conf.\discretionary {-}{}{}py}{57}{section.4.15}
+\contentsline {subsection}{\numberline {4.15.1}Detailn\IeC {\'\i } popis}{57}{subsection.4.15.1}
+\contentsline {section}{\numberline {4.16}Dokumentace souboru tests\discretionary {-}{}{}Services.\discretionary {-}{}{}py}{57}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Detailn\IeC {\'\i } popis}{58}{subsection.4.16.1}
+\contentsline {section}{\numberline {4.17}Dokumentace souboru xml\discretionary {-}{}{}Foc\discretionary {-}{}{}Par.\discretionary {-}{}{}py}{58}{section.4.17}
+\contentsline {subsection}{\numberline {4.17.1}Detailn\IeC {\'\i } popis}{58}{subsection.4.17.1}

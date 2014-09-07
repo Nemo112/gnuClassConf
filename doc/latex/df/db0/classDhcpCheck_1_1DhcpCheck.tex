@@ -1,0 +1,112 @@
+\hypertarget{classDhcpCheck_1_1DhcpCheck}{\section{Dokumentace třídy Dhcp\-Check.\-Dhcp\-Check}
+\label{df/db0/classDhcpCheck_1_1DhcpCheck}\index{Dhcp\-Check.\-Dhcp\-Check@{Dhcp\-Check.\-Dhcp\-Check}}
+}
+
+
+Třída pro práci se souborem vypujčených I\-P adres.  
+
+
+\subsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classDhcpCheck_1_1DhcpCheck_a96437be47fab72ad232f68029e3ced97}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
+def \hyperlink{classDhcpCheck_1_1DhcpCheck_ad1c0e03ff71f3cf29f29667be833c33f}{chc\-New}
+\begin{DoxyCompactList}\small\item\em Kontroluje nově propůjčené I\-P adresy. \end{DoxyCompactList}\item 
+def \hyperlink{classDhcpCheck_1_1DhcpCheck_a77ee6b7f23e71d4ea91e0d97b398da43}{get\-Cl\-List}
+\begin{DoxyCompactList}\small\item\em Načítá list klientů na D\-H\-C\-P serveru. \end{DoxyCompactList}\item 
+def \hyperlink{classDhcpCheck_1_1DhcpCheck_ae1bfc1a6d8b07eb5d1166459d4e99330}{get\-Mac\-By\-Ip\-Dh}
+\begin{DoxyCompactList}\small\item\em Vrátí M\-A\-C adresu k I\-P adrese z tabulky propůjčených adres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDhcpCheck_1_1DhcpCheck_abbd6a49b6a89bb175a09dae1d4f5a543}{\hyperlink{classDhcpCheck_1_1DhcpCheck_abbd6a49b6a89bb175a09dae1d4f5a543}{path\-Lease}}\label{df/db0/classDhcpCheck_1_1DhcpCheck_abbd6a49b6a89bb175a09dae1d4f5a543}
+
+\begin{DoxyCompactList}\small\item\em Cesta k propůjčeným adresám. \end{DoxyCompactList}\item 
+\hypertarget{classDhcpCheck_1_1DhcpCheck_a15d05487b6ddc97ecca4753336563fa0}{\hyperlink{classDhcpCheck_1_1DhcpCheck_a15d05487b6ddc97ecca4753336563fa0}{leas\-Cont}}\label{df/db0/classDhcpCheck_1_1DhcpCheck_a15d05487b6ddc97ecca4753336563fa0}
+
+\begin{DoxyCompactList}\small\item\em Obsah souboru propůjčených adres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Třída pro práci se souborem vypujčených I\-P adres. 
+
+\subsection{Dokumentace konstruktoru a destruktoru}
+\hypertarget{classDhcpCheck_1_1DhcpCheck_a96437be47fab72ad232f68029e3ced97}{\index{Dhcp\-Check\-::\-Dhcp\-Check@{Dhcp\-Check\-::\-Dhcp\-Check}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!DhcpCheck::DhcpCheck@{Dhcp\-Check\-::\-Dhcp\-Check}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Dhcp\-Check.\-Dhcp\-Check.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{pth\-Ls = {\ttfamily \char`\"{}/var/lib/dhcp/dhcpd.leases\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{df/db0/classDhcpCheck_1_1DhcpCheck_a96437be47fab72ad232f68029e3ced97}
+
+
+Konstruktor třídy okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em pth\-Ls} & Cesta k souboru vypujčených adres \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentace k metodám}
+\hypertarget{classDhcpCheck_1_1DhcpCheck_ad1c0e03ff71f3cf29f29667be833c33f}{\index{Dhcp\-Check\-::\-Dhcp\-Check@{Dhcp\-Check\-::\-Dhcp\-Check}!chc\-New@{chc\-New}}
+\index{chc\-New@{chc\-New}!DhcpCheck::DhcpCheck@{Dhcp\-Check\-::\-Dhcp\-Check}}
+\subsubsection[{chc\-New}]{\setlength{\rightskip}{0pt plus 5cm}def Dhcp\-Check.\-Dhcp\-Check.\-chc\-New (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{df/db0/classDhcpCheck_1_1DhcpCheck_ad1c0e03ff71f3cf29f29667be833c33f}
+
+
+Kontroluje nově propůjčené I\-P adresy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDhcpCheck_1_1DhcpCheck_a77ee6b7f23e71d4ea91e0d97b398da43}{\index{Dhcp\-Check\-::\-Dhcp\-Check@{Dhcp\-Check\-::\-Dhcp\-Check}!get\-Cl\-List@{get\-Cl\-List}}
+\index{get\-Cl\-List@{get\-Cl\-List}!DhcpCheck::DhcpCheck@{Dhcp\-Check\-::\-Dhcp\-Check}}
+\subsubsection[{get\-Cl\-List}]{\setlength{\rightskip}{0pt plus 5cm}def Dhcp\-Check.\-Dhcp\-Check.\-get\-Cl\-List (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{df/db0/classDhcpCheck_1_1DhcpCheck_a77ee6b7f23e71d4ea91e0d97b398da43}
+
+
+Načítá list klientů na D\-H\-C\-P serveru. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDhcpCheck_1_1DhcpCheck_ae1bfc1a6d8b07eb5d1166459d4e99330}{\index{Dhcp\-Check\-::\-Dhcp\-Check@{Dhcp\-Check\-::\-Dhcp\-Check}!get\-Mac\-By\-Ip\-Dh@{get\-Mac\-By\-Ip\-Dh}}
+\index{get\-Mac\-By\-Ip\-Dh@{get\-Mac\-By\-Ip\-Dh}!DhcpCheck::DhcpCheck@{Dhcp\-Check\-::\-Dhcp\-Check}}
+\subsubsection[{get\-Mac\-By\-Ip\-Dh}]{\setlength{\rightskip}{0pt plus 5cm}def Dhcp\-Check.\-Dhcp\-Check.\-get\-Mac\-By\-Ip\-Dh (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{ip}
+\end{DoxyParamCaption}
+)}}\label{df/db0/classDhcpCheck_1_1DhcpCheck_ae1bfc1a6d8b07eb5d1166459d4e99330}
+
+
+Vrátí M\-A\-C adresu k I\-P adrese z tabulky propůjčených adres. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em ip} & Ip adresa pro vyhledání M\-A\-C adresy \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentace pro tuto třídu byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DhcpCheck_8py}{Dhcp\-Check.\-py}\end{DoxyCompactItemize}

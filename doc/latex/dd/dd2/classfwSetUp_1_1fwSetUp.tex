@@ -1,0 +1,181 @@
+\hypertarget{classfwSetUp_1_1fwSetUp}{\section{Dokumentace třídy fw\-Set\-Up.\-fw\-Set\-Up}
+\label{dd/dd2/classfwSetUp_1_1fwSetUp}\index{fw\-Set\-Up.\-fw\-Set\-Up@{fw\-Set\-Up.\-fw\-Set\-Up}}
+}
+
+
+Třída obsahující metody pro práci s /etc/hosts.  
+
+
+\subsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_ad05f56aa9dd4503852ec2bcfb2a3afe2}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_aea3760656409015f15b9b3450edd70e1}{bl\-Dom}
+\begin{DoxyCompactList}\small\item\em Metoda přidá do /etc/hosts překlad domény na učitelský počítač \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a3a03c76b94db3bc750260ab64d76d755}{un\-Dom}
+\begin{DoxyCompactList}\small\item\em Metoda odebere z /etc/hosts překlad domény na učitelský počítač \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a75a8c09d8493ac43747cb4c518bef7dd}{is\-Net}
+\begin{DoxyCompactList}\small\item\em Metoda zkontroluje stav blokování klientů \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a4d21f86d17c54919fbdc2e3f069fa471}{bl\-Net}
+\begin{DoxyCompactList}\small\item\em Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta) \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a4f770f10b81c0030b1753dfb60452045}{un\-Bl\-Net}
+\begin{DoxyCompactList}\small\item\em Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta) \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a9d56382f2c43c78f6dcf2057580a5ed2}{get\-Lst\-Bl}
+\begin{DoxyCompactList}\small\item\em Metoda načte /etc/hosts a udělá seznam blokovaných domén. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classfwSetUp_1_1fwSetUp_adf3bfb3c9578fb497292ececbf5497f7}{\hyperlink{classfwSetUp_1_1fwSetUp_adf3bfb3c9578fb497292ececbf5497f7}{clhs}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_adf3bfb3c9578fb497292ececbf5497f7}
+
+\begin{DoxyCompactList}\small\item\em Klientský hosts. \end{DoxyCompactList}\item 
+\hypertarget{classfwSetUp_1_1fwSetUp_a98fdb43a4b9d6104ac4b4dc3d77dadcd}{\hyperlink{classfwSetUp_1_1fwSetUp_a98fdb43a4b9d6104ac4b4dc3d77dadcd}{sehs}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a98fdb43a4b9d6104ac4b4dc3d77dadcd}
+
+\begin{DoxyCompactList}\small\item\em Serverový hosts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Třída obsahující metody pro práci s /etc/hosts. 
+
+\subsection{Dokumentace konstruktoru a destruktoru}
+\hypertarget{classfwSetUp_1_1fwSetUp_ad05f56aa9dd4503852ec2bcfb2a3afe2}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_ad05f56aa9dd4503852ec2bcfb2a3afe2}
+
+
+Konstruktor třídy okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentace k metodám}
+\hypertarget{classfwSetUp_1_1fwSetUp_aea3760656409015f15b9b3450edd70e1}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!bl\-Dom@{bl\-Dom}}
+\index{bl\-Dom@{bl\-Dom}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{bl\-Dom}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-bl\-Dom (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{domain}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_aea3760656409015f15b9b3450edd70e1}
+
+
+Metoda přidá do /etc/hosts překlad domény na učitelský počítač 
+
+
+\begin{DoxyParams}{Parametry}
+{\em domain} & Doména k blokování \\
+\hline
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+False pokud už záznam existuje, True pokud se přidá bez problémů 
+\end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a4d21f86d17c54919fbdc2e3f069fa471}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!bl\-Net@{bl\-Net}}
+\index{bl\-Net@{bl\-Net}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{bl\-Net}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-bl\-Net (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a4d21f86d17c54919fbdc2e3f069fa471}
+
+
+Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True pokud vše projde, False pokud už v listu neni 
+\end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a9d56382f2c43c78f6dcf2057580a5ed2}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!get\-Lst\-Bl@{get\-Lst\-Bl}}
+\index{get\-Lst\-Bl@{get\-Lst\-Bl}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{get\-Lst\-Bl}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-get\-Lst\-Bl (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a9d56382f2c43c78f6dcf2057580a5ed2}
+
+
+Metoda načte /etc/hosts a udělá seznam blokovaných domén. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+lst List jako slovník obsahující položky očíslované od 0-\/n, kde každá obsahuje hostname a ip 
+\end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a75a8c09d8493ac43747cb4c518bef7dd}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!is\-Net@{is\-Net}}
+\index{is\-Net@{is\-Net}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{is\-Net}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-is\-Net (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a75a8c09d8493ac43747cb4c518bef7dd}
+
+
+Metoda zkontroluje stav blokování klientů 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True pokud jsou blokovány, false pokud ne 
+\end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a4f770f10b81c0030b1753dfb60452045}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!un\-Bl\-Net@{un\-Bl\-Net}}
+\index{un\-Bl\-Net@{un\-Bl\-Net}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{un\-Bl\-Net}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-un\-Bl\-Net (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a4f770f10b81c0030b1753dfb60452045}
+
+
+Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True pokud vše projde, False pokud už v listu neni 
+\end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a3a03c76b94db3bc750260ab64d76d755}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!un\-Dom@{un\-Dom}}
+\index{un\-Dom@{un\-Dom}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{un\-Dom}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-un\-Dom (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{domain}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a3a03c76b94db3bc750260ab64d76d755}
+
+
+Metoda odebere z /etc/hosts překlad domény na učitelský počítač 
+
+
+\begin{DoxyParams}{Parametry}
+{\em domain} & Doména k odblokování \\
+\hline
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentace pro tuto třídu byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fwSetUp_8py}{fw\-Set\-Up.\-py}\end{DoxyCompactItemize}

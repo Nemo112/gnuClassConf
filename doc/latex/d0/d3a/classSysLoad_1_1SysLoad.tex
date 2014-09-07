@@ -1,0 +1,250 @@
+\hypertarget{classSysLoad_1_1SysLoad}{\section{Dokumentace třídy Sys\-Load.\-Sys\-Load}
+\label{d0/d3a/classSysLoad_1_1SysLoad}\index{Sys\-Load.\-Sys\-Load@{Sys\-Load.\-Sys\-Load}}
+}
+
+
+Třída obsahující metody s prací s načítáním zatížení systému.  
+
+
+\subsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a7e00bec18d33f1bf3ab7a214597ddf6f}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a9c6e924af991784ea7603995e6df4790}{diskstats\-Parse}
+\begin{DoxyCompactList}\small\item\em Metoda parsující statistiky z /proc/diskstats. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a7540932700db54f5a564f3fd5ba6ef54}{get\-Tr\-Re\-By}
+\begin{DoxyCompactList}\small\item\em Metoda vracící celkový počet odeslaných a přijatých bytů rozhraní \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_ab68faaad3b50152a2ebc1f352d795d8f}{get\-Load\-Net}
+\begin{DoxyCompactList}\small\item\em Metoda vracící 0-\/100 jako procento zatížení rozhraní v proměnné eth. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a72febde2af89e56afa589d4c15fa4e72}{get\-Time\-List}
+\begin{DoxyCompactList}\small\item\em Metoda parsující statistiky z /proc/stat. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_abaf98f579871142a2bca31ee312b55b5}{delta\-Time}
+\begin{DoxyCompactList}\small\item\em Metoda vrací rozdíl z cpu statistik. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a0e61f72ce5be5549a61836ae78352462}{get\-Cpu\-Load}
+\begin{DoxyCompactList}\small\item\em Metoda vrací vytížení procesoru mezi 0 a 1. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a850f2f2f4bff009a9fe24faffbebe3ca}{get\-Perc\-Cpu\-Load}
+\begin{DoxyCompactList}\small\item\em Metoda vrací vytížení procesoru v procentech 0 až 100. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_a9464f6f2f01a89169aa36d818f1af51c}{get\-Perc\-Sda\-Load}
+\begin{DoxyCompactList}\small\item\em Metoda vrací vytížení pevného disku v procentech 0 až 100. \end{DoxyCompactList}\item 
+def \hyperlink{classSysLoad_1_1SysLoad_ab21272b6a351f0a904b2cd39ac3df38a}{get\-Load\-Avg}
+\begin{DoxyCompactList}\small\item\em Metoda vrací vytížení systému (disk,cpu,...) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Veřejné atributy}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSysLoad_1_1SysLoad_ac2f7c48ad5c162afa0efeca1024566f1}{\hyperlink{classSysLoad_1_1SysLoad_ac2f7c48ad5c162afa0efeca1024566f1}{int}}\label{d0/d3a/classSysLoad_1_1SysLoad_ac2f7c48ad5c162afa0efeca1024566f1}
+
+\begin{DoxyCompactList}\small\item\em Interval obnovy statistiky. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailní popis}
+Třída obsahující metody s prací s načítáním zatížení systému. 
+
+\subsection{Dokumentace konstruktoru a destruktoru}
+\hypertarget{classSysLoad_1_1SysLoad_a7e00bec18d33f1bf3ab7a214597ddf6f}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{interval = {\ttfamily 0.1}}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a7e00bec18d33f1bf3ab7a214597ddf6f}
+
+
+Konstruktor třídy okna. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em interval} & Obnova času při načítání zatížení procesoru \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentace k metodám}
+\hypertarget{classSysLoad_1_1SysLoad_abaf98f579871142a2bca31ee312b55b5}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!delta\-Time@{delta\-Time}}
+\index{delta\-Time@{delta\-Time}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{delta\-Time}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-delta\-Time (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{interval}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_abaf98f579871142a2bca31ee312b55b5}
+
+
+Metoda vrací rozdíl z cpu statistik. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em interval} & Čas mezi delta časy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Číselný rozdíl 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_a9c6e924af991784ea7603995e6df4790}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!diskstats\-Parse@{diskstats\-Parse}}
+\index{diskstats\-Parse@{diskstats\-Parse}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{diskstats\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-diskstats\-Parse (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{dev = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a9c6e924af991784ea7603995e6df4790}
+
+
+Metoda parsující statistiky z /proc/diskstats. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em dev} & Jméno zařízení \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSysLoad_1_1SysLoad_a0e61f72ce5be5549a61836ae78352462}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Cpu\-Load@{get\-Cpu\-Load}}
+\index{get\-Cpu\-Load@{get\-Cpu\-Load}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Cpu\-Load}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Cpu\-Load (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a0e61f72ce5be5549a61836ae78352462}
+
+
+Metoda vrací vytížení procesoru mezi 0 a 1. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Číslo mezi 0 a 1 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_ab21272b6a351f0a904b2cd39ac3df38a}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Load\-Avg@{get\-Load\-Avg}}
+\index{get\-Load\-Avg@{get\-Load\-Avg}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Load\-Avg}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Load\-Avg (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_ab21272b6a351f0a904b2cd39ac3df38a}
+
+
+Metoda vrací vytížení systému (disk,cpu,...) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Procento mezi 0 až 100 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_ab68faaad3b50152a2ebc1f352d795d8f}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Load\-Net@{get\-Load\-Net}}
+\index{get\-Load\-Net@{get\-Load\-Net}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Load\-Net}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Load\-Net (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{eth = {\ttfamily \char`\"{}eth0\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_ab68faaad3b50152a2ebc1f352d795d8f}
+
+
+Metoda vracící 0-\/100 jako procento zatížení rozhraní v proměnné eth. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em eth} & Jméno rozhraní \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Rozsah 0-\/100 jako procento zatížení 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_a850f2f2f4bff009a9fe24faffbebe3ca}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Perc\-Cpu\-Load@{get\-Perc\-Cpu\-Load}}
+\index{get\-Perc\-Cpu\-Load@{get\-Perc\-Cpu\-Load}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Perc\-Cpu\-Load}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Perc\-Cpu\-Load (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a850f2f2f4bff009a9fe24faffbebe3ca}
+
+
+Metoda vrací vytížení procesoru v procentech 0 až 100. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Procento mezi 0 až 100 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_a9464f6f2f01a89169aa36d818f1af51c}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Perc\-Sda\-Load@{get\-Perc\-Sda\-Load}}
+\index{get\-Perc\-Sda\-Load@{get\-Perc\-Sda\-Load}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Perc\-Sda\-Load}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Perc\-Sda\-Load (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a9464f6f2f01a89169aa36d818f1af51c}
+
+
+Metoda vrací vytížení pevného disku v procentech 0 až 100. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Procento mezi 0 až 100 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_a72febde2af89e56afa589d4c15fa4e72}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Time\-List@{get\-Time\-List}}
+\index{get\-Time\-List@{get\-Time\-List}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Time\-List}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Time\-List (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a72febde2af89e56afa589d4c15fa4e72}
+
+
+Metoda parsující statistiky z /proc/stat. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Mapu zparsovanou z /proc/stat 
+\end{DoxyReturn}
+\hypertarget{classSysLoad_1_1SysLoad_a7540932700db54f5a564f3fd5ba6ef54}{\index{Sys\-Load\-::\-Sys\-Load@{Sys\-Load\-::\-Sys\-Load}!get\-Tr\-Re\-By@{get\-Tr\-Re\-By}}
+\index{get\-Tr\-Re\-By@{get\-Tr\-Re\-By}!SysLoad::SysLoad@{Sys\-Load\-::\-Sys\-Load}}
+\subsubsection[{get\-Tr\-Re\-By}]{\setlength{\rightskip}{0pt plus 5cm}def Sys\-Load.\-Sys\-Load.\-get\-Tr\-Re\-By (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{eth}
+\end{DoxyParamCaption}
+)}}\label{d0/d3a/classSysLoad_1_1SysLoad_a7540932700db54f5a564f3fd5ba6ef54}
+
+
+Metoda vracící celkový počet odeslaných a přijatých bytů rozhraní 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em eth} & Jméno rozhraní \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Číselný údaj 
+\end{DoxyReturn}
+
+
+Dokumentace pro tuto třídu byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SysLoad_8py}{Sys\-Load.\-py}\end{DoxyCompactItemize}
