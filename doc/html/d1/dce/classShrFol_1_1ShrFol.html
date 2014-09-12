@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Hledat');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Hlavní&#160;stránka</span></a></li>
+      <li><a href="../../pages.html"><span>Ostatní&#160;stránky</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Třídy</span></a></li>
       <li><a href="../../files.html"><span>Soubory</span></a></li>
       <li>
@@ -103,12 +104,14 @@ Veřejné metody</h2></td></tr>
 <tr class="memdesc:a9c6d9419ead704adaa83dd00209f7d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrací list sdílených složek.  <a href="#a9c6d9419ead704adaa83dd00209f7d8d"></a><br/></td></tr>
 <tr class="memitem:a9f817cf66c0e30b0f6f7fe8dc56ca7da"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a9f817cf66c0e30b0f6f7fe8dc56ca7da">addToList</a></td></tr>
 <tr class="memdesc:a9f817cf66c0e30b0f6f7fe8dc56ca7da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Přidá na list sdílení složku.  <a href="#a9f817cf66c0e30b0f6f7fe8dc56ca7da"></a><br/></td></tr>
+<tr class="memitem:a83073341f2ff8ba2cc2f0ec3d28f0bfe"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a83073341f2ff8ba2cc2f0ec3d28f0bfe">uMntAll</a></td></tr>
+<tr class="memdesc:a83073341f2ff8ba2cc2f0ec3d28f0bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odebere mount složky a smaže všechny složky.  <a href="#a83073341f2ff8ba2cc2f0ec3d28f0bfe"></a><br/></td></tr>
 <tr class="memitem:a09764ae9bb636491c06f49b382d96632"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a09764ae9bb636491c06f49b382d96632">uMntLst</a></td></tr>
 <tr class="memdesc:a09764ae9bb636491c06f49b382d96632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odebere mount složky a smaže jí  <a href="#a09764ae9bb636491c06f49b382d96632"></a><br/></td></tr>
 <tr class="memitem:a73b990abe1e0a91da9f90fda31c686b7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a73b990abe1e0a91da9f90fda31c686b7">remFrList</a></td></tr>
 <tr class="memdesc:a73b990abe1e0a91da9f90fda31c686b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odebere z listu sdílených složek.  <a href="#a73b990abe1e0a91da9f90fda31c686b7"></a><br/></td></tr>
 <tr class="memitem:a689d7f68c00bb7fb068646bdbbec97b8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a689d7f68c00bb7fb068646bdbbec97b8">genListSh</a></td></tr>
-<tr class="memdesc:a689d7f68c00bb7fb068646bdbbec97b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vygeneruje dávku pro sdílení složek do obrazu.  <a href="#a689d7f68c00bb7fb068646bdbbec97b8"></a><br/></td></tr>
+<tr class="memdesc:a689d7f68c00bb7fb068646bdbbec97b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vygeneruje dávky pro sdílení složek do obrazu První v .  <a href="#a689d7f68c00bb7fb068646bdbbec97b8"></a><br/></td></tr>
 <tr class="memitem:a04f993258bc66b3f4702891962fbfcd2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a04f993258bc66b3f4702891962fbfcd2">addShRc</a></td></tr>
 <tr class="memdesc:a04f993258bc66b3f4702891962fbfcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Přidá odkaz na skript sdílející složky do rc.local hostovské stanice.  <a href="#a04f993258bc66b3f4702891962fbfcd2"></a><br/></td></tr>
 <tr class="memitem:a115dac3a241b1c02fb8076e30d8b0eed"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dce/classShrFol_1_1ShrFol.html#a115dac3a241b1c02fb8076e30d8b0eed">expShrs</a></td></tr>
@@ -266,7 +269,8 @@ Veřejné atributy</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Vygeneruje dávku pro sdílení složek do obrazu. </p>
+<p>Vygeneruje dávky pro sdílení složek do obrazu První v . </p>
+<p>/tmpba/mntGen.sh vegeneruje mount složek První v ./tmpba/untGen.sh vegeneruje umount složek </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>Ukazatel na objekt </td></tr>
@@ -360,6 +364,30 @@ Veřejné atributy</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a83073341f2ff8ba2cc2f0ec3d28f0bfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ShrFol.ShrFol.uMntAll </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odebere mount složky a smaže všechny složky. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Ukazatel na objekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a09764ae9bb636491c06f49b382d96632"></a>
 <div class="memitem">
 <div class="memproto">
@@ -401,7 +429,7 @@ Veřejné atributy</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generováno so 6. zář 2014 16.55:59 pro projekt GNUškola konfigurační prostředí programem &#160;<a href="http://www.doxygen.org/index.html">
+Generováno pá 12. zář 2014 15.32:13 pro projekt GNUškola konfigurační prostředí programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

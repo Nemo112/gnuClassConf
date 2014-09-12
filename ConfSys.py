@@ -30,7 +30,20 @@ class ConfSys:
 				## Rozhraní defaultní brány
 				self.de=i
 		## Logovací třída
-		self.log=LogWrk()
+		self.log=LogWrk()	
+	#def __del__(self):
+	#	""" Destruktor třídy okna
+	#	Pročistí mounty a t.d.
+	#	\param self Ukazatel na objekt
+	#	"""
+	#	tos='umount /NFSROOT/class/proc'
+	#	for line in self.sy.runProcess(tos):
+	#		print line,
+	#		self.log.write(line)
+	#	tos='umount /NFSROOT/class/sys'
+	#	for line in self.sy.runProcess(tos):
+	#		print line,
+	#		self.log.write(line)
 	def getDefGtw(self):
 		""" Getter na bránu
 		\param self Ukazatel na objekt
@@ -76,10 +89,11 @@ class ConfSys:
 		""" Restart síťových služeb
 		\param self Ukazatel na objekt
 		"""
-		tos='/etc/init.d/network-manager stop'
-		for line in self.sy.runProcess(tos):
-			print line,
-			self.log.write(line)
+		if os.path.isfile("/etc/init.d/network-manager"):
+			tos='/etc/init.d/network-manager stop'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 		tos='ifdown ' + self.ethc
 		for line in self.sy.runProcess(tos):
 			print line,
@@ -159,7 +173,7 @@ class ConfSys:
 			tar.write("subnet " + self.sy.getNet(self.sy.getNetmsk(self.de),self.sy.getEthIp(self.de)) + " netmask " + self.sy.getNetmsk(self.de) + " {\n")
 			tar.write("\trange " + fr + " " + br + ";\n")
 			tar.write("\toption broadcast-address " + self.sy.getBro(self.sy.getNetmsk(self.de),self.sy.getEthIp(self.de)) + ";\n")
-			tar.write("\toption routers " + self.sy.getEthIp(self.de) + ";\n")
+			tar.write("\toption routers " + self.sy.getDefGW() + ";\n")
 			tar.write("\toption domain-name-servers " + self.sy.getDnsSer() + " ;\n")
 			tar.write("\tfilename \"tftp://" + self.sy.getEthIp(self.de) + "/pxelinux.0\";\n")
 			tar.write("\tserver-name \"" + self.sy.getEthIp(self.de) + "\";\n")
@@ -215,10 +229,11 @@ class ConfSys:
 		""" Restartuje všechny služby pro aplikaci
 		\param self Ukazatel na objekt
 		"""
-		tos='/etc/init.d/network-manager stop'
-		for line in self.sy.runProcess(tos):
-			print line,
-			self.log.write(line)
+		if os.path.isfile("/etc/init.d/network-manager"):
+			tos='/etc/init.d/network-manager stop'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 		# síťování
 		tos='/etc/init.d/networking restart'
 		for line in self.sy.runProcess(tos):
@@ -235,11 +250,11 @@ class ConfSys:
 			print line,
 			self.log.write(line)
 		# nfs
-		tos='/etc/init.d/nfs-common restart'
+		tos='service nfs-common restart'
 		for line in self.sy.runProcess(tos):
 			print line,
 			self.log.write(line)
-		tos='/etc/init.d/nfs-kernel-server restart'
+		tos='service nfs-kernel-server restart'
 		for line in self.sy.runProcess(tos):
 			print line,
 			self.log.write(line)
@@ -314,8 +329,8 @@ class ConfSys:
 		tar.write("export XKBVARIANT=\"qwerty_bksl\"\n")
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
-		tar.write("apt-get install xfce4 -y\n")
-		tar.write("apt-get install lightdm -y\n")
+		tar.write("apt-get install --allow-unauthenticated xfce4 -y\n")
+		tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installXfc.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installXfc.sh'
@@ -343,7 +358,7 @@ class ConfSys:
 		tar.write("export XKBVARIANT=\"qwerty_bksl\"\n")
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
-		tar.write("apt-get install lightdm -y\n")
+		tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installDm.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installDm.sh'
@@ -389,7 +404,7 @@ class ConfSys:
 		tar.write("rm /etc/mtab\n")
 		tar.write("ln -s /proc/mounts /etc/mtab & \n")
 		tar.write("sleep 4\n")
-		tar.write("apt-get install linux-image-`uname -a | awk '{print $3}'` -y\n")
+		tar.write("apt-get install --allow-unauthenticated linux-image-`uname -a | awk '{print $3}'` -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installImg.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installImg.sh'
@@ -482,7 +497,7 @@ class ConfSys:
 		tar = open ("/NFSROOT/class/addons/locaStu.sh", 'a')
 		tar.write("#!/bin/bash\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
-		tar.write("apt-get install locales -y\n")
+		tar.write("apt-get install --allow-unauthenticated locales -y\n")
 		tar.write("localedef -i cs_CZ -f UTF-8 cs_CZ.UTF-8\n")
 		tar.write("update-locale cs_CZ.UTF-8\n")
 		tar.write("locale-gen\n")
@@ -501,7 +516,7 @@ class ConfSys:
 		tar = open ("/NFSROOT/class/addons/setupXfc.sh", 'a')
 		tar.write("#!/bin/bash\n")
 		tar.write("export LC_ALL=C\n")
-		tar.write("apt-get install xserver-xorg-input-kbd -y\n")
+		tar.write("apt-get install --allow-unauthenticated xserver-xorg-input-kbd -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/setupXfc.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/setupXfc.sh'
@@ -517,7 +532,7 @@ class ConfSys:
 		tar.write("#!/bin/bash\n")
 		tar.write("export LC_ALL=C\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
-		tar.write("apt-get install iceweasel -y\n")
+		tar.write("apt-get install --allow-unauthenticated iceweasel -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installIce.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installIce.sh'

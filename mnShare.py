@@ -83,6 +83,7 @@ if __name__ == "__main__":
 			except:
 				return
 			value = w.get(index)
+			value=value.encode('utf-8') 
 			result = tkMessageBox.askquestion("Odebrání", "Odebrat sdílení " + value + "?", icon='question')
 			if result == "yes":
 				self.shr.remFrList(value)

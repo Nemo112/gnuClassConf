@@ -5,12 +5,12 @@
 	<apps>
 		<app>
 			<name>Výkresový program QElectroTech</name>
-			<comm>apt-get install qelectrotech -y</comm>
+			<comm>apt-get install --allow-unauthenticated qelectrotech -y</comm>
 			<uni>apt-get remove qelectrotech -y</uni>
 		</app>
 		<app>
 			<name>Odborná matematika KiCAD</name>
-			<comm>apt-get install kicad -y</comm>
+			<comm>apt-get install --allow-unauthenticated kicad -y</comm>
 			<uni>apt-get remove kicad -y</uni>
 		</app>
 	</apps>

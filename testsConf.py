@@ -36,8 +36,9 @@ if __name__ == "__main__":
 			self.flg=0
 			## Ukazatel na okno
 			self.root=r
-			self.root.title("Testování nastavení")
+			self.root.title("Testování stavu")
 			self.root.geometry(("%dx%d")%(210,200))
+			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.resizable(0,0)
 			## Skupina label objektů
 			self.group = LabelFrame(self.root, text="Služby", padx=5, pady=5)

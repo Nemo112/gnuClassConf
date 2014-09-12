@@ -42,6 +42,35 @@ if __name__ == "__main__":
 			self.qoi=qoi
 			## Logovací třída
 			self.log=LogWrk()
+			## Instance objektu spravující systémové nástroje
+			self.sy=ConsSys()
+			if os.path.isfile("/NFSROOT/class/proc/mounts"):
+				self.log.write("/proc/mounts already there")
+			else:
+				open("/NFSROOT/class/proc/mounts","w")
+			# mount proc /NFSROOT/class/proc -t proc
+			tos='mount proc /NFSROOT/class/proc -t proc'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+			# mount sysfs /NFSROOT/class/sys -t sysfs
+			tos='mount sysfs /NFSROOT/class/sys -t sysfs'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+		def __del__(self):
+			""" Destruktor třídy okna
+			Pročistí mounty a t.d.
+			\param self Ukazatel na objekt
+			"""
+			tos='umount /NFSROOT/class/proc'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+			tos='umount /NFSROOT/class/sys'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 		def loadNXml(self):
 			""" Načítání vnějších xml v podobě gml pomocí dialogového okna tkFileDialog
 			\param self Ukazatel na objekt
@@ -183,7 +212,7 @@ if __name__ == "__main__":
 			\param self Ukazatel na objekt
 			\param event Ukazatel na akci
 			"""
-			webbrowser.open_new(r"http://www.example.com/")
+			webbrowser.open_new(r"http://www.nemor.cz/gnuClassConf/focus")
 		def insSet(self):
 			""" Metoda spuští instalaci balíčků v systému
 			\param self Ukazatel na objekt

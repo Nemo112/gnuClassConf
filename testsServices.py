@@ -23,6 +23,7 @@ if __name__ == "__main__":
 			self.root=r
 			self.root.title("Testování služeb")
 			self.root.geometry(("%dx%d")%(200,200))
+			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.resizable(0,0)
 			## Skupina label objektů
 			self.group = LabelFrame(root, text="Služby", padx=5, pady=5)

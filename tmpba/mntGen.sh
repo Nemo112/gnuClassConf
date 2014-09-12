@@ -1,3 +1,3 @@
 #!/bin/bash
-mount -o rbind "/home/ucitel/testshare" "/NFSROOT/class/class_shares/testshare" 
-exit 0
+mount -o rbind "/home/ucitel/žšašek" "/NFSROOT/class/class_shares/žšašek" ;
+exit 0;

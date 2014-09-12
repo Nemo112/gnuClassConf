@@ -28,5 +28,6 @@ var searchData=
   ['gettimelist',['getTimeList',['../d0/d3a/classSysLoad_1_1SysLoad.html#a72febde2af89e56afa589d4c15fa4e72',1,'SysLoad::SysLoad']]],
   ['gettrreby',['getTrReBy',['../d0/d3a/classSysLoad_1_1SysLoad.html#a7540932700db54f5a564f3fd5ba6ef54',1,'SysLoad::SysLoad']]],
   ['gra',['gra',['../da/ddf/classmnRepair_1_1App.html#a4cef9252fd6d9bcf259cca1e8d3f08cd',1,'mnRepair::App']]],
-  ['group',['group',['../d0/dec/classtestsConf_1_1App.html#adcc7e371225beb5afe9c8b92bd88894e',1,'testsConf.App.group()'],['../d7/df4/classtestsServices_1_1App.html#a1549120a798c7368dee93b4ba094dc0f',1,'testsServices.App.group()']]]
+  ['group',['group',['../d0/dec/classtestsConf_1_1App.html#adcc7e371225beb5afe9c8b92bd88894e',1,'testsConf.App.group()'],['../d7/df4/classtestsServices_1_1App.html#a1549120a798c7368dee93b4ba094dc0f',1,'testsServices.App.group()']]],
+  ['gnuclassconf',['gnuClassConf',['../d0/d30/md_README.html',1,'']]]
 ];

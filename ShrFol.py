@@ -58,6 +58,12 @@ class ShrFol:
 				fl.close()
 		else:
 			return
+	def uMntAll(self):
+		""" Odebere mount složky a smaže všechny složky
+		\param self Ukazatel na objekt
+		"""
+		exe=["./tmpba/untGen.sh"]
+		p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	def uMntLst(self,dele):
 		""" Odebere mount složky a smaže jí
 		\param self Ukazatel na objekt
@@ -92,9 +98,12 @@ class ShrFol:
 		else:
 			return
 	def genListSh(self):
-		""" Vygeneruje dávku pro sdílení složek do obrazu
+		""" Vygeneruje dávky pro sdílení složek do obrazu
+		První v  ./tmpba/mntGen.sh vegeneruje mount složek
+		První v  ./tmpba/untGen.sh vegeneruje umount složek
 		\param self Ukazatel na objekt
 		"""
+		# mount
 		lst=self.shList()
 		if not os.path.isdir("/NFSROOT/class/class_shares"):
 			os.makedirs("/NFSROOT/class/class_shares")
@@ -109,6 +118,18 @@ class ShrFol:
 		fl.write(tos)
 		fl.close()
 		os.chmod("./tmpba/mntGen.sh",0755)
+		# umount
+		tos = "#!/bin/bash\n"
+		for it in lst:
+			nm = it.split("/")[-1]
+			tos = tos + "umount \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+			if os.path.isdir("/NFSROOT/class/class_shares/" + nm):
+				tos = tos + "rmdir \"/NFSROOT/class/class_shares/" + nm + "\";\n"
+		tos = tos + "exit 0;\n"
+		fl=open("./tmpba/untGen.sh","w")
+		fl.write(tos)
+		fl.close()
+		os.chmod("./tmpba/untGen.sh",0755)
 	def addShRc(self):
 		""" Přidá odkaz na skript sdílející složky do rc.local hostovské stanice
 		\param self Ukazatel na objekt
@@ -169,6 +190,6 @@ if __name__ == "__main__":
 	#print sh.shList()
 	#sh.remFrList("/home")
 	#print sh.shList()
-	#sh.genListSh()
+	#sh.uMntAll()
 	#sh.intrCli()
 	

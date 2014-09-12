@@ -41,6 +41,7 @@ if __name__ == "__main__":
 			"""
 			## Instance objektu spravující systémové nástroje
 			self.sys=ConsSys()
+			#self.sy=ConsSys()
 			## Ukazatel na okno Tk
 			self.root=r
 			self.root.title("Základní nastavení učebny")

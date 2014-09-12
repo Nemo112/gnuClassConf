@@ -24,6 +24,7 @@ class iTaHand:
 		#subprocess.Popen("./instItalcMa.sh", shell=True)
 		for line in self.sy.runProcess("./instItalcMa.sh"):
 			print line,
+		os.makedirs("/root/.italc/")
 		self.sy.copyLargeFile("./data/emptyConfITa","/root/.italc/globalconfig.xml")
 	def instClie(self):
 		""" Metoda pro instalaci iTalcu na klientu
@@ -33,7 +34,7 @@ class iTaHand:
 		tar = open ("/NFSROOT/class/addons/installIta.sh", 'a')
 		tar.write("#!/bin/bash\n")
 		tar.write("export LC_ALL=C\n")
-		tar.write("apt-get install italc-client -y\n")
+		tar.write("apt-get install --allow-unauthenticated italc-client -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installIta.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installIta.sh'
@@ -90,7 +91,16 @@ class iTaHand:
 		""" Spouští ica jako službu
 		\param self Ukazatel na objekt
 		"""
-		subprocess.Popen("/usr/bin/ica", shell=True)
+		# test obsahu služby iTalc
+		if os.path.isfile("/usr/bin/ica"):
+			isIca=False
+			p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+			out, err = p.communicate()
+			for line in out.splitlines():
+				if 'ica' in line:
+					isIca=True
+			if isIca == False:
+				subprocess.Popen("/usr/bin/ica", shell=True)
 	def isIdInTab(self,id):
 		""" Otestuje id zdali je v tabulce iTalcu
 		\param self Ukazatel na objekt

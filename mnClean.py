@@ -8,6 +8,8 @@ from ConsSys import ConsSys
 from inFocus import inFocus
 from clImaOs import clImaOs
 import multiprocessing
+import tkMessageBox
+from ShrFol import ShrFol
 from Queue import Empty, Full
 
 if __name__ == "__main__":
@@ -37,7 +39,9 @@ if __name__ == "__main__":
 			""" Smaže systém - resp zašle signál vláknu, aby smazal systém
 			\param self Ukazatel na objekt
 			"""
-			self.qi.put("ERASE")
+			result = tkMessageBox.askquestion("Smazání", "Doopravdy smazat celý obraz učebny?", icon='warning')
+			if result == "yes":
+				self.qi.put("ERASE")
 		def clear(self):
 			""" Vyčistí systém - resp zašle signál vláknu, aby vyčistil systém
 			\param self Ukazatel na objekt
@@ -57,8 +61,8 @@ if __name__ == "__main__":
 			gpMan = LabelFrame(self.root, text="Oprava třídy", padx=5, pady=5)
 			gpMan.place(relx=0.01, rely=0)
 			Button(gpMan,height=1, width=21,text="Vyčistit balíčky obrazu",command=self.clear).pack()
-			Button(gpMan,height=1, width=21,text="Smazat obraz učebny",command=self.erase).pack()
 			Button(gpMan,height=1, width=21,text="Aktualizovat třídu",command=self.update).pack()
+			Button(gpMan,height=1, width=21,text="Smazat obraz učebny",command=self.erase).pack()
 			# Výpisky
 			gpTh = LabelFrame(self.root, text="Průběh", padx=5, pady=5)
 			gpTh.place(relx=0.48, rely=0.0)
@@ -105,6 +109,9 @@ if __name__ == "__main__":
 			if stri == "XXX":
 				break
 			elif stri == "ERASE":
+				qo.put("Odpojuji sdílení")
+				sh=ShrFol()
+				sh.uMntAll()
 				qo.put("Mažu obraz")
 				sy=ConsSys()
 				sy.erAll()

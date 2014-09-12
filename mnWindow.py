@@ -84,8 +84,16 @@ if __name__ == "__main__":
 			Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem
 			\param self Ukazatel na objekt
 			"""
+			# test obsahu služby iTalc
 			if os.path.isfile("/usr/bin/ica"):
-				subprocess.Popen("/usr/bin/ica", shell=True)
+				isIca=False
+				p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+				out, err = p.communicate()
+				for line in out.splitlines():
+					if 'ica' in line:
+						isIca=True
+				if isIca == False:
+					subprocess.Popen("/usr/bin/ica", shell=True)
 			# Správa
 			gpMan = LabelFrame(self.root, text="Ovládání", padx=5, pady=5)
 			gpMan.place(relx=0.01, rely=0)
@@ -177,6 +185,7 @@ if __name__ == "__main__":
 		\param qi Vstupní fronta
 		\param qo Vstupní fronta
 		"""
+		log=LogWrk()
 		dhc=DhcpCheck()
 		while True:
 			stri = ""
@@ -191,16 +200,16 @@ if __name__ == "__main__":
 				if n is not None:
 					for i in n:
 						qo.put("Nový host s IP " + i)
-						self.log.write("Nový host s IP " + i)
+						log.write("Nový host s IP " + i)
 						qo.put("Přidávám do iTalcu")
 						it=iTaHand()
 						if it.isInTab(i):
 							it.remCli(i)
 							it.addCli(i,dhc.getMacByIpDh(i))
-							self.log.write("Odebrán a přidán " + i)
+							log.write("Odebrán a přidán " + i)
 						else:
 							it.addCli(i,dhc.getMacByIpDh(i))
-							self.log.write("Přidán " + i)
+							log.write("Přidán " + i)
 						qo.put("Přidáno")
 						qo.put("Restartujte iTalc")
 				time.sleep(1)

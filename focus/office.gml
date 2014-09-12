@@ -5,12 +5,12 @@
 	<apps>
 		<app>
 			<name>Kancelářský balíček LibreOffice</name>
-			<comm>apt-get install libreoffice -y</comm>
+			<comm>apt-get install --allow-unauthenticated libreoffice -y</comm>
 			<uni>apt-get remove libreoffice -y</uni>
 		</app>
 		<app>
 			<name>Editor textových souborů Leafpad</name>
-			<comm>apt-get install leafpad -y</comm>
+			<comm>apt-get install --allow-unauthenticated leafpad -y</comm>
 			<uni>apt-get remove leafpad -y</uni>
 		</app>
 	</apps>

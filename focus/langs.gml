@@ -5,12 +5,12 @@
 	<apps>
 		<app>
 			<name>Frázový program Anki</name>
-			<comm>apt-get install anki -y</comm>
+			<comm>apt-get install --allow-unauthenticated anki -y</comm>
 			<uni>apt-get remove anki -y</uni>
 		</app>
 		<app>
 			<name>Kartičkový program Mnemosyne</name>
-			<comm>apt-get install mnemosyne -y</comm>
+			<comm>apt-get install --allow-unauthenticated mnemosyne -y</comm>
 			<uni>apt-get remove mnemosyne -y</uni>
 		</app>
 	</apps>
