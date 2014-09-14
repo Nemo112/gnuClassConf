@@ -50,7 +50,7 @@ if __name__ == "__main__":
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
 			## Počet síťových rozhraní
-			self.ethc=len(self.sys.getEths())
+			self.ethc=len(self.sys.getEths())-1
 			if self.ethc == 1:
 				## Proměnná obsahující cestu k obrázku topologie
 				self.igm=PhotoImage(file="./onesd.gif")

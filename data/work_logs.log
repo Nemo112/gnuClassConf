@@ -71390,3 +71390,33 @@ lightdm is already the newest version.
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
 ++++++++++++++++++++++++++++++++++++++++++++
+[19:20:17 14.09.2014]
+/proc/mounts already there
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:17 14.09.2014]
+/proc/mounts already there
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:17 14.09.2014]
+mount: proc je již připojeno, či je /NFSROOT/class/proc již používáno
+
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:17 14.09.2014]
+mount: podle mtab je proc již připojeno na /NFSROOT/class/proc
+
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:17 14.09.2014]
+mount: sysfs je již připojeno, či je /NFSROOT/class/sys již používáno
+
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:17 14.09.2014]
+mount: podle mtab je sysfs již připojeno na /NFSROOT/class/sys
+
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:20 14.09.2014]
+umount: /NFSROOT/class/proc není připojeno
+
+++++++++++++++++++++++++++++++++++++++++++++
+[19:20:20 14.09.2014]
+umount: /NFSROOT/class/sys není připojeno
+
+++++++++++++++++++++++++++++++++++++++++++++

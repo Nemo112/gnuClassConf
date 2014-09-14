@@ -16,6 +16,7 @@ from iTaHand import iTaHand
 from Queue import Empty, Full
 import signal
 from LogWrk import LogWrk
+from ProcLs import ProcLs
 
 if __name__ == "__main__":
 	class App:
@@ -42,11 +43,15 @@ if __name__ == "__main__":
 			self.qo=qo
 			## Logovací třída
 			self.log=LogWrk()
+			## Procesy
+			self.pr=ProcLs()
 		def stFoc(self):
 			""" Metoda zapínající okno mnFocus.py
 			\param self Ukazatel na objekt
 			"""
-			if os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
+			if self.pr.isRnApp("mnFocus.py")==True:
+				print "Already running"
+			elif os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
 				subprocess.Popen("./mnFocus.py", shell=True)
 			else:
 				tkMessageBox.showinfo("Chyba", "Zdá se, že třída ještě není nastavena. Použijte \"Základní nastavení učebny\"")
@@ -54,7 +59,9 @@ if __name__ == "__main__":
 			""" Metoda zapínající okno mnRepair.py
 			\param self Ukazatel na objekt
 			"""
-			if os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
+			if self.pr.isRnApp("mnRepair.py")==True:
+				print "Already running"
+			elif os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
 				subprocess.Popen("./mnRepair.py", shell=True)
 			else:
 				tkMessageBox.showinfo("Chyba", "Zdá se, že třída ještě není nastavena. Použijte \"Základní nastavení učebny\"")
@@ -62,7 +69,9 @@ if __name__ == "__main__":
 			""" Metoda zapínající okno mnClean.py
 			\param self Ukazatel na objekt
 			"""
-			if os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
+			if self.pr.isRnApp("mnClean.py")==True:
+				print "Already running"
+			elif os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
 				subprocess.Popen("./mnClean.py", shell=True)
 			else:
 				tkMessageBox.showinfo("Chyba", "Zdá se, že třída ještě není nastavena. Použijte \"Základní nastavení učebny\"")
@@ -70,7 +79,9 @@ if __name__ == "__main__":
 			""" Metoda zapínající okno mnShare.py
 			\param self Ukazatel na objekt
 			"""
-			if os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
+			if self.pr.isRnApp("mnShare.py")==True:
+				print "Already running"
+			elif os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
 				subprocess.Popen("./mnShare.py", shell=True)
 			else:
 				tkMessageBox.showinfo("Chyba", "Zdá se, že třída ještě není nastavena. Použijte \"Základní nastavení učebny\"")
@@ -78,7 +89,10 @@ if __name__ == "__main__":
 			""" Metoda zapínající okno closeSetup.py
 			\param self Ukazatel na objekt
 			"""
-			subprocess.Popen("./closeSetup.py", shell=True)
+			if self.pr.isRnApp("closeSetup.py")==True:
+				print "Already running"
+			else:
+				subprocess.Popen("./closeSetup.py", shell=True)
 		def paintLayout(self):
 			""" Metoda vykreslující grafické prvky okna
 			Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem
@@ -151,7 +165,9 @@ if __name__ == "__main__":
 			""" Metoda pro spuštění povolení a zakázání
 			\param self Ukazatel na objekt
 			"""
-			if os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
+			if self.pr.isRnApp("mnEnDis.py")==True:
+				print "Already running"
+			elif os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
 				subprocess.Popen("./mnEnDis.py", shell=True)
 			else:
 				tkMessageBox.showinfo("Chyba", "Zdá se, že třída ještě není nastavena. Použijte \"Základní nastavení učebny\"")
