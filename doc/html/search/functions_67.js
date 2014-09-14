@@ -7,6 +7,7 @@ var searchData=
   ['getcpuload',['getCpuLoad',['../d0/d3a/classSysLoad_1_1SysLoad.html#a0e61f72ce5be5549a61836ae78352462',1,'SysLoad::SysLoad']]],
   ['getdefgtw',['getDefGtw',['../d0/d38/classConfSys_1_1ConfSys.html#a5e40e32204d5c5b8f1cf7e28f215680a',1,'ConfSys::ConfSys']]],
   ['getdefgw',['getDefGW',['../d9/d30/classConsSys_1_1ConsSys.html#ab56242cf1d07da89a1bbdad369926f77',1,'ConsSys::ConsSys']]],
+  ['getdefgwint',['getDefGwInt',['../d9/d30/classConsSys_1_1ConsSys.html#a676ae0d38fa6aea12ab2dce4381ff872',1,'ConsSys::ConsSys']]],
   ['getdfilint',['getDfIlInt',['../d9/d30/classConsSys_1_1ConsSys.html#ae4a40c5b960925adc2263425da8e7288',1,'ConsSys::ConsSys']]],
   ['getdnsser',['getDnsSer',['../d9/d30/classConsSys_1_1ConsSys.html#aa4f9f92600aab89b6a70e72dbef258ee',1,'ConsSys::ConsSys']]],
   ['getethip',['getEthIp',['../d9/d30/classConsSys_1_1ConsSys.html#a9d9dce75471df6c59b12c8e440e849d5',1,'ConsSys::ConsSys']]],

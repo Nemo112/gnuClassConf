@@ -69,7 +69,7 @@ if __name__ == "__main__":
 ## Řádné spuštění aplikace probíhá pomocí spuštění skriptu ./main.py.
 ## Aplikace spoléhá, že její umístění je v /opt/gnuClassConf/, pokud tomu tak není, může dojít k problémům.
 ##
-##\section Požadavky na vývoj a spuštění
+##\section Požadavky
 ## Pro vývoj je potřeba jakékoliv textové IDE. Pokud spuštíte projekt z obrazu, nalézá se v systému Scite.
 ## Vývoj je určen pro systém Debian verze 7 s instalací Python verze 2.7.3.
 ##

@@ -8,6 +8,7 @@ import time
 import shutil
 import subprocess
 import os
+from optparse import OptionParser
 
 class clImaOs:
 	""" \brief Třída s metodami pro úklid systému
@@ -38,3 +39,18 @@ class clImaOs:
 		"""
 		for line in self.sy.runProcess("apt-get autoclean"):
 			print line,
+
+if __name__ == "__main__":
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Serve for cleaning up apt")
+	parser.add_option("-c", "--clean-image", action="store_true", dest="cleanIm", default=False, help="Clean client image")
+	parser.add_option("-C", "--clean-system", action="store_true", dest="cleanSy", default=False, help="Clean host")
+	## Argumenty a parametry z parseru
+	(args, opts) = parser.parse_args()
+	## Instance objektu
+	cl=clImaOs()
+	if args.cleanSy == True:
+		cl.cleanSystem()
+	if args.cleanIm == True:
+		cl.cleanImage()
+	

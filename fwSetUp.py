@@ -4,6 +4,7 @@
 ## \brief Ovládání doménového přístupu pomocí klienského /etc/hosts a /etc/resolv.conf
 import re
 from ConsSys import ConsSys
+from optparse import OptionParser
 
 class fwSetUp:
 	""" \brief Třída obsahující metody pro práci s /etc/hosts
@@ -90,7 +91,7 @@ class fwSetUp:
 		tar.write(ts) 
 		tar.close()
 	def unBlNet(self):
-		""" Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta)
+		""" Metoda odblokuje přístup na internet (upraví /etc/resolv.conf hosta)
 		\param self Ukazatel na objekt
 		\return True pokud vše projde, False pokud už v listu neni
 		"""
@@ -127,4 +128,28 @@ class fwSetUp:
 				i += 1
 		return lst
 if __name__ == "__main__":
-	print("Jen pro import")
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Serve for /etc/hosts management in client filesystem")
+
+	parser.add_option("-b", "--block-net", action="store_true", dest="prBl", default=False,  help="Block internet by messing DNS path in client list")
+
+	parser.add_option("-u", "--unblock-net", action="store_true", dest="prUl", default=False, help="Unblock internet by messing DNS path in client list")
+
+	parser.add_option("-l", "--blocked-list",  action="store_true", dest="lst", default=False, help="Give a list of blocked domains")
+	parser.add_option("-s", "--block-domain", action="store", type="string", dest="blD", default="", help="Tells to hosts that domain is on different IP")
+	parser.add_option("-g", "--unblock-domain", action="store", type="string", dest="unDom", default="", help="Unblock domain")
+	## Argumenty a parametry z parseru			
+	(args, opts) = parser.parse_args()
+	## Instance objektu
+	f=fwSetUp()
+	if args.prUl == True:
+		f.unBlNet()
+	if args.lst == True:
+		for i in f.getLstBl():
+			print f.getLstBl()[i]['hostname']
+	if args.prBl == True:
+		f.blNet()
+	if args.unDom != "":
+		f.unDom(args.unDom)
+	if args.blD != "":
+		f.blDom(args.blD)

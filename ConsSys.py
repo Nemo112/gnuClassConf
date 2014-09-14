@@ -15,6 +15,11 @@ import os
 import tarfile
 import hashlib
 import crypt
+from optparse import OptionParser
+import sys
+import array
+from GetIfAdrs import *
+
 
 class ConsSys:
 	""" 
@@ -22,6 +27,41 @@ class ConsSys:
 	Obsahuje ucelenou formu pro práci s prostředky jako ip,
 	spouštěče ostatních skriptů a další, ...
 	"""
+	def allUpWIp(self):
+		""" 
+		Metoda vypíše aktivní rozhraní i s IP adresou
+		\param self Ukazatel na objekt
+		"""
+		is_64bits = sys.maxsize > 2**32
+		struct_size = 40 if is_64bits else 32
+		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+		max_possible = 8 # initial value
+		while True:
+			bytes = max_possible * struct_size
+			names = array.array('B', '\0' * bytes)
+			outbytes = struct.unpack('iL', fcntl.ioctl(
+				s.fileno(),
+				0x8912,  # SIOCGIFCONF
+				struct.pack('iL', bytes, names.buffer_info()[0])
+			))[0]
+			if outbytes == bytes:
+				max_possible *= 2
+			else:
+				break
+		namestr = names.tostring()
+		return [(namestr[i:i+16].split('\0', 1)[0])
+			for i in range(0, outbytes, struct_size)]
+	def getDefGwInt(self):
+		""" 
+		Metoda vrátí rozhraní, které vede k defaultní bráně 
+		\param self Ukazatel na objekt
+		\return String obsahující jméno rozhraní veoudícho k defaultní brány
+		"""		
+		de=""
+		for i in self.getEths():
+			if self.compIpByMask(self.getNetmsk(i),self.getDefGW(),self.getEthIp(i)):
+				de=i
+		return de
 	def erAll(self):
 		""" 
 		Metoda vymaže obraz a záznam o instalovaném software
@@ -79,18 +119,17 @@ class ConsSys:
 			line = p.stdout.readline()
 			yield line
 			if(retcode is not None):
-				break		
+				break
 	def getEths(self):
 		""" Metoda ze systému vytáhne jména eth zařízení a vrátí je v poli
 		\param self Ukazatel na objekt
 		\return Pole všech eth zařízení
 		"""
-		p = subprocess.Popen(["ip","link","show"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-		k=re.compile("eth[0-9]+")
-		r=k.finditer(p.communicate()[0])
-		eths=()
-		for i in r:
-			eths = eths + (i.group(),)
+		eths=[]
+		tm=get_network_interfaces()
+		for i in tm:
+			#print i
+			eths.append(str(i).split(" ")[0])
 		return eths
 	def getEthIp(self,et):
 		""" Metoda ze systému vytáhne ip adresy eth zařízení a vrátí je v txt
@@ -134,7 +173,6 @@ class ConsSys:
 		\return String obsahující masku rozhraní
 		"""
 		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x891b, struct.pack('256s',ifname))[20:24])
 		try:
 			return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x891b, struct.pack('256s',ifname))[20:24])
 		except:
@@ -163,7 +201,7 @@ class ConsSys:
 		"""
 		try:
 			header = {"pragma" : "no-cache"}
-			req = urllib2.Request("http://gnuskola.cz", headers=header)
+			req = urllib2.Request("http://www.example.com", headers=header)
 			response=urllib2.urlopen(req,timeout=2)
 			return True
 		except urllib2.URLError as err:
@@ -267,4 +305,16 @@ class ConsSys:
 		tar.extractall()
 		tar.close()
 if __name__ == "__main__":
-	print("Jen pro import")
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Close system settings and methods")
+	parser.add_option("-e", "--erase-all", action="store_true", dest="err", default=False, help="Erase whole client image")
+	parser.add_option("-l", "--eth-list", action="store_true", dest="lst", default=False, help="Give a list of eth interfaces")
+	## Argumenty a parametry z parseru
+	(args, opts) = parser.parse_args()
+	## Instance objektu
+	cs=ConsSys()
+	if args.err ==True:
+		cs.erAll()
+	if args.lst == True:
+		for i in cs.getEths():
+			print i

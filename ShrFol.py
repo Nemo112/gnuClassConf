@@ -7,6 +7,7 @@ from ConsSys import ConsSys
 from LogWrk import LogWrk
 import os
 import subprocess
+from optparse import OptionParser
 
 class ShrFol:
 	""" \brief Třída s metodami pro sdílení souborů do obrazu klientských počítačů
@@ -183,13 +184,27 @@ class ShrFol:
 		tar.write(obs)
 		tar.close()
 if __name__ == "__main__":
-	print("Jen pro import")
-	#sh=ShrFol()
-	#sh.addToList("/prd")
-	#sh.addToList("/home")
-	#print sh.shList()
-	#sh.remFrList("/home")
-	#print sh.shList()
-	#sh.uMntAll()
-	#sh.intrCli()
-	
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Serve for setting up shares in client filesystem")
+
+	parser.add_option("-l", "--shared-list", action="store_true", dest="lst", default=False, help="Give a list of shared files")
+
+	parser.add_option("-s", "--share-new", action="store", type="string", dest="nfo", default="", help="Share new folder")
+
+	parser.add_option("-u", "--unshare-folder", action="store", type="string", dest="ufo", default="", help="Unshare folder")
+	## Argumenty a parametry z parseru			
+	(args, opts) = parser.parse_args()
+	## Instance objektu	
+	sh=ShrFol()
+	if args.lst == True:
+		for i in sh.shList():
+			print i
+	if args.nfo != "":
+		if os.path.isdir(args.nfo) and args.nfo != "/":
+			sh.addToList(args.nfo)
+			sh.genListSh()
+			sh.expShrs()
+	if args.ufo != "":
+		sh.remFrList(args.ufo)
+		sh.uMntLst(args.ufo)
+		sh.genListSh()

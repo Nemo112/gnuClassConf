@@ -10,6 +10,8 @@ import subprocess
 import os
 from LogWrk import LogWrk
 from ShrFol import ShrFol
+from optparse import OptionParser
+from ParConfFl import ParConfFl
 
 class ConfSys:
 	""" \brief Třída obsahující metody pro nastavení systému
@@ -30,20 +32,7 @@ class ConfSys:
 				## Rozhraní defaultní brány
 				self.de=i
 		## Logovací třída
-		self.log=LogWrk()	
-	#def __del__(self):
-	#	""" Destruktor třídy okna
-	#	Pročistí mounty a t.d.
-	#	\param self Ukazatel na objekt
-	#	"""
-	#	tos='umount /NFSROOT/class/proc'
-	#	for line in self.sy.runProcess(tos):
-	#		print line,
-	#		self.log.write(line)
-	#	tos='umount /NFSROOT/class/sys'
-	#	for line in self.sy.runProcess(tos):
-	#		print line,
-	#		self.log.write(line)
+		self.log=LogWrk()
 	def getDefGtw(self):
 		""" Getter na bránu
 		\param self Ukazatel na objekt
@@ -585,8 +574,42 @@ class ConfSys:
 		tar.close()
 		os.chmod("/NFSROOT/class/home/student/.config/autostart/chgback.desktop",0777)
 if __name__ == "__main__":
-	print("Jen pro import")
-	#sf=ConfSys("eth1")
-	#sf.setUpHsn()
-	#sf.copyXBac()
-	#sf.setUpFst()
+	## vstup pro parser konf souboru
+	pr=ParConfFl()
+	## vnitřní rozhraní pro síť
+	ine=pr.getInterfaces()['inti']
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Installation and detail configuration for client image and host system")
+	parser.add_option("-o", "--show-out-eth", action="store_true", dest="out", default=False, help="Show outer interface")
+	parser.add_option("-s", "--setup-services", action="store_true", dest="set", default=False, help="Setting up network services configuration")
+	parser.add_option("-n", "--setup-network", action="store_true", dest="net", default=False, help="Setting up network IP and NAT")
+	parser.add_option("-c", "--install-x", action="store_true", dest="xin", default=False, help="Install X windows")
+	parser.add_option("-b", "--install-browser", action="store_true", dest="bin", default=False, help="Install Iceweasel to image")
+	parser.add_option("-k", "--install-kernel", action="store_true", dest="kin", default=False, help="Install kernel to TFTP and clients filesystem")
+	parser.add_option("-i", "--inner-interface", action="store", type="string", dest="sf", default="", help="Settting up for interface inside of class")
+	## Argumenty a parametry z parseru
+	(args, opts) = parser.parse_args()
+	if args.sf != "":
+		ine=args.sf
+	## instance objektu pro práci s klientskou stanicí
+	sf=ConfSys(ine)
+	if args.out == True:
+		print sf.getDefGtw()
+	if args.xin == True:
+		sf.copyXorgCo()
+		sf.installXfce()
+		sf.setUpKey()
+		sf.copyXBac()
+		sf.installDm()
+	if args.bin == True:
+		sf.installIce()
+	if args.kin == True:
+		sf.createKer()
+	if args.set == True:
+		sf.setUpDH()
+		sf.setUpNFS()
+		sf.setUpHsn()
+		sf.setUpFst()
+	if args.net == True:
+		sf.resetNet()
+		sf.setUpMasq()

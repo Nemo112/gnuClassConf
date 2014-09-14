@@ -4,6 +4,8 @@
 ## \brief Třída pro kontrolu dhcp serveru
 import time
 import os
+import sys
+from optparse import OptionParser
 
 class DhcpCheck:
 	"""\brief Třída pro práci se souborem vypujčených IP adres
@@ -76,4 +78,31 @@ class DhcpCheck:
 					nln=" ".join(line.split())
 					return nln.split(" ")[2].replace(";","")
 if __name__ == "__main__":
-	print("Jen pro import")
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Serve for DHCP lists checks")
+	parser.add_option("-p", "--print-list", action="store_true", dest="prDh", default=False, help="Says klients in DHCP list")
+	parser.add_option("-m", "--get-mac", action="store", type="string", dest="mac", help="Says MAC from IP adress in DHCP lease file")
+	## Argumenty a parametry z parseru
+	(args, opts) = parser.parse_args()
+	## Instance objektu
+	dh=DhcpCheck()
+	if args.prDh == True:
+		for i in dh.getClList():
+			print i
+	if args.mac != "":
+		## IP adresa z argumentu
+		m=args.mac.split(".")
+		if len(m) != 4:
+			print "Error in IP given"
+			sys.exit(2)
+		for i in m:
+			try:
+				## Dekadické číslo IP adresy
+				n=int(i)
+			except:
+				print "Error in IP given"
+				sys.exit(2)				
+			if n > 255 or n < 0:
+				print "Error in IP given"
+				sys.exit(2)
+		print dh.getMacByIpDh(args.mac)

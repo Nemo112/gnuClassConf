@@ -6,6 +6,7 @@
 from ConsSys import ConsSys
 from LogWrk import LogWrk
 import os
+from optparse import OptionParser
 
 class inFocus:
 	""" \brief Třída obsahující metody pro instalaci programů do obrazu
@@ -44,6 +45,19 @@ class inFocus:
 		""" Oprav konfigurace balíčků
 		\param self Ukazatel na objekt
 		"""
+		mn=False
+		if len(os.listdir("/NFSROOT/class/proc")) <= 1:
+			mn=True
+			# mount proc /NFSROOT/class/proc -t proc
+			tos='mount proc /NFSROOT/class/proc -t proc'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+			# mount sysfs /NFSROOT/class/sys -t sysfs
+			tos='mount sysfs /NFSROOT/class/sys -t sysfs'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 		nm = self.path + "/clearConf.sh"
 		self.sy.removeFl(nm)
 		tar = open (nm, 'a')
@@ -58,10 +72,32 @@ class inFocus:
 		for line in self.sy.runProcess(tos):
 			print line,
 			self.log.write(line)
+		if mn == True:
+			tos='umount /NFSROOT/class/proc'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+			tos='umount /NFSROOT/class/sys'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 	def aptAutorem(self):
 		""" Autoremove balíčků z obrazu
 		\param self Ukazatel na objekt
 		"""
+		mn=False
+		if len(os.listdir("/NFSROOT/class/proc")) <= 1:
+			mn=True
+			# mount proc /NFSROOT/class/proc -t proc
+			tos='mount proc /NFSROOT/class/proc -t proc'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+			# mount sysfs /NFSROOT/class/sys -t sysfs
+			tos='mount sysfs /NFSROOT/class/sys -t sysfs'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 		nm = self.path + "/autorem.sh"
 		self.sy.removeFl(nm)
 		tar = open (nm, 'a')
@@ -74,6 +110,15 @@ class inFocus:
 		for line in self.sy.runProcess(tos):
 			print line,
 			self.log.write(line)
+		if mn == True:
+			tos='umount /NFSROOT/class/proc'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
+			tos='umount /NFSROOT/class/sys'
+			for line in self.sy.runProcess(tos):
+				print line,
+				self.log.write(line)
 	def uniXmlCo(self,name):
 		""" Upravení installed souboru, kde jsou zapsány instalované účely
 		\param self Ukazatel na objekt
@@ -118,4 +163,20 @@ class inFocus:
 				ts.append(ln)
 		return ts
 if __name__ == "__main__":
-	print("Jen pro import")
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Work with focuses in client filesystem")
+	parser.add_option("-l", "--installed-list", action="store_true", dest="lst", default=False, help="Give a list of installed focuses")
+	parser.add_option("-c", "--clean-dpkg", action="store_true", dest="cle", default=False, help="Clean dpkg, apt and force install apt-get packages which failed")
+	parser.add_option("-r", "--auto-rem", action="store_true", dest="rem", default=False, help="Clean image by apt-get autoremove")
+	## Argumenty a parametry z parseru
+	(args, opts) = parser.parse_args()
+	## Instance objektu
+	f=inFocus()
+	if args.lst == True:
+		for i in f.getLstInst():
+			print i
+	if args.cle == True:
+		f.dpkgConfA()
+	if args.rem == True:
+		f.aptAutorem()
+		

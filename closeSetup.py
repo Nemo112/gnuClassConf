@@ -225,8 +225,11 @@ if __name__ == "__main__":
 				self.etg=etf[0]
 				self.vf.set(etf[0])
 			else:
-				self.etg=etf[-1]
-				self.vf.set(etf[-1])
+				i=-1
+				while self.sys.getDefGwInt() ==  etf[i]:
+					i -= 1
+				self.etg=etf[i]
+				self.vf.set(etf[i])
 			opteth = OptionMenu(dnwg,self.vf, *etf, command=self.chge)
 			opteth.pack()
 			dnwb=LabelFrame(self.root, text="Instalace a nastavení", padx=5, pady=5)

@@ -4,6 +4,7 @@
 ## \brief Třída pro načítání konfiguračních souborů
 
 import os
+from optparse import OptionParser
 
 class ParConfFl:
 	""" \brief Třída obsahující metody s prací s načítáním konfiguračních souborů
@@ -53,4 +54,19 @@ class ParConfFl:
 		open("./configuration/interfaces","w").write(tmp)
 		return True
 if __name__ == "__main__":
-	print("Jen pro import")
+	## Parser argumentů a parametrů
+	parser = OptionParser(usage="usage: %prog [args]\n Parser for configuration file talking about interfaces")
+	parser.add_option("-l", "--class-interfaces", action="store_true", dest="inn", default=False, help="Showing which interface is for class and which for outer connections")
+	parser.add_option("-i", "--inner-interface", action="store", type="string", dest="inner", default="", help="Settting up for interface inside of class")
+	parser.add_option("-o", "--outer-interface", action="store", type="string", dest="outer", default="", help="Settting up for interface outside of class")
+	## Argumenty a parametry z parseru
+	(args, opts) = parser.parse_args()
+	## Instance objektu
+	pr=ParConfFl()
+	if args.inn == True:
+		print "Inner interface: " + pr.getInterfaces()['inti']
+		print "Outer interface: " + pr.getInterfaces()['outi']
+	if args.inner != "":
+		pr.setInterfaces(args.inner,pr.getInterfaces()['outi'])
+	if args.outer != "":
+		pr.setInterfaces(pr.getInterfaces()['inti'],args.outer)
