@@ -1,7 +1,7 @@
 #!/bin/bash
 p=$PWD;
-cd /;
-tar cvf /opt/gnuClassConf.tar /opt/gnuClassConf;
-cd /opt;
+cd ..;
+tar cvf ./gnuClassConf.tar ./gnuClassConf;
 gzip -f ./gnuClassConf.tar;
+scp ./gnuClassConf.tar.gz nemo@nemor.cz:/raid/home/nemo/00_imp_data_rep_nemo/SKOLA2/baka_prace;
 cd $p;

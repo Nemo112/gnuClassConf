@@ -19,13 +19,13 @@ class DhcpCheck:
 		self.pathLease=pthLs
 		## Obsah souboru propůjčených adres
 		self.leasCont=""
-		if os.path.isfile(pthLs) == False:
-			return
-		try:
-			with open(pthLs,'r') as cont:
-				self.leasCont=cont.read()
-		except:
-			return
+		#if os.path.isfile(pthLs) == False:
+		#	return
+		#try:
+		#	with open(pthLs,'r') as cont:
+		#		self.leasCont=cont.read()
+		#except:
+		#	return
 	def chcNew(self):
 		""" Kontroluje nově propůjčené IP adresy
 		\param self Ukazatel na objekt

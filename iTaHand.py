@@ -15,6 +15,8 @@ class iTaHand:
 		""" Konstruktor třídy iTalcu
 		\param self Ukazatel na objekt
 		"""
+		## Domácí složka
+		self.home=os.path.expanduser("~")
 		## Instance systémové třídy pro práci se systémem
 		self.sy=ConsSys()
 	def instServ(self):
@@ -24,8 +26,9 @@ class iTaHand:
 		#subprocess.Popen("./instItalcMa.sh", shell=True)
 		for line in self.sy.runProcess("./instItalcMa.sh"):
 			print line,
-		os.makedirs("/root/.italc/")
-		self.sy.copyLargeFile("./data/emptyConfITa","/root/.italc/globalconfig.xml")
+		self.sy.makeDir(self.home + "/.italc/")
+		self.sy.removeFl(self.home + "/.italc/globalconfig.xml")
+		self.sy.copyLargeFile("./data/emptyConfITa",self.home + "/.italc/globalconfig.xml")
 	def instClie(self):
 		""" Metoda pro instalaci iTalcu na klientu
 		\param self Ukazatel na objekt
@@ -106,9 +109,9 @@ class iTaHand:
 		\param self Ukazatel na objekt
 		\param id String obsahující id v tabulce
 		"""
-		if os.path.isfile("/root/.italc/globalconfig.xml") == False:
+		if os.path.isfile(self.home + "/.italc/globalconfig.xml") == False:
 			return False
-		fl=open("/root/.italc/globalconfig.xml","r").read()
+		fl=open(self.home + "/.italc/globalconfig.xml","r").read()
 		for ln in fl.split("\n"):
 			if id in ln:
 				return True
@@ -138,19 +141,31 @@ class iTaHand:
 		\param ip String obsahující ip adresu klienta
 		\param mac String obsahující mac adresu klienta
 		"""
-		if os.path.isfile("/root/.italc/globalconfig.xml") == False:
+		if os.path.isfile(self.home + "/.italc/globalconfig.xml") == False:
 			return False
 		if self.isInTab(ip):
 			return False
-		twr=""
-		fl=open("/root/.italc/globalconfig.xml","r")
+		fl=open(self.home + "/.italc/globalconfig.xml","r")
 		fg=fl.read()
+		fl.close()
+		#Test, zdali je konfig uplně prazdný
+		for line in fg.split("\n"):
+			if "<classroom name=\"ducks\"/>" in line:
+				print "yep"
+				self.sy.removeFl(self.home + "/.italc/globalconfig.xml")
+				self.sy.copyLargeFile("./data/emptyConfITa",self.home + "/.italc/globalconfig.xml")
+				break
+		#Přidání IP
+		fl=open(self.home + "/.italc/globalconfig.xml","r")
+		fg=fl.read()
+		fl.close()
+		twr=""
 		for ln in fg.split("\n"):
 			if  "<classroom name=\"ducks\">" in ln:
 				twr = twr + ln + "\n<client hostname=\"" + ip + "\" mac=\"" + mac + "\" type=\"0\" id=\"" +  self.idCli(ip) + "\" name=\"" + self.nameCli(ip) + "\"/> \n"
 			else:
 				twr = twr + ln + "\n"
-		wr=open("/root/.italc/globalconfig.xml","w")
+		wr=open(self.home + "/.italc/globalconfig.xml","w")
 		wr.write(twr)
 		wr.close()
 		return True			
@@ -174,15 +189,15 @@ class iTaHand:
 		\param self Ukazatel na objekt
 		\param ip String obsahující ip adresu klienta
 		"""
-		if os.path.isfile("/root/.italc/globalconfig.xml") == False:
+		if os.path.isfile(self.home + "/.italc/globalconfig.xml") == False:
 			return False
 		twr=""
-		fl=open("/root/.italc/globalconfig.xml","r")
+		fl=open(self.home + "/.italc/globalconfig.xml","r")
 		fg=fl.read()
 		for ln in fg.split("\n"):
 			if ip not in ln:
 				twr = twr + ln + "\n"
-		wr=open("/root/.italc/globalconfig.xml","w")
+		wr=open(self.home + "/.italc/globalconfig.xml","w")
 		wr.write(twr)
 		wr.close()
 		return True	
@@ -191,9 +206,9 @@ class iTaHand:
 		\param self Ukazatel na objekt
 		\param ip String obsahující ip adresu klienta
 		"""
-		if os.path.isfile("/root/.italc/globalconfig.xml") == False:
+		if os.path.isfile(self.home + "/.italc/globalconfig.xml") == False:
 			return False
-		fl=open("/root/.italc/globalconfig.xml","r").read()
+		fl=open(self.home + "/.italc/globalconfig.xml","r").read()
 		for ln in fl.split("\n"):
 			if ip in ln:
 				return True
@@ -224,7 +239,7 @@ class iTaHand:
 			print line,
 		for line in self.sy.runProcess("cp -r /etc/italc/keys/public /NFSROOT/class/etc/italc/keys"):
 			print line,
-		for line in self.sy.runProcess("chmod 444 /root/.italc/globalconfig.xml"):
+		for line in self.sy.runProcess("chmod 444 " + self.home + "/.italc/globalconfig.xml"):
 			print line,
 		self.setUpIcaS()
 	def setCliSc(self):
