@@ -228,6 +228,7 @@ if __name__ == "__main__":
 							log.write("Přidán " + i)
 						qo.put("Přidáno")
 						qo.put("Restartujte iTalc")
+				# Vyčkává vteřinu pro refresh zátěže
 				time.sleep(1)
 	## Vstupní fronta pracovního vlákna
 	qi = multiprocessing.Queue()

@@ -4,8 +4,19 @@
 	echo "Použití ./$0 <vnitřní eth rozhraní> <vnější eth rozhraní>"
 	exit 3;
 }
-[[ $1 =~ ^eth[0-9]*$ ]] || { exit 1; }
-[[ $2 =~ ^eth[0-9]*$ ]] || { exit 1; }
+
+eths=(`ip link | awk 'BEGIN{FS=" "}{print $2}' | grep ".*:$" | tr -d ':'`);
+ff=0;
+sf=0;
+
+for i in ${eths[@]};do
+	[[ "$1" == "$i" ]] && { ff=1; }
+	[[ "$2" == "$i" ]] && { sf=1; }
+done;
+
+[[ "$ff" == "0" ]] && { exit 1; }
+[[ "$sf" == "0" ]] && { exit 1; }
+
 [[ "$1" == "$2" ]] && { exit 2; }
 [[ -f "/etc/init.d/iptables-persistent" ]] || {
 	export DEBIAN_FRONTEND=noninteractive
