@@ -331,9 +331,6 @@ if __name__ == "__main__":
 					setUNt.setUpDH()
 					# nastavit nfs
 					setUNt.setUpNFS()
-					# změna hostname
-					# vytvořit rc skript, který nastaví hostname na "student<poslední oktet IP>"
-					setUNt.setUpHsn()
 					# vkládání záznamů do fstab
 					setUNt.setUpFst()
 				# nastavit locales v obrazu
@@ -386,6 +383,10 @@ if __name__ == "__main__":
 				if ig == 1:
 					# přidání pozadí
 					setUNt.copyXBac()
+				if nn == 1:
+					# změna hostname
+					# vytvořit rc skript, který nastaví hostname na "student<poslední oktet IP>"
+					setUNt.setUpHsn()
 				# restartuji služby
 				qo.put("Restartuji služby")
 				# zastavení network managera

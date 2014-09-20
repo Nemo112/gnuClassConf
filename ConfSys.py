@@ -532,10 +532,12 @@ class ConfSys:
 		""" Kopíruji Xorg konfiguraci
 		\param self Ukazatel na objekt
 		"""
+		# Kopie XORG konfiguračních souborů
 		self.sy.extGzTar("./data/dataXorg.tar.gz")
 		self.sy.removeFl("/NFSROOT/class/etc/X11")
 		shutil.move("./dataXorg/X11","/NFSROOT/class/etc/")
 		os.rmdir("./dataXorg")
+		# Přidání české klávesy
 		self.sy.removeFl("/NFSROOT/class/etc/default/keyboard")
 		tar = open ("/NFSROOT/class/etc/default/keyboard", 'a')
 		tar.write("# KEYBOARD CONFIGURATION FILE\n")
@@ -550,6 +552,24 @@ class ConfSys:
 		tar.write("BACKSPACE=\"guess\"\n")
 		os.chmod("/NFSROOT/class/etc/default/keyboard",0644)
 		tar.close()
+		# Změna klávesy při startu uživatele
+		self.sy.removeFl("/NFSROOT/class/home/student/.config/autostart/chanKeyb.desktop")
+		tar = open ("/NFSROOT/class/home/student/.config/autostart/chanKeyb.desktop", 'a')
+		tar.write("[Desktop Entry]\n")
+		tar.write("Type=Application\n")
+		tar.write("Name=My Script\n")
+		tar.write("Exec=/addons/chgKey.sh\n")
+		tar.write("Icon=system-run\n")
+		tar.write("X-GNOME-Autostart-enabled=true\n")
+		tar.close()
+		os.chmod("/NFSROOT/class/home/student/.config/autostart/chanKeyb.desktop",0777)
+		# Přidání dávky pro změnu klávesy
+		self.sy.removeFl("/NFSROOT/class/addons/chgKey.sh")
+		tar = open ("/NFSROOT/class/addons/chgKey.sh", 'a')
+		tar.write("#!/bin/bash\n")
+		tar.write("setxkbmap cz;\n")
+		tar.close()
+		os.chmod("/NFSROOT/class/addons/chgKey.sh",0777)
 	def copyXBac(self):
 		""" Kopíruji X pozadi
 		\param self Ukazatel na objekt
