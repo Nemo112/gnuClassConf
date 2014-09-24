@@ -293,7 +293,7 @@ class ConsSys:
 				tor['df']=i
 			if self.getEthIp(i) == "192.168.111.1":
 				tor['in']=i
-		if tor['in'] is None:
+		if  tor.has_key('in') == False:
 			tor['in']=tor['df']
 		return tor
 	def extGzTar(self,who):

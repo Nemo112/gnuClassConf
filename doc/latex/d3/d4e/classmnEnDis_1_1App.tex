@@ -11,8 +11,10 @@ Třída obsahující metody s prací s oknem Hlavní okno aplikace, slouží jak
 \item 
 def \hyperlink{classmnEnDis_1_1App_a3ac75ba1fca4a08b0d67aa7e90955432}{\-\_\-\-\_\-init\-\_\-\-\_\-}
 \begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
-def \hyperlink{classmnEnDis_1_1App_a4be4b410762f472fb88468fa0558477b}{cl\-Set}
-\begin{DoxyCompactList}\small\item\em Metoda zapínající okno \hyperlink{closeSetup_8py}{close\-Setup.\-py}. \end{DoxyCompactList}\item 
+def \hyperlink{classmnEnDis_1_1App_af13efa3169ba4793cf1b89047a6badb4}{key\-Se}
+\begin{DoxyCompactList}\small\item\em Metoda reagující na vyhledávání v entry boxu. \end{DoxyCompactList}\item 
+def \hyperlink{classmnEnDis_1_1App_ac43efb517d5669730e3fc10b0fb3fda0}{list\-Res}
+\begin{DoxyCompactList}\small\item\em Metoda pro třídění pole domén podle regulárního výrazu. \end{DoxyCompactList}\item 
 def \hyperlink{classmnEnDis_1_1App_a93d7d009d63cf2e43b27e518a6c13a34}{paint\-Layout}
 \begin{DoxyCompactList}\small\item\em Metoda vykreslující grafické prvky okna Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem. \end{DoxyCompactList}\item 
 def \hyperlink{classmnEnDis_1_1App_a8ad51ad767ffedec6efb20f08edf0c15}{load\-Items}
@@ -36,6 +38,9 @@ def \hyperlink{classmnEnDis_1_1App_affc24d80e2923473251a5321f50e11fb}{qquit}
 \hypertarget{classmnEnDis_1_1App_ace76e4f1ae369e83cd7f8f827b1615f6}{\hyperlink{classmnEnDis_1_1App_ace76e4f1ae369e83cd7f8f827b1615f6}{root}}\label{d3/d4e/classmnEnDis_1_1App_ace76e4f1ae369e83cd7f8f827b1615f6}
 
 \begin{DoxyCompactList}\small\item\em Ukazatel na okno Tk. \end{DoxyCompactList}\item 
+\hypertarget{classmnEnDis_1_1App_a19246a61ca31b63c982bdfd118af4340}{\hyperlink{classmnEnDis_1_1App_a19246a61ca31b63c982bdfd118af4340}{ens}}\label{d3/d4e/classmnEnDis_1_1App_a19246a61ca31b63c982bdfd118af4340}
+
+\begin{DoxyCompactList}\small\item\em String obsahující regulární výraz pro hledání \end{DoxyCompactList}\item 
 \hypertarget{classmnEnDis_1_1App_a410cba0728f165e5ee0a37f920fcd2ed}{\hyperlink{classmnEnDis_1_1App_a410cba0728f165e5ee0a37f920fcd2ed}{ew}}\label{d3/d4e/classmnEnDis_1_1App_a410cba0728f165e5ee0a37f920fcd2ed}
 
 \begin{DoxyCompactList}\small\item\em Vstup pro přidání domény k blokování \end{DoxyCompactList}\item 
@@ -73,22 +78,6 @@ Konstruktor třídy okna.
 
 
 \subsection{Dokumentace k metodám}
-\hypertarget{classmnEnDis_1_1App_a4be4b410762f472fb88468fa0558477b}{\index{mn\-En\-Dis\-::\-App@{mn\-En\-Dis\-::\-App}!cl\-Set@{cl\-Set}}
-\index{cl\-Set@{cl\-Set}!mnEnDis::App@{mn\-En\-Dis\-::\-App}}
-\subsubsection[{cl\-Set}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-En\-Dis.\-App.\-cl\-Set (
-\begin{DoxyParamCaption}
-\item[{}]{self}
-\end{DoxyParamCaption}
-)}}\label{d3/d4e/classmnEnDis_1_1App_a4be4b410762f472fb88468fa0558477b}
-
-
-Metoda zapínající okno \hyperlink{closeSetup_8py}{close\-Setup.\-py}. 
-
-
-\begin{DoxyParams}{Parametry}
-{\em self} & Ukazatel na objekt \\
-\hline
-\end{DoxyParams}
 \hypertarget{classmnEnDis_1_1App_adf3a656d9cbec9df505eb8fabb88627e}{\index{mn\-En\-Dis\-::\-App@{mn\-En\-Dis\-::\-App}!key\-En@{key\-En}}
 \index{key\-En@{key\-En}!mnEnDis::App@{mn\-En\-Dis\-::\-App}}
 \subsubsection[{key\-En}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-En\-Dis.\-App.\-key\-En (
@@ -106,6 +95,44 @@ Metoda pro přidání blokované domény.
 {\em self} & Ukazatel na objekt \\
 \hline
 {\em evt} & Event, který se ale nepoužije \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnEnDis_1_1App_af13efa3169ba4793cf1b89047a6badb4}{\index{mn\-En\-Dis\-::\-App@{mn\-En\-Dis\-::\-App}!key\-Se@{key\-Se}}
+\index{key\-Se@{key\-Se}!mnEnDis::App@{mn\-En\-Dis\-::\-App}}
+\subsubsection[{key\-Se}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-En\-Dis.\-App.\-key\-Se (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{evt}
+\end{DoxyParamCaption}
+)}}\label{d3/d4e/classmnEnDis_1_1App_af13efa3169ba4793cf1b89047a6badb4}
+
+
+Metoda reagující na vyhledávání v entry boxu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em evt} & Event, který se ale nepoužije \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmnEnDis_1_1App_ac43efb517d5669730e3fc10b0fb3fda0}{\index{mn\-En\-Dis\-::\-App@{mn\-En\-Dis\-::\-App}!list\-Res@{list\-Res}}
+\index{list\-Res@{list\-Res}!mnEnDis::App@{mn\-En\-Dis\-::\-App}}
+\subsubsection[{list\-Res}]{\setlength{\rightskip}{0pt plus 5cm}def mn\-En\-Dis.\-App.\-list\-Res (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{reg = {\ttfamily \char`\"{}$\ast$\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{d3/d4e/classmnEnDis_1_1App_ac43efb517d5669730e3fc10b0fb3fda0}
+
+
+Metoda pro třídění pole domén podle regulárního výrazu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na třídu \\
+\hline
+{\em reg} & Regulární výraz pro vyhledáváné \\
 \hline
 \end{DoxyParams}
 \hypertarget{classmnEnDis_1_1App_a8ad51ad767ffedec6efb20f08edf0c15}{\index{mn\-En\-Dis\-::\-App@{mn\-En\-Dis\-::\-App}!load\-Items@{load\-Items}}

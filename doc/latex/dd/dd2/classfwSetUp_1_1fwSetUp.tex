@@ -15,6 +15,8 @@ def \hyperlink{classfwSetUp_1_1fwSetUp_aea3760656409015f15b9b3450edd70e1}{bl\-Do
 \begin{DoxyCompactList}\small\item\em Metoda přidá do /etc/hosts překlad domény na učitelský počítač \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a3a03c76b94db3bc750260ab64d76d755}{un\-Dom}
 \begin{DoxyCompactList}\small\item\em Metoda odebere z /etc/hosts překlad domény na učitelský počítač \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_ab96ab2edba8c87302754c40491ca0d17}{rel\-Bl\-Dom}
+\begin{DoxyCompactList}\small\item\em Metoda oblokuje doménu ale nechá jí v tabulce. \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a75a8c09d8493ac43747cb4c518bef7dd}{is\-Net}
 \begin{DoxyCompactList}\small\item\em Metoda zkontroluje stav blokování klientů \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a4d21f86d17c54919fbdc2e3f069fa471}{bl\-Net}
@@ -136,6 +138,28 @@ Metoda zkontroluje stav blokování klientů
 \begin{DoxyReturn}{Návratová hodnota}
 True pokud jsou blokovány, false pokud ne 
 \end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_ab96ab2edba8c87302754c40491ca0d17}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!rel\-Bl\-Dom@{rel\-Bl\-Dom}}
+\index{rel\-Bl\-Dom@{rel\-Bl\-Dom}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{rel\-Bl\-Dom}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-rel\-Bl\-Dom (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{domain}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_ab96ab2edba8c87302754c40491ca0d17}
+
+
+Metoda oblokuje doménu ale nechá jí v tabulce. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em domain} & Doména k odblokování \\
+\hline
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True pokud vše proběhlo v pořádku, False pokud ne 
+\end{DoxyReturn}
 \hypertarget{classfwSetUp_1_1fwSetUp_a4f770f10b81c0030b1753dfb60452045}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!un\-Bl\-Net@{un\-Bl\-Net}}
 \index{un\-Bl\-Net@{un\-Bl\-Net}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
 \subsubsection[{un\-Bl\-Net}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-un\-Bl\-Net (
@@ -174,6 +198,9 @@ Metoda odebere z /etc/hosts překlad domény na učitelský počítač
 {\em self} & Ukazatel na objekt \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True pokud vše proběhlo v pořádku, False pokud ne 
+\end{DoxyReturn}
 
 
 Dokumentace pro tuto třídu byla generována z následujícího souboru\-:\begin{DoxyCompactItemize}

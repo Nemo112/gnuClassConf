@@ -16,7 +16,7 @@ var searchData=
   ['cleanimage',['cleanImage',['../d5/d13/classclImaOs_1_1clImaOs.html#a98998f9ce2a3918b093ebed313e95061',1,'clImaOs::clImaOs']]],
   ['cleansystem',['cleanSystem',['../d5/d13/classclImaOs_1_1clImaOs.html#adbf1356c7c45a2aeaf9680c50856c18a',1,'clImaOs::clImaOs']]],
   ['clear',['clear',['../dc/dd1/classmnClean_1_1App.html#a7f88384497c1aec6b34293edb587209e',1,'mnClean::App']]],
-  ['clset',['clSet',['../d3/d4e/classmnEnDis_1_1App.html#a4be4b410762f472fb88468fa0558477b',1,'mnEnDis.App.clSet()'],['../d4/d8e/classmnWindow_1_1App.html#a9c892833aaab9a00f5e04afd5cfc83bf',1,'mnWindow.App.clSet()']]],
+  ['clset',['clSet',['../d4/d8e/classmnWindow_1_1App.html#a9c892833aaab9a00f5e04afd5cfc83bf',1,'mnWindow::App']]],
   ['compipbymask',['compIpByMask',['../d9/d30/classConsSys_1_1ConsSys.html#a1ef224020294732e42b40e7ee5664d34',1,'ConsSys::ConsSys']]],
   ['copylargefile',['copyLargeFile',['../d9/d30/classConsSys_1_1ConsSys.html#a32297a919cf09725c56828a6769cff70',1,'ConsSys::ConsSys']]],
   ['copyxbac',['copyXBac',['../d0/d38/classConfSys_1_1ConfSys.html#a56c578bb874bfb2b0b3da19361ddf84b',1,'ConfSys::ConfSys']]],

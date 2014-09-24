@@ -319,7 +319,7 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get install --allow-unauthenticated xfce4 -y\n")
-		tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
+		#tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installXfc.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installXfc.sh'
@@ -348,7 +348,9 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
-		tar.close()
+		tar.write("apt-get install --allow-unauthenticated gdm -y\n")
+		tar.close()	
+		
 		os.chmod("/NFSROOT/class/addons/installDm.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installDm.sh'
 		for line in self.sy.runProcess(tos):
@@ -361,6 +363,21 @@ class ConfSys:
 					qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
 				if "Unpacking" == line.split(" ")[0]:
 					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
+					
+		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
+			cnl=cont.read()
+		obs=""
+		for line in cnl.split("\n"):
+			if "dpkg-reconfigure lightdm;" in line:
+				return
+			if "exit 0" == line:
+				break
+			obs = obs + line  + "\n"
+		obs = obs + "dpkg-reconfigure lightdm;\n"
+		obs = obs + "exit 0\n"
+		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
+		tar.write(obs)
+		tar.close()
 	def installSysDebs(self,qo=None):
 		""" Instaluje základní systém přes deboostrap
 		\param self Ukazatel na objekt
@@ -633,3 +650,4 @@ if __name__ == "__main__":
 	if args.net == True:
 		sf.resetNet()
 		sf.setUpMasq()
+		

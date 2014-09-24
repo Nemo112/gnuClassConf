@@ -105,6 +105,7 @@ if __name__ == "__main__":
 			\param self Ukazatel na objekt
 			\param evt Ukazatel na widget a jeho reakci na klik
 			"""
+			f=inFocus()
 			w = evt.widget
 			if w.curselection():
 				index = w.curselection()
@@ -113,13 +114,34 @@ if __name__ == "__main__":
 				for i in index:
 					self.tl.insert('end',self.lst.getFoc().items()[int(i)][1]['name'].upper())
 					for it in self.lst.getFoc().items()[int(i)][1]['apps'].items():
+						appNm=f.getApNmFrCom(it[1]['comm'])
+						ts=f.getIfInst(appNm)
 						self.tl.insert('end',it[1]['name'])
+						if ts == False:
+							self.tl.itemconfig(END, {'bg':'orange red'}) 
 					self.tl.insert('end',"")
-				self.tl.config(state=DISABLED)
+				#self.tl.config(state=DISABLED)
 			else:
 				self.tl.config(state=NORMAL)
 				self.tl.delete(0, END)
 				self.tl.config(state=DISABLED)
+		def repLfLisb(self):
+			""" Metoda pro překreslení okna instalací aplikací
+			\param self Ukazatel na objekt
+			"""
+			f=inFocus()
+			index = self.to.curselection()
+			self.tl.delete(0, END)
+			for i in index:
+				self.tl.insert('end',self.lst.getFoc().items()[int(i)][1]['name'].upper())
+				for it in self.lst.getFoc().items()[int(i)][1]['apps'].items():
+					# Kontrola, zdali jsou aplikace nainstalované
+					appNm=f.getApNmFrCom(it[1]['comm'])
+					ts=f.getIfInst(appNm)
+					self.tl.insert('end',it[1]['name'])
+					if ts == False:
+						self.tl.itemconfig(END, {'bg':'orange red'}) 
+				self.tl.insert('end',"")
 		def paintLayout(self):
 			""" Metoda vykreslující grafické prvky okna
 			Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem
@@ -146,15 +168,14 @@ if __name__ == "__main__":
 				i += 1
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.to.yview)
-			
-			#Button(self.root,height=1, width=19,text="Přidat aplikaci",command=self.insSet).place(relx=0.51, rely=0.02)
-			
 			gpTh = LabelFrame(self.root, text="Aplikace", padx=5, pady=5)
-			gpTh.place(relx=0.45, rely=0.03)
-			#gpTh.place(relx=0.45, rely=0.12)
+			gpTh.place(relx=0.45, rely=0.129)
 			scrollbar = Scrollbar(gpTh)
+			## Informační text
+			self.inl=Label(self.root,text="Červeně jsou označené aplikace,\nkteré nejsou nainstalovány")
+			self.inl.place(relx=0.48, rely=0.02)
 			## List aplikací
-			self.tl = Listbox(gpTh,height=15, width=26, bd=0, yscrollcommand=scrollbar.set,disabledforeground="black")
+			self.tl = Listbox(gpTh,height=13, width=26, bd=0, yscrollcommand=scrollbar.set,disabledforeground="black")
 			self.tl.pack(side=LEFT)
 			
 			if self.to.curselection():
@@ -164,9 +185,15 @@ if __name__ == "__main__":
 				for i in index:
 					self.tl.insert('end',self.lst.getFoc().items()[int(i)][1]['name'].upper())
 					for it in self.lst.getFoc().items()[int(i)][1]['apps'].items():
+						# Kontrola, zdali jsou aplikace nainstalované
+						appNm=f.getApNmFrCom(it[1]['comm'])
+						ts=f.getIfInst(appNm)
 						self.tl.insert('end',it[1]['name'])
+						if ts == False:
+							self.tl.itemconfig(END, {'bg':'orange red'}) 
 					self.tl.insert('end',"")
-				self.tl.config(state=DISABLED)
+				
+			#self.tl.config(state=DISABLED)
 			
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.tl.yview)
@@ -200,6 +227,8 @@ if __name__ == "__main__":
 					self.b['state']='disabled'
 					self.b['text']="Vyčkejte prosím"
 				else:
+					self.inl.configure(text="Červeně jsou označené aplikace,\nkteré nejsou nainstalovány")
+					self.repLfLisb()
 					self.b['state']='normal'
 					self.b['text']="Připravit vybrané"
 				#print(stri)
@@ -222,6 +251,7 @@ if __name__ == "__main__":
 			nt=self.lst.getFoc()
 			rms=[x for x in range(0,len(nt.items()))]
 			self.b['state']='disabled'
+			self.inl.configure(text="VYČKEJTE, NEŽ SE UKONČÍ\nINSTALACE!")
 			print "Add"
 			## Počet načtených balíčků
 			self.h=0

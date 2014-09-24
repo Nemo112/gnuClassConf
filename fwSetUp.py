@@ -37,19 +37,20 @@ class fwSetUp:
 		""" Metoda odebere z /etc/hosts překlad domény na učitelský počítač
 		\param domain Doména k odblokování
 		\param self Ukazatel na objekt
+		\return True pokud vše proběhlo v pořádku, False pokud ne
 		"""
 		if domain == "localhost":
-			return
+			return False
 		if domain == "ip6-localnet":
-			return
+			return False
 		if domain == "ip6-loopback":
-			return
+			return False
 		if domain == "ip6-mcastprefix":
-			return
+			return False
 		if domain == "ip6-allnodes":
-			return
+			return False
 		if domain == "ip6-allrouters":
-			return
+			return False
 		ts=""
 		for line in open(self.clhs):
 			ip=line.split("\t")[0]
@@ -61,6 +62,25 @@ class fwSetUp:
 		tar = open (self.clhs, 'w')
 		tar.write(ts) 
 		tar.close()
+		return True
+	def relBlDom(self,domain):
+		""" Metoda oblokuje doménu ale nechá jí v tabulce
+		\param domain Doména k odblokování
+		\param self Ukazatel na objekt
+		\return True pokud vše proběhlo v pořádku, False pokud ne
+		"""
+		if self.unDom(domain) == False:
+			return False
+		sy=ConsSys()
+		dc=self.getLstBl()
+		for it in dc.items():
+			if it[1]['hostname'] == domain:
+				return False
+		inIp=sy.getEthIp(sy.getDfIlInt()['in'])
+		tar = open (self.clhs, 'a')
+		tar.write("#"+inIp + "\t\t" + domain +"\n") 
+		tar.close()
+		return True
 	def isNet(self):
 		""" Metoda zkontroluje stav blokování klientů
 		\param self Ukazatel na objekt
@@ -117,6 +137,7 @@ class fwSetUp:
 		for line in open(self.clhs):
 			ip4=line.split("\t")[0]
 			aa=re.match(r"^((0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}(0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])$",ip4)
+			bb=re.match(r"^#((0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}(0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])$",ip4)
 			if aa:
 				ip4 = aa.group()
 				cols={}
@@ -124,6 +145,17 @@ class fwSetUp:
 				cols['ip']=ip4
 				if cols['hostname'] == "localhost":
 					continue
+				cols['blocking'] = True
+				lst[i]=cols
+				i += 1
+			elif 	bb:
+				ip4 = bb.group()
+				cols={}
+				cols['hostname']=line.split("\t")[-1][0:-1]
+				cols['ip']=ip4
+				if cols['hostname'] == "localhost":
+					continue
+				cols['blocking'] = False
 				lst[i]=cols
 				i += 1
 		return lst
@@ -153,3 +185,4 @@ if __name__ == "__main__":
 		f.unDom(args.unDom)
 	if args.blD != "":
 		f.blDom(args.blD)
+	

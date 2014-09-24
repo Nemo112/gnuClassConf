@@ -76,6 +76,7 @@ class iTaHand:
 		tar.close()
 		os.chmod("/NFSROOT/class/home/student/.config/autostart/icastart.desktop",0777)
 		# úprava lokálního rc.local
+		"""
 		with open("/etc/rc.local",'r') as cont:
 			cnl=cont.read()
 		obs=""
@@ -90,6 +91,7 @@ class iTaHand:
 		tar = open ("/etc/rc.local", 'w')
 		tar.write(obs)
 		tar.close()
+		"""
 	def runIca(self):
 		""" Spouští ica jako službu
 		\param self Ukazatel na objekt

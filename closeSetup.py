@@ -65,6 +65,7 @@ if __name__ == "__main__":
 			self.qo=qoi
 			## Logovací třída
 			self.log=LogWrk()
+			
 		def qquit(self):
 			""" Metoda pro ukončení okna
 			Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna
@@ -256,6 +257,21 @@ if __name__ == "__main__":
 			if stri == "XXX":
 				break
 			if stri == "INST":
+				# mountování pro instalace
+				if os.path.isfile("/NFSROOT/class/proc/mounts"):
+					self.log.write("/proc/mounts already there")
+				else:
+					open("/NFSROOT/class/proc/mounts","w")
+				# mount proc /NFSROOT/class/proc -t proc
+				tos='mount proc /NFSROOT/class/proc -t proc'
+				for line in sy.runProcess(tos):
+					print line,
+					self.log.write(line)
+				# mount sysfs /NFSROOT/class/sys -t sysfs
+				tos='mount sysfs /NFSROOT/class/sys -t sysfs'
+				for line in sy.runProcess(tos):
+					print line,
+					self.log.write(line)
 				# instalace prostředků
 				qo.put("Kontroluji aktualizace")
 				for line in sy.runProcess("apt-get update"):
@@ -285,6 +301,15 @@ if __name__ == "__main__":
 					if "Unpacking" == line.split(" ")[0]:
 						qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 				qo.put("Hotovo")
+				# umountutí
+				tos='umount /NFSROOT/class/proc'
+				for line in self.sy.runProcess(tos):
+					print line,
+					self.log.write(line)
+				tos='umount /NFSROOT/class/sys'
+				for line in self.sy.runProcess(tos):
+					print line,
+					self.log.write(line)
 			if stri.split(";")[0] == "SET":
 				eth=stri.split(";")[1]
 				setUNt=ConfSys(eth)
@@ -297,6 +322,21 @@ if __name__ == "__main__":
 				ig=int(tsth[3])
 				ib=int(tsth[4])
 				su=int(tsth[5])
+				# mountování pro instalace
+				if os.path.isfile("/NFSROOT/class/proc/mounts"):
+					log.write("/proc/mounts already there")
+				else:
+					open("/NFSROOT/class/proc/mounts","w")
+				# mount proc /NFSROOT/class/proc -t proc
+				tos='mount proc /NFSROOT/class/proc -t proc'
+				for line in sy.runProcess(tos):
+					print line,
+					log.write(line)
+				# mount sysfs /NFSROOT/class/sys -t sysfs
+				tos='mount sysfs /NFSROOT/class/sys -t sysfs'
+				for line in sy.runProcess(tos):
+					print line,
+					log.write(line)
 				#print
 				print np
 				print nn
@@ -366,6 +406,11 @@ if __name__ == "__main__":
 					setUNt.setUpKey()
 					qo.put("Hotovo")
 				# instalace Iceweaselu
+				if im == 1:
+					# vytváření obrazů jádra
+					qo.put("Připravuji jádro")
+					setUNt.createKer(qo)
+					qo.put("Hotovo")
 				if ib == 1:
 					qo.put("Připravuji prohlížeč")
 					setUNt.installIce()
@@ -374,11 +419,6 @@ if __name__ == "__main__":
 					#instaluji login screen
 					qo.put("Připravuji grafické rozhraní")
 					setUNt.installDm(qo)
-					qo.put("Hotovo")
-				if im == 1:
-					# vytváření obrazů jádra
-					qo.put("Připravuji jádro")
-					setUNt.createKer(qo)
 					qo.put("Hotovo")
 				if ig == 1:
 					# přidání pozadí
@@ -393,6 +433,15 @@ if __name__ == "__main__":
 				setUNt.resetAllServ()
 				qo.put("Hotovo")
 				qo.put("Zdá se, že všechno je připraveno")
+				# umountutí
+				tos='umount /NFSROOT/class/proc'
+				for line in sy.runProcess(tos):
+					print line,
+					log.write(line)
+				tos='umount /NFSROOT/class/sys'
+				for line in sy.runProcess(tos):
+					print line,
+					log.write(line)
 				continue
 	## Proměnná obsahující okno Tk
 	win = Tk()

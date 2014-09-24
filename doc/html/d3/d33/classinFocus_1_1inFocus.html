@@ -112,6 +112,10 @@ Veřejné metody</h2></td></tr>
 <tr class="memdesc:ad8ae29f519ec260560e3f3f33076add3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upravení installed souboru, kde jsou zapsány instalované účely.  <a href="#ad8ae29f519ec260560e3f3f33076add3"></a><br/></td></tr>
 <tr class="memitem:af6094d372c354e903a9c9e12eed838e0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d33/classinFocus_1_1inFocus.html#af6094d372c354e903a9c9e12eed838e0">getLstInst</a></td></tr>
 <tr class="memdesc:af6094d372c354e903a9c9e12eed838e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Přečtení listu instalovaných účelů  <a href="#af6094d372c354e903a9c9e12eed838e0"></a><br/></td></tr>
+<tr class="memitem:a7cdf0f46165d73f2474d2d856a79b8f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d33/classinFocus_1_1inFocus.html#a7cdf0f46165d73f2474d2d856a79b8f1">getApNmFrCom</a></td></tr>
+<tr class="memdesc:a7cdf0f46165d73f2474d2d856a79b8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vyparsuje jméno aplikace z instalačního příkazu.  <a href="#a7cdf0f46165d73f2474d2d856a79b8f1"></a><br/></td></tr>
+<tr class="memitem:aadfed74ffb6dc74f74fd2266dca70e0d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d33/classinFocus_1_1inFocus.html#aadfed74ffb6dc74f74fd2266dca70e0d">getIfInst</a></td></tr>
+<tr class="memdesc:aadfed74ffb6dc74f74fd2266dca70e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Přečtení listu instalovaných účelů  <a href="#aadfed74ffb6dc74f74fd2266dca70e0d"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Veřejné atributy</h2></td></tr>
@@ -247,6 +251,78 @@ Veřejné atributy</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7cdf0f46165d73f2474d2d856a79b8f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def inFocus.inFocus.getApNmFrCom </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>com</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vyparsuje jméno aplikace z instalačního příkazu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Ukazatel na objekt </td></tr>
+    <tr><td class="paramname">com</td><td>Příkaz pro instalaci aplikace </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>String obsahující jméno aplikace </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aadfed74ffb6dc74f74fd2266dca70e0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def inFocus.inFocus.getIfInst </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Přečtení listu instalovaných účelů </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Ukazatel na objekt </td></tr>
+    <tr><td class="paramname">nm</td><td>Name of package </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>True pakliže je balíček nainstalovaný, false pokud ne </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af6094d372c354e903a9c9e12eed838e0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -347,7 +423,7 @@ Veřejné atributy</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generováno so 20. zář 2014 21.05:18 pro projekt GNUškola konfigurační prostředí programem &#160;<a href="http://www.doxygen.org/index.html">
+Generováno st 24. zář 2014 17.58:10 pro projekt GNUškola konfigurační prostředí programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

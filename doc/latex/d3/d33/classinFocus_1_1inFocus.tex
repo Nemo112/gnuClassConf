@@ -22,6 +22,10 @@ def \hyperlink{classinFocus_1_1inFocus_a64cbd33ed3dcf62bb6ab44de37cddba1}{uni\-X
 def \hyperlink{classinFocus_1_1inFocus_ad8ae29f519ec260560e3f3f33076add3}{inst\-Xml\-Co}
 \begin{DoxyCompactList}\small\item\em Upravení installed souboru, kde jsou zapsány instalované účely. \end{DoxyCompactList}\item 
 def \hyperlink{classinFocus_1_1inFocus_af6094d372c354e903a9c9e12eed838e0}{get\-Lst\-Inst}
+\begin{DoxyCompactList}\small\item\em Přečtení listu instalovaných účelů \end{DoxyCompactList}\item 
+def \hyperlink{classinFocus_1_1inFocus_a7cdf0f46165d73f2474d2d856a79b8f1}{get\-Ap\-Nm\-Fr\-Com}
+\begin{DoxyCompactList}\small\item\em Vyparsuje jméno aplikace z instalačního příkazu. \end{DoxyCompactList}\item 
+def \hyperlink{classinFocus_1_1inFocus_aadfed74ffb6dc74f74fd2266dca70e0d}{get\-If\-Inst}
 \begin{DoxyCompactList}\small\item\em Přečtení listu instalovaných účelů \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Veřejné atributy}
 \begin{DoxyCompactItemize}
@@ -114,6 +118,50 @@ Vykonej příkaz z comm.
 {\em self} & Ukazatel na objekt \\
 \hline
 \end{DoxyParams}
+\hypertarget{classinFocus_1_1inFocus_a7cdf0f46165d73f2474d2d856a79b8f1}{\index{in\-Focus\-::in\-Focus@{in\-Focus\-::in\-Focus}!get\-Ap\-Nm\-Fr\-Com@{get\-Ap\-Nm\-Fr\-Com}}
+\index{get\-Ap\-Nm\-Fr\-Com@{get\-Ap\-Nm\-Fr\-Com}!inFocus::inFocus@{in\-Focus\-::in\-Focus}}
+\subsubsection[{get\-Ap\-Nm\-Fr\-Com}]{\setlength{\rightskip}{0pt plus 5cm}def in\-Focus.\-in\-Focus.\-get\-Ap\-Nm\-Fr\-Com (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{com}
+\end{DoxyParamCaption}
+)}}\label{d3/d33/classinFocus_1_1inFocus_a7cdf0f46165d73f2474d2d856a79b8f1}
+
+
+Vyparsuje jméno aplikace z instalačního příkazu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em com} & Příkaz pro instalaci aplikace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+String obsahující jméno aplikace 
+\end{DoxyReturn}
+\hypertarget{classinFocus_1_1inFocus_aadfed74ffb6dc74f74fd2266dca70e0d}{\index{in\-Focus\-::in\-Focus@{in\-Focus\-::in\-Focus}!get\-If\-Inst@{get\-If\-Inst}}
+\index{get\-If\-Inst@{get\-If\-Inst}!inFocus::inFocus@{in\-Focus\-::in\-Focus}}
+\subsubsection[{get\-If\-Inst}]{\setlength{\rightskip}{0pt plus 5cm}def in\-Focus.\-in\-Focus.\-get\-If\-Inst (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{nm}
+\end{DoxyParamCaption}
+)}}\label{d3/d33/classinFocus_1_1inFocus_aadfed74ffb6dc74f74fd2266dca70e0d}
+
+
+Přečtení listu instalovaných účelů 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em nm} & Name of package \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+True pakliže je balíček nainstalovaný, false pokud ne 
+\end{DoxyReturn}
 \hypertarget{classinFocus_1_1inFocus_af6094d372c354e903a9c9e12eed838e0}{\index{in\-Focus\-::in\-Focus@{in\-Focus\-::in\-Focus}!get\-Lst\-Inst@{get\-Lst\-Inst}}
 \index{get\-Lst\-Inst@{get\-Lst\-Inst}!inFocus::inFocus@{in\-Focus\-::in\-Focus}}
 \subsubsection[{get\-Lst\-Inst}]{\setlength{\rightskip}{0pt plus 5cm}def in\-Focus.\-in\-Focus.\-get\-Lst\-Inst (

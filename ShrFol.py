@@ -6,6 +6,7 @@
 from ConsSys import ConsSys
 from LogWrk import LogWrk
 import os
+import shutil
 import subprocess
 from optparse import OptionParser
 
@@ -113,6 +114,7 @@ class ShrFol:
 			nm = it.split("/")[-1]
 			if not os.path.isdir("/NFSROOT/class/class_shares/" + nm):
 				os.makedirs("/NFSROOT/class/class_shares/" + nm)
+				shutil.copymode(it, "/NFSROOT/class/class_shares/" + nm)
 			tos = tos + "mount -o rbind \"" + it + "\" \"/NFSROOT/class/class_shares/" + nm  + "\" " + ";\n"
 		tos = tos + "exit 0;\n"
 		fl=open("./tmpba/mntGen.sh","w")
@@ -186,11 +188,8 @@ class ShrFol:
 if __name__ == "__main__":
 	## Parser argumentů a parametrů
 	parser = OptionParser(usage="usage: %prog [args]\n Serve for setting up shares in client filesystem")
-
 	parser.add_option("-l", "--shared-list", action="store_true", dest="lst", default=False, help="Give a list of shared files")
-
 	parser.add_option("-s", "--share-new", action="store", type="string", dest="nfo", default="", help="Share new folder")
-
 	parser.add_option("-u", "--unshare-folder", action="store", type="string", dest="ufo", default="", help="Unshare folder")
 	## Argumenty a parametry z parseru			
 	(args, opts) = parser.parse_args()

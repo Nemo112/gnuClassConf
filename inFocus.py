@@ -7,6 +7,7 @@ from ConsSys import ConsSys
 from LogWrk import LogWrk
 import os
 from optparse import OptionParser
+import subprocess
 
 class inFocus:
 	""" \brief Třída obsahující metody pro instalaci programů do obrazu
@@ -28,6 +29,18 @@ class inFocus:
 		\param comm Příkaz k vychování
 		\param self Ukazatel na objekt
 		"""
+		if "install" in comm.split():
+			appNm=self.getApNmFrCom(comm)
+			ts=self.getIfInst(appNm)
+			#aplikace je přítomna, není potřeba instalovat
+			if ts == True:
+				return
+		if "remove" in comm.split():
+			appNm=self.getApNmFrCom(comm)
+			ts=self.getIfInst(appNm)
+			#aplikace je nepřítomna, není potřeba odstraňovat
+			if ts == False:
+				return
 		name=comm.replace(" ","")
 		nm = self.path + name +".sh"
 		self.sy.removeFl(nm)
@@ -162,6 +175,25 @@ class inFocus:
 			if ln.split(".")[1] == "gml":
 				ts.append(ln)
 		return ts
+	def getApNmFrCom(self,com):
+		""" Vyparsuje jméno aplikace z instalačního příkazu
+		\param self Ukazatel na objekt
+		\param com Příkaz pro instalaci aplikace
+		\return String obsahující jméno aplikace
+		"""
+		comm=com.replace("install","").replace("apt-get","").replace("-y","").replace("remove","").replace("autoremove","")
+		return comm.replace("--allow-unauthenticated","").replace(" ","")
+	def getIfInst(self,nm):
+		""" Přečtení listu instalovaných účelů
+		\param self Ukazatel na objekt
+		\param nm Name of package
+		\return True pakliže je balíček nainstalovaný, false pokud ne
+		"""
+		FNULL = open(os.devnull, 'w')
+		rt=subprocess.call("chroot /NFSROOT/class dpkg-query -l " + nm, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+		if rt == 0:
+			return True
+		return False
 if __name__ == "__main__":
 	## Parser argumentů a parametrů
 	parser = OptionParser(usage="usage: %prog [args]\n Work with focuses in client filesystem")
@@ -179,4 +211,3 @@ if __name__ == "__main__":
 		f.dpkgConfA()
 	if args.rem == True:
 		f.aptAutorem()
-		

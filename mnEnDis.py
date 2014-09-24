@@ -8,7 +8,9 @@ import subprocess
 from SysLoad import SysLoad
 from iTaHand import iTaHand
 import tkMessageBox
+import re
 from fwSetUp import fwSetUp
+from EnDisDiag import EnDisDiag
 
 if __name__ == "__main__":
 	class App:
@@ -29,19 +31,50 @@ if __name__ == "__main__":
 			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
-		def clSet(self):
-			""" Metoda zapínající okno closeSetup.py
+		def keySe(self,evt):
+			""" Metoda reagující na vyhledávání v entry boxu
 			\param self Ukazatel na objekt
+			\param evt Event, který se ale nepoužije
 			"""
-			subprocess.Popen("./closeSetup.py", shell=True)
+			if self.ens.get() == "":
+				return
+			self.listRes(self.ens.get())
+		def listRes(self,reg="*"):
+			"""Metoda pro třídění pole domén podle regulárního výrazu
+			\param self Ukazatel na třídu
+			\param reg Regulární výraz pro vyhledáváné
+			"""
+			self.to.delete(0, END)
+			# list domén
+			ls=self.fw.getLstBl()
+			for i in ls:
+				try:
+					m = re.search(reg,ls[i]['hostname'],re.IGNORECASE)
+				except:
+					m = "A"
+				if m != None:
+					self.to.insert('end', ls[i]['hostname'])
+					# zabarvení položek blokování
+					if ls[i]['blocking'] == True:
+						self.to.itemconfig(END, {'bg':'orange red'})
+					else:
+						self.to.itemconfig(END, {'bg':'dark sea green'})
 		def paintLayout(self):
 			""" Metoda vykreslující grafické prvky okna
 			Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem
 			\param self Ukazatel na objekt
 			"""
+			# entry pro vyhledávání
+			Label(self.root,text="Hledat: ").place(relx=0.02, rely=0.08)
+			## String obsahující regulární výraz pro hledání
+			self.ens=StringVar()
+			self.ens.set("*")
+			ens=Entry(self.root,width=17,textvariable=self.ens)
+			ens.bind("<KeyPress>", self.keySe)
+			ens.place(relx=0.14, rely=0.08)
 			# povolení a zakázání domén
 			gpMan = LabelFrame(self.root, text="Zákaz domény", padx=5, pady=5)
-			gpMan.place(relx=0.01, rely=0.08)
+			gpMan.place(relx=0.01, rely=0.2)
 			Label(gpMan,text="Jméno domény:").grid(padx=4, pady=1)
 			## Vstup pro přidání domény k blokování
 			self.ew=StringVar()
@@ -51,7 +84,7 @@ if __name__ == "__main__":
 			Button(gpMan,height=1, width=19,text="Zakázat",command=self.setN).grid(padx=3, pady=3)
 			# povolení a zakázání internetu
 			gpManI = LabelFrame(self.root, text="Zákaz internetu", padx=15, pady=5)
-			gpManI.place(relx=0.01, rely=0.6)
+			gpManI.place(relx=0.01, rely=0.65)
 			Label(gpManI,height=1, width=20,text="Stav blokování internetu").pack()
 			## Proměnná pro výsledek volby uživatele
 			self.v = IntVar()
@@ -85,6 +118,10 @@ if __name__ == "__main__":
 			dc=self.fw.getLstBl()
 			for it in dc.items():
 				self.to.insert('end',it[1]['hostname'])
+				if it[1]['blocking'] == True:
+					self.to.itemconfig(END, {'bg':'orange red'})
+				else:
+					self.to.itemconfig(END, {'bg':'dark sea green'})
 		def onSelect(self,evt):
 			""" Metoda pro odebrání položky z blokovacího okénka
 			\param self Ukazatel na objekt
@@ -96,11 +133,34 @@ if __name__ == "__main__":
 			except:
 				return
 			value = w.get(index)
-			result = tkMessageBox.askquestion("Povolení", "Odblokovat " + value + "?", icon='warning')
-			if result == "yes":
-				self.to.delete(index)
-				self.fw.unDom(value)
-				self.loadItems()
+			ls=self.fw.getLstBl()
+			bl=False
+			for i in ls:
+				if value == ls[i]['hostname']:
+					if ls[i]['blocking']:
+						bl = True
+						break
+			if bl == True:
+				result = tkMessageBox.askquestion("Odblokovat", "Odblokovat " + value + "? \n Položka zůstane v tabulce pro pozdější rozhodnutí.", icon='warning')
+				if result == "yes":
+					self.to.delete(index)
+					self.fw.relBlDom(value)
+					self.loadItems()
+			elif bl == False:
+				## Rozhodnutí uživatele
+				di=EnDisDiag(self.root)
+				self.root.wait_window(di.top)
+				result = di.des
+				#print di.des
+				if result == "Block":
+					self.to.delete(index)
+					self.fw.unDom(value)
+					self.fw.blDom(value)
+					self.loadItems()
+				if result == "Errase":
+					self.to.delete(index)
+					self.fw.unDom(value)
+					self.loadItems()
 		def keyEn(self,evt):
 			""" Metoda pro přidání blokované domény
 			\param self Ukazatel na objekt
