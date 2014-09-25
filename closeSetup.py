@@ -82,13 +82,21 @@ if __name__ == "__main__":
 			if s == "Počítač v síti":
 				self.igm = PhotoImage(file="./onesd.gif")
 				self.iml.configure(image=self.igm)
-				etf=self.sys.getEths()[0]
-				self.vf.set(self.sys.getEths()[0])
+				# najít rozhraní, které směruje
+				#etf=self.sys.getDefGwInt()
+				self.vf.set(self.sys.getDefGwInt())
 				#print s
 			if s == "Počítač jako směrovač":
 				self.igm = PhotoImage(file="./twosd.gif")
 				self.iml.configure(image=self.igm)
-				self.vf.set(self.sys.getEths()[-1])
+				# najít rozhraní, které rozhodně nesměruje
+				i = 0
+				while self.sys.getDefGwInt() == self.sys.getEths()[i] or self.sys.getEths()[i] == "lo":
+					i += 1
+					if i == len(self.sys.getEths()):
+						i = 0
+						break
+				self.vf.set(self.sys.getEths()[i])
 				#print s
 		def chge(self,s):
 			""" Metoda měnící eth rozhraní konfigurace
@@ -223,14 +231,17 @@ if __name__ == "__main__":
 			self.vf=StringVar(self.root)
 			etf=self.sys.getEths()
 			if self.ethCn == 1:
-				self.etg=etf[0]
-				self.vf.set(etf[0])
+				self.etg=self.sys.getDefGwInt()
+				self.vf.set(self.sys.getDefGwInt())
 			else:
-				i=-1
-				while self.sys.getDefGwInt() ==  etf[i]:
-					i -= 1
-				self.etg=etf[i]
+				i=0
+				while self.sys.getDefGwInt() == etf[i] or etf[i] == "lo":
+					i += 1
+					if i == len(etf[i]):
+						i = 0
+						break
 				self.vf.set(etf[i])
+				self.etg=etf[i]
 			opteth = OptionMenu(dnwg,self.vf, *etf, command=self.chge)
 			opteth.pack()
 			dnwb=LabelFrame(self.root, text="Instalace a nastavení", padx=5, pady=5)

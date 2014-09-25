@@ -27,7 +27,7 @@ if __name__ == "__main__":
 			## Ukazatel na okno Tk
 			self.root=r
 			self.root.title("Zákazy a povolení")
-			self.root.geometry(("%dx%d")%(450,270))
+			self.root.geometry(("%dx%d")%(450,310))
 			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
@@ -65,16 +65,16 @@ if __name__ == "__main__":
 			\param self Ukazatel na objekt
 			"""
 			# entry pro vyhledávání
-			Label(self.root,text="Hledat: ").place(relx=0.02, rely=0.08)
+			Label(self.root,text="Hledat: ").place(relx=0.02, rely=0.07)
 			## String obsahující regulární výraz pro hledání
 			self.ens=StringVar()
 			self.ens.set("*")
 			ens=Entry(self.root,width=17,textvariable=self.ens)
 			ens.bind("<KeyPress>", self.keySe)
-			ens.place(relx=0.14, rely=0.08)
+			ens.place(relx=0.14, rely=0.07)
 			# povolení a zakázání domén
 			gpMan = LabelFrame(self.root, text="Zákaz domény", padx=5, pady=5)
-			gpMan.place(relx=0.01, rely=0.2)
+			gpMan.place(relx=0.01, rely=0.17)
 			Label(gpMan,text="Jméno domény:").grid(padx=4, pady=1)
 			## Vstup pro přidání domény k blokování
 			self.ew=StringVar()
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 			Button(gpMan,height=1, width=19,text="Zakázat",command=self.setN).grid(padx=3, pady=3)
 			# povolení a zakázání internetu
 			gpManI = LabelFrame(self.root, text="Zákaz internetu", padx=15, pady=5)
-			gpManI.place(relx=0.01, rely=0.65)
+			gpManI.place(relx=0.01, rely=0.57)
 			Label(gpManI,height=1, width=20,text="Stav blokování internetu").pack()
 			## Proměnná pro výsledek volby uživatele
 			self.v = IntVar()
@@ -108,6 +108,8 @@ if __name__ == "__main__":
 			self.to.bind('<<ListboxSelect>>', self.onSelect)
 			self.to.pack(side=LEFT)
 			self.loadItems()
+			# Label oznamující funkci barev
+			Label(self.root,text="Červená barva označuje domény, které jsou blokovány.\nZelené jsou připraveny pro blokování a uschovány pro použití.").place(relx=0.07, rely=0.88)
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.to.yview)
 		def loadItems(self):
@@ -141,7 +143,7 @@ if __name__ == "__main__":
 						bl = True
 						break
 			if bl == True:
-				result = tkMessageBox.askquestion("Odblokovat", "Odblokovat " + value + "? \n Položka zůstane v tabulce pro pozdější rozhodnutí.", icon='warning')
+				result = tkMessageBox.askquestion("Odblokovat", "Odblokovat " + value + "? \nPoložka zůstane v tabulce pro pozdější použití.", icon='warning')
 				if result == "yes":
 					self.to.delete(index)
 					self.fw.relBlDom(value)

@@ -33,5 +33,7 @@ else
 		cat "$PWD/configuration/interfaces_cl" > "$TDIR/configuration/interfaces";
 		cat "$PWD/configuration/shared_cl" > "$TDIR/configuration/shared";
 		cat "$PWD/focus/installed_cl.cfg" > "$TDIR/focus/installed.cfg";
+		# Čištění logu
+		echo "" > "$TDIR/data/work_logs.log"
 	fi
 fi
