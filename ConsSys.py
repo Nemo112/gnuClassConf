@@ -16,9 +16,11 @@ import tarfile
 import hashlib
 import crypt
 from optparse import OptionParser
+from UError import UError 
 import sys
 import array
 from GetIfAdrs import *
+from UError import UError
 
 
 class ConsSys:
@@ -119,6 +121,8 @@ class ConsSys:
 			line = p.stdout.readline()
 			yield line
 			if(retcode is not None):
+				if retcode != 0:
+					raise UError("Chyba v podprocesu systému!")
 				break
 	def getEths(self):
 		""" Metoda ze systému vytáhne jména eth zařízení a vrátí je v poli

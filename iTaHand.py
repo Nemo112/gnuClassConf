@@ -6,6 +6,7 @@ import os
 from ConsSys import ConsSys
 import subprocess
 import socket
+from UError import UError
 
 class iTaHand:
 	"""
@@ -219,30 +220,66 @@ class iTaHand:
 		""" Metoda pro generování klíčů
 		\param self Ukazatel na objekt
 		"""
-		for line in self.sy.runProcess("addgroup italc"):
-			print line,
-		for line in self.sy.runProcess("adduser italc"):
-			print line,
-		for line in self.sy.runProcess("usermod -a -G italc ucitel"):
-			print line,
-		for line in self.sy.runProcess("usermod -a -G italc root"):
-			print line,
-		for line in self.sy.runProcess("ica -role teacher -createkeypair"):
-			print line,			
-		for line in self.sy.runProcess("chgrp -R italc /etc/italc/keys"):
-			print line,
-		for line in self.sy.runProcess("chmod -R 640 /etc/italc/keys/private"):
-			print line,
-		for line in self.sy.runProcess("chmod -R ug+x /etc/italc/keys/private"):
-			print line,
-		for line in self.sy.runProcess("mkdir /NFSROOT/class/etc/italc"):
-			print line,
-		for line in self.sy.runProcess("mkdir /NFSROOT/class/etc/italc/keys"):
-			print line,
-		for line in self.sy.runProcess("cp -r /etc/italc/keys/public /NFSROOT/class/etc/italc/keys"):
-			print line,
-		for line in self.sy.runProcess("chmod 444 " + self.home + "/.italc/globalconfig.xml"):
-			print line,
+		try:
+			for line in self.sy.runProcess("addgroup italc"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("adduser italc"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("usermod -a -G italc ucitel"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("usermod -a -G italc root"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("ica -role teacher -createkeypair"):
+				print line,			
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("chgrp -R italc /etc/italc/keys"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("chmod -R 640 /etc/italc/keys/private"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("chmod -R ug+x /etc/italc/keys/private"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("mkdir /NFSROOT/class/etc/italc"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("mkdir /NFSROOT/class/etc/italc/keys"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("cp -r /etc/italc/keys/public /NFSROOT/class/etc/italc/keys"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
+		try:
+			for line in self.sy.runProcess("chmod 444 " + self.home + "/.italc/globalconfig.xml"):
+				print line,
+		except UError,e:
+			print(str(e.args) + " ERROR!")
 		self.setUpIcaS()
 	def setCliSc(self):
 		""" Metoda pro generování skriptu na klientu

@@ -31,3 +31,12 @@ if [[ "$y" == "a" ]];then
 elif [[ "$y" == "p" ]];then
 	apt-get remove --purge isc-dhcp-server tftpd-hpa apache2 nfs-kernel-server tftpd-hpa syslinux debootstrap expect;
 fi
+# Mazání obrazu
+if [[ -d "/NFSROOT/" ]]; then
+	echo "Při správě učebny bylo potřeba pracovat se složkou obsahující soubory pro třídu";
+	echo "Mají se také s odinstalací odstranit?";
+	read -p "Zvolte (a) pro odstranění, (n) pro nic: " y
+	if [[ "$y" == "a" ]];then
+		rm -r "/NFSROOT";
+	fi
+fi

@@ -23,6 +23,7 @@ from ParConfFl import ParConfFl
 from LogWrk import LogWrk
 from ConsSys import ConsSys
 from ConfSys import ConfSys
+from UError import UError
 from iTaHand import iTaHand
 
 if __name__ == "__main__":
@@ -41,7 +42,6 @@ if __name__ == "__main__":
 			"""
 			## Instance objektu spravující systémové nástroje
 			self.sys=ConsSys()
-			#self.sy=ConsSys()
 			## Ukazatel na okno Tk
 			self.root=r
 			self.root.title("Základní nastavení učebny")
@@ -112,7 +112,22 @@ if __name__ == "__main__":
 			"""
 			try:
 				stri = cq.get(0)
-				self.to.insert('end',stri)
+				if stri[-6:] == "ERROR!":
+					self.to.insert('end',"Chyba! Zkontrolujte připojení,")
+					self.to.itemconfig('end', {'bg':'orange red'}) 
+					self.to.insert('end',"místo na disku a systém.")
+					self.to.itemconfig('end', {'bg':'orange red'}) 
+				elif stri == "TATO OPERACE JE NA DLOUHO!":
+					self.to.insert('end',stri)
+					self.to.itemconfig('end', {'bg':'orange'}) 
+				elif stri == "Hotovo":
+					self.to.insert('end',stri)
+					self.to.itemconfig('end', {'bg':'lime green'}) 
+				elif stri == "Zdá se, že všechno je připraveno":
+					self.to.insert('end',stri)
+					self.to.itemconfig('end', {'bg':'lime green'})
+				else:
+					self.to.insert('end',stri)
 				self.to.select_clear(self.to.size()-2)
 				self.to.yview(END)
 			except Empty:
@@ -268,59 +283,38 @@ if __name__ == "__main__":
 			if stri == "XXX":
 				break
 			if stri == "INST":
-				# mountování pro instalace
-				if os.path.isfile("/NFSROOT/class/proc/mounts"):
-					self.log.write("/proc/mounts already there")
-				else:
-					open("/NFSROOT/class/proc/mounts","w")
-				# mount proc /NFSROOT/class/proc -t proc
-				tos='mount proc /NFSROOT/class/proc -t proc'
-				for line in sy.runProcess(tos):
-					print line,
-					self.log.write(line)
-				# mount sysfs /NFSROOT/class/sys -t sysfs
-				tos='mount sysfs /NFSROOT/class/sys -t sysfs'
-				for line in sy.runProcess(tos):
-					print line,
-					self.log.write(line)
 				# instalace prostředků
-				qo.put("Kontroluji aktualizace")
-				for line in sy.runProcess("apt-get update"):
-					print line,
-				qo.put("Hotovo")
-				qo.put("TATO OPERACE JE NA DLOUHO!")
-				qo.put("Aktualizuji")
-				for line in sy.runProcess("apt-get upgrade -y"):
-					print line,
-					log.write(line)
-					if "Get" == line.split(":")[0]:
-						qo.put("Získávám " + line.split(" ")[-5].replace("\n",""))
-					if "Setting" == line.split(" ")[0]:
-						qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
-					if "Unpacking" == line.split(" ")[0]:
-						qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
-				qo.put("Hotovo")
-				qo.put("Instaluji balíčky")
-				sy.runProcess("export DEBIAN_FRONTEND=noninteractive")
-				for line in sy.runProcess("apt-get install isc-dhcp-server nfs-kernel-server tftpd-hpa syslinux debootstrap expect apache2 -y"):
-					print line,
-					log.write(line)
-					if "Get" == line.split(":")[0]:
-						qo.put("Získávám " + line.split(" ")[-5].replace("\n",""))
-					if "Setting" == line.split(" ")[0]:
-						qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
-					if "Unpacking" == line.split(" ")[0]:
-						qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
-				qo.put("Hotovo")
-				# umountutí
-				tos='umount /NFSROOT/class/proc'
-				for line in self.sy.runProcess(tos):
-					print line,
-					self.log.write(line)
-				tos='umount /NFSROOT/class/sys'
-				for line in self.sy.runProcess(tos):
-					print line,
-					self.log.write(line)
+				try:
+					qo.put("Kontroluji aktualizace")
+					for line in sy.runProcess("apt-get update"):
+						print line,
+					qo.put("Hotovo")
+					qo.put("TATO OPERACE JE NA DLOUHO!")
+					qo.put("Aktualizuji")
+					for line in sy.runProcess("apt-get upgrade -y"):
+						print line,
+						log.write(line)
+						if "Get" == line.split(":")[0]:
+							qo.put("Získávám " + line.split(" ")[-5].replace("\n",""))
+						if "Setting" == line.split(" ")[0]:
+							qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
+						if "Unpacking" == line.split(" ")[0]:
+							qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
+					qo.put("Hotovo")
+					qo.put("Instaluji balíčky")
+					sy.runProcess("export DEBIAN_FRONTEND=noninteractive")
+					for line in sy.runProcess("apt-get install isc-dhcp-server iptables-persistent nfs-kernel-server tftpd-hpa syslinux debootstrap expect apache2 -y"):
+						print line,
+						log.write(line)
+						if "Get" == line.split(":")[0]:
+							qo.put("Získávám " + line.split(" ")[-5].replace("\n",""))
+						if "Setting" == line.split(" ")[0]:
+							qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
+						if "Unpacking" == line.split(" ")[0]:
+							qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
+					qo.put("Hotovo")
+				except UError,e:
+					qo.put(str(e.args) + " ERROR!")
 			if stri.split(";")[0] == "SET":
 				eth=stri.split(";")[1]
 				setUNt=ConfSys(eth)
@@ -333,127 +327,104 @@ if __name__ == "__main__":
 				ig=int(tsth[3])
 				ib=int(tsth[4])
 				su=int(tsth[5])
-				# mountování pro instalace
-				if os.path.isfile("/NFSROOT/class/proc/mounts"):
-					log.write("/proc/mounts already there")
-				else:
-					open("/NFSROOT/class/proc/mounts","w")
-				# mount proc /NFSROOT/class/proc -t proc
-				tos='mount proc /NFSROOT/class/proc -t proc'
-				for line in sy.runProcess(tos):
-					print line,
-					log.write(line)
-				# mount sysfs /NFSROOT/class/sys -t sysfs
-				tos='mount sysfs /NFSROOT/class/sys -t sysfs'
-				for line in sy.runProcess(tos):
-					print line,
-					log.write(line)
-				#print
 				print np
 				print nn
 				print im
 				print ig
 				print ib
 				print su
-				#continue
-				if np == 1:
-					qo.put("Nastavuji připojení")
-					pr=ParConfFl()
-					pr.setInterfaces(eth,setUNt.de)
-					#print eth + " XXXX " + setUNt.de
-					setUNt.setUpNets()
-					# restart sítě
-					qo.put("Restartuji připojení")
-					setUNt.resetNet()
-					# povoluji NAT a routování
-					qo.put("Nastavuji přepínání")
-					setUNt.setUpMasq()
-				# stáhnout deboostrapem obraz
-				if im == 1:
-					qo.put("Stahuji obraz systému")
-					qo.put("TATO OPERACE JE NA DLOUHO!")
-					setUNt.installSysDebs(qo)
-					qo.put("Hotovo")
-					# přidávám složku pro instalaci dalších aplikací
-					# HODNĚ DŮLEŽITÉ, OSTATNÍ METODY NA EXISTENCI SLOŽKY SPOLÉHAJÍ
-				sy.makeDir("/NFSROOT/class/addons/")
-				if nn == 1:
-					# nastavit dhcp
-					setUNt.setUpDH()
-					# nastavit nfs
-					setUNt.setUpNFS()
-					# vkládání záznamů do fstab
-					setUNt.setUpFst()
-				# nastavit locales v obrazu
-				if im == 1:
-					qo.put("Připravuji jazyk balíčku")
-					setUNt.setUpLoc()
-					qo.put("Hotovo")
-				if su == 1:
-					# nastavit uživatele
-					# heslo roota
-					qo.put("Nastavuji heslo roota")
-					sy.chgPasswd("/NFSROOT/class/etc/shadow",'root','teacher')
-					qo.put("Hotovo")
-					# založení studenta
-					qo.put("Připravuji uživatele student")
-					setUNt.createStudent()
-					qo.put("Hotovo")
-					# editace iTalc
-					i=iTaHand()
-					i.setUpIcaS()
-				if ig == 1:
-					# Kopírování Xorg konfigurace
-					qo.put("Kopíruji nastavení Xorg")
-					setUNt.copyXorgCo()
-					qo.put("Hotovo")
-					# instalace XFCE
-					qo.put("Připravuji grafické rozhraní")
-					qo.put("TATO OPERACE JE NA DLOUHO!")
-					setUNt.installXfce(qo)
-					qo.put("Hotovo")
-					# nastavení klávesnice
-					qo.put("Nastavuji klávesnici")
-					setUNt.setUpKey()
-					qo.put("Hotovo")
-				# instalace Iceweaselu
-				if im == 1:
-					# vytváření obrazů jádra
-					qo.put("Připravuji jádro")
-					setUNt.createKer(qo)
-					qo.put("Hotovo")
-				if ib == 1:
-					qo.put("Připravuji prohlížeč")
-					setUNt.installIce()
-					qo.put("Hotovo")
-				if ig == 1:
-					#instaluji login screen
-					qo.put("Připravuji grafické rozhraní")
-					setUNt.installDm(qo)
-					qo.put("Hotovo")
-				if ig == 1:
-					# přidání pozadí
-					setUNt.copyXBac()
-				if nn == 1:
-					# změna hostname
-					# vytvořit rc skript, který nastaví hostname na "student<poslední oktet IP>"
-					setUNt.setUpHsn()
+				#start
+				try:
+					if np == 1:
+						qo.put("Nastavuji připojení")
+						pr=ParConfFl()
+						pr.setInterfaces(eth,setUNt.de)
+						#print eth + " XXXX " + setUNt.de
+						setUNt.setUpNets()
+						# restart sítě
+						qo.put("Restartuji připojení")
+						setUNt.resetNet()
+						# povoluji NAT a routování
+						qo.put("Nastavuji přepínání")
+						setUNt.setUpMasq()
+					# stáhnout deboostrapem obraz
+					if im == 1:
+						qo.put("Stahuji obraz systému")
+						qo.put("TATO OPERACE JE NA DLOUHO!")
+						setUNt.installSysDebs(qo)
+						qo.put("Hotovo")
+						# přidávám složku pro instalaci dalších aplikací
+						# HODNĚ DŮLEŽITÉ, OSTATNÍ METODY NA EXISTENCI SLOŽKY SPOLÉHAJÍ
+					sy.makeDir("/NFSROOT/class/addons/")
+					if nn == 1:
+						# nastavit dhcp
+						setUNt.setUpDH()
+						# nastavit nfs
+						setUNt.setUpNFS()
+						# vkládání záznamů do fstab
+						setUNt.setUpFst()
+					# nastavit locales v obrazu
+					if im == 1:
+						qo.put("Připravuji jazyk balíčku")
+						setUNt.setUpLoc()
+						qo.put("Hotovo")
+					if su == 1:
+						# nastavit uživatele
+						# heslo roota
+						qo.put("Nastavuji heslo roota")
+						sy.chgPasswd("/NFSROOT/class/etc/shadow",'root','teacher')
+						qo.put("Hotovo")
+						# založení studenta
+						qo.put("Připravuji uživatele student")
+						setUNt.createStudent()
+						qo.put("Hotovo")
+						# editace iTalc
+						i=iTaHand()
+						i.setUpIcaS()
+					if ig == 1:
+						# Kopírování Xorg konfigurace
+						qo.put("Kopíruji nastavení Xorg")
+						setUNt.copyXorgCo()
+						qo.put("Hotovo")
+						# instalace XFCE
+						qo.put("Připravuji grafické rozhraní")
+						qo.put("TATO OPERACE JE NA DLOUHO!")
+						setUNt.installXfce(qo)
+						qo.put("Hotovo")
+						# nastavení klávesnice
+						qo.put("Nastavuji klávesnici")
+						setUNt.setUpKey()
+						qo.put("Hotovo")
+					# instalace Iceweaselu
+					if im == 1:
+						# vytváření obrazů jádra
+						qo.put("Připravuji jádro")
+						setUNt.createKer(qo)
+						qo.put("Hotovo")
+					if ib == 1:
+						qo.put("Připravuji prohlížeč")
+						setUNt.installIce()
+						qo.put("Hotovo")
+					if ig == 1:
+						#instaluji login screen
+						qo.put("Připravuji grafické rozhraní")
+						setUNt.installDm(qo)
+						qo.put("Hotovo")
+					if ig == 1:
+						# přidání pozadí
+						setUNt.copyXBac()
+					if nn == 1:
+						# změna hostname
+						# vytvořit rc skript, který nastaví hostname na "student<poslední oktet IP>"
+						setUNt.setUpHsn()
+				except UError,e:
+					qo.put(str(e.args) + " ERROR!")
 				# restartuji služby
 				qo.put("Restartuji služby")
 				# zastavení network managera
 				setUNt.resetAllServ()
 				qo.put("Hotovo")
 				qo.put("Zdá se, že všechno je připraveno")
-				# umountutí
-				tos='umount /NFSROOT/class/proc'
-				for line in sy.runProcess(tos):
-					print line,
-					log.write(line)
-				tos='umount /NFSROOT/class/sys'
-				for line in sy.runProcess(tos):
-					print line,
-					log.write(line)
-				continue
 	## Proměnná obsahující okno Tk
 	win = Tk()
 	global np

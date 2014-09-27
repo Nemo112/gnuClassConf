@@ -100,6 +100,15 @@ if __name__ == "__main__":
 			"""
 			# test obsahu služby iTalc
 			if os.path.isfile("/usr/bin/ica"):
+				# test, zdali už neběží
+				p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+				out, err = p.communicate()
+				for line in out.splitlines():
+					if os.path.isfile("/usr/bin/ica"):
+						if 'ica' in line:
+							pid = int(line.split(None, 1)[0])
+							os.kill(pid, signal.SIGKILL)
+				# spuštění služby
 				isIca=False
 				p = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
 				out, err = p.communicate()

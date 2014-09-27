@@ -45,4 +45,5 @@ fi
 rm "/etc/sysctl.conf";
 mv "$tm" "/etc/sysctl.conf";
 # ukládání iptables
-iptables-save > /etc/iptables/rules.v4
+[[ ! -d "/etc/iptables" ]] && mkdir /etc/iptables;
+iptables-save > /etc/iptables/rules.v4;

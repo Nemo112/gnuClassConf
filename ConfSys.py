@@ -348,7 +348,7 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
-		tar.write("apt-get install --allow-unauthenticated gdm -y\n")
+		#tar.write("apt-get install --allow-unauthenticated gdm -y\n")
 		tar.close()	
 		
 		os.chmod("/NFSROOT/class/addons/installDm.sh",0755)
@@ -521,6 +521,7 @@ class ConfSys:
 		self.sy.removeFl("/NFSROOT/class/addons/setupXfc.sh")
 		tar = open ("/NFSROOT/class/addons/setupXfc.sh", 'a')
 		tar.write("#!/bin/bash\n")
+		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("export LC_ALL=C\n")
 		tar.write("apt-get install --allow-unauthenticated xserver-xorg-input-kbd -y\n")
 		tar.close()
