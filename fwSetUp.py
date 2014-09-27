@@ -136,6 +136,11 @@ class fwSetUp:
 		lst={}
 		for line in open(self.clhs):
 			ip4=line.split("\t")[0]
+			hst=line.split("\t")[-1]
+			#print hst
+			st=re.match(r"student[0-9]*",hst)
+			if st:
+				continue
 			aa=re.match(r"^((0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}(0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])$",ip4)
 			bb=re.match(r"^#((0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}(0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])$",ip4)
 			if aa:
