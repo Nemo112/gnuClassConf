@@ -49,6 +49,8 @@ if __name__ == "__main__":
 			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
+			## popis obrázku
+			self.v=StringVar(self.root)
 			## Počet síťových rozhraní
 			self.ethc=len(self.sys.getEths())-1
 			if self.ethc == 1:
@@ -56,9 +58,11 @@ if __name__ == "__main__":
 				self.igm=PhotoImage(file="./onesd.gif")
 				## Proměnná obsahuje počet rozhraní použitých pro prostředí aplikace
 				self.ethCn=1
+				self.v.set("Počítač v síti")
 			else:
 				self.igm=PhotoImage(file="./twosd.gif")
 				self.ethCn=2
+				self.v.set("Počítač jako směrovač")
 			## Vstupní fronta pro pracovní vlákno
 			self.qi=qii
 			## Výstupní fronta z pracovního vlákna
@@ -105,6 +109,14 @@ if __name__ == "__main__":
 			"""
 			## Promměnná obsahující zvolené rozhraní pro třídu
 			self.etg=s
+			if self.etg == self.sys.getDefGwInt():
+				self.igm = PhotoImage(file="./onesd.gif")
+				self.iml.configure(image=self.igm)
+				self.v.set("Počítač v síti")
+			else:
+				self.igm = PhotoImage(file="./twosd.gif")
+				self.iml.configure(image=self.igm)
+				self.v.set("Počítač jako směrovač")
 		def CheckTxtF(self,cq):
 			""" Metoda menící textové pole podle toho, zdali se něco vyskytne ve výstupní frontě
 			\param cq Výstupní fronta, na kterou metoda reaguje a její výstup směřuje do textového pole to
@@ -126,6 +138,10 @@ if __name__ == "__main__":
 				elif stri == "Zdá se, že všechno je připraveno":
 					self.to.insert('end',stri)
 					self.to.itemconfig('end', {'bg':'lime green'})
+				elif stri == "SETSDONE":
+					self.sets['state'] = 'normal'
+				elif stri == "INSDONE":
+					self.inse['state'] = 'normal'
 				else:
 					self.to.insert('end',stri)
 				self.to.select_clear(self.to.size()-2)
@@ -145,12 +161,14 @@ if __name__ == "__main__":
 			pet = str(ib.get())
 			ses = str(su.get())
 			self.qi.put("SET;" + self.etg + ";" + jed + dva + tri + cty + pet + ses)
+			self.sets['state'] = 'disabled'
 		def stInst(self):
 			""" Metoda pro spuštění instalace balíčků pro potřeby třídy
 			Posílá do vstupní fronty požadavky na vnější proces, který příkazy postupně spouští
 			\param self Ukazatel na objekt
 			"""
 			self.qi.put("INST")
+			self.inse['state'] = 'disabled'
 		def swi(self):
 			""" Kontrolní metoda pro přepínání checkbuttonů
 			\param self Ukazatel na objekt
@@ -171,12 +189,11 @@ if __name__ == "__main__":
 			sysq=ConsSys()
 			group = LabelFrame(self.root, text="Topologie učebny", padx=5, pady=5)
 			group.pack()
-			v=StringVar(self.root)
 			if self.ethc == 1:
-				v.set("Počítač v síti")
+				self.v.set("Počítač v síti")
 			else:
-				v.set("Počítač jako směrovač")
-			option = OptionMenu(group, v, "Počítač v síti", "Počítač jako směrovač", command=self.chg)
+				self.v.set("Počítač jako směrovač")
+			option = OptionMenu(group, self.v, "Počítač v síti", "Počítač jako směrovač", command=self.chg)
 			option.pack()
 			## Proměnná obsahuje obrázek topologie
 			self.iml=Label(group, image=self.igm)
@@ -225,7 +242,7 @@ if __name__ == "__main__":
 			if sysq.isCnt():
 				vx.set("Počítač připojen k internetu.")
 				lxi=Label(grst,textvariable=vx, height=3, width=30)
-			else:					
+			else:
 				vx.set("Chybí internet!")
 				lxi=Label(grst,font="bold",textvariable=vx, height=3, width=20)
 			tx.set("Počet rozhraní: " + str(self.ethc) + "\n systém podle toho \n nastavil předpokládanou \n topologii.")
@@ -263,10 +280,14 @@ if __name__ == "__main__":
 			dnwb.place(relx=0.27, rely=.79)
 			fa=Frame(dnwb)
 			Label(fa,height=1, width=21,text="Instalace služeb systému:").pack(side="left")
-			Button(fa,height=1, width=6,text="Spustit",command=self.stInst).pack(side="right")
+			# spouštěcí button
+			self.inse=Button(fa,height=1, width=6,text="Spustit",command=self.stInst)
+			self.inse.pack(side="right")
 			fb=Frame(dnwb)
 			Label(fb,text="Nastavení služeb systému:").pack(side="left")
-			Button(fb,height=1, width=6,text="Spustit",command=self.stSet).pack(side="right")
+			# nastavující button
+			self.sets=Button(fb,height=1, width=6,text="Spustit",command=self.stSet)
+			self.sets.pack(side="right")
 			fa.pack()
 			fb.pack()
 			self.root.after(100,self.CheckTxtF,self.qo)
@@ -313,6 +334,7 @@ if __name__ == "__main__":
 						if "Unpacking" == line.split(" ")[0]:
 							qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 					qo.put("Hotovo")
+					qo.put("INSDONE")
 				except UError,e:
 					qo.put(str(e.args) + " ERROR!")
 			if stri.split(";")[0] == "SET":
@@ -417,6 +439,7 @@ if __name__ == "__main__":
 						# změna hostname
 						# vytvořit rc skript, který nastaví hostname na "student<poslední oktet IP>"
 						setUNt.setUpHsn()
+					qo.put("SETSDONE")
 				except UError,e:
 					qo.put(str(e.args) + " ERROR!")
 				# restartuji služby

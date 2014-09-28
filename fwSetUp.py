@@ -137,7 +137,7 @@ class fwSetUp:
 		for line in open(self.clhs):
 			ip4=line.split("\t")[0]
 			hst=line.split("\t")[-1]
-			#print hst
+			#student(0-n) je hostname klientských stanic, nesmí se vymazat
 			st=re.match(r"student[0-9]*",hst)
 			if st:
 				continue

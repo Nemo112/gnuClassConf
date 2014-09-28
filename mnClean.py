@@ -11,6 +11,7 @@ import multiprocessing
 import tkMessageBox
 from ShrFol import ShrFol
 from Queue import Empty, Full
+from FsSize import FsSize
 
 if __name__ == "__main__":
 	class App:
@@ -35,6 +36,8 @@ if __name__ == "__main__":
 			self.qi=qi
 			## Výstupní fronta
 			self.qo=qo
+			## Velikosti FS
+			self.fs=FsSize()
 		def erase(self):
 			""" Smaže systém - resp zašle signál vláknu, aby smazal systém
 			\param self Ukazatel na objekt
@@ -62,7 +65,17 @@ if __name__ == "__main__":
 			gpMan.place(relx=0.01, rely=0)
 			Button(gpMan,height=1, width=21,text="Vyčistit balíčky obrazu",command=self.clear).pack()
 			Button(gpMan,height=1, width=21,text="Aktualizovat třídu",command=self.update).pack()
-			Button(gpMan,height=1, width=21,text="Smazat obraz učebny",command=self.erase).pack()
+			# Velikost zaplnění os
+			Label(self.root,text="Zaplnění souborového systému:").place(relx=0.02, rely=0.5)
+			## progresbar ukazující zaplnění FS
+			self.progressbar = ttk.Progressbar(orient=HORIZONTAL, length=200, mode='determinate')
+			self.progressbar.place(relx=0.02, rely=0.6)
+			self.progressbar["value"]=0
+			self.progressbar["maximum"]=self.fs.getSize()
+			# Smazání
+			gpCle = LabelFrame(self.root, text="Vymazání", padx=5, pady=5)
+			gpCle.place(relx=0.01, rely=0.73)
+			Button(gpCle,height=1, width=21,text="Smazat obraz učebny",command=self.erase).pack()
 			# Výpisky
 			gpTh = LabelFrame(self.root, text="Průběh", padx=5, pady=5)
 			gpTh.place(relx=0.48, rely=0.0)
@@ -90,6 +103,7 @@ if __name__ == "__main__":
 			except Empty:
 				pass
 			finally:
+				self.progressbar["value"]=self.fs.getFull()
 				self.root.after(100,self.mvBar,qc)
 		def qquit(self):
 			""" Metoda pro ukončení okna
