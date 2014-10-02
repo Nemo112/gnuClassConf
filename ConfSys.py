@@ -333,6 +333,29 @@ class ConfSys:
 					qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
 				if "Unpacking" == line.split(" ")[0]:
 					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
+	def installStand(self,qo=None):
+		""" Instaluje standardní systém
+		\param self Ukazatel na objekt
+		\param qo Ukazatel na frontu pro výpis v okně
+		"""
+		self.sy.removeFl("/NFSROOT/class/addons/installSta.sh")
+		tar = open ("/NFSROOT/class/addons/installSta.sh", 'a')
+		tar.write("#!/bin/bash\n")
+		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
+		tar.write("aptitude install ~pstandard ~pimportant ~prequired -y\n")
+		tar.close()
+		os.chmod("/NFSROOT/class/addons/installSta.sh",0755)
+		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installSta.sh'
+		for line in self.sy.runProcess(tos):
+			print line,
+			self.log.write(line)
+			if qo != None:
+				if "Get" == line.split(":")[0]:
+					qo.put("Získávám " + line.split(" ")[-5].replace("\n",""))
+				if "Setting" == line.split(" ")[0]:
+					qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
+				if "Unpacking" == line.split(" ")[0]:
+					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 	def installDm(self,qo=None):
 		""" Instaluje lightdm
 		\param self Ukazatel na objekt
@@ -364,20 +387,21 @@ class ConfSys:
 				if "Unpacking" == line.split(" ")[0]:
 					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 					
-		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
-			cnl=cont.read()
-		obs=""
-		for line in cnl.split("\n"):
-			if "dpkg-reconfigure lightdm;" in line:
-				return
-			if "exit 0" == line:
-				break
-			obs = obs + line  + "\n"
-		obs = obs + "dpkg-reconfigure lightdm;\n"
-		obs = obs + "exit 0\n"
-		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
-		tar.write(obs)
-		tar.close()
+		
+		#with open("/NFSROOT/class/etc/rc.local",'r') as cont:
+		#	cnl=cont.read()
+		#obs=""
+		#for line in cnl.split("\n"):
+		#	if "dpkg-reconfigure lightdm;" in line:
+		#		return
+		#	if "exit 0" == line:
+		#		break
+		#	obs = obs + line  + "\n"
+		#obs = obs + "dpkg-reconfigure lightdm;\n"
+		#obs = obs + "exit 0\n"
+		#tar = open ("/NFSROOT/class/etc/rc.local", 'w')
+		#tar.write(obs)
+		#tar.close()
 	def installSysDebs(self,qo=None):
 		""" Instaluje základní systém přes deboostrap
 		\param self Ukazatel na objekt

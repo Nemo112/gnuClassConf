@@ -10,6 +10,7 @@ var searchData=
   ['insset',['insSet',['../db/d36/classmnFocus_1_1App.html#a2ad6e7b25e3ebd9dbf284a5046ed22d0',1,'mnFocus::App']]],
   ['installdm',['installDm',['../d0/d38/classConfSys_1_1ConfSys.html#acc9747fb9c27ec9b502f05f8e9038e93',1,'ConfSys::ConfSys']]],
   ['installice',['installIce',['../d0/d38/classConfSys_1_1ConfSys.html#a75c24373b7f98875cb36979db32affb6',1,'ConfSys::ConfSys']]],
+  ['installstand',['installStand',['../d0/d38/classConfSys_1_1ConfSys.html#a95ef7393f7d7dbee78bced240d3554a2',1,'ConfSys::ConfSys']]],
   ['installsysdebs',['installSysDebs',['../d0/d38/classConfSys_1_1ConfSys.html#a25b558cfd4ac44f9f75d82771079db7a',1,'ConfSys::ConfSys']]],
   ['installxfce',['installXfce',['../d0/d38/classConfSys_1_1ConfSys.html#a3b5dad79e382f77b71218611bb97a25b',1,'ConfSys::ConfSys']]],
   ['instclie',['instClie',['../dc/de8/classiTaHand_1_1iTaHand.html#aba573d17165dd8ae89e4cb7f2594edfa',1,'iTaHand::iTaHand']]],

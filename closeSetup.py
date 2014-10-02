@@ -403,6 +403,10 @@ if __name__ == "__main__":
 						# editace iTalc
 						i=iTaHand()
 						i.setUpIcaS()
+					if im == 1:
+						qo.put("Instaluji základní systém")
+						setUNt.installStand()
+						qo.put("Hotovo")
 					if ig == 1:
 						# Kopírování Xorg konfigurace
 						qo.put("Kopíruji nastavení Xorg")

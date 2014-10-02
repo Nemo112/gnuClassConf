@@ -144,6 +144,8 @@ class iTaHand:
 		\param ip String obsahující ip adresu klienta
 		\param mac String obsahující mac adresu klienta
 		"""
+		if ip is None or mac is None:
+			return False
 		if os.path.isfile(self.home + "/.italc/globalconfig.xml") == False:
 			return False
 		if self.isInTab(ip):
