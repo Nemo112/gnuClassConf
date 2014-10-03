@@ -222,21 +222,16 @@ if __name__ == "__main__":
 				if stri == "XXX":
 					break
 				n=dhc.chcNew()
+				it=iTaHand()
 				if n is not None:
 					for i in n:
-						qo.put("Nový host s IP " + i)
-						log.write("Nový host s IP " + i)
-						qo.put("Přidávám do iTalcu")
-						it=iTaHand()
-						if it.isInTab(i):
-							it.remCli(i)
-							it.addCli(i,dhc.getMacByIpDh(i))
-							log.write("Odebrán a přidán " + i)
-						else:
-							it.addCli(i,dhc.getMacByIpDh(i))
-							log.write("Přidán " + i)
-						qo.put("Přidáno")
-						qo.put("Restartujte iTalc")
+						if it.tstItalc():
+							if it.isInTab(i) == False:
+								it.addCli(i,dhc.getMacByIpDh(i))
+								log.write("Přidán " + i)
+								qo.put("Přidán nový PC do iTalc")
+								qo.put("má IP " + i)
+								qo.put("Restartujte iTalc")
 				# Vyčkává vteřinu pro refresh zátěže
 				time.sleep(1)
 	## Vstupní fronta pracovního vlákna

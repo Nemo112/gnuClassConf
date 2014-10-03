@@ -13,6 +13,8 @@ def \hyperlink{classitWindow_1_1App_a358ea0d385b15780fd9967398f16179a}{\-\_\-\-\
 \begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
 def \hyperlink{classitWindow_1_1App_a4b85fcf604eb62e56ab1419c5d9c9658}{paint\-Layout}
 \begin{DoxyCompactList}\small\item\em Metoda vykreslující grafické prvky okna Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem. \end{DoxyCompactList}\item 
+def \hyperlink{classitWindow_1_1App_ae3e1bcda10d1e008a01bff04f8b65fcd}{mv\-Bar}
+\begin{DoxyCompactList}\small\item\em Metoda pro vypisování obsahu výstupní fronty. \end{DoxyCompactList}\item 
 def \hyperlink{classitWindow_1_1App_a43d0be6dbdd9986f4a412e3856c4db16}{ins}
 \begin{DoxyCompactList}\small\item\em Metoda instalující i\-Talc Instaluje službu, nastaví klienta, připraví klíče a nakopíruje je do klientských stanic. \end{DoxyCompactList}\item 
 def \hyperlink{classitWindow_1_1App_ad1fd8fe169b638114c7763ff46965d9e}{i\-Tl}
@@ -28,9 +30,21 @@ def \hyperlink{classitWindow_1_1App_a8158d651d179afcacc028088642e297b}{qquit}
 \hypertarget{classitWindow_1_1App_ac6c6184b190927f6585ceeb2ece1ea2b}{\hyperlink{classitWindow_1_1App_ac6c6184b190927f6585ceeb2ece1ea2b}{it}}\label{da/dc1/classitWindow_1_1App_ac6c6184b190927f6585ceeb2ece1ea2b}
 
 \begin{DoxyCompactList}\small\item\em Ukazatel na i\-Talc třídu. \end{DoxyCompactList}\item 
+\hypertarget{classitWindow_1_1App_a07aacdbdffaed3e10d11b8f4c1af3ac7}{\hyperlink{classitWindow_1_1App_a07aacdbdffaed3e10d11b8f4c1af3ac7}{qi}}\label{da/dc1/classitWindow_1_1App_a07aacdbdffaed3e10d11b8f4c1af3ac7}
+
+\begin{DoxyCompactList}\small\item\em Vstupní fronta. \end{DoxyCompactList}\item 
+\hypertarget{classitWindow_1_1App_a75789c9c99805707f63881012a06109d}{\hyperlink{classitWindow_1_1App_a75789c9c99805707f63881012a06109d}{qo}}\label{da/dc1/classitWindow_1_1App_a75789c9c99805707f63881012a06109d}
+
+\begin{DoxyCompactList}\small\item\em Výstupní fronta. \end{DoxyCompactList}\item 
 \hypertarget{classitWindow_1_1App_abe6b33cafc73a90339a592c36e97704c}{\hyperlink{classitWindow_1_1App_abe6b33cafc73a90339a592c36e97704c}{vd}}\label{da/dc1/classitWindow_1_1App_abe6b33cafc73a90339a592c36e97704c}
 
-\begin{DoxyCompactList}\small\item\em Label hláška pro uživatele. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Label hláška pro uživatele. \end{DoxyCompactList}\item 
+\hypertarget{classitWindow_1_1App_a6f15bb5d6e708468c0553acee3e6d08e}{\hyperlink{classitWindow_1_1App_a6f15bb5d6e708468c0553acee3e6d08e}{ld}}\label{da/dc1/classitWindow_1_1App_a6f15bb5d6e708468c0553acee3e6d08e}
+
+\begin{DoxyCompactList}\small\item\em Label oznamující uživateli stav. \end{DoxyCompactList}\item 
+\hypertarget{classitWindow_1_1App_a88e67d043e457a37416651b04f4cb2dd}{\hyperlink{classitWindow_1_1App_a88e67d043e457a37416651b04f4cb2dd}{bti}}\label{da/dc1/classitWindow_1_1App_a88e67d043e457a37416651b04f4cb2dd}
+
+\begin{DoxyCompactList}\small\item\em Install/run buttonek. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailní popis}
@@ -42,7 +56,9 @@ Třída obsahující metody s prací s oknem Okénko obsluhující instalaci a p
 \subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def it\-Window.\-App.\-\_\-\-\_\-init\-\_\-\-\_\- (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{r}
+\item[{}]{r, }
+\item[{}]{qi, }
+\item[{}]{qo}
 \end{DoxyParamCaption}
 )}}\label{da/dc1/classitWindow_1_1App_a358ea0d385b15780fd9967398f16179a}
 
@@ -54,6 +70,10 @@ Konstruktor třídy okna.
 {\em self} & Ukazatel na objekt \\
 \hline
 {\em r} & Ukazatel na Tkinker okno \\
+\hline
+{\em qi} & Vstupní fronta \\
+\hline
+{\em qo} & Výstupní fronta \\
 \hline
 \end{DoxyParams}
 
@@ -89,6 +109,25 @@ Metoda spouštějící i\-Talc.
 
 \begin{DoxyParams}{Parametry}
 {\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classitWindow_1_1App_ae3e1bcda10d1e008a01bff04f8b65fcd}{\index{it\-Window\-::\-App@{it\-Window\-::\-App}!mv\-Bar@{mv\-Bar}}
+\index{mv\-Bar@{mv\-Bar}!itWindow::App@{it\-Window\-::\-App}}
+\subsubsection[{mv\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}def it\-Window.\-App.\-mv\-Bar (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{qc}
+\end{DoxyParamCaption}
+)}}\label{da/dc1/classitWindow_1_1App_ae3e1bcda10d1e008a01bff04f8b65fcd}
+
+
+Metoda pro vypisování obsahu výstupní fronty. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+{\em qc} & Výstupní fronta pro výpis do listu \\
 \hline
 \end{DoxyParams}
 \hypertarget{classitWindow_1_1App_a4b85fcf604eb62e56ab1419c5d9c9658}{\index{it\-Window\-::\-App@{it\-Window\-::\-App}!paint\-Layout@{paint\-Layout}}
