@@ -63,7 +63,6 @@ if __name__ == "__main__":
 				self.bti=Button(self.root,height=1, width=19,text="Spustit",command=self.iTl)
 				self.bti.pack()
 			else:
-				## Install/run buttonek
 				self.bti=Button(group,height=1, width=19,text="Instalovat",command=self.ins)
 				self.bti.pack()
 			tx=StringVar()

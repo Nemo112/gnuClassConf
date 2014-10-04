@@ -16,6 +16,7 @@ import ttk
 import os
 import shutil
 from ConsSys import ConsSys
+from UError import UError
 from LogWrk import LogWrk
 
 if __name__ == "__main__":
@@ -118,7 +119,9 @@ if __name__ == "__main__":
 						ts=f.getIfInst(appNm)
 						self.tl.insert('end',it[1]['name'])
 						if ts == False:
-							self.tl.itemconfig(END, {'bg':'orange red'}) 
+							self.tl.itemconfig(END, {'bg':'orange red'})
+						else:
+							self.tl.itemconfig(END, {'bg':'dark sea green'})
 					self.tl.insert('end',"")
 				#self.tl.config(state=DISABLED)
 			else:
@@ -140,7 +143,9 @@ if __name__ == "__main__":
 					ts=f.getIfInst(appNm)
 					self.tl.insert('end',it[1]['name'])
 					if ts == False:
-						self.tl.itemconfig(END, {'bg':'orange red'}) 
+						self.tl.itemconfig(END, {'bg':'orange red'})
+					else:
+						self.tl.itemconfig(END, {'bg':'dark sea green'})
 				self.tl.insert('end',"")
 		def paintLayout(self):
 			""" Metoda vykreslující grafické prvky okna
@@ -190,7 +195,9 @@ if __name__ == "__main__":
 						ts=f.getIfInst(appNm)
 						self.tl.insert('end',it[1]['name'])
 						if ts == False:
-							self.tl.itemconfig(END, {'bg':'orange red'}) 
+							self.tl.itemconfig(END, {'bg':'orange red'}) 						
+						else:
+							self.tl.itemconfig(END, {'bg':'dark sea green'})
 					self.tl.insert('end',"")
 				
 			#self.tl.config(state=DISABLED)
@@ -220,6 +227,12 @@ if __name__ == "__main__":
 			"""
 			try:
 				st=qc.get(0)
+				cap=st.split(":")
+				if len(cap) > 1:
+					if cap[0] == "ERROR":
+						text = u"Nastala chyba, zkontrolujte připojení! \n Chyba přišla u příkazu " + cap[1]
+						#text += + cap[1]
+						tkMessageBox.showerror("Chyba!", text)
 				self.h += 1
 				self.progressbar["maximum"]=self.cn
 				self.progressbar["value"]=self.h
@@ -294,12 +307,21 @@ if __name__ == "__main__":
 			elif stri == "RCA":
 				f.dpkgConfA()
 			elif stri.split(":")[0] == "INST":
+				#OHLÍDAT EXCECPNY
 				print(stri.split(":")[2])
-				f.exCom(stri.split(":")[2])
+				try:
+					f.exCom(stri.split(":")[2])
+				except UError,e:
+					print(str(e.args) + " ERROR!")
+					qo.put("ERROR:" + stri.split(":")[2])
 				qo.put("IN:"+stri.split(":")[1])
 			elif stri.split(":")[0] == "REMO":
 				print(stri.split(":")[2])
-				f.exCom(stri.split(":")[2])
+				try:
+					f.exCom(stri.split(":")[2])
+				except UError,e:
+					print(str(e.args) + " ERROR!")
+					qo.put("ERROR:" + stri.split(":")[2])
 				qo.put("RN:"+stri.split(":")[1])
 	## Hlavní instance okna TK
 	win = Tk()
