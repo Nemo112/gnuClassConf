@@ -103,4 +103,4 @@ def get_network_interfaces():
  
 if __name__ == '__main__':
     print "Jen pro import"
-    print [str(ni) for ni in get_network_interfaces()]
+    #print [str(ni) for ni in get_network_interfaces()]

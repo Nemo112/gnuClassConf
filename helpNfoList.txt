@@ -1,0 +1,122 @@
+Spustitelný skript ./backupWrk.sh
+====================================================
+Spustitelný skript ./clImaOs.py
+Usage: clImaOs.py [args]
+ Serve for cleaning up apt
+
+Options:
+  -h, --help          show this help message and exit
+  -c, --clean-image   Clean client image
+  -C, --clean-system  Clean host
+====================================================
+Spustitelný skript ./ConfSys.py
+Usage: ConfSys.py [args]
+ Installation and detail configuration for client image and host system
+
+Options:
+  -h, --help            show this help message and exit
+  -o, --show-out-eth    Show outer interface
+  -s, --setup-services  Setting up network services configuration
+  -n, --setup-network   Setting up network IP and NAT
+  -c, --install-x       Install X windows
+  -b, --install-browser
+                        Install Iceweasel to image
+  -k, --install-kernel  Install kernel to TFTP and clients filesystem
+  -i SF, --inner-interface=SF
+                        Settting up for interface inside of class
+====================================================
+Spustitelný skript ./ConsSys.py
+Usage: ConsSys.py [args]
+ Close system settings and methods
+
+Options:
+  -h, --help       show this help message and exit
+  -e, --erase-all  Erase whole client image
+  -l, --eth-list   Give a list of eth interfaces
+====================================================
+Spustitelný skript ./DhcpCheck.py
+Usage: DhcpCheck.py [args]
+ Serve for DHCP lists checks
+
+Options:
+  -h, --help            show this help message and exit
+  -p, --print-list      Says klients in DHCP list
+  -m MAC, --get-mac=MAC
+                        Says MAC from IP adress in DHCP lease file
+====================================================
+Spustitelný skript ./docArgs.sh
+Projde všechny spustitelné skripty a vypíše jejich -h
+====================================================
+Spustitelný skript ./fwSetUp.py
+Usage: fwSetUp.py [args]
+ Serve for /etc/hosts management in client filesystem
+
+Options:
+  -h, --help            show this help message and exit
+  -b, --block-net       Block internet by messing DNS path in client list
+  -u, --unblock-net     Unblock internet by messing DNS path in client list
+  -l, --blocked-list    Give a list of blocked domains
+  -s BLD, --block-domain=BLD
+                        Tells to hosts that domain is on different IP
+  -g UNDOM, --unblock-domain=UNDOM
+                        Unblock domain
+====================================================
+Spustitelný skript ./GetIfAdrs.py
+Jen pro import
+====================================================
+Spustitelný skript ./inFocus.py
+Usage: inFocus.py [args]
+ Work with focuses in client filesystem
+
+Options:
+  -h, --help            show this help message and exit
+  -l, --installed-list  Give a list of installed focuses
+  -c, --clean-dpkg      Clean dpkg, apt and force install apt-get packages
+                        which failed
+  -r, --auto-rem        Clean image by apt-get autoremove
+====================================================
+Spustitelný skript ./instItalcMa.sh
+====================================================
+Spustitelný skript ./instLouncher.sh
+====================================================
+Spustitelný skript ./iTaHand.py
+Jen pro import
+====================================================
+Spustitelný skript ./LogWrk.py
+Jen pro import
+====================================================
+Spustitelný skript ./masquarate.sh
+Použití ././masquarate.sh <vnitřní eth rozhraní> <vnější eth rozhraní>
+====================================================
+Spustitelný skript ./ParConfFl.py
+Usage: ParConfFl.py [args]
+ Parser for configuration file talking about interfaces
+
+Options:
+  -h, --help            show this help message and exit
+  -l, --class-interfaces
+                        Showing which interface is for class and which for
+                        outer connections
+  -i INNER, --inner-interface=INNER
+                        Settting up for interface inside of class
+  -o OUTER, --outer-interface=OUTER
+                        Settting up for interface outside of class
+====================================================
+Spustitelný skript ./ShrFol.py
+Usage: ShrFol.py [args]
+ Serve for setting up shares in client filesystem
+
+Options:
+  -h, --help            show this help message and exit
+  -l, --shared-list     Give a list of shared files
+  -s NFO, --share-new=NFO
+                        Share new folder
+  -u UFO, --unshare-folder=UFO
+                        Unshare folder
+====================================================
+Spustitelný skript ./SysLoad.py
+Jen pro import
+====================================================
+Spustitelný skript ./xmlFocPar.py
+Jen pro import
+====================================================

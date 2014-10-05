@@ -1,4 +1,7 @@
 #!/bin/bash
+
+[[ "$1" != "" ]] && exit 0;
+
 nm="/usr/share/applications/gnuClassConf.desktop";
 touch  $nm;
 chmod 755  $nm;

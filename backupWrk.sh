@@ -1,4 +1,5 @@
 #!/bin/bash
+[[ "$1" != "" ]] && { exit 1; }
 p=$PWD;
 cd ..;
 tar cvf ./gnuClassConf.tar ./gnuClassConf;

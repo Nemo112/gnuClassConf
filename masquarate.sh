@@ -1,6 +1,6 @@
 #!/bin/bash
 #testování vstupů
-if [[ "$1" == ""  ]];then
+if [[ "$1" == "" || "$1" == "-h" ]];then
 	echo "Použití ./$0 <vnitřní eth rozhraní> <vnější eth rozhraní>";
 	exit 3;
 fi
