@@ -290,7 +290,7 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get autoremove --purge xfce4 -y\n")
-		tar.write("apt-get autoremove --purge lightdm -y\n")
+		tar.write("apt-get autoremove --purge slim -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/unstallXfc.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/unstallXfc.sh'
@@ -357,7 +357,7 @@ class ConfSys:
 				if "Unpacking" == line.split(" ")[0]:
 					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 	def installDm(self,qo=None):
-		""" Instaluje lightdm
+		""" Instaluje slim
 		\param self Ukazatel na objekt
 		\param qo Ukazatel na frontu pro výpis v okně
 		"""
@@ -370,7 +370,7 @@ class ConfSys:
 		tar.write("export XKBVARIANT=\"qwerty_bksl\"\n")
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
-		tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
+		tar.write("apt-get install --allow-unauthenticated slim -y\n")
 		#tar.write("apt-get install --allow-unauthenticated gdm -y\n")
 		tar.close()	
 		

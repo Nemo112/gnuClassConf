@@ -167,7 +167,7 @@ if __name__ == "__main__":
 			except Empty:
 				#self.progressbar["value"]=self.sl.getLoadAvg()
 				pass
-			finally:			
+			finally:
 				self.progressbar["value"]=self.sl.getLoadAvg()
 				self.root.after(1000,self.loadProgs,qc)
 		def enDis(self):
