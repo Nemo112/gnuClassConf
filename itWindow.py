@@ -86,6 +86,7 @@ if __name__ == "__main__":
 					Button(self.root,height=1, width=19,text="Spustit",command=self.iTl).pack()
 				elif st == "ERROR":
 					self.vd.set("Nastala chyba\npři instalaci\nzkontrolujte\n připojení!")
+					self.bti.config(state='normal')
 			except Empty:
 				pass
 			finally:
@@ -96,6 +97,7 @@ if __name__ == "__main__":
 			\param self Ukazatel na objekt
 			"""
 			self.vd.set("Instaluji, vyčkejte!")
+			self.bti.config(state='disabled')
 			self.qi.put("INS")
 		def iTl(self):
 			""" Metoda spouštějící iTalc

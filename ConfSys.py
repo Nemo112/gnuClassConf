@@ -319,7 +319,7 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get install --allow-unauthenticated xfce4 -y\n")
-		#tar.write("apt-get install --allow-unauthenticated lightdm -y\n")
+		#tar.write("apt-get install --allow-unauthenticated lightdmdm -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installXfc.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installXfc.sh'
@@ -371,7 +371,6 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get install --allow-unauthenticated slim -y\n")
-		#tar.write("apt-get install --allow-unauthenticated gdm -y\n")
 		tar.close()	
 		
 		os.chmod("/NFSROOT/class/addons/installDm.sh",0755)
@@ -386,22 +385,42 @@ class ConfSys:
 					qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
 				if "Unpacking" == line.split(" ")[0]:
 					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
-					
+		if os.path.isfile("/NFSROOT/class/etc/slim.conf"):
+			os.remove("/NFSROOT/class/etc/slim.conf")
+		self.sy.copyLargeFile("./data/slim.conf","/NFSROOT/class/etc/slim.conf")
+		xloc="/NFSROOT/class/addons/Xloc.sh"
+		if os.path.isfile(xloc):
+			os.remove(xloc)
+		tar = open (xloc,"w")
+		tar.write("#!/bin/bash\n")
+		tar.write("export LC_ALL=C;\n")
+		tar.write("export DEBIAN_FRONTEND=noninteractive;\n")
+		tar.write("mkdir /run/shm/X11l;\n")
+		tar.write("mkdir /run/shm/X11e;\n")
+		tar.write("cp -r /usr/lib/X11 /run/shm/X11l;\n")
+		tar.write("cp -r /etc/X11 /run/shm/X11e;\n")
+		tar.write("mount -o bind /run/shm/X11e/X11 /etc/X11/;\n")
+		tar.write("mount -o bind /run/shm/X11l/X11 /usr/lib/X11/;\n")
+		tar.write("\n")
+		tar.close()	
 		
-		#with open("/NFSROOT/class/etc/rc.local",'r') as cont:
-		#	cnl=cont.read()
-		#obs=""
-		#for line in cnl.split("\n"):
-		#	if "dpkg-reconfigure lightdm;" in line:
-		#		return
-		#	if "exit 0" == line:
-		#		break
-		#	obs = obs + line  + "\n"
-		#obs = obs + "dpkg-reconfigure lightdm;\n"
-		#obs = obs + "exit 0\n"
-		#tar = open ("/NFSROOT/class/etc/rc.local", 'w')
-		#tar.write(obs)
-		#tar.close()
+		os.chmod(xloc,0755)
+		#vložení do RC.LOCAL
+		nad="/addons/Xloc.sh;"
+		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
+			cnl=cont.read()
+		obs=""
+		for line in cnl.split("\n"):
+			if nad in line:
+				return
+			if "exit 0" == line:
+				break
+			obs = obs + line  + "\n"
+		obs = obs + nad + "\n"
+		obs = obs + "exit 0\n"
+		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
+		tar.write(obs)
+		tar.close()
 	def installSysDebs(self,qo=None):
 		""" Instaluje základní systém přes deboostrap
 		\param self Ukazatel na objekt
@@ -495,6 +514,7 @@ class ConfSys:
 		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/tmp  /tmp  nfs rw,hard,nolock 0 0\n")
 		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/root /root nfs rw,hard,nolock 0 0\n")
 		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/home /root nfs rw,hard,nolock 0 0\n")
+		fd.write(self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/etc/X11 /etc/X11 nfs rw,hard,nolock 0 0\n")
 		fd.write("#" + "tmpfs /tmp tmpfs mode=1777,nosuid,nodev 0 0\n")
 		fd.write("#\n")
 		fd.write(self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/  /  nfs defaults 1 1\n")
