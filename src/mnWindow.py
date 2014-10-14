@@ -136,24 +136,36 @@ if __name__ == "__main__":
 			# Výpisky
 			gpTh = LabelFrame(self.root, text="Noví klienti", padx=5, pady=5)
 			gpTh.place(relx=0.48, rely=0.0)
-			scrollbar = Scrollbar(self.root)
+			scrollbar = Scrollbar(gpTh)
 			## List pro výpis změn v systému
-			self.to = Listbox(gpTh,height=13, width=27, bd=0, yscrollcommand=scrollbar.set)
-			self.to.pack()
+			self.to = Listbox(gpTh,height=11, width=27, bd=0, yscrollcommand=scrollbar.set)
+			self.to.pack(side=LEFT)
 			self.to.insert('end', "Zatím nic...")
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.to.yview)
 			# Progres
-			Label(self.root,height=1, width=21,text="Zatížení učebny:").place(relx=0.42, rely=0.82)
+			Label(self.root,height=1,text="Zatížení učebny:").place(relx=0.5, rely=0.72)
 			## Ukazatel vytížení počítače
-			self.progressbar = ttk.Progressbar(orient=HORIZONTAL, length=200, mode='determinate')
-			self.progressbar.place(relx=0.5, rely=0.89)
+			self.progressbar = ttk.Progressbar(orient=HORIZONTAL, length=100, mode='determinate')
+			self.progressbar.place(relx=0.75, rely=0.72)
 			self.progressbar["value"]=0
 			self.progressbar["maximum"]=100
 			# načítání progressbaru
 			## Obsahuje instanci vytížení systému
 			self.sl=SysLoad()
 			self.loadProgs(self.qo)
+			# help popisek
+			l=Label(self.root,text="Pokud si nevíte rady, použijte ",cursor="hand2")
+			l.place(relx=0.5, rely=0.82)
+			l=Label(self.root,text="nápovědu.",fg="Blue",cursor="hand2")
+			l.place(relx=0.5, rely=0.89)
+			l.bind("<Button-1>",self.callMan)
+		def callMan(self,evt):
+			""" Metoda pro zobrazení pdf manuálové stránky
+			\param self Ukazatel na objekt
+			"""
+			c=["xdg-open","./man/man.pdf"]
+			proc = subprocess.Popen(c)
 		def loadProgs(self,qc):
 			""" Metoda pro načítání progressbaru a vyplování listu
 			\param self Ukazatel na objekt
