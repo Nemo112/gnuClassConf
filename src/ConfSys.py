@@ -367,7 +367,7 @@ class ConfSys:
 		f.write("allowed_users=anybody\n")
 		f.close()
 		# upravit rc.local
-		nad="su - student -c startx;"
+		nad="su - student -c startx &"
 		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
 			cnl=cont.read()
 		obs=""
