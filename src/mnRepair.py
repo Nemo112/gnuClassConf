@@ -13,6 +13,7 @@ from ParConfFl import ParConfFl
 from inFocus import inFocus
 from xmlFocPar import xmlFocPar
 from iTaHand import iTaHand
+from ShrFol import ShrFol
 import os
 
 if __name__ == "__main__":
@@ -231,8 +232,11 @@ if __name__ == "__main__":
 					setUNt.createStudent()
 					qo.put("60:Edituji rc.local")
 					setUNt.setUpHsn()
+					setUNt.installDm()
 					i=iTaHand()
 					i.setUpIcaS()
+					s=ShrFol()
+					s.addShRc()
 					qo.put("80:Provedeno")
 					qo.put("80:Pokud pořád nefunguje,")
 					qo.put("80:zkuste znovu projít")
