@@ -306,13 +306,14 @@ if __name__ == "__main__":
 			if stri == "INST":
 				# instalace prostředků
 				try:
+					sy.runProcess("export DEBIAN_FRONTEND=noninteractive")
 					qo.put("Kontroluji aktualizace")
 					for line in sy.runProcess("apt-get update"):
 						print line,
 					qo.put("Hotovo")
 					qo.put("TATO OPERACE JE NA DLOUHO!")
 					qo.put("Aktualizuji")
-					for line in sy.runProcess("apt-get upgrade -y"):
+					for line in sy.runProcess("apt-get upgrade -y --force-yes"):
 						print line,
 						log.write(line)
 						if "Get" == line.split(":")[0]:
@@ -323,7 +324,6 @@ if __name__ == "__main__":
 							qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 					qo.put("Hotovo")
 					qo.put("Instaluji balíčky")
-					sy.runProcess("export DEBIAN_FRONTEND=noninteractive")
 					for line in sy.runProcess("apt-get install isc-dhcp-server iptables-persistent nfs-kernel-server tftpd-hpa syslinux debootstrap expect apache2 -y"):
 						print line,
 						log.write(line)

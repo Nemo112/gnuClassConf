@@ -12,6 +12,7 @@ import tkMessageBox
 from ShrFol import ShrFol
 from Queue import Empty, Full
 from FsSize import FsSize
+from UError import UError
 
 if __name__ == "__main__":
 	class App:
@@ -97,7 +98,14 @@ if __name__ == "__main__":
 			"""
 			try:
 				st=qc.get(0)
-				self.to.insert('end',st)
+				if st == "ERROR":
+					self.to.insert('end',"Nastala chyba")
+					self.to.itemconfig('end', {'bg':'orange red'})
+					self.to.insert('end',"Zkontrolujte systém") 
+					self.to.itemconfig('end', {'bg':'orange red'})
+				else:
+					self.to.insert('end',st)
+					self.to.itemconfig('end', {'bg':'lime green'}) 
 				self.to.select_clear(self.to.size()-2)
 				self.to.yview(END)	
 			except Empty:
@@ -124,26 +132,44 @@ if __name__ == "__main__":
 				break
 			elif stri == "ERASE":
 				qo.put("Odpojuji sdílení")
-				sh=ShrFol()
-				sh.uMntAll()
+				try:
+					sh=ShrFol()
+					sh.uMntAll()
+				except UError,e:
+					print(str(e.args) + " ERROR!")
+					qo.put("ERROR")				
 				qo.put("Mažu obraz")
-				sy=ConsSys()
-				sy.erAll()
+				try:
+					sy=ConsSys()
+					sy.erAll()
+				except UError,e:
+					print(str(e.args) + " ERROR!")
+					qo.put("ERROR")				
 				qo.put("Smazáno")
 			elif stri == "CLEAR":
 				qo.put("Zkouším vyčistit systém")
 				f=inFocus()
-				f.dpkgConfA()
-				c=clImaOs()
-				c.cleanImage()
-				c.cleanSystem()
-				qo.put("Vyčištěno")
+				try:
+					f.dpkgConfA()
+					c=clImaOs()
+					c.cleanImage()
+					c.cleanSystem()
+				except UError,e:
+					print(str(e.args) + " ERROR!")
+					qo.put("ERROR")
+				else:
+					qo.put("Vyčištěno")
 			elif stri == "UPDATE":
 				qo.put("Aktualizuji")
 				sy=ConsSys()
-				sy.updateImg()
-				sy.updateSys()
-				qo.put("Aktualizováno")
+				try:
+					sy.updateImg()
+					sy.updateSys()
+				except UError,e:
+					print(str(e.args) + " ERROR!")
+					qo.put("ERROR")
+				else:
+					qo.put("Aktualizováno")
 	## Vstupní fronta pracovního vlákna
 	qi = multiprocessing.Queue()
 	qi.cancel_join_thread()

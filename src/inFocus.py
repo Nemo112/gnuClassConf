@@ -9,6 +9,7 @@ import os
 from optparse import OptionParser
 import subprocess
 
+
 class inFocus:
 	""" \brief Třída obsahující metody pro instalaci programů do obrazu
 	"""
@@ -181,7 +182,7 @@ class inFocus:
 		\param com Příkaz pro instalaci aplikace
 		\return String obsahující jméno aplikace
 		"""
-		comm=com.replace("install","").replace("apt-get","").replace("-y","").replace("remove","").replace("autoremove","")
+		comm=com.replace("install","").replace("--force-yes","").replace("apt-get","").replace("-y","").replace("remove","").replace("autoremove","")
 		return comm.replace("--allow-unauthenticated","").replace(" ","")
 	def getIfInst(self,nm):
 		""" Přečtení listu instalovaných účelů
@@ -189,10 +190,16 @@ class inFocus:
 		\param nm Name of package
 		\return True pakliže je balíček nainstalovaný, false pokud ne
 		"""
-		FNULL = open(os.devnull, 'w')
-		rt=subprocess.call("chroot /NFSROOT/class dpkg-query -l " + nm, shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
-		if rt == 0:
-			return True
+		tos = "chroot /NFSROOT/class dpkg --get-selections"
+		
+		process = subprocess.Popen(tos.split(), stdout=subprocess.PIPE)
+		(output, err) = process.communicate()
+		exit_code = process.wait()
+		for line in output.split("\n"):
+			#print line.split()[0]
+			if len(line.split()) >= 2:
+				if nm in line.split()[0] and line.split()[1] == "install":
+					return True
 		return False
 if __name__ == "__main__":
 	## Parser argumentů a parametrů

@@ -82,12 +82,12 @@ class ConsSys:
 		tar = open ("/NFSROOT/class/addons/updateApt.sh", 'a')
 		tar.write("#!/bin/bash\n")
 		tar.write("apt-get update\n")
-		tar.write("apt-get upgrade -y\n")
+		tar.write("apt-get upgrade -y --force-yes\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/updateApt.sh",0755)
 		tos="chroot /NFSROOT/class /bin/bash -c ./addons/updateApt.sh"
 		for line in self.runProcess(tos):
-			print line,	
+			print line,
 	def updateSys(self):
 		""" 
 		Aktualizace systému
@@ -95,7 +95,7 @@ class ConsSys:
 		"""
 		for line in self.runProcess("apt-get update"):
 			print line,
-		for line in self.runProcess("apt-get upgrade -y"):
+		for line in self.runProcess("apt-get upgrade -y --force-yes"):
 			print line,
 	def serv(self):
 		""" 

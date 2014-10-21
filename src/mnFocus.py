@@ -49,16 +49,19 @@ if __name__ == "__main__":
 				self.log.write("/proc/mounts already there")
 			else:
 				open("/NFSROOT/class/proc/mounts","w")
-			# mount proc /NFSROOT/class/proc -t proc
-			tos='mount proc /NFSROOT/class/proc -t proc'
-			for line in self.sy.runProcess(tos):
-				print line,
-				self.log.write(line)
-			# mount sysfs /NFSROOT/class/sys -t sysfs
-			tos='mount sysfs /NFSROOT/class/sys -t sysfs'
-			for line in self.sy.runProcess(tos):
-				print line,
-				self.log.write(line)
+			try:
+				# mount proc /NFSROOT/class/proc -t proc
+				tos='mount proc /NFSROOT/class/proc -t proc'
+				for line in self.sy.runProcess(tos):
+					print line,
+					self.log.write(line)
+				# mount sysfs /NFSROOT/class/sys -t sysfs
+				tos='mount sysfs /NFSROOT/class/sys -t sysfs'
+				for line in self.sy.runProcess(tos):
+					print line,
+					self.log.write(line)
+			except UError,e:
+				print(str(e.args) + " ERROR!")
 		def __del__(self):
 			""" Destruktor třídy okna
 			Pročistí mounty a t.d.
