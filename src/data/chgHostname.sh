@@ -1,5 +1,5 @@
 #!/bin/bash
-## 
+##
 ## Dávka pro změnu hostname
 ## Nové jméno je vybíráno z posledního oktetu IP a slova student
 ##
@@ -18,6 +18,10 @@ done < "/etc/hosts"
 [[ "$ins" != "1" ]] && {
 	echo "${ip}	${hs}" >> "/etc/hosts";
 }
+## vytváření lokální kopie /etc/hostname
+touch "/run/shm/hostname";
+rm "/etc/hostname";
+ln -s "/run/shm/hostname" "/etc/hostname";
 ## změna v /etc/hostname
 echo "$hs" > "/etc/hostname"
 hostname "$hs"

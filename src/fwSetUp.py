@@ -3,6 +3,7 @@
 ## \file fwSetUp.py
 ## \brief Ovládání doménového přístupu pomocí klienského /etc/hosts a /etc/resolv.conf
 import re
+import os
 from ConsSys import ConsSys
 from optparse import OptionParser
 
@@ -13,156 +14,257 @@ class fwSetUp:
 		""" Konstruktor třídy okna
 		\param self Ukazatel na objekt
 		"""
-		## Klientský hosts
-		self.clhs="/NFSROOT/class/etc/hosts"
-		## Serverový hosts
-		self.sehs="/etc/hosts"
+		## List pravidel
+		self.clhs="/NFSROOT/class/addons/rules.sh"
+		## Příkazy pro blokování všeho
+		self.bla = "iptables -F;\niptables -X;\niptables -P INPUT DROP\niptables -P OUTPUT DROP\niptables -P FORWARD DROP\niptables -A OUTPUT -p tcp --dport 111 -j ACCEPT\niptables -A INPUT -p tcp --sport 111 -j ACCEPT\niptables -A OUTPUT -p tcp --dport 2049 -j ACCEPT\niptables -A INPUT -p tcp --sport 2049 -j ACCEPT\n";
+		## Příkazy pro povolení všeho
+		self.ola = "iptables -F;\niptables -X;\niptables -A OUTPUT -j ACCEPT;\niptables -A INPUT -j ACCEPT;\n"
+		## Hlavička rules.sh souboru
+		self.hed = "#!/bin/bash\n# Needitujte nikdy tento soubor!\n"
+	def getNETpa(self):
+		""" Metoda pro vybrání části definující NET z konfiguračního souboru pravidel rules.sh
+		\param self Ukazatel na objekt
+		"""
+		if os.path.isfile(self.clhs) == False:
+			return ""
+		f=open(self.clhs,"r")
+		cn=f.read().split("\n")
+		f.close()
+		cod=""
+		rd=False
+		for line in cn:
+			if line == "# NET" and rd == False:
+				rd = True
+			elif line == "# ===" and rd == True:
+				rd = False
+			elif rd == True:
+				cod += line + "\n"
+			else:
+				continue
+		return cod
+	def getDOMpa(self):
+		""" Metoda pro vybrání části definující DOM z konfiguračního souboru pravidel rules.sh
+		\param self Ukazatel na objekt
+		"""
+		if os.path.isfile(self.clhs) == False:
+			return ""
+		f=open(self.clhs,"r")
+		cn=f.read().split("\n")
+		f.close()
+		cod=""
+		rd=False
+		for line in cn:
+			if line == "# DOM" and rd == False:
+				rd = True
+			elif line == "# ===" and rd == True:
+				rd = False
+			elif rd == True:
+				cod += line + "\n"
+			else:
+				continue
+		return cod
 	def blDom(self,domain):
-		""" Metoda přidá do /etc/hosts překlad domény na učitelský počítač
+		""" Metoda přidá do rules.sh další záznam k blokování
 		\param domain Doména k blokování
 		\param self Ukazatel na objekt
 		\return False pokud už záznam existuje, True pokud se přidá bez problémů
 		"""
-		sy=ConsSys()
-		dc=self.getLstBl()
-		for it in dc.items():
-			if it[1]['hostname'] == domain:
+		l=self.getLstBl()
+		for i in l:
+			if l[i]['hostname'] == domain:
 				return False
-		inIp=sy.getEthIp(sy.getDfIlInt()['in'])
-		tar = open (self.clhs, 'a')
-		tar.write(inIp + "\t\t" + domain +"\n") 
-		tar.close()
-		return True
+		if os.path.isfile(self.clhs) == False:
+			return False
+		net=self.getNETpa()
+		dom=self.getDOMpa()
+		twr = self.hed + "# NET\n" + net + "# ===\n"
+		twr += "# DOM\n" + dom  
+		twr +=  "iptables -I OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP\n" + "# ===\n"
+		f = open(self.clhs,"w")
+		f.write(twr)
+		f.close()
 	def unDom(self,domain):
-		""" Metoda odebere z /etc/hosts překlad domény na učitelský počítač
+		""" Metoda odebere doménu z listu blokování
 		\param domain Doména k odblokování
 		\param self Ukazatel na objekt
 		\return True pokud vše proběhlo v pořádku, False pokud ne
 		"""
-		if domain == "localhost":
+		l=self.getLstBl()
+		if os.path.isfile(self.clhs) == False:
 			return False
-		if domain == "ip6-localnet":
-			return False
-		if domain == "ip6-loopback":
-			return False
-		if domain == "ip6-mcastprefix":
-			return False
-		if domain == "ip6-allnodes":
-			return False
-		if domain == "ip6-allrouters":
-			return False
-		ts=""
-		for line in open(self.clhs):
-			ip=line.split("\t")[0]
-			host=line.split("\t")[-1][0:-1]
-			if host == domain:
-				continue
-			else:
-				ts = ts + line
-		tar = open (self.clhs, 'w')
-		tar.write(ts) 
-		tar.close()
-		return True
+		net=self.getNETpa()
+		dom=self.getDOMpa()
+		twr = self.hed + "# NET\n" + net + "# ===\n"
+		twr += "# DOM\n"
+		tdo = ""
+		for i in dom.split("\n"):
+			m = re.search(r"\"Host: ([\wěščřžýáíé.]+)\"", i)
+			if m != None:
+				if m.group(1) != domain.encode("utf-8"):
+					tdo +=  i + "\n"
+		twr += tdo + "# ===\n"
+		f = open(self.clhs,"w")
+		f.write(twr)
+		f.close()
 	def relBlDom(self,domain):
 		""" Metoda oblokuje doménu ale nechá jí v tabulce
 		\param domain Doména k odblokování
 		\param self Ukazatel na objekt
 		\return True pokud vše proběhlo v pořádku, False pokud ne
 		"""
-		if self.unDom(domain) == False:
+		l=self.getLstBl()
+		if os.path.isfile(self.clhs) == False:
 			return False
-		sy=ConsSys()
-		dc=self.getLstBl()
-		for it in dc.items():
-			if it[1]['hostname'] == domain:
-				return False
-		inIp=sy.getEthIp(sy.getDfIlInt()['in'])
-		tar = open (self.clhs, 'a')
-		tar.write("#"+inIp + "\t\t" + domain +"\n") 
-		tar.close()
-		return True
+		net=self.getNETpa()
+		dom=self.getDOMpa()
+		twr = self.hed + "# NET\n" + net + "# ===\n"
+		twr += "# DOM\n"
+		tdo = ""
+		for i in dom.split("\n"):
+			m = re.search(r"\"Host: ([\wěščřžýáíé.]+)\"", i)
+			if m != None:
+				if m.group(1) == domain.encode("utf-8"):
+					tdo += "#" + i + "\n"
+				else:
+					tdo += i + "\n"
+		twr += tdo + "# ===\n"
+		f = open(self.clhs,"w")
+		f.write(twr)
+		f.close()
 	def isNet(self):
 		""" Metoda zkontroluje stav blokování klientů
 		\param self Ukazatel na objekt
-		\return True pokud jsou blokovány, false pokud ne
+		\return True pokud jsou blokovány, False pokud ne
 		"""
-		ts=""
-		for line in open("/NFSROOT/class/etc/resolv.conf"):
-			fr=line.split(" ")[0]
-			se=line.split(" ")[-1][0:-1]
-			if fr == "nameserver" and se =="127.0.0.1":
-				return True
+		if os.path.isfile(self.clhs) == False:
+			return False
+		f=open(self.clhs,"r")
+		cn=f.read().split("\n")
+		f.close()
+		cod=""
+		rd=False
+		for line in cn:
+			if line == "# NET" and rd == False:
+				rd = True
+			elif line == "# ===" and rd == True:
+				rd = False
+			elif rd == True:
+				cod += line + "\n"
 			else:
-				return False
+				continue
+		if cod == self.ola:
+			return False
+		else:
+			return True
 	def blNet(self):
-		""" Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta)
+		""" Metoda zablokuje přístup na internet (upraví /addons/rules.sh hosta)
 		\param self Ukazatel na objekt
 		\return True pokud vše projde, False pokud už v listu neni
 		"""
-		ts=""
-		for line in open("/NFSROOT/class/etc/resolv.conf"):
-			fr=line.split(" ")[0]
-			se=line.split(" ")[-1][0:-1]
-			if fr == "nameserver":
-				ts = ts + "nameserver 127.0.0.1" + "\n"
+		if os.path.isfile(self.clhs) == False:
+			return False
+		f=open(self.clhs,"r")
+		cn=f.read().split("\n")
+		f.close()
+		cod=""
+		rd = False
+		for line in cn:
+			if line == "# NET" and rd == False:
+				rd = True
+			elif line == "# ===" and rd == True:
+				rd = False
+			elif rd == True:
+				cod += line + "\n"
 			else:
-				ts = ts + line
-		tar = open ("/NFSROOT/class/etc/resolv.conf", 'w')
-		tar.write(ts) 
-		tar.close()
+				continue
+		if cod == self.ola:
+			f=open(self.clhs,"r")
+			cn=f.read().split("\n")
+			f.close()
+			sw = ""
+			for line in cn:
+				if line =="# NET" and rd == False:
+					rd = True
+					sw += "# NET\n" + self.bla + "# ===\n"
+				if line =="# ===" and rd == True:
+					rd = False
+				elif rd == False:
+					sw += line + "\n"		
+			f=open(self.clhs,"w")
+			cn=f.write(sw)
+			f.close()
+			return True
+		return False
 	def unBlNet(self):
-		""" Metoda odblokuje přístup na internet (upraví /etc/resolv.conf hosta)
+		""" Metoda odblokuje přístup na internet
 		\param self Ukazatel na objekt
 		\return True pokud vše projde, False pokud už v listu neni
 		"""
-		ts=""
-		sy=ConsSys()
-		for line in open("/NFSROOT/class/etc/resolv.conf"):
-			fr=line.split(" ")[0]
-			se=line.split(" ")[-1][0:-1]
-			if fr == "nameserver":
-				ts = ts + "nameserver " + sy.getDnsSer() + "\n"
+		if os.path.isfile(self.clhs) == False:
+			return False
+		f=open(self.clhs,"r")
+		cn=f.read().split("\n")
+		f.close()
+		cod=""
+		rd = False
+		for line in cn:
+			if line == "# NET" and rd == False:
+				rd = True
+			elif line == "# ===" and rd == True:
+				rd = False
+			elif rd == True:
+				cod += line + "\n"
 			else:
-				ts = ts + line
-		tar = open ("/NFSROOT/class/etc/resolv.conf", 'w')
-		tar.write(ts) 
-		tar.close()
+				continue
+		if cod == self.bla:
+			f=open(self.clhs,"r")
+			cn=f.read().split("\n")
+			f.close()
+			sw = ""
+			for line in cn:
+				if line =="# NET" and rd == False:
+					rd = True
+					sw += "# NET\n" + self.ola + "# ===\n"
+				if line =="# ===" and rd == True:
+					rd = False
+				elif rd == False:
+					sw += line + "\n"		
+			f=open(self.clhs,"w")
+			cn=f.write(sw)
+			f.close()
+			return True
+		return False
 	def getLstBl(self):
-		""" Metoda načte /etc/hosts a udělá seznam blokovaných domén
+		""" Metoda načte všechny blokované domény z rules
 		\param self Ukazatel na objekt
 		\return lst List jako slovník obsahující položky očíslované od 0-n, kde každá obsahuje hostname a ip
 		"""
 		i=0
 		lst={}
-		for line in open(self.clhs):
-			ip4=line.split("\t")[0]
-			hst=line.split("\t")[-1]
-			#student(0-n) je hostname klientských stanic, nesmí se vymazat
-			st=re.match(r"student[0-9]*",hst)
-			if st:
+		rd=False
+		if os.path.isfile(self.clhs) == False:
+			return lst
+		f=open(self.clhs,"r")
+		cn=f.read().split("\n")
+		f.close()
+		for line in cn:
+			if line == "# DOM" and rd == False:
+				rd = True
+			elif line == "# ===" and rd == True:
+				rd = False
+			elif rd == True:
+				m = re.search(r"\"Host: ([\wěščřžýáíé.]+)\"", line)
+				if m != None:
+					lst[i]={}
+					if line[0] == "#":
+						lst[i]['blocking'] = False
+					else:
+						lst[i]['blocking'] = True
+					lst[i]['hostname']= m.group(1).decode("utf-8")
+					i += 1
+			else:
 				continue
-			aa=re.match(r"^((0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}(0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])$",ip4)
-			bb=re.match(r"^#((0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}(0|[1-9]|[1-9][0-9]|[1-2][0-9][0-9])$",ip4)
-			if aa:
-				ip4 = aa.group()
-				cols={}
-				cols['hostname']=line.split("\t")[-1][0:-1]
-				cols['ip']=ip4
-				if cols['hostname'] == "localhost":
-					continue
-				cols['blocking'] = True
-				lst[i]=cols
-				i += 1
-			elif 	bb:
-				ip4 = bb.group()
-				cols={}
-				cols['hostname']=line.split("\t")[-1][0:-1]
-				cols['ip']=ip4
-				if cols['hostname'] == "localhost":
-					continue
-				cols['blocking'] = False
-				lst[i]=cols
-				i += 1
 		return lst
 if __name__ == "__main__":
 	## Parser argumentů a parametrů

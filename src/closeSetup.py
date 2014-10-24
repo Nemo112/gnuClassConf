@@ -443,6 +443,7 @@ if __name__ == "__main__":
 						# změna hostname
 						# vytvořit rc skript, který nastaví hostname na "student<poslední oktet IP>"
 						setUNt.setUpHsn()
+						setUNt.setUpFw()
 					qo.put("SETSDONE")
 				except UError,e:
 					qo.put(str(e.args) + " ERROR!")

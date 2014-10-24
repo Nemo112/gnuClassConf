@@ -22,7 +22,6 @@ import array
 from GetIfAdrs import *
 from UError import UError
 
-
 class ConsSys:
 	""" 
 	\brief Třída obsahující funkce pro práci se systémem.
@@ -69,6 +68,10 @@ class ConsSys:
 		Metoda vymaže obraz a záznam o instalovaném software
 		\param self Ukazatel na objekt
 		"""
+		# odpojí všechny sdílené složky
+		from ShrFol import ShrFol
+		s=ShrFol()
+		s.uMntAll()
 		# smazat obraz
 		shutil.rmtree("/NFSROOT/class")
 		# přemáznout instalovaný seznam ve focus

@@ -232,6 +232,7 @@ if __name__ == "__main__":
 					setUNt.createStudent()
 					qo.put("60:Edituji rc.local")
 					setUNt.setUpHsn()
+					setUNt.setUpFw()
 					setUNt.installDm()
 					i=iTaHand()
 					i.setUpIcaS()

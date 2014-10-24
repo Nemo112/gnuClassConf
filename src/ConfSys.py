@@ -469,14 +469,7 @@ class ConfSys:
 		self.sy.removeFl("/NFSROOT/class/etc/fstab")
 		fd=open("/NFSROOT/class/etc/fstab",'a')
 		fd.write("# DUCKED changed \n")
-		fd.write("none        /proc    proc       defaults  0 0\n")
-		fd.write("none        /sys     sysfs      defaults  0 0\n")
-		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/var  /var  nfs rw,hard,nolock 0 0\n")
-		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/tmp  /tmp  nfs rw,hard,nolock 0 0\n")
-		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/root /root nfs rw,hard,nolock 0 0\n")
-		fd.write("#" + self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/home /root nfs rw,hard,nolock 0 0\n")
-		fd.write(self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/etc/X11 /etc/X11 nfs rw,hard,nolock 0 0\n")
-		fd.write("#" + "tmpfs /tmp tmpfs mode=1777,nosuid,nodev 0 0\n")
+		#fd.write(self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/etc/X11 /etc/X11 nfs rw,hard,nolock 0 0\n")
 		fd.write("#\n")
 		fd.write(self.sy.getEthIp(self.ethc)  + ":/NFSROOT/class/  /  nfs defaults 1 1\n")
 		fd.write("devpts                  /dev/pts                devpts  gid=5,mode=620  0 0\n")
@@ -485,6 +478,37 @@ class ConfSys:
 		fd.write("tmpfs 			/tmp 			tmpfs   mode=1777,nosuid,nodev 0 0\n")
 		fd.close()
 		os.chmod("/NFSROOT/class/etc/fstab",0644)
+	def setUpFw(self):
+		""" Nastavuje spuštění firewallu
+		\param self Ukazatel na objekt
+		"""
+		# nakopíruje rules.sh s permit na všechno
+		nm="rules.sh"
+		if os.path.isfile(wa + nm):
+			self.sy.removeFl(wa + nm)
+			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		# nakopíruje do obrazu ipTabChe.sh
+		wa="/NFSROOT/class/addons/"
+		nm="ipTabChe.sh"
+		if os.path.isfile(wa + nm):
+			self.sy.removeFl(wa + nm)
+			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		# zavede do rc.local odkaz na ipTabChe.sh
+		wa= "/addons/"
+		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
+			cnl=cont.read()
+		obs=""
+		for line in cnl.split("\n"):
+			if wa + nm +" &" in line:
+				return
+			if "exit 0" == line:
+				break
+			obs = obs + line  + "\n"
+		obs = obs + wa + nm +" &\n"
+		obs = obs + "exit 0\n"
+		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
+		tar.write(obs)
+		tar.close()
 	def setUpLoc(self):
 		""" Nastavuje locales v obraze
 		\param self Ukazatel na objekt

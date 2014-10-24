@@ -143,7 +143,7 @@ if __name__ == "__main__":
 						bl = True
 						break
 			if bl == True:
-				result = tkMessageBox.askquestion("Odblokovat", "Odblokovat " + value + "? \nPoložka zůstane v tabulce pro pozdější použití.", icon='warning')
+				result = tkMessageBox.askquestion("Odblokovat", "Odblokovat " + value.encode("utf-8") + "? \nPoložka zůstane v tabulce pro pozdější použití.", icon='warning')
 				if result == "yes":
 					self.to.delete(index)
 					self.fw.relBlDom(value)

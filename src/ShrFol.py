@@ -3,12 +3,12 @@
 ## \file ShrFol.py
 ## \brief Třída s metodami pro sdílení souborů do obrazu klientských počítačů
 
-from ConsSys import ConsSys
-from LogWrk import LogWrk
 import os
 import shutil
 import subprocess
 from optparse import OptionParser
+from ConsSys import ConsSys
+from LogWrk import LogWrk
 
 class ShrFol:
 	""" \brief Třída s metodami pro sdílení souborů do obrazu klientských počítačů
