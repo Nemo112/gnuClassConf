@@ -101,7 +101,6 @@ iptables -D INPUT -j DROP;
 		dom=self.getDOMpa()
 		twr = self.hed 
 		twr += "# DOM\n" + dom  
-		#twr +=  "iptables -D OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP;\n" + "# ===\n"
 		twr += "iptables -I INPUT -m tcp -p tcp -d \"" + domain.encode("utf-8")  +"\" --dport 443 -j DROP;\n";
 		twr += "iptables -I FORWARD  -m string --string \"" + domain.encode("utf-8")  +"\" --algo bm --from 1 --to 600 -j REJECT;\n"
 		twr += "iptables -I INPUT -p tcp --sport 443 -m string --string \"" + domain.encode("utf-8") + "\" --algo bm -j DROP;\n"
