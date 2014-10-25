@@ -3,9 +3,11 @@
 ## \file fwSetUp.py
 ## \brief Ovládání doménového přístupu pomocí klienského /etc/hosts a /etc/resolv.conf
 import re
+import subprocess
 import os
 from ConsSys import ConsSys
 from optparse import OptionParser
+import md5
 
 class fwSetUp:
 	""" \brief Třída obsahující metody pro práci s /etc/hosts
@@ -16,10 +18,29 @@ class fwSetUp:
 		"""
 		## List pravidel
 		self.clhs="/NFSROOT/class/addons/rules.sh"
+		sy=ConsSys()
+		inIp=sy.getEthIp(sy.getDfIlInt()['in'])
+		## Hash listu pravidel
+		self.har="/NFSROOT/class/addons/harsh"
 		## Příkazy pro blokování všeho
-		self.bla = "iptables -F;\niptables -X;\niptables -P INPUT DROP\niptables -P OUTPUT DROP\niptables -P FORWARD DROP\niptables -A OUTPUT -p tcp --dport 111 -j ACCEPT\niptables -A INPUT -p tcp --sport 111 -j ACCEPT\niptables -A OUTPUT -p tcp --dport 2049 -j ACCEPT\niptables -A INPUT -p tcp --sport 2049 -j ACCEPT\n";
+		self.bla = "iptables -I INPUT -s " + inIp + " -j ACCEPT;\n"
+		self.bla += "iptables -I OUTPUT -d  " + inIp + " -j ACCEPT;\n"
+		self.bla +="""
+iptables -D OUTPUT -j ACCEPT;
+iptables -D INPUT -j ACCEPT;
+iptables -A OUTPUT -j DROP;
+iptables -A INPUT -j DROP;
+"""
 		## Příkazy pro povolení všeho
-		self.ola = "iptables -F;\niptables -X;\niptables -A OUTPUT -j ACCEPT;\niptables -A INPUT -j ACCEPT;\n"
+		self.ola = """
+iptables -A OUTPUT -j ACCEPT;
+iptables -A INPUT -j ACCEPT;
+iptables -D OUTPUT -j DROP;
+iptables -D INPUT -j DROP;
+"""
+		if os.path.isfile(self.clhs):
+			open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
+			os.chmod(self.har,0666)
 		## Hlavička rules.sh souboru
 		self.hed = "#!/bin/bash\n# Needitujte nikdy tento soubor!\n"
 	def getNETpa(self):
@@ -78,12 +99,18 @@ class fwSetUp:
 			return False
 		net=self.getNETpa()
 		dom=self.getDOMpa()
-		twr = self.hed + "# NET\n" + net + "# ===\n"
+		twr = self.hed 
 		twr += "# DOM\n" + dom  
-		twr +=  "iptables -I OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP\n" + "# ===\n"
+		#twr +=  "iptables -D OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP;\n" + "# ===\n"
+		twr += "iptables -I INPUT -m tcp -p tcp -d \"" + domain.encode("utf-8")  +"\" --dport 443 -j DROP;\n";
+		twr += "iptables -I FORWARD  -m string --string \"" + domain.encode("utf-8")  +"\" --algo bm --from 1 --to 600 -j REJECT;\n"
+		twr += "iptables -I INPUT -p tcp --sport 443 -m string --string \"" + domain.encode("utf-8") + "\" --algo bm -j DROP;\n"
+		twr += "iptables -I OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP;\n" + "# ===\n"
+		twr += "# NET\n" + net + "# ===\n"
 		f = open(self.clhs,"w")
-		f.write(twr)
+		f.write(twr.rstrip('\n'))
 		f.close()
+		open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
 	def unDom(self,domain):
 		""" Metoda odebere doménu z listu blokování
 		\param domain Doména k odblokování
@@ -95,18 +122,18 @@ class fwSetUp:
 			return False
 		net=self.getNETpa()
 		dom=self.getDOMpa()
-		twr = self.hed + "# NET\n" + net + "# ===\n"
+		twr = self.hed
 		twr += "# DOM\n"
 		tdo = ""
 		for i in dom.split("\n"):
-			m = re.search(r"\"Host: ([\wěščřžýáíé.]+)\"", i)
-			if m != None:
-				if m.group(1) != domain.encode("utf-8"):
-					tdo +=  i + "\n"
+			if ( " " + domain + "\"" in i or " " + domain + " " in i or "\"" + domain + "\"" in i) == False:
+				tdo +=  i + "\n"
 		twr += tdo + "# ===\n"
+		twr += "# NET\n" + net + "# ===\n"
 		f = open(self.clhs,"w")
-		f.write(twr)
+		f.write(twr.rstrip('\n'))
 		f.close()
+		open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
 	def relBlDom(self,domain):
 		""" Metoda oblokuje doménu ale nechá jí v tabulce
 		\param domain Doména k odblokování
@@ -117,21 +144,27 @@ class fwSetUp:
 		if os.path.isfile(self.clhs) == False:
 			return False
 		net=self.getNETpa()
-		dom=self.getDOMpa()
-		twr = self.hed + "# NET\n" + net + "# ===\n"
+		dom=self.getDOMpa().rstrip('\n').lstrip('\n')
+		twr = self.hed 
 		twr += "# DOM\n"
 		tdo = ""
 		for i in dom.split("\n"):
-			m = re.search(r"\"Host: ([\wěščřžýáíé.]+)\"", i)
-			if m != None:
-				if m.group(1) == domain.encode("utf-8"):
-					tdo += "#" + i + "\n"
-				else:
-					tdo += i + "\n"
+			if i == "iptables -I INPUT -m tcp -p tcp -d \"" + domain.encode("utf-8")  +"\" --dport 443 -j DROP;":
+				tdo += "iptables -D INPUT -m tcp -p tcp -d \"" + domain.encode("utf-8")  +"\" --dport 443 -j DROP;\n"
+			elif i == "iptables -I FORWARD  -m string --string \"" + domain.encode("utf-8")  +"\" --algo bm --from 1 --to 600 -j REJECT;":
+				tdo += "iptables -D FORWARD  -m string --string \"" + domain.encode("utf-8")  +"\" --algo bm --from 1 --to 600 -j REJECT;\n"
+			elif i == "iptables -I INPUT -p tcp --sport 443 -m string --string \"" + domain.encode("utf-8") + "\" --algo bm -j DROP;":
+				tdo += "iptables -D INPUT -p tcp --sport 443 -m string --string \"" + domain.encode("utf-8") + "\" --algo bm -j DROP;\n"
+			elif i == "iptables -I OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP;":
+				tdo += "iptables -D OUTPUT -p tcp --dport 80  -m string --string \"Host: " + domain.encode("utf-8") + "\" --algo bm -j DROP;\n"
+			else:
+				tdo += i + "\n"
 		twr += tdo + "# ===\n"
+		twr += "# NET\n" + net + "# ===\n"
 		f = open(self.clhs,"w")
-		f.write(twr)
+		f.write(twr.rstrip('\n'))
 		f.close()
+		open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
 	def isNet(self):
 		""" Metoda zkontroluje stav blokování klientů
 		\param self Ukazatel na objekt
@@ -153,7 +186,7 @@ class fwSetUp:
 				cod += line + "\n"
 			else:
 				continue
-		if cod == self.ola:
+		if cod.rstrip('\n').lstrip('\n') == self.ola.rstrip('\n').lstrip('\n'):
 			return False
 		else:
 			return True
@@ -192,8 +225,9 @@ class fwSetUp:
 				elif rd == False:
 					sw += line + "\n"		
 			f=open(self.clhs,"w")
-			cn=f.write(sw)
+			cn=f.write(sw.rstrip('\n'))
 			f.close()
+			open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
 			return True
 		return False
 	def unBlNet(self):
@@ -231,8 +265,9 @@ class fwSetUp:
 				elif rd == False:
 					sw += line + "\n"		
 			f=open(self.clhs,"w")
-			cn=f.write(sw)
+			cn=f.write(sw.rstrip('\n'))
 			f.close()
+			open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
 			return True
 		return False
 	def getLstBl(self):
@@ -257,7 +292,7 @@ class fwSetUp:
 				m = re.search(r"\"Host: ([\wěščřžýáíé.]+)\"", line)
 				if m != None:
 					lst[i]={}
-					if line[0] == "#":
+					if line.split()[1] == "-D":
 						lst[i]['blocking'] = False
 					else:
 						lst[i]['blocking'] = True
