@@ -483,16 +483,22 @@ class ConfSys:
 		\param self Ukazatel na objekt
 		"""
 		# nakopíruje rules.sh s permit na všechno
+		wa="/NFSROOT/class/addons/"
 		nm="rules.sh"
 		if os.path.isfile(wa + nm):
 			self.sy.removeFl(wa + nm)
 			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		else:
+			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		os.chmod(wa + nm,0755)
 		# nakopíruje do obrazu ipTabChe.sh
-		wa="/NFSROOT/class/addons/"
 		nm="ipTabChe.sh"
 		if os.path.isfile(wa + nm):
 			self.sy.removeFl(wa + nm)
 			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		else:
+			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		os.chmod(wa + nm,0755)
 		# zavede do rc.local odkaz na ipTabChe.sh
 		wa= "/addons/"
 		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
