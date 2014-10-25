@@ -18,7 +18,7 @@ mkdir usr/share/pixmaps;
 cd ..;
 #==================================
 # copy icon
-cp iconst.png ./tmp/usr/share/pixmaps/iconst.png;
+cp iconst.png ./tmp/usr/share/pixmaps/$name.png;
 #==================================
 # copy shortcut
 toi=$(cat <<EOF
@@ -29,7 +29,7 @@ GenericName=GUI konfigurační prostředí třídy
 TryExec=gksu
 Exec=gksu /opt/${name}/main.py
 Terminal=false
-Icon=/usr/share/pixmaps/iconst.png
+Icon=/usr/share/pixmaps/$name.png
 Type=Application
 Categories=Network
 Comment=$desc

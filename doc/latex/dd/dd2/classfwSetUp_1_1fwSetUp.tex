@@ -11,29 +11,42 @@ Třída obsahující metody pro práci s /etc/hosts.
 \item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_ad05f56aa9dd4503852ec2bcfb2a3afe2}{\-\_\-\-\_\-init\-\_\-\-\_\-}
 \begin{DoxyCompactList}\small\item\em Konstruktor třídy okna. \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a280e0fbdf7efa6835fee31650a79e02b}{get\-N\-E\-Tpa}
+\begin{DoxyCompactList}\small\item\em Metoda pro vybrání části definující N\-E\-T z konfiguračního souboru pravidel rules.\-sh. \end{DoxyCompactList}\item 
+def \hyperlink{classfwSetUp_1_1fwSetUp_a29cba8b25408c6c37632e9e969343f3b}{get\-D\-O\-Mpa}
+\begin{DoxyCompactList}\small\item\em Metoda pro vybrání části definující D\-O\-M z konfiguračního souboru pravidel rules.\-sh. \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_aea3760656409015f15b9b3450edd70e1}{bl\-Dom}
-\begin{DoxyCompactList}\small\item\em Metoda přidá do /etc/hosts překlad domény na učitelský počítač \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Metoda přidá do rules.\-sh další záznam k blokování \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a3a03c76b94db3bc750260ab64d76d755}{un\-Dom}
-\begin{DoxyCompactList}\small\item\em Metoda odebere z /etc/hosts překlad domény na učitelský počítač \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Metoda odebere doménu z listu blokování \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_ab96ab2edba8c87302754c40491ca0d17}{rel\-Bl\-Dom}
 \begin{DoxyCompactList}\small\item\em Metoda oblokuje doménu ale nechá jí v tabulce. \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a75a8c09d8493ac43747cb4c518bef7dd}{is\-Net}
 \begin{DoxyCompactList}\small\item\em Metoda zkontroluje stav blokování klientů \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a4d21f86d17c54919fbdc2e3f069fa471}{bl\-Net}
-\begin{DoxyCompactList}\small\item\em Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Metoda zablokuje přístup na internet (upraví /addons/rules.sh hosta) \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a4f770f10b81c0030b1753dfb60452045}{un\-Bl\-Net}
-\begin{DoxyCompactList}\small\item\em Metoda odblokuje přístup na internet (upraví /etc/resolv.conf hosta) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Metoda odblokuje přístup na internet. \end{DoxyCompactList}\item 
 def \hyperlink{classfwSetUp_1_1fwSetUp_a9d56382f2c43c78f6dcf2057580a5ed2}{get\-Lst\-Bl}
-\begin{DoxyCompactList}\small\item\em Metoda načte /etc/hosts a udělá seznam blokovaných domén. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metoda načte všechny blokované domény z rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Veřejné atributy}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{classfwSetUp_1_1fwSetUp_adf3bfb3c9578fb497292ececbf5497f7}{\hyperlink{classfwSetUp_1_1fwSetUp_adf3bfb3c9578fb497292ececbf5497f7}{clhs}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_adf3bfb3c9578fb497292ececbf5497f7}
 
-\begin{DoxyCompactList}\small\item\em Klientský hosts. \end{DoxyCompactList}\item 
-\hypertarget{classfwSetUp_1_1fwSetUp_a98fdb43a4b9d6104ac4b4dc3d77dadcd}{\hyperlink{classfwSetUp_1_1fwSetUp_a98fdb43a4b9d6104ac4b4dc3d77dadcd}{sehs}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a98fdb43a4b9d6104ac4b4dc3d77dadcd}
+\begin{DoxyCompactList}\small\item\em List pravidel. \end{DoxyCompactList}\item 
+\hypertarget{classfwSetUp_1_1fwSetUp_af02eb0d94dd896eb96041c84ef5c93d4}{\hyperlink{classfwSetUp_1_1fwSetUp_af02eb0d94dd896eb96041c84ef5c93d4}{har}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_af02eb0d94dd896eb96041c84ef5c93d4}
 
-\begin{DoxyCompactList}\small\item\em Serverový hosts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Hash listu pravidel. \end{DoxyCompactList}\item 
+\hypertarget{classfwSetUp_1_1fwSetUp_a693063fc31722feffdd0595635f6ca2c}{\hyperlink{classfwSetUp_1_1fwSetUp_a693063fc31722feffdd0595635f6ca2c}{bla}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a693063fc31722feffdd0595635f6ca2c}
+
+\begin{DoxyCompactList}\small\item\em Příkazy pro blokování všeho. \end{DoxyCompactList}\item 
+\hypertarget{classfwSetUp_1_1fwSetUp_ab15e9dbc926d4fc98b4e40acdcc850e4}{\hyperlink{classfwSetUp_1_1fwSetUp_ab15e9dbc926d4fc98b4e40acdcc850e4}{ola}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_ab15e9dbc926d4fc98b4e40acdcc850e4}
+
+\begin{DoxyCompactList}\small\item\em Příkazy pro povolení všeho. \end{DoxyCompactList}\item 
+\hypertarget{classfwSetUp_1_1fwSetUp_a990198a44ed7ae3fec540068dac86452}{\hyperlink{classfwSetUp_1_1fwSetUp_a990198a44ed7ae3fec540068dac86452}{hed}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a990198a44ed7ae3fec540068dac86452}
+
+\begin{DoxyCompactList}\small\item\em Hlavička rules.\-sh souboru. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailní popis}
@@ -69,7 +82,7 @@ Konstruktor třídy okna.
 )}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_aea3760656409015f15b9b3450edd70e1}
 
 
-Metoda přidá do /etc/hosts překlad domény na učitelský počítač 
+Metoda přidá do rules.\-sh další záznam k blokování 
 
 
 \begin{DoxyParams}{Parametry}
@@ -90,7 +103,7 @@ False pokud už záznam existuje, True pokud se přidá bez problémů
 )}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a4d21f86d17c54919fbdc2e3f069fa471}
 
 
-Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta) 
+Metoda zablokuje přístup na internet (upraví /addons/rules.sh hosta) 
 
 
 \begin{DoxyParams}{Parametry}
@@ -100,6 +113,22 @@ Metoda zablokuje přístup na internet (upraví /etc/resolv.conf hosta)
 \begin{DoxyReturn}{Návratová hodnota}
 True pokud vše projde, False pokud už v listu neni 
 \end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a29cba8b25408c6c37632e9e969343f3b}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!get\-D\-O\-Mpa@{get\-D\-O\-Mpa}}
+\index{get\-D\-O\-Mpa@{get\-D\-O\-Mpa}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{get\-D\-O\-Mpa}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-get\-D\-O\-Mpa (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a29cba8b25408c6c37632e9e969343f3b}
+
+
+Metoda pro vybrání části definující D\-O\-M z konfiguračního souboru pravidel rules.\-sh. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
 \hypertarget{classfwSetUp_1_1fwSetUp_a9d56382f2c43c78f6dcf2057580a5ed2}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!get\-Lst\-Bl@{get\-Lst\-Bl}}
 \index{get\-Lst\-Bl@{get\-Lst\-Bl}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
 \subsubsection[{get\-Lst\-Bl}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-get\-Lst\-Bl (
@@ -109,7 +138,7 @@ True pokud vše projde, False pokud už v listu neni
 )}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a9d56382f2c43c78f6dcf2057580a5ed2}
 
 
-Metoda načte /etc/hosts a udělá seznam blokovaných domén. 
+Metoda načte všechny blokované domény z rules. 
 
 
 \begin{DoxyParams}{Parametry}
@@ -119,6 +148,22 @@ Metoda načte /etc/hosts a udělá seznam blokovaných domén.
 \begin{DoxyReturn}{Návratová hodnota}
 lst List jako slovník obsahující položky očíslované od 0-\/n, kde každá obsahuje hostname a ip 
 \end{DoxyReturn}
+\hypertarget{classfwSetUp_1_1fwSetUp_a280e0fbdf7efa6835fee31650a79e02b}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!get\-N\-E\-Tpa@{get\-N\-E\-Tpa}}
+\index{get\-N\-E\-Tpa@{get\-N\-E\-Tpa}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
+\subsubsection[{get\-N\-E\-Tpa}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-get\-N\-E\-Tpa (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a280e0fbdf7efa6835fee31650a79e02b}
+
+
+Metoda pro vybrání části definující N\-E\-T z konfiguračního souboru pravidel rules.\-sh. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
 \hypertarget{classfwSetUp_1_1fwSetUp_a75a8c09d8493ac43747cb4c518bef7dd}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!is\-Net@{is\-Net}}
 \index{is\-Net@{is\-Net}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
 \subsubsection[{is\-Net}]{\setlength{\rightskip}{0pt plus 5cm}def fw\-Set\-Up.\-fw\-Set\-Up.\-is\-Net (
@@ -136,7 +181,7 @@ Metoda zkontroluje stav blokování klientů
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Návratová hodnota}
-True pokud jsou blokovány, false pokud ne 
+True pokud jsou blokovány, False pokud ne 
 \end{DoxyReturn}
 \hypertarget{classfwSetUp_1_1fwSetUp_ab96ab2edba8c87302754c40491ca0d17}{\index{fw\-Set\-Up\-::fw\-Set\-Up@{fw\-Set\-Up\-::fw\-Set\-Up}!rel\-Bl\-Dom@{rel\-Bl\-Dom}}
 \index{rel\-Bl\-Dom@{rel\-Bl\-Dom}!fwSetUp::fwSetUp@{fw\-Set\-Up\-::fw\-Set\-Up}}
@@ -169,7 +214,7 @@ True pokud vše proběhlo v pořádku, False pokud ne
 )}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a4f770f10b81c0030b1753dfb60452045}
 
 
-Metoda odblokuje přístup na internet (upraví /etc/resolv.conf hosta) 
+Metoda odblokuje přístup na internet. 
 
 
 \begin{DoxyParams}{Parametry}
@@ -189,7 +234,7 @@ True pokud vše projde, False pokud už v listu neni
 )}}\label{dd/dd2/classfwSetUp_1_1fwSetUp_a3a03c76b94db3bc750260ab64d76d755}
 
 
-Metoda odebere z /etc/hosts překlad domény na učitelský počítač 
+Metoda odebere doménu z listu blokování 
 
 
 \begin{DoxyParams}{Parametry}
