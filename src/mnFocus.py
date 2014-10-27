@@ -257,7 +257,7 @@ if __name__ == "__main__":
 			\param self Ukazatel na objekt
 			\param event Ukazatel na akci
 			"""
-			webbrowser.open_new(r"http://www.nemor.cz/gnuClassConf/focus")
+			webbrowser.open_new(r"http://gnuclassconf.nemor.cz/focus/")
 		def insSet(self):
 			""" Metoda spuští instalaci balíčků v systému
 			\param self Ukazatel na objekt
