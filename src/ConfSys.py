@@ -515,6 +515,20 @@ class ConfSys:
 		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
 		tar.write(obs)
 		tar.close()
+		# nainstaluje inotify pro změnu souboru
+		# NEFUNGUJE KVŮLI NFS
+		#self.sy.removeFl("/NFSROOT/class/addons/setupNotify.sh")
+		#tar = open ("/NFSROOT/class/addons/setupNotify.sh", 'a')
+		#tar.write("#!/bin/bash\n")
+		#tar.write("export DEBIAN_FRONTEND=noninteractive\n")
+		#tar.write("export LC_ALL=C\n")
+		#tar.write("apt-get install --allow-unauthenticated inotify-tools -y --force-yes\n")
+		#tar.close()
+		#os.chmod("/NFSROOT/class/addons/setupNotify.sh",0755)
+		#tos='chroot /NFSROOT/class /bin/bash -c ./addons/setupNotify.sh'
+		#for line in self.sy.runProcess(tos):
+		#	print line,
+		#	self.log.write(line)
 	def setUpLoc(self):
 		""" Nastavuje locales v obraze
 		\param self Ukazatel na objekt

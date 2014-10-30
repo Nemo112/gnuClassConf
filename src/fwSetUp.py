@@ -43,6 +43,18 @@ iptables -D INPUT -j DROP;
 			os.chmod(self.har,0666)
 		## Hlavička rules.sh souboru
 		self.hed = "#!/bin/bash\n# Needitujte nikdy tento soubor!\n"
+	def changeHash(self):
+		""" Metoda vytvoří hash pravidel
+		\param self Ukazatel na objekt
+		"""
+		# načte soubor pravidel
+		r=open(self.clhs,"r")
+		md=r.read()
+		r.close()
+		# vypočte hash a uloží
+		f=open(self.har,"w")
+		f.write(md5.new(md).digest())
+		f.close()
 	def getNETpa(self):
 		""" Metoda pro vybrání části definující NET z konfiguračního souboru pravidel rules.sh
 		\param self Ukazatel na objekt
@@ -109,7 +121,7 @@ iptables -D INPUT -j DROP;
 		f = open(self.clhs,"w")
 		f.write(twr.rstrip('\n'))
 		f.close()
-		open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
+		self.changeHash()
 	def unDom(self,domain):
 		""" Metoda odebere doménu z listu blokování
 		\param domain Doména k odblokování
@@ -132,7 +144,7 @@ iptables -D INPUT -j DROP;
 		f = open(self.clhs,"w")
 		f.write(twr.rstrip('\n'))
 		f.close()
-		open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
+		self.changeHash()
 	def relBlDom(self,domain):
 		""" Metoda oblokuje doménu ale nechá jí v tabulce
 		\param domain Doména k odblokování
@@ -163,7 +175,7 @@ iptables -D INPUT -j DROP;
 		f = open(self.clhs,"w")
 		f.write(twr.rstrip('\n'))
 		f.close()
-		open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
+		self.changeHash()
 	def isNet(self):
 		""" Metoda zkontroluje stav blokování klientů
 		\param self Ukazatel na objekt
@@ -226,7 +238,7 @@ iptables -D INPUT -j DROP;
 			f=open(self.clhs,"w")
 			cn=f.write(sw.rstrip('\n'))
 			f.close()
-			open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
+			self.changeHash()
 			return True
 		return False
 	def unBlNet(self):
@@ -266,7 +278,7 @@ iptables -D INPUT -j DROP;
 			f=open(self.clhs,"w")
 			cn=f.write(sw.rstrip('\n'))
 			f.close()
-			open(self.har,"w").write(md5.new(open(self.clhs,"r").read()).digest())
+			self.changeHash()
 			return True
 		return False
 	def getLstBl(self):

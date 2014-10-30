@@ -1,5 +1,5 @@
 #!/bin/bash
-# zkontroluje /addons/rules, při změně aplikuje změnu
+# zkontroluje /addons/rules, p?i zm?n? aplikuje zm?nu
 # pauze mezi kontrolami
 delay="10";
 haf="/addons/harsh";
