@@ -144,6 +144,7 @@ class iTaHand:
 		\param ip String obsahující ip adresu klienta
 		\param mac String obsahující mac adresu klienta
 		"""
+		# přidání do italc
 		if ip is None or mac is None:
 			return False
 		if os.path.isfile(self.home + "/.italc/globalconfig.xml") == False:
@@ -173,7 +174,18 @@ class iTaHand:
 		wr=open(self.home + "/.italc/globalconfig.xml","w")
 		wr.write(twr)
 		wr.close()
-		return True			
+		# přidání do /etc/hosts
+		f=open("/etc/hosts","r")
+		o=f.read()
+		f.close()
+		for i in o.split("\n"):
+			if len(i.split()) > 0:
+				if i.split()[0] == ip:
+					return True
+		f=open("/etc/hosts","a")
+		f.write("\n" + ip + " " + self.nameCli(ip))
+		f.close()
+		return True	
 	def tesCliITlc(self,ip):
 		""" Otestuje IP klienta, zdali je na ní iTalc (podle portu iTalc služby)
 		\param self Ukazatel na objekt

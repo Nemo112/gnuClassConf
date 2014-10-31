@@ -3,7 +3,7 @@
 ### Obsah se přepisuje podle volby v "Základní nastavení učebny"
 
 ### in je rozhraní pro učebnu 
-in=eth0
+in=eth1
 
 ### out je rozhraní pro vnější síť
 out=eth0
