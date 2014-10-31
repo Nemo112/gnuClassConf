@@ -89,6 +89,7 @@ if __name__ == "__main__":
 				# najít rozhraní, které směruje
 				#etf=self.sys.getDefGwInt()
 				self.vf.set(self.sys.getDefGwInt())
+				self.etg=self.sys.getDefGwInt()
 				#print s
 			if s == "Počítač jako směrovač":
 				self.igm = PhotoImage(file="./twosd.gif")
@@ -101,6 +102,7 @@ if __name__ == "__main__":
 						i = 0
 						break
 				self.vf.set(self.sys.getEths()[i])
+				self.etg=self.sys.getEths()[i]
 				#print s
 		def chge(self,s):
 			""" Metoda měnící eth rozhraní konfigurace
@@ -306,14 +308,28 @@ if __name__ == "__main__":
 			if stri == "INST":
 				# instalace prostředků
 				try:
-					sy.runProcess("export DEBIAN_FRONTEND=noninteractive")
+					sy.removeFl("./data/update.sh")
+					tar = open ("./data/update.sh", 'a')
+					tar.write("#!/bin/bash\n")
+					tar.write("export DEBIAN_FRONTEND=noninteractive\n")
+					tar.write("apt-get update;\n")
+					tar.close()
+					os.chmod("./data/update.sh",0755)
 					qo.put("Kontroluji aktualizace")
-					for line in sy.runProcess("apt-get update"):
+					for line in sy.runProcess("./data/update.sh"):
 						print line,
 					qo.put("Hotovo")
 					qo.put("TATO OPERACE JE NA DLOUHO!")
 					qo.put("Aktualizuji")
-					for line in sy.runProcess("apt-get upgrade -y --force-yes"):
+					# upgrade
+					sy.removeFl("./data/upgrade.sh")
+					tar = open ("./data/upgrade.sh", 'a')
+					tar.write("#!/bin/bash\n")
+					tar.write("export DEBIAN_FRONTEND=noninteractive;\n")
+					tar.write("apt-get upgrade -y --force-yes;\n")
+					tar.close()
+					os.chmod("./data/upgrade.sh",0755)
+					for line in sy.runProcess("./data/upgrade.sh"):
 						print line,
 						log.write(line)
 						if "Get" == line.split(":")[0]:
@@ -324,7 +340,15 @@ if __name__ == "__main__":
 							qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
 					qo.put("Hotovo")
 					qo.put("Instaluji balíčky")
-					for line in sy.runProcess("apt-get install isc-dhcp-server iptables-persistent nfs-kernel-server tftpd-hpa syslinux debootstrap expect apache2 -y"):
+					# instalace
+					sy.removeFl("./data/insts.sh")
+					tar = open ("./data/insts.sh", 'a')
+					tar.write("#!/bin/bash\n")
+					tar.write("export DEBIAN_FRONTEND=noninteractive;\n")
+					tar.write("apt-get install isc-dhcp-server iptables-persistent nfs-kernel-server tftpd-hpa syslinux debootstrap expect apache2 -y;\n")
+					tar.close()
+					os.chmod("./data/insts.sh",0755)
+					for line in sy.runProcess("./data/insts.sh"):
 						print line,
 						log.write(line)
 						if "Get" == line.split(":")[0]:
