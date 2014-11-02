@@ -49,6 +49,8 @@ if __name__ == "__main__":
 			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
+			## Aktivace směrování 
+			self.sm=BooleanVar()
 			## popis obrázku
 			self.v=StringVar(self.root)
 			## Počet síťových rozhraní
@@ -59,17 +61,18 @@ if __name__ == "__main__":
 				## Proměnná obsahuje počet rozhraní použitých pro prostředí aplikace
 				self.ethCn=1
 				self.v.set("Počítač v síti")
+				self.sm.set(0)
 			else:
 				self.igm=PhotoImage(file="./twosd.gif")
 				self.ethCn=2
 				self.v.set("Počítač jako směrovač")
+				self.sm.set(1)
 			## Vstupní fronta pro pracovní vlákno
 			self.qi=qii
 			## Výstupní fronta z pracovního vlákna
 			self.qo=qoi
 			## Logovací třída
-			self.log=LogWrk()
-			
+			self.log=LogWrk()			
 		def qquit(self):
 			""" Metoda pro ukončení okna
 			Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna
@@ -87,23 +90,25 @@ if __name__ == "__main__":
 				self.igm = PhotoImage(file="./onesd.gif")
 				self.iml.configure(image=self.igm)
 				# najít rozhraní, které směruje
-				#etf=self.sys.getDefGwInt()
-				self.vf.set(self.sys.getDefGwInt())
-				self.etg=self.sys.getDefGwInt()
-				#print s
+				gws=self.sys.getDefGwInt()
+				self.vf.set(gws[0])
+				self.etg=gws[0]
+				self.sm.set(0)
 			if s == "Počítač jako směrovač":
 				self.igm = PhotoImage(file="./twosd.gif")
 				self.iml.configure(image=self.igm)
 				# najít rozhraní, které rozhodně nesměruje
 				i = 0
-				while self.sys.getDefGwInt() == self.sys.getEths()[i] or self.sys.getEths()[i] == "lo":
-					i += 1
-					if i == len(self.sys.getEths()):
-						i = 0
-						break
+				gws=self.sys.getDefGwInt()
+				for gw in gws:
+					while gw == self.sys.getEths()[i] or self.sys.getEths()[i] == "lo":
+						i += 1
+						if i == len(self.sys.getEths()):
+							i = 0
+							break
 				self.vf.set(self.sys.getEths()[i])
 				self.etg=self.sys.getEths()[i]
-				#print s
+				self.sm.set(1)
 		def chge(self,s):
 			""" Metoda měnící eth rozhraní konfigurace
 			\param s String obsahující výsledek volby uživatele ve scroll listu
@@ -111,14 +116,16 @@ if __name__ == "__main__":
 			"""
 			## Promměnná obsahující zvolené rozhraní pro třídu
 			self.etg=s
-			if self.etg == self.sys.getDefGwInt():
+			if self.etg in self.sys.getDefGwInt():
 				self.igm = PhotoImage(file="./onesd.gif")
 				self.iml.configure(image=self.igm)
 				self.v.set("Počítač v síti")
+				self.sm.set(0)
 			else:
 				self.igm = PhotoImage(file="./twosd.gif")
 				self.iml.configure(image=self.igm)
 				self.v.set("Počítač jako směrovač")
+				self.sm.set(1)
 		def CheckTxtF(self,cq):
 			""" Metoda menící textové pole podle toho, zdali se něco vyskytne ve výstupní frontě
 			\param cq Výstupní fronta, na kterou metoda reaguje a její výstup směřuje do textového pole to
@@ -126,7 +133,20 @@ if __name__ == "__main__":
 			"""
 			try:
 				stri = cq.get(0)
-				if stri[-6:] == "ERROR!":
+				if stri == "NET!":
+					self.to.insert('end',"Pozor! Síťové rozhraní")
+					self.to.itemconfig('end', {'bg':'orange'}) 
+					self.to.insert('end',"se nepovedlo restartovat.")
+					self.to.itemconfig('end', {'bg':'orange'}) 
+					self.to.insert('end',"Při nejhorším restarujte")
+					self.to.itemconfig('end', {'bg':'orange'}) 
+					self.to.insert('end',"systém nebo proveďt")
+					self.to.itemconfig('end', {'bg':'orange'}) 
+					self.to.insert('end',"postup s jiným")
+					self.to.itemconfig('end', {'bg':'orange'}) 
+					self.to.insert('end',"rozhraním.")
+					self.to.itemconfig('end', {'bg':'orange'}) 
+				elif stri[-6:] == "ERROR!":
 					self.to.insert('end',"Chyba! Zkontrolujte připojení,")
 					self.to.itemconfig('end', {'bg':'orange red'}) 
 					self.to.insert('end',"místo na disku a systém.")
@@ -162,7 +182,7 @@ if __name__ == "__main__":
 			cty = str(ig.get())
 			pet = str(ib.get())
 			ses = str(su.get())
-			self.qi.put("SET;" + self.etg + ";" + jed + dva + tri + cty + pet + ses)
+			self.qi.put("SET;" + str(self.sm.get()) + ";" + self.etg + ";" + jed + dva + tri + cty + pet + ses)
 			self.sets['state'] = 'disabled'
 		def stInst(self):
 			""" Metoda pro spuštění instalace balíčků pro potřeby třídy
@@ -183,6 +203,20 @@ if __name__ == "__main__":
 			print ig.get()
 			print ib.get()
 			print su.get()
+		def sme(self):
+			""" Metoda pro změnu vlastnosti změrování mezi sítěmi
+			\param self Ukazatel na objekt
+			"""
+			if self.sm.get() == 0:
+				self.igm = PhotoImage(file="./onesd.gif")
+				self.iml.configure(image=self.igm)
+				self.v.set("Počítač v síti")
+				self.sm.set(0)
+			else:
+				self.igm = PhotoImage(file="./twosd.gif")
+				self.iml.configure(image=self.igm)
+				self.v.set("Počítač jako směrovač")
+				self.sm.set(1)
 		def paintLayout(self):
 			""" Metoda vykreslující grafické prvky okna
 			Slouží jako komplexní metoda pro vykreslení a je hlavní metodou s práci s oknem
@@ -259,25 +293,31 @@ if __name__ == "__main__":
 			self.to.insert('end', "Zatím nic...")
 			scrollbar.config(command=self.to.yview)
 			Label(self.root,text="Průběh nastavování").place(relx=0.66, rely=.37)
-			dnwg=LabelFrame(self.root, text="Výběr rozhraní pro třídu", padx=5, pady=3)
+			dnwg=LabelFrame(self.root, text="Rozhraní", padx=5, pady=3)
 			dnwg.place(relx=0.27, rely=.68)
+			Label(dnwg,text="Pro třídu:").pack(side=LEFT)
 			## Proměnná obsahuje string prostředí Tk, které říká, jaké je zvolené rozrhaní pro komunikaci se třídou
 			self.vf=StringVar(self.root)
 			etf=self.sys.getEths()
 			if self.ethCn == 1:
-				self.etg=self.sys.getDefGwInt()
-				self.vf.set(self.sys.getDefGwInt())
+				gws=self.sys.getDefGwInt()
+				self.etg=gws[0]
+				self.vf.set(gws[0])
 			else:
 				i=0
-				while self.sys.getDefGwInt() == etf[i] or etf[i] == "lo":
+				while etf[i] in self.sys.getDefGwInt() or etf[i] == "lo":
 					i += 1
-					if i == len(etf[i]):
+					if i == len(etf):
 						i = 0
 						break
 				self.vf.set(etf[i])
 				self.etg=etf[i]
 			opteth = OptionMenu(dnwg,self.vf, *etf, command=self.chge)
-			opteth.pack()
+			opteth.pack(side=LEFT)
+			# co když uživatel přesto nechce/chce směrovat pro rozhraní
+			Label(dnwg,text=" směrování:").pack(side=LEFT)
+			Checkbutton(dnwg,onvalue=True,offvalue=False,variable=self.sm,command=self.sme).pack(side=LEFT)
+
 			dnwb=LabelFrame(self.root, text="Instalace a nastavení", padx=5, pady=5)
 			dnwb.place(relx=0.27, rely=.79)
 			fa=Frame(dnwb)
@@ -362,11 +402,13 @@ if __name__ == "__main__":
 				except UError,e:
 					qo.put(str(e.args) + " ERROR!")
 			if stri.split(";")[0] == "SET":
-				eth=stri.split(";")[1]
-				setUNt=ConfSys(eth)
-				# nastavení prostředků
-				# nastavení připojení
-				tsth=stri.split(";")[2]
+				# bude se routovat?
+				rut=int(stri.split(";")[1])
+				# rozhraní třídy
+				eth=stri.split(";")[2]
+				setUNt=ConfSys(eth,rut)
+				# parametry nastavování
+				tsth=stri.split(";")[3]
 				np=int(tsth[0])
 				nn=int(tsth[1])
 				im=int(tsth[2])
@@ -393,7 +435,10 @@ if __name__ == "__main__":
 						# povoluji NAT a routování
 						qo.put("Nastavuji přepínání")
 						setUNt.setUpMasq()
-					# stáhnout deboostrapem obraz
+						# stáhnout deboostrapem obraz
+				except UError,e:
+					qo.put("NET!")
+				try:
 					if im == 1:
 						qo.put("Stahuji obraz systému")
 						qo.put("TATO OPERACE JE NA DLOUHO!")
@@ -402,11 +447,13 @@ if __name__ == "__main__":
 						# přidávám složku pro instalaci dalších aplikací
 						# HODNĚ DŮLEŽITÉ, OSTATNÍ METODY NA EXISTENCI SLOŽKY SPOLÉHAJÍ
 					sy.makeDir("/NFSROOT/class/addons/")
-					if nn == 1:
+					if np == 1:
 						# nastavit dhcp
 						setUNt.setUpDH()
+					if nn == 1:
 						# nastavit nfs
 						setUNt.setUpNFS()
+					if np == 1:
 						# vkládání záznamů do fstab
 						setUNt.setUpFst()
 					# nastavit locales v obrazu
@@ -451,6 +498,9 @@ if __name__ == "__main__":
 						qo.put("Připravuji jádro")
 						setUNt.createKer(qo)
 						qo.put("Hotovo")
+					if np == 1:
+						# mění IP pro tftpd server
+						setUNt.tftpdCon(qo)
 					if ib == 1:
 						qo.put("Připravuji prohlížeč")
 						setUNt.installIce()
@@ -474,7 +524,10 @@ if __name__ == "__main__":
 				# restartuji služby
 				qo.put("Restartuji služby")
 				# zastavení network managera
-				setUNt.resetAllServ()
+				try:
+					setUNt.resetAllServ()
+				except UError,e:
+					qo.put("NET!")
 				qo.put("Hotovo")
 				qo.put("Zdá se, že všechno je připraveno")
 	## Proměnná obsahující okno Tk

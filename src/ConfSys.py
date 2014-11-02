@@ -17,7 +17,7 @@ class ConfSys:
 	""" \brief Třída obsahující metody pro nastavení systému
 	Obsahuje metody pro nastavení systému.
 	"""
-	def __init__(self,ethc="eth0"):
+	def __init__(self,ethc="eth0",rut=0):
 		""" Konstruktor třídy okna
 		\param self Ukazatel na objekt
 		\param ethc Jaké rozhraní je použito pro třídu
@@ -26,11 +26,15 @@ class ConfSys:
 		self.ethc=ethc
 		## Instance třídy pro práci se systémem
 		self.sy=ConsSys()
-		ets=self.sy.getEths()
-		for i in ets:
-			if self.sy.compIpByMask(self.sy.getNetmsk(i),self.sy.getDefGW(),self.sy.getEthIp(i)):
-				## Rozhraní defaultní brány
-				self.de=i
+		## Rozhraní defaultní brány
+		self.de=""
+		if rut == 0:
+			self.de = ethc
+		if self.de == "":
+			ets=self.sy.getEths()
+			for i in ets:
+				if self.sy.compIpByMask(self.sy.getNetmsk(i),self.sy.getDefGW(),self.sy.getEthIp(i)):
+					self.de=i
 		## Logovací třída
 		self.log=LogWrk()
 	def getDefGtw(self):
@@ -60,7 +64,7 @@ class ConfSys:
 		wsti = wsti + "\tgateway " + self.sy.getDefGW() + "\n"
 		# eth je rozhraní pro třídu a de pro vnější rozhraní
 		tAddress=self.sy.getEthIp(de)
-		if eth != de:
+		if eth != self.de:
 			wsti = wsti + "\n"
 			wsti = wsti + "auto " + eth + "\n"
 			wsti = wsti + "iface " + eth + " inet static\n"
@@ -450,7 +454,16 @@ class ConfSys:
 			tar = open ("/etc/default/tftpd-hpa", 'a')
 			tar.write("\n# DUCKED changed\n")
 			tar.close()
-		# úprava nastavení
+	def tftpdCon(self,qo=None):
+		""" Nastavuje tftp konfiguraci
+		\param self Ukazatel na objekt
+		"""
+		for fln in os.listdir("/NFSROOT/class/boot/"):
+			root, ext = os.path.splitext(fln)
+			if root.startswith('initrd'):
+				intrnam = fln
+			if root.startswith('vmlinuz'):
+				vmlinuz = fln
 		self.sy.makeDir("/srv/tftp/pxelinux.cfg")
 		self.sy.removeFl("/srv/tftp/pxelinux.cfg/default")
 		tar = open ("/srv/tftp/pxelinux.cfg/default", 'a')
@@ -692,6 +705,7 @@ if __name__ == "__main__":
 		sf.installIce()
 	if args.kin == True:
 		sf.createKer()
+		sf.tftpdCon()
 	if args.set == True:
 		sf.setUpDH()
 		sf.setUpNFS()

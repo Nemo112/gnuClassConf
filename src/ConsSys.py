@@ -20,7 +20,7 @@ from UError import UError
 import sys
 import array
 from GetIfAdrs import *
-from UError import UError
+
 
 class ConsSys:
 	""" 
@@ -58,10 +58,10 @@ class ConsSys:
 		\param self Ukazatel na objekt
 		\return String obsahující jméno rozhraní veoudícho k defaultní brány
 		"""		
-		de=""
+		de=[]
 		for i in self.getEths():
 			if self.compIpByMask(self.getNetmsk(i),self.getDefGW(),self.getEthIp(i)):
-				de=i
+				de.append(i)
 		return de
 	def erAll(self):
 		""" 
@@ -316,6 +316,7 @@ if __name__ == "__main__":
 	parser = OptionParser(usage="usage: %prog [args]\n Close system settings and methods")
 	parser.add_option("-e", "--erase-all", action="store_true", dest="err", default=False, help="Erase whole client image")
 	parser.add_option("-l", "--eth-list", action="store_true", dest="lst", default=False, help="Give a list of eth interfaces")
+	parser.add_option("-i", "--eth-list-ip", action="store_true", dest="lsti", default=False, help="Give a list of eth interfaces with IPs")
 	## Argumenty a parametry z parseru
 	(args, opts) = parser.parse_args()
 	## Instance objektu
@@ -325,3 +326,6 @@ if __name__ == "__main__":
 	if args.lst == True:
 		for i in cs.getEths():
 			print i
+	if args.lsti == True:
+		for i in cs.getEths():
+			print cs.getEthIp(i)

@@ -5,7 +5,8 @@ if [[ "$1" == "" || "$1" == "-h" ]];then
 	exit 3;
 fi
 
-eths=(`ip link | awk 'BEGIN{FS=" "}{print $2}' | grep ".*:$" | tr -d ':'`);
+#eths=(`ip link | awk 'BEGIN{FS=" "}{print $2}' | grep ".*:$" | tr -d ':'`);
+eths=(`ifconfig | awk 'BEGIN{FS="  ";}{if($1){ print $1; } }'`);
 ff=0;
 sf=0;
 
