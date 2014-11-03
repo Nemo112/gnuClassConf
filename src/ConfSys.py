@@ -121,6 +121,14 @@ class ConfSys:
 		""" Nastavení DHCP
 		\param self Ukazatel na objekt
 		"""
+		pr=ParConfFl()
+		if pr.getTftp() == "virtualbox":
+			if self.ethc != self.de:
+				tfp="tftp://192.168.111.1/pxelinux.0"
+			else:
+				tfp="tftp://" + self.sy.getEthIp(self.de) + "/pxelinux.0"
+		else:
+			tfp = pr.getTftp()
 		if self.ethc != self.de:
 			self.sy.removeFl("/etc/dhcp/class.conf")
 			tar = open ("/etc/dhcp/class.conf", 'a')
@@ -132,7 +140,7 @@ class ConfSys:
 			tar.write("\toption broadcast-address 192.168.111.255;\n")
 			tar.write("\toption routers 192.168.111.1;\n")
 			tar.write("\toption domain-name-servers " + self.sy.getDnsSer() + ";\n")
-			tar.write("\tfilename \"tftp://192.168.111.1/pxelinux.0\";\n")
+			tar.write("\tfilename \"" + tfp + "\";\n")
 			tar.write("\tserver-name \"192.168.111.1\";\n")
 			tar.write("\toption domain-name \"class\";\n")
 			tar.write("\toption root-path \"/NFSROOT/class\";\n")
@@ -168,7 +176,7 @@ class ConfSys:
 			tar.write("\toption broadcast-address " + self.sy.getBro(self.sy.getNetmsk(self.de),self.sy.getEthIp(self.de)) + ";\n")
 			tar.write("\toption routers " + self.sy.getDefGW() + ";\n")
 			tar.write("\toption domain-name-servers " + self.sy.getDnsSer() + " ;\n")
-			tar.write("\tfilename \"tftp://" + self.sy.getEthIp(self.de) + "/pxelinux.0\";\n")
+			tar.write("\tfilename \"" + tfp + "\";\n")
 			tar.write("\tserver-name \"" + self.sy.getEthIp(self.de) + "\";\n")
 			tar.write("\toption domain-name \"class\";\n")
 			tar.write("\toption root-path \"/NFSROOT/class\";\n")

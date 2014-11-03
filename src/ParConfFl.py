@@ -9,6 +9,24 @@ from optparse import OptionParser
 class ParConfFl:
 	""" \brief Třída obsahující metody s prací s načítáním konfiguračních souborů
 	"""
+	def getTftp(self):
+		""" Metoda vrací string obsahující cestu k pxelinux.0 v konfigruaci DHCP
+		Cesta se mění pokud je ve virtualboxu či v reálu
+		\param self Ukazatel na objekt
+		\return String obsahující cestu
+		"""
+		if os.path.isfile("./configuration/tftpath") == False:
+			return None
+		ret=""
+		fii=open("./configuration/tftpath","r").readlines()
+		for ln in fii:
+			crs=ln.find("#")
+			line=ln[0:crs]
+			ln=line.replace(" ","")
+			fl=ln.split("=")
+			if fl[0] == "path":
+				ret = fl[1]
+		return ret
 	def getInterfaces(self):
 		""" Metoda vrací slovník obsahující vstupní a výstupní zařízení
 		\param self Ukazatel na objekt
@@ -59,6 +77,7 @@ if __name__ == "__main__":
 	parser.add_option("-l", "--class-interfaces", action="store_true", dest="inn", default=False, help="Showing which interface is for class and which for outer connections")
 	parser.add_option("-i", "--inner-interface", action="store", type="string", dest="inner", default="", help="Settting up for interface inside of class")
 	parser.add_option("-o", "--outer-interface", action="store", type="string", dest="outer", default="", help="Settting up for interface outside of class")
+	parser.add_option("-t", "--tft-path", action="store_true",  default=False, dest="tftp", help="Getting TFTP path for DHCP which is going to be used")
 	## Argumenty a parametry z parseru
 	(args, opts) = parser.parse_args()
 	## Instance objektu
@@ -70,3 +89,5 @@ if __name__ == "__main__":
 		pr.setInterfaces(args.inner,pr.getInterfaces()['outi'])
 	if args.outer != "":
 		pr.setInterfaces(pr.getInterfaces()['inti'],args.outer)
+	if args.tftp == True:
+		print pr.getTftp()
