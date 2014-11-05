@@ -302,7 +302,7 @@ class ConfSys:
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
 		tar.write("apt-get autoremove --purge xfce4 -y\n")
-		tar.write("apt-get autoremove --purge slim -y\n")
+		#tar.write("apt-get autoremove --purge slim -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/unstallXfc.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/unstallXfc.sh'
@@ -330,7 +330,8 @@ class ConfSys:
 		tar.write("export XKBVARIANT=\"qwerty_bksl\"\n")
 		tar.write("export XKBOPTIONS=\"\"\n")
 		tar.write("export DEBIAN_FRONTEND=noninteractive\n")
-		tar.write("apt-get install --allow-unauthenticated xfce4 -y --force-yes\n")
+		tar.write("apt-get install --allow-unauthenticated xfce4 leafpad -y --force-yes\n")
+		tar.write("apt-get remove -y xscreensaver\n")
 		#tar.write("apt-get install --allow-unauthenticated lightdmdm -y\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installXfc.sh",0755)
