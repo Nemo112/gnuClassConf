@@ -24,8 +24,9 @@ class ParConfFl:
 			line=ln[0:crs]
 			ln=line.replace(" ","")
 			fl=ln.split("=")
-			if fl[0] == "path":
-				ret = fl[1]
+			if len(fl) == 2:
+				if fl[0] == "path":
+					ret = fl[1]
 		return ret
 	def getInterfaces(self):
 		""" Metoda vrací slovník obsahující vstupní a výstupní zařízení
@@ -41,10 +42,11 @@ class ParConfFl:
 			line=ln[0:crs]
 			ln=line.replace(" ","")
 			fl=ln.split("=")
-			if fl[0] == "in":
-				ret['inti'] = fl[1]
-			if fl[0] == "out":
-				ret['outi'] = fl[1]
+			if len(fl) == 2:
+				if fl[0] == "in":
+					ret['inti'] = fl[1]
+				if fl[0] == "out":
+					ret['outi'] = fl[1]
 		return ret
 	def setInterfaces(self,inti,outi):
 		""" Metoda nastavující vstupní a výstupní zažízení v conf souboru

@@ -1,1 +1,4 @@
+# Cesta k PXE souboru, který je popsán v DCHP konfiguračním souboru.
+# Pokud je path nastavena na virtualbox, prostředí vyplní parametry PXE
+# pro testování ve virtualboxu.
 path=virtualbox
