@@ -233,6 +233,7 @@ if __name__ == "__main__":
 					qo.put("60:Edituji rc.local")
 					setUNt.setUpHsn()
 					setUNt.setUpFw()
+					setUNt.setUpXh()
 					setUNt.installDm()
 					i=iTaHand()
 					i.setUpIcaS()

@@ -687,20 +687,52 @@ class ConfSys:
 		f=open("/NFSROOT/class/usr/bin/gdm-signal","a")
 		f.write("#!/bin/bash\n")
 		f.write("if [[ \"$1\" == \"-h\" ]];then\n")
+		f.write("     echo \"1\" > /run/shm/hlt;\n")
 		f.write("     xfce4-session-logout --halt;\n")
 		f.write("fi\n")
 		f.write("if [[ \"$1\" == \"-r\" ]];then\n")
+		f.write("     echo \"2\" > /run/shm/hlt;\n")
 		f.write("     xfce4-session-logout --restart;\n")
 		f.write("fi\n")
 		f.close()
 		os.chmod("/NFSROOT/class/usr/bin/gdm-signal",0755)
+		# Přidání vypínací služby
+		self.setUpXh()
 		# Přidání restartu pro iTalc
 		self.sy.removeFl("/NFSROOT/class/usr/bin/gdm-restart")		
 		f=open("/NFSROOT/class/usr/bin/gdm-restart","a")
 		f.write("#!/bin/bash\n")
+		f.write("echo \"2\" > /run/shm/hlt;\n")
 		f.write("xfce4-session-logout --restart;\n")
 		f.close()
 		os.chmod("/NFSROOT/class/usr/bin/gdm-restart",0755)
+	def setUpXh(self):
+		""" Upraví vypínání systému pro iTalc
+		\param self Ukazatel na objekt
+		"""
+		wa = "/NFSROOT/class/addons/"
+		nm = "shutd.sh"
+		if os.path.isfile(wa + nm):
+			self.sy.removeFl(wa + nm)
+			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		else:
+			self.sy.copyLargeFile("./data/" + nm,wa + nm)
+		os.chmod(wa + nm,0755)
+		wa = "/addons/"
+		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
+			cnl=cont.read()
+		obs=""
+		for line in cnl.split("\n"):
+			if wa + nm +" &" in line:
+				return
+			if "exit 0" == line:
+				break
+			obs = obs + line  + "\n"
+		obs = obs + wa + nm +" &\n"
+		obs = obs + "exit 0\n"
+		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
+		tar.write(obs)
+		tar.close()
 	def copyXBac(self):
 		""" Kopíruji X pozadi
 		\param self Ukazatel na objekt
