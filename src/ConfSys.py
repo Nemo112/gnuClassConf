@@ -268,15 +268,18 @@ class ConfSys:
 		tar.write("#!/bin/bash\n")
 		tar.write("export LC_ALL=C\n")
 		tar.write("groupadd student\n")
-		tar.write("useradd student -d /run/shm/home/student -p student -s /bin/bash -g student\n")
+		tar.write("useradd student -d /tmp/home/student -p student -s /bin/bash -g student\n")
 		tar.write("chown -R student:student /home/student\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/makeStu.sh",0755)
 		self.sy.extGzTar("./data/dataStCp.tar.gz")
 		self.sy.removeFl("/NFSROOT/class/home/student")
 		shutil.move("./dataStCp/student","/NFSROOT/class/home/")
-		self.sy.removeFl("/NFSROOT/class/etc/rc.local")
-		shutil.move("./dataStCp/rc.local","/NFSROOT/class/etc/")
+		# upravit rc.local
+		self.sy.addToNFSRc("mkdir /tmp/home;")
+		self.sy.addToNFSRc("cp -R /home/student /tmp/home;")
+		self.sy.addToNFSRc("chown -R student:student /tmp/home/student;")
+		#==========
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/makeStu.sh'
 		for line in self.sy.runProcess(tos):
 			print line,

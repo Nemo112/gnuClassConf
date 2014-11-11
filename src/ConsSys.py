@@ -28,6 +28,27 @@ class ConsSys:
 	Obsahuje ucelenou formu pro práci s prostředky jako ip,
 	spouštěče ostatních skriptů a další, ...
 	"""
+	def addToNFSRc(self,comm):
+		""" 
+		Metoda přidá do NFS sdíleného OS záznam do rc.local
+		\param self Ukazatel na objekt
+		\param comm Příkaz
+		"""
+		nad=comm
+		with open("/NFSROOT/class/etc/rc.local",'r') as cont:
+			cnl=cont.read()
+		obs=""
+		for line in cnl.split("\n"):
+			if nad in line:
+				return
+			if "exit 0" == line:
+				break
+			obs = obs + line  + "\n"
+		obs = obs + nad + "\n"
+		obs = obs + "exit 0\n"
+		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
+		tar.write(obs)
+		tar.close()
 	def allUpWIp(self):
 		""" 
 		Metoda vypíše aktivní rozhraní i s IP adresou
