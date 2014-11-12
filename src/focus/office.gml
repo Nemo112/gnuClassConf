@@ -8,11 +8,6 @@
 			<comm>apt-get install --allow-unauthenticated libreoffice -y --force-yes</comm>
 			<uni>apt-get autoremove libreoffice -y</uni>
 		</app>
-		<app>
-			<name>Editor textových souborů Leafpad</name>
-			<comm>apt-get install --allow-unauthenticated leafpad -y --force-yes</comm>
-			<uni>apt-get autoremove leafpad -y</uni>
-		</app>
 	</apps>
 	<note>Seznam aplikací vhodných pro kancelářskou práci</note>
 </list>
