@@ -40,15 +40,23 @@ class ShrFol:
 				else:
 					tr=line[0:tl]
 				if tr.replace(" ","") != "":
-					toR.append(tr)
+					spl=tr.split(";")
+					toa={}
+					toa['path']=spl[0]
+					if len(spl) > 1:
+						toa['righ']=spl[1]
+					else:
+						toa['righ']="rw"
+					toR.append(toa)
 			fl.close()
 		else:
 			return
 		return toR
-	def addToList(self,add):
+	def addToList(self,add,righ="rw"):
 		""" Přidá na list sdílení složku
 		\param self Ukazatel na objekt
 		\param add String obsahující cestu ke složce
+		\param righ String obsahující jaká práva se použijí
 		\return True pokud složka existuje a je přidána, jinak False
 		"""
 		if add in self.shList():
@@ -56,7 +64,7 @@ class ShrFol:
 		if os.path.isfile(self.path):
 			if os.path.isdir(add):
 				fl=open(self.path,"a")
-				fl.write(add + "\n")
+				fl.write(add + ";" + righ + "\n")
 				fl.close()
 		else:
 			return
@@ -82,23 +90,24 @@ class ShrFol:
 		\param self Ukazatel na objekt
 		\param dele String obsahující jméno složky k odstranění
 		"""
-		if dele in self.shList():
-			if os.path.isfile(self.path):
-				fl=open(self.path,"r")
-				cnt=fl.read()
-				fl.close()
-				ts=""
-				for ln in cnt.split("\n"):
-					if len(ln) > 0 and ln[0] == "#":
-						ts = ts + ln + "\n"
-						continue
-					if dele != ln:
-						ts = ts + ln + "\n"
-				fl=open(self.path,"w")
-				cnt=fl.write(ts)
-				fl.close()
-		else:
-			return
+		if os.path.isfile(self.path):
+			fl=open(self.path,"r")
+			cnt=fl.read()
+			fl.close()
+			ts=""
+			for ln in cnt.split("\n"):
+				if ln.replace(" ","") == "":
+					continue
+				line=""
+				if "#" in ln:
+					line = ln[0:ln.find("#")]
+				else:
+					line=ln
+				if dele != line.split(";")[0]:
+					ts = ts + ln + "\n"
+			fl=open(self.path,"w")
+			cnt=fl.write(ts)
+			fl.close()
 	def genListSh(self):
 		""" Vygeneruje dávky pro sdílení složek do obrazu
 		První v  ./tmpba/mntGen.sh vegeneruje mount složek
@@ -111,11 +120,13 @@ class ShrFol:
 			os.makedirs("/NFSROOT/class/class_shares")
 		tos = "#!/bin/bash\n"
 		for it in lst:
-			nm = it.split("/")[-1]
+			nm = it['path'].split("/")[-1]
 			if not os.path.isdir("/NFSROOT/class/class_shares/" + nm):
 				os.makedirs("/NFSROOT/class/class_shares/" + nm)
-				shutil.copymode(it, "/NFSROOT/class/class_shares/" + nm)
-			tos = tos + "mount -o rbind \"" + it + "\" \"/NFSROOT/class/class_shares/" + nm  + "\" " + ";\n"
+				shutil.copymode(it['path'], "/NFSROOT/class/class_shares/" + nm)
+				tos = tos + "mount -o " + it['righ'] + ",rbind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+			else:
+				tos = tos + "mount -o " + it['righ'] + ",rbind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
 		tos = tos + "exit 0;\n"
 		fl=open("./tmpba/mntGen.sh","w")
 		fl.write(tos)
@@ -124,7 +135,7 @@ class ShrFol:
 		# umount
 		tos = "#!/bin/bash\n"
 		for it in lst:
-			nm = it.split("/")[-1]
+			nm = it['path'].split("/")[-1]
 			tos = tos + "umount \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
 			if os.path.isdir("/NFSROOT/class/class_shares/" + nm):
 				tos = tos + "rmdir \"/NFSROOT/class/class_shares/" + nm + "\";\n"

@@ -8,6 +8,7 @@ from ShrFol import ShrFol
 import tkMessageBox
 import tkFileDialog
 import os
+from ShDiag import ShDiag
 
 if __name__ == "__main__":
 	class App:
@@ -24,7 +25,7 @@ if __name__ == "__main__":
 			## Ukazatel na okno Tk
 			self.root=r
 			self.root.title("Sdílení")
-			self.root.geometry(("%dx%d")%(236,320))
+			self.root.geometry(("%dx%d")%(236,350))
 			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
@@ -47,7 +48,15 @@ if __name__ == "__main__":
 			dirname = tkFileDialog.askdirectory(parent=self.root,initialdir=home,title='Vyberte složku pro sdílení')
 			if dirname == "/":
 				return
-			self.shr.addToList(dirname)
+			elif  "/" in dirname:
+				if len(dirname.split("/")) > 2:
+					if dirname.split("/")[1] == "NFSROOT":
+						return
+			res=tkMessageBox.askquestion("Práva", "Sdílet pouze čtení?", icon='question')
+			if res == 'yes':
+				self.shr.addToList(dirname,"r")
+			else:
+				self.shr.addToList(dirname)
 			self.shr.genListSh()
 			self.shr.expShrs()
 			self.loadItems()
@@ -57,10 +66,10 @@ if __name__ == "__main__":
 			\param self Ukazatel na objekt
 			"""
 			# přidání sdílené složky
-			Button(self.root,height=1, width=24,text="Přidat složku k sdílení",command=self.getNewDir).place(relx=0.02, rely=0.04)
+			Button(self.root,height=1, width=24,text="Přidat složku k sdílení",command=self.getNewDir).place(relx=0.028, rely=0.01)
 			# sdílené složky
 			gpTh = LabelFrame(self.root, text="Sdílené složky", padx=5, pady=5)
-			gpTh.place(relx=0.03, rely=0.16)
+			gpTh.place(relx=0.03, rely=0.1)
 			Label(gpTh,height=1, width=24,text="Klepnutím složku odeberete").pack()
 			scrollbar = Scrollbar(gpTh)
 			## Listbox ovladatelný z ostatních metod
@@ -69,9 +78,14 @@ if __name__ == "__main__":
 			self.to.pack(side=LEFT)
 			ls=self.shr.shList()
 			for it in ls:
-				self.to.insert('end',it)
+				self.to.insert('end',it['path'])
+				if it['righ'] == "rw":
+					self.to.itemconfig('end', {'bg':'lime green'})
+				else:
+					self.to.itemconfig('end', {'bg':'orange'}) 
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.to.yview)
+			Label(self.root,height=3, width=24,text="Zeleně jsou označeny složky\npro čtení a zápis,\noranžově složky pro čtení.").place(relx=0.076, rely=0.85)
 		def onSelect(self,evt):
 			""" Metoda pro odebrání položky z listu sdílení
 			\param self Ukazatel na objekt
@@ -83,11 +97,31 @@ if __name__ == "__main__":
 			except:
 				return
 			value = w.get(index)
-			value=value.encode('utf-8') 
-			result = tkMessageBox.askquestion("Odebrání", "Odebrat sdílení " + value + "?", icon='question')
-			if result == "yes":
+			value=value.encode('utf-8')
+			ls=self.shr.shList()
+			rl="r"
+			for it in ls:
+				if it['path'] == value:
+					rl=it['righ']
+			## Rozhodnutí uživatele
+			di=ShDiag(self.root,value,rl)
+			self.root.wait_window(di.top)
+			result = di.des
+			if result == "Del":
 				self.shr.remFrList(value)
 				self.shr.uMntLst(value)
+				self.shr.genListSh()
+				self.loadItems()
+			elif result == "Re":
+				self.shr.remFrList(value)
+				self.shr.uMntLst(value)
+				self.shr.addToList(value,"r")
+				self.shr.genListSh()
+				self.loadItems()
+			elif result == "Rw":
+				self.shr.remFrList(value)
+				self.shr.uMntLst(value)
+				self.shr.addToList(value,"rw")
 				self.shr.genListSh()
 				self.loadItems()
 		def loadItems(self):
@@ -97,7 +131,11 @@ if __name__ == "__main__":
 			self.to.delete(0, END)
 			ls=self.shr.shList()
 			for it in ls:
-				self.to.insert('end',it)
+				self.to.insert('end',it['path'])
+				if it['righ'] == "rw":
+					self.to.itemconfig('end', {'bg':'lime green'})
+				else:
+					self.to.itemconfig('end', {'bg':'orange'}) 
 		def qquit(self):
 			""" Metoda pro ukončení okna
 			Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna

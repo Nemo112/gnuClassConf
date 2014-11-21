@@ -1,4 +1,3 @@
-# List sdílených složek
-
-
-/root/test
+/root/dataXorg;rw
+/root/doc;r
+/root/test;rw
