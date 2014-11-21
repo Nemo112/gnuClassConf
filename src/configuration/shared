@@ -1,3 +1,2 @@
+/root/doc;ro
 /root/dataXorg;rw
-/root/doc;r
-/root/test;rw

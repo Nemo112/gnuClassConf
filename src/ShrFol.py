@@ -65,9 +65,30 @@ class ShrFol:
 			if os.path.isdir(add):
 				fl=open(self.path,"a")
 				fl.write(add + ";" + righ + "\n")
-				fl.close()
+				fl.close()			
 		else:
 			return
+		# nasdílí složku
+		self.mntByPa(add,right)
+	def mntByPa(self,it,ri):
+		""" Připojí složku
+		\param it Cesta ke složce
+		\param ri Práva ke složce
+		\param self Ukazatel na objekt
+		"""
+		nm = it.split("/")[-1]
+		if not os.path.isdir("/NFSROOT/class/class_shares/" + nm):
+			os.makedirs("/NFSROOT/class/class_shares/" + nm)
+			shutil.copymode(it, "/NFSROOT/class/class_shares/" + nm)
+			tos = "mount -o " + ri + ",rbind \"" + it + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+		inm = False
+		for line in self.sy.runProcess("mount"):
+			if len(line.split()) > 2:
+				if line.split()[2] == "/NFSROOT/class/class_shares/" + nm:
+					inm = True
+		if inm == False:
+			exe=[tos.split()]
+			p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	def uMntAll(self):
 		""" Odebere mount složky a smaže všechny složky
 		\param self Ukazatel na objekt
