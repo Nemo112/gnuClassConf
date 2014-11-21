@@ -69,7 +69,7 @@ class ShrFol:
 		else:
 			return
 		# nasdílí složku
-		self.mntByPa(add,right)
+		self.mntByPa(add,righ)
 	def mntByPa(self,it,ri):
 		""" Připojí složku
 		\param it Cesta ke složce
