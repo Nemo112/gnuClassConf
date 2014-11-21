@@ -54,7 +54,7 @@ if __name__ == "__main__":
 						return
 			res=tkMessageBox.askquestion("Práva", "Sdílet pouze čtení?", icon='question')
 			if res == 'yes':
-				self.shr.addToList(dirname,"r")
+				self.shr.addToList(dirname,"ro")
 			else:
 				self.shr.addToList(dirname)
 			self.shr.genListSh()
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 			elif result == "Re":
 				self.shr.remFrList(value)
 				self.shr.uMntLst(value)
-				self.shr.addToList(value,"r")
+				self.shr.addToList(value,"ro")
 				self.shr.genListSh()
 				self.loadItems()
 			elif result == "Rw":

@@ -53,6 +53,6 @@ class ShDiag:
 		Label(self.top,height=3,text="Má být složka ke čtení i zápisu, \n pouze ke čtení \n nebo jí přestat sdílet?",justify=CENTER).pack()
 		if self.rig == "rw":
 			Button(self.top,height=1, width=10,text="Čtení",command=self.setDer).place(relx=0.01, rely=0.65)
-		elif self.rig == "r":
+		elif self.rig == "ro":
 			Button(self.top,height=1, width=10,text="Čtení i zápis",command=self.setDeb).place(relx=0.01, rely=0.65)
 		Button(self.top,height=1, width=10,text="Přestat sdílet",command=self.setDec).place(relx=0.55, rely=0.65)

@@ -26,7 +26,6 @@ toi=$(cat <<EOF
 Encoding=UTF-8
 Name=gnuClassConf
 GenericName=GUI konfigurační prostředí třídy
-TryExec=gksu
 Exec=gksu /opt/${name}/main.py
 Terminal=false
 Icon=/usr/share/pixmaps/$name.png
@@ -39,6 +38,31 @@ printf "%s\n" "$toi" > ./tmp/usr/share/applications/$name.desktop;
 #==================================
 # copy of files
 cp -r ./src/* ./tmp/opt/${name}/;
+echo "# List sdílených složek" > ./tmp/opt/${name}/configuration/shared;
+int=$(cat <<EOF
+### Konfigurační soubor pro rozhraní učebny
+### Neupravujte pokud nebudete vysloveně muset
+### Obsah se přepisuje podle volby v "Základní nastavení učebny"
+
+### in je rozhraní pro učebnu
+in=
+
+### out je rozhraní pro vnější síť
+out=
+EOF
+)
+printf "%s\n" "$int" > ./tmp/opt/${name}/configuration/interfaces;
+echo "" > ./tmp/opt/${name}/data/work_logs.log;
+#==================================
+#rewriting tftp path in class.conf setup
+toi=$(cat <<EOF
+# Cesta k PXE souboru, který je popsán v DCHP konfiguračním souboru.
+# Pokud je path nastavena na virtualbox, prostředí vyplní parametry PXE
+# pro testování ve virtualboxu.
+path=pxelinux.0
+EOF
+)
+printf "%s\n" "$toi" > ./tmp/opt/${name}/configuration/tftpath;
 #==================================
 # making control
 size=`du -s ./tmp/usr/`;
@@ -47,7 +71,7 @@ Package: $name
 Version: $version
 Priority: optional
 Recommends: python
-Depends: python-tk | python (>= 2.7.6) 
+Depends: python-tk | python (>= 2.7.6) | gksu
 Architecture: all
 Installed-Size: $size
 Maintainer: Martin_Beranek <beranm14@fit.cvut.cz>

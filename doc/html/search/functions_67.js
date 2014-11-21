@@ -32,6 +32,7 @@ var searchData=
   ['getpercsdaload',['getPercSdaLoad',['../d0/d3a/classSysLoad_1_1SysLoad.html#a9464f6f2f01a89169aa36d818f1af51c',1,'SysLoad::SysLoad']]],
   ['getsize',['getSize',['../d1/d81/classFsSize_1_1FsSize.html#a988fd81d1518f72d3c93f49c986a0a47',1,'FsSize::FsSize']]],
   ['gettext',['getText',['../db/ddc/classxmlFocPar_1_1xmlFocPar.html#aef5bda118fe845d2b412cd2f24df368e',1,'xmlFocPar::xmlFocPar']]],
+  ['gettftp',['getTftp',['../d4/d51/classParConfFl_1_1ParConfFl.html#a4d415b4a08096b6f12663baabdd7b5bb',1,'ParConfFl::ParConfFl']]],
   ['gettimelist',['getTimeList',['../d0/d3a/classSysLoad_1_1SysLoad.html#a72febde2af89e56afa589d4c15fa4e72',1,'SysLoad::SysLoad']]],
   ['gettrreby',['getTrReBy',['../d0/d3a/classSysLoad_1_1SysLoad.html#a7540932700db54f5a564f3fd5ba6ef54',1,'SysLoad::SysLoad']]],
   ['gra',['gra',['../da/ddf/classmnRepair_1_1App.html#a4cef9252fd6d9bcf259cca1e8d3f08cd',1,'mnRepair::App']]]

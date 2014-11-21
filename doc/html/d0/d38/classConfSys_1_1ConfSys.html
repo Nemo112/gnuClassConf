@@ -130,6 +130,8 @@ Veřejné metody</h2></td></tr>
 <tr class="memdesc:a25b558cfd4ac44f9f75d82771079db7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instaluje základní systém přes deboostrap.  <a href="#a25b558cfd4ac44f9f75d82771079db7a"></a><br/></td></tr>
 <tr class="memitem:a8b17a236bdf36c53b109b0d30add20a3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#a8b17a236bdf36c53b109b0d30add20a3">createKer</a></td></tr>
 <tr class="memdesc:a8b17a236bdf36c53b109b0d30add20a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instaluje základní jádro do základního systému a zapisuje jej do TFTPD serveru.  <a href="#a8b17a236bdf36c53b109b0d30add20a3"></a><br/></td></tr>
+<tr class="memitem:a7fcacef3719a4eefbb116cd91df1846f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#a7fcacef3719a4eefbb116cd91df1846f">tftpdCon</a></td></tr>
+<tr class="memdesc:a7fcacef3719a4eefbb116cd91df1846f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nastavuje tftp konfiguraci.  <a href="#a7fcacef3719a4eefbb116cd91df1846f"></a><br/></td></tr>
 <tr class="memitem:ab30f940b6063d918726bf098a1572dbd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#ab30f940b6063d918726bf098a1572dbd">setUpFst</a></td></tr>
 <tr class="memdesc:ab30f940b6063d918726bf098a1572dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nastavuje fstab v obraze.  <a href="#ab30f940b6063d918726bf098a1572dbd"></a><br/></td></tr>
 <tr class="memitem:a8494e0b1d538ef981c3670e065bbfe78"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#a8494e0b1d538ef981c3670e065bbfe78">setUpFw</a></td></tr>
@@ -142,6 +144,8 @@ Veřejné metody</h2></td></tr>
 <tr class="memdesc:a75c24373b7f98875cb36979db32affb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instaluje Iceweasel do obrazu.  <a href="#a75c24373b7f98875cb36979db32affb6"></a><br/></td></tr>
 <tr class="memitem:ac1ae7ecf353bc1fd45635bdca5d7b3bc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#ac1ae7ecf353bc1fd45635bdca5d7b3bc">copyXorgCo</a></td></tr>
 <tr class="memdesc:ac1ae7ecf353bc1fd45635bdca5d7b3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopíruji Xorg konfiguraci.  <a href="#ac1ae7ecf353bc1fd45635bdca5d7b3bc"></a><br/></td></tr>
+<tr class="memitem:a9f6f935bb49c6cbdf8dab640c0b9b33f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#a9f6f935bb49c6cbdf8dab640c0b9b33f">setUpXh</a></td></tr>
+<tr class="memdesc:a9f6f935bb49c6cbdf8dab640c0b9b33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upraví vypínání systému pro iTalc.  <a href="#a9f6f935bb49c6cbdf8dab640c0b9b33f"></a><br/></td></tr>
 <tr class="memitem:a56c578bb874bfb2b0b3da19361ddf84b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d38/classConfSys_1_1ConfSys.html#a56c578bb874bfb2b0b3da19361ddf84b">copyXBac</a></td></tr>
 <tr class="memdesc:a56c578bb874bfb2b0b3da19361ddf84b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopíruji X pozadi.  <a href="#a56c578bb874bfb2b0b3da19361ddf84b"></a><br/></td></tr>
 </table><table class="memberdecls">
@@ -177,7 +181,13 @@ Veřejné atributy</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ethc</em> = <code>&quot;eth0&quot;</code>&#160;</td>
+          <td class="paramname"><em>ethc</em> = <code>&quot;eth0&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rut</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -758,6 +768,64 @@ Veřejné atributy</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9f6f935bb49c6cbdf8dab640c0b9b33f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ConfSys.ConfSys.setUpXh </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Upraví vypínání systému pro iTalc. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Ukazatel na objekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7fcacef3719a4eefbb116cd91df1846f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ConfSys.ConfSys.tftpdCon </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>qo</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Nastavuje tftp konfiguraci. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>Ukazatel na objekt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a0992f277e8ca9e28938ca2b2dde59ea1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -799,7 +867,7 @@ Veřejné atributy</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generováno so 25. říj 2014 21.58:04 pro projekt GNUškola konfigurační prostředí programem &#160;<a href="http://www.doxygen.org/index.html">
+Generováno pá 21. lis 2014 22.18:24 pro projekt GNUškola konfigurační prostředí programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

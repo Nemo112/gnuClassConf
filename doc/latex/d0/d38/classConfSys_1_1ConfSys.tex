@@ -41,6 +41,8 @@ def \hyperlink{classConfSys_1_1ConfSys_a25b558cfd4ac44f9f75d82771079db7a}{instal
 \begin{DoxyCompactList}\small\item\em Instaluje základní systém přes deboostrap. \end{DoxyCompactList}\item 
 def \hyperlink{classConfSys_1_1ConfSys_a8b17a236bdf36c53b109b0d30add20a3}{create\-Ker}
 \begin{DoxyCompactList}\small\item\em Instaluje základní jádro do základního systému a zapisuje jej do T\-F\-T\-P\-D serveru. \end{DoxyCompactList}\item 
+def \hyperlink{classConfSys_1_1ConfSys_a7fcacef3719a4eefbb116cd91df1846f}{tftpd\-Con}
+\begin{DoxyCompactList}\small\item\em Nastavuje tftp konfiguraci. \end{DoxyCompactList}\item 
 def \hyperlink{classConfSys_1_1ConfSys_ab30f940b6063d918726bf098a1572dbd}{set\-Up\-Fst}
 \begin{DoxyCompactList}\small\item\em Nastavuje fstab v obraze. \end{DoxyCompactList}\item 
 def \hyperlink{classConfSys_1_1ConfSys_a8494e0b1d538ef981c3670e065bbfe78}{set\-Up\-Fw}
@@ -53,6 +55,8 @@ def \hyperlink{classConfSys_1_1ConfSys_a75c24373b7f98875cb36979db32affb6}{instal
 \begin{DoxyCompactList}\small\item\em Instaluje Iceweasel do obrazu. \end{DoxyCompactList}\item 
 def \hyperlink{classConfSys_1_1ConfSys_ac1ae7ecf353bc1fd45635bdca5d7b3bc}{copy\-Xorg\-Co}
 \begin{DoxyCompactList}\small\item\em Kopíruji Xorg konfiguraci. \end{DoxyCompactList}\item 
+def \hyperlink{classConfSys_1_1ConfSys_a9f6f935bb49c6cbdf8dab640c0b9b33f}{set\-Up\-Xh}
+\begin{DoxyCompactList}\small\item\em Upraví vypínání systému pro i\-Talc. \end{DoxyCompactList}\item 
 def \hyperlink{classConfSys_1_1ConfSys_a56c578bb874bfb2b0b3da19361ddf84b}{copy\-X\-Bac}
 \begin{DoxyCompactList}\small\item\em Kopíruji X pozadi. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Veřejné atributy}
@@ -81,7 +85,8 @@ Třída obsahující metody pro nastavení systému Obsahuje metody pro nastaven
 \subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def Conf\-Sys.\-Conf\-Sys.\-\_\-\-\_\-init\-\_\-\-\_\- (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{ethc = {\ttfamily \char`\"{}eth0\char`\"{}}}
+\item[{}]{ethc = {\ttfamily \char`\"{}eth0\char`\"{}}, }
+\item[{}]{rut = {\ttfamily 0}}
 \end{DoxyParamCaption}
 )}}\label{d0/d38/classConfSys_1_1ConfSys_a197c6584cb1c94711acbf308691162ec}
 
@@ -443,6 +448,39 @@ Nastavení síťových rozhraní v /etc/network/interfaces.
 
 
 Nastavení N\-F\-S. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classConfSys_1_1ConfSys_a9f6f935bb49c6cbdf8dab640c0b9b33f}{\index{Conf\-Sys\-::\-Conf\-Sys@{Conf\-Sys\-::\-Conf\-Sys}!set\-Up\-Xh@{set\-Up\-Xh}}
+\index{set\-Up\-Xh@{set\-Up\-Xh}!ConfSys::ConfSys@{Conf\-Sys\-::\-Conf\-Sys}}
+\subsubsection[{set\-Up\-Xh}]{\setlength{\rightskip}{0pt plus 5cm}def Conf\-Sys.\-Conf\-Sys.\-set\-Up\-Xh (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{d0/d38/classConfSys_1_1ConfSys_a9f6f935bb49c6cbdf8dab640c0b9b33f}
+
+
+Upraví vypínání systému pro i\-Talc. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em self} & Ukazatel na objekt \\
+\hline
+\end{DoxyParams}
+\hypertarget{classConfSys_1_1ConfSys_a7fcacef3719a4eefbb116cd91df1846f}{\index{Conf\-Sys\-::\-Conf\-Sys@{Conf\-Sys\-::\-Conf\-Sys}!tftpd\-Con@{tftpd\-Con}}
+\index{tftpd\-Con@{tftpd\-Con}!ConfSys::ConfSys@{Conf\-Sys\-::\-Conf\-Sys}}
+\subsubsection[{tftpd\-Con}]{\setlength{\rightskip}{0pt plus 5cm}def Conf\-Sys.\-Conf\-Sys.\-tftpd\-Con (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{qo = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{d0/d38/classConfSys_1_1ConfSys_a7fcacef3719a4eefbb116cd91df1846f}
+
+
+Nastavuje tftp konfiguraci. 
 
 
 \begin{DoxyParams}{Parametry}
