@@ -58,7 +58,6 @@ if __name__ == "__main__":
 			else:
 				self.shr.addToList(dirname)
 			self.shr.genListSh()
-			self.shr.expShrs()
 			self.loadItems()
 		def paintLayout(self):
 			""" Metoda vykreslující grafické prvky okna

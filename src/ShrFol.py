@@ -80,21 +80,28 @@ class ShrFol:
 		if not os.path.isdir("/NFSROOT/class/class_shares/" + nm):
 			os.makedirs("/NFSROOT/class/class_shares/" + nm)
 			shutil.copymode(it, "/NFSROOT/class/class_shares/" + nm)
-			tos = "mount -o " + ri + ",rbind \"" + it + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
-		inm = False
+		else:
+			self.uMntLst(it)
+			os.makedirs("/NFSROOT/class/class_shares/" + nm)
+			shutil.copymode(it, "/NFSROOT/class/class_shares/" + nm)
+
+		exs = ["mount","--bind",it,"/NFSROOT/class/class_shares/" + nm]
+		exd = ["mount","-o","remount," + ri + ",bind",it,"/NFSROOT/class/class_shares/" + nm]
+		
 		for line in self.sy.runProcess("mount"):
 			if len(line.split()) > 2:
 				if line.split()[2] == "/NFSROOT/class/class_shares/" + nm:
-					inm = True
-		if inm == False:
-			exe=[tos.split()]
-			p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+					umt=["umount","-l","/NFSROOT/class/class_shares/" + nm]
+					p = subprocess.call(umt)
+
+		p = subprocess.call(exs, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+		p = subprocess.call(exd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	def uMntAll(self):
 		""" Odebere mount složky a smaže všechny složky
 		\param self Ukazatel na objekt
 		"""
 		exe=["./tmpba/untGen.sh"]
-		p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+		p = subprocess.call(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	def uMntLst(self,dele):
 		""" Odebere mount složky a smaže jí
 		\param self Ukazatel na objekt
@@ -102,10 +109,16 @@ class ShrFol:
 		"""
 		nm=dele.split("/")[-1]
 		if os.path.isdir("/NFSROOT/class/class_shares/" + nm):
-			exe=["umount","/NFSROOT/class/class_shares/" + nm + ""]
-			p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-			exe=["rm","-r","/NFSROOT/class/class_shares/" + nm + ""]
-			p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+			for line in self.sy.runProcess("mount"):
+				if len(line.split()) > 2:
+					if line.split()[2] == "/NFSROOT/class/class_shares/" + nm:
+						exe=["umount","-l","/NFSROOT/class/class_shares/" + nm]
+						p = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+						val,err = p.communicate()
+						print val
+						print "/NFSROOT/class/class_shares/" + nm, " umounted"
+			exe=["rm","-r","/NFSROOT/class/class_shares/" + nm]
+			p = subprocess.call(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 	def remFrList(self,dele):
 		""" Odebere z listu sdílených složek
 		\param self Ukazatel na objekt
@@ -145,9 +158,11 @@ class ShrFol:
 			if not os.path.isdir("/NFSROOT/class/class_shares/" + nm):
 				os.makedirs("/NFSROOT/class/class_shares/" + nm)
 				shutil.copymode(it['path'], "/NFSROOT/class/class_shares/" + nm)
-				tos = tos + "mount -o " + it['righ'] + ",rbind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+				tos = tos + "mount --bind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+				tos = tos + "mount -o remount," + it['righ'] + ",bind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
 			else:
-				tos = tos + "mount -o " + it['righ'] + ",rbind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+				tos = tos + "mount --bind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+				tos = tos + "mount -o remount," + it['righ'] + ",bind \"" + it['path'] + "\" \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
 		tos = tos + "exit 0;\n"
 		fl=open("./tmpba/mntGen.sh","w")
 		fl.write(tos)
@@ -157,7 +172,7 @@ class ShrFol:
 		tos = "#!/bin/bash\n"
 		for it in lst:
 			nm = it['path'].split("/")[-1]
-			tos = tos + "umount \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
+			tos = tos + "umount -l \"/NFSROOT/class/class_shares/" + nm  + "\"" + ";\n"
 			if os.path.isdir("/NFSROOT/class/class_shares/" + nm):
 				tos = tos + "rmdir \"/NFSROOT/class/class_shares/" + nm + "\";\n"
 		tos = tos + "exit 0;\n"
