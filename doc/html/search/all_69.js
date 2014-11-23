@@ -8,6 +8,7 @@ var searchData=
   ['inl',['inl',['../db/d36/classmnFocus_1_1App.html#afe256570e794996242e331f33796610a',1,'mnFocus::App']]],
   ['ins',['ins',['../da/dc1/classitWindow_1_1App.html#a43d0be6dbdd9986f4a412e3856c4db16',1,'itWindow::App']]],
   ['insset',['insSet',['../db/d36/classmnFocus_1_1App.html#a2ad6e7b25e3ebd9dbf284a5046ed22d0',1,'mnFocus::App']]],
+  ['inssy',['insSy',['../db/d36/classmnFocus_1_1App.html#af603a2648869e9af45d927b6b2aa360d',1,'mnFocus::App']]],
   ['installdm',['installDm',['../d0/d38/classConfSys_1_1ConfSys.html#acc9747fb9c27ec9b502f05f8e9038e93',1,'ConfSys::ConfSys']]],
   ['installice',['installIce',['../d0/d38/classConfSys_1_1ConfSys.html#a75c24373b7f98875cb36979db32affb6',1,'ConfSys::ConfSys']]],
   ['installstand',['installStand',['../d0/d38/classConfSys_1_1ConfSys.html#a95ef7393f7d7dbee78bced240d3554a2',1,'ConfSys::ConfSys']]],

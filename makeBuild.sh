@@ -71,7 +71,7 @@ Package: $name
 Version: $version
 Priority: optional
 Recommends: python
-Depends: python-tk | python (>= 2.7.6) | gksu
+Depends: python-tk | python (>= 2.7.6) | gksu 
 Architecture: all
 Installed-Size: $size
 Maintainer: Martin_Beranek <beranm14@fit.cvut.cz>

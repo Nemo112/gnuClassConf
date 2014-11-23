@@ -7,6 +7,7 @@ from Tkinter import *
 import webbrowser
 import tkFileDialog
 import tkMessageBox
+import subprocess
 from xmlFocPar import xmlFocPar
 import tkFont
 from inFocus import inFocus
@@ -35,7 +36,7 @@ if __name__ == "__main__":
 			## List účelů s aplikacami
 			self.lst=xmlFocPar()
 			self.root.title("Nastavení účelu učebny")
-			self.root.geometry(("%dx%d")%(440,340))
+			self.root.geometry(("%dx%d")%(440,380))
 			self.root.wm_iconbitmap('@./gnusk.xbm')
 			self.root.protocol("WM_DELETE_WINDOW",self.qquit)
 			self.root.resizable(0,0)
@@ -157,10 +158,10 @@ if __name__ == "__main__":
 			"""
 			f=inFocus()
 			
-			Button(self.root,height=1, width=19,text="Přidat účel",command=self.loadNXml).place(relx=0.03, rely=0.02)
+			Button(self.root,height=1, width=19,text="Přidat účel",command=self.loadNXml).place(relx=0.03, rely=0.01)
 			
 			gpTh = LabelFrame(self.root, text="Účel", padx=5, pady=5)
-			gpTh.place(relx=0.01, rely=0.12)
+			gpTh.place(relx=0.01, rely=0.1)
 			scrollbar = Scrollbar(gpTh)
 			## Účely
 			self.to = Listbox(gpTh,height=13, width=20, bd=0, yscrollcommand=scrollbar.set,selectmode="multiple")
@@ -177,11 +178,11 @@ if __name__ == "__main__":
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.to.yview)
 			gpTh = LabelFrame(self.root, text="Aplikace", padx=5, pady=5)
-			gpTh.place(relx=0.45, rely=0.129)
+			gpTh.place(relx=0.45, rely=0.1)
 			scrollbar = Scrollbar(gpTh)
 			## Informační text
 			self.inl=Label(self.root,text="Červeně jsou označené aplikace,\nkteré nejsou nainstalovány")
-			self.inl.place(relx=0.48, rely=0.02)
+			self.inl.place(relx=0.48, rely=0.01)
 			## List aplikací
 			self.tl = Listbox(gpTh,height=13, width=26, bd=0, yscrollcommand=scrollbar.set,disabledforeground="black")
 			self.tl.pack(side=LEFT)
@@ -202,25 +203,27 @@ if __name__ == "__main__":
 						else:
 							self.tl.itemconfig(END, {'bg':'dark sea green'})
 					self.tl.insert('end',"")
-				
-			#self.tl.config(state=DISABLED)
-			
 			scrollbar.pack(side=RIGHT, fill=Y)
 			scrollbar.config(command=self.tl.yview)
 
 			l=Label(self.root,text="Pokud chybí účel, který \n potřebuje, můžete použít",cursor="hand2")
-			l.place(relx=0.01, rely=0.8)
+			l.place(relx=0.01, rely=0.7)
 			l=Label(self.root,text="stránku účelů učeben.",fg="Blue",cursor="hand2")
-			l.place(relx=0.02, rely=0.89)
+			l.place(relx=0.02, rely=0.79)
 			l.bind("<Button-1>",self.callPage)
 			## Tlačíko spouštějící instalace
 			self.b=Button(self.root,height=1, width=19,text="Připravit vybrané",command=self.insSet)
-			self.b.place(relx=0.51, rely=0.8)
+			self.b.place(relx=0.51, rely=0.7)
 			## Ukazatel vyhotovení instalace
-			self.progressbar = ttk.Progressbar(orient=HORIZONTAL, length=196, mode='determinate')
-			self.progressbar.place(relx=0.49, rely=0.9)
+			self.progressbar = ttk.Progressbar(orient=HORIZONTAL, length=180, mode='determinate')
+			self.progressbar.place(relx=0.51, rely=0.79)
 			self.progressbar["value"]=0
 			self.progressbar["maximum"]=100
+			## Synaptic
+			gpSy = LabelFrame(self.root, text="Ruční instalace", padx=5, pady=2)
+			gpSy.place(relx=0.022, rely=0.85)
+			Label(gpSy,text="Pokud chcete instalovat balíčky ručně, použijte",cursor="hand2").pack(side=LEFT)
+			Button(gpSy,height=1, width=10,text="Synaptic",command=self.insSy).pack(side=RIGHT)
 			
 			self.root.after(100,self.mvBar,self.qoi)
 		def mvBar(self,qc):
@@ -252,6 +255,12 @@ if __name__ == "__main__":
 				pass
 			finally:
 				self.root.after(100,self.mvBar,qc)
+		def insSy(self):
+			""" Metoda pro spuštění synapticu nad obrazem učebny
+			\param self Ukazatel na objekt
+			\param event Ukazatel na akci
+			"""
+			subprocess.Popen("./lounchSyn.sh", shell=True)
 		def callPage(self,event):
 			""" Metoda pro spuštění stránky s účelama učebny
 			\param self Ukazatel na objekt
