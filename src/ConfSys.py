@@ -349,6 +349,17 @@ class ConfSys:
 					qo.put("Nastavuji " + line.split(" ")[-3].replace("\n",""))
 				if "Unpacking" == line.split(" ")[0]:
 					qo.put("Rozbaluji " + line.split(" ")[1].replace("\n",""))
+		# Úprava odhlášení ze stanice
+		os.rename("/NFSROOT/class/usr/bin/xfce4-session-logout","/NFSROOT/class/usr/bin/xfce4logoutEdit")
+		f=open("/NFSROOT/class/usr/bin/xfce4-session-logout","a")
+		f.write("#!/bin/bash\n")
+		f.write("if [[ \"$1\" == \"--logout\" ]]; then\n")
+		f.write("	echo \"Nope!\";\n")
+		f.write("else\n")
+		f.write("	/usr/bin/xfce4logoutEdit $1 $2 $3 $4 $5;\n")
+		f.write("fi\n")
+		f.close()
+		os.chmod("/NFSROOT/class/usr/bin/xfce4-session-logout",0555)
 	def installStand(self,qo=None):
 		""" Instaluje standardní systém
 		\param self Ukazatel na objekt

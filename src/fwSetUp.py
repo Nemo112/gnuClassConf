@@ -28,6 +28,8 @@ class fwSetUp:
 		self.bla +="""
 iptables -D OUTPUT -j ACCEPT;
 iptables -D INPUT -j ACCEPT;
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
 iptables -A OUTPUT -j DROP;
 iptables -A INPUT -j DROP;
 """
@@ -35,6 +37,8 @@ iptables -A INPUT -j DROP;
 		self.ola = """
 iptables -A OUTPUT -j ACCEPT;
 iptables -A INPUT -j ACCEPT;
+iptables -D INPUT -i lo -j ACCEPT
+iptables -D OUTPUT -o lo -j ACCEPT
 iptables -D OUTPUT -j DROP;
 iptables -D INPUT -j DROP;
 """
