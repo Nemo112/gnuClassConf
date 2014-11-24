@@ -1,6 +1,6 @@
 #!/bin/bash
 name="gnuClassConf";
-version="0.001";
+version="0.01.`git rev-list --count HEAD`";
 desc="Aplikace pro správu síťové učebny v rámci LAN.";
 #==================================
 # directory structure build
