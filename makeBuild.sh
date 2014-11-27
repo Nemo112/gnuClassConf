@@ -93,5 +93,6 @@ mv bckman $name.1;
 #==================================
 # making deb
 sudo chown -hR root:root ./tmp;
-sudo dpkg-deb -b ./tmp ${name}_${version}_all.deb;
+sudo dpkg-deb -b ./tmp ${name}_${version}_all.deb 1>/dev/null;
 rm -r ./tmp;
+echo ${name}_${version}_all.deb;

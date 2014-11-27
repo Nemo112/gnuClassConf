@@ -477,6 +477,13 @@ class ConfSys:
 			tar = open ("/etc/default/tftpd-hpa", 'a')
 			tar.write("\n# DUCKED changed\n")
 			tar.close()
+		# upravení halt a restart v 
+		#rc0.d
+		if os.path.isfile("/NFSROOT/class/etc/rc0.d/K09halt"):
+			os.rename("/NFSROOT/class/etc/rc0.d/K09halt","/NFSROOT/class/etc/rc0.d/K00halt")
+		#rc6.d
+		if os.path.isfile("/NFSROOT/class/etc/rc6.d/K09reboot"):
+			os.rename("/NFSROOT/class/etc/rc6.d/K09reboot","/NFSROOT/class/etc/rc0.d/K00reboot")
 	def tftpdCon(self,qo=None):
 		""" Nastavuje tftp konfiguraci
 		\param self Ukazatel na objekt
@@ -627,6 +634,7 @@ class ConfSys:
 		tar.write("apt-get install --allow-unauthenticated iceweasel -y --force-yes\n")
 		tar.write("apt-get install --allow-unauthenticated mousepad -y --force-yes\n")
 		tar.write("apt-get install --allow-unauthenticated xpdf -y --force-yes\n")
+		tar.write("apt-get install --allow-unauthenticated synaptic -y --force-yes\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installIce.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installIce.sh'

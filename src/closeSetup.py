@@ -265,7 +265,7 @@ if __name__ == "__main__":
 			self.q=Checkbutton(grss,text="Instalace gui",onvalue=True,offvalue=False,variable=ig,command=self.swi)
 			self.q.pack(anchor=W)
 			## c Checkbutton pro instalaci prohlížeče
-			self.c=Checkbutton(grss,text="Instalace prohlížeče",onvalue=True,offvalue=False,variable=ib,command=self.swi)
+			self.c=Checkbutton(grss,text="Instalace prohlížece",onvalue=True,offvalue=False,variable=ib,command=self.swi)
 			self.c.pack(anchor=W)
 			## u Checkbutton pro nastavení uživatelů
 			self.u=Checkbutton(grss,text="Nastavení uživatelů",onvalue=True,offvalue=False,variable=su,command=self.swi)

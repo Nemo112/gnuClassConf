@@ -8,5 +8,5 @@ gzip -f ./gnuClassConf.tar;
 scp ./gnuClassConf.tar.gz nemo@nemor.cz:/raid/home/nemo/00_imp_data_rep_nemo/SKOLA2/baka_prace;
 scp ./gnuClassConf.tar.gz nemo@nemor.cz:/raid/www/gnuclassconf/src;
 cd $p;
-./makeBuild.sh;
-scp ./gnuClassConf_0.001_all.deb nemo@nemor.cz:/raid/www/gnuclassconf/src;
+nmb=$(./makeBuild.sh);
+scp ./$nmb nemo@nemor.cz:/raid/www/gnuclassconf/src;
