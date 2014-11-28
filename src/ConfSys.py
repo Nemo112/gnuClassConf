@@ -409,6 +409,16 @@ class ConfSys:
 		tar = open ("/NFSROOT/class/etc/rc.local", 'w')
 		tar.write(obs)
 		tar.close()
+		# upravit startx pro logout
+		os.rename("/NFSROOT/class/usr/bin/startx","/NFSROOT/class/usr/bin/startx_ed")
+		tos="""#!/bin/bash
+/usr/bin/startx_ed;
+echo 2 > /run/shm/hlt;
+"""
+		f=open("/NFSROOT/class/usr/bin/startx","w")
+		f.write(tos)
+		f.close()
+		os.chmod("/NFSROOT/class/usr/bin/startx",0755)
 	def installSysDebs(self,qo=None):
 		""" Instaluje základní systém přes deboostrap
 		\param self Ukazatel na objekt
@@ -479,11 +489,11 @@ class ConfSys:
 			tar.close()
 		# upravení halt a restart v 
 		#rc0.d
-		if os.path.isfile("/NFSROOT/class/etc/rc0.d/K09halt"):
-			os.rename("/NFSROOT/class/etc/rc0.d/K09halt","/NFSROOT/class/etc/rc0.d/K00halt")
+		#if os.path.isfile("/NFSROOT/class/etc/rc0.d/K09halt"):
+		#	os.rename("/NFSROOT/class/etc/rc0.d/K09halt","/NFSROOT/class/etc/rc0.d/K00halt")
 		#rc6.d
-		if os.path.isfile("/NFSROOT/class/etc/rc6.d/K09reboot"):
-			os.rename("/NFSROOT/class/etc/rc6.d/K09reboot","/NFSROOT/class/etc/rc0.d/K00reboot")
+		#if os.path.isfile("/NFSROOT/class/etc/rc6.d/K09reboot"):
+		#	os.rename("/NFSROOT/class/etc/rc6.d/K09reboot","/NFSROOT/class/etc/rc0.d/K00reboot")
 	def tftpdCon(self,qo=None):
 		""" Nastavuje tftp konfiguraci
 		\param self Ukazatel na objekt

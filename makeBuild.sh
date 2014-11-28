@@ -38,6 +38,7 @@ printf "%s\n" "$toi" > ./tmp/usr/share/applications/$name.desktop;
 #==================================
 # copy of files
 cp -r ./src/* ./tmp/opt/${name}/;
+rm -r ./tmp/opt/${name}/*\.pyc;
 echo "# List sdílených složek" > ./tmp/opt/${name}/configuration/shared;
 int=$(cat <<EOF
 ### Konfigurační soubor pro rozhraní učebny
