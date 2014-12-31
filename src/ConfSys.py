@@ -113,7 +113,7 @@ class ConfSys:
 		\param self Ukazatel na objekt
 		"""
 		if self.ethc != self.de:
-			tos="./masquarate.sh " + self.ethc + " " + self.de
+			tos="./masquarade.sh " + self.ethc + " " + self.de
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)
