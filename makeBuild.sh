@@ -18,9 +18,9 @@ mkdir usr/share/pixmaps;
 cd ..;
 #==================================
 # create install script
-touch tmp/DEBIAN/prerm;
-cat ./src/install.sh > tmp/DEBIAN/prerm;
-chmod +x tmp/DEBIAN/prerm;
+touch tmp/DEBIAN/postinst;
+cat ./src/install.sh > tmp/DEBIAN/postinst;
+chmod +x tmp/DEBIAN/postinst;
 #==================================
 # copy icon
 cp iconst.png ./tmp/usr/share/pixmaps/$name.png;
