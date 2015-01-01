@@ -1,0 +1,15 @@
+#!/bin/bash
+# Instalace aplikace
+# Cílová složka
+TDIR="/opt/gnuClassConf";
+if [[ -d "$TDIR" ]];then
+	# Složka už existuje, kopíruji vše až na konfigurační soubory
+	# Pokud konfigurační soubory focus/installed.cfg, configuration/shared
+	# a configuration/interfaces existují, nepřepisovat
+	d="/tmp/gnuClI";
+	echo "Načítám konfiguraci";
+	cat "$d/interfaces" > "$TDIR/configuration/interfaces";
+	cat "$d/shared" > "$TDIR/configuration/shared";
+	cat "$d/installed.cfg" > "$TDIR/focus/installed.cfg";
+	rm -r $d;
+fi

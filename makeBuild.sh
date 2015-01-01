@@ -17,10 +17,18 @@ mkdir usr/share/man/man1/;
 mkdir usr/share/pixmaps;
 cd ..;
 #==================================
-# create install script
+# create install scripts
+touch tmp/DEBIAN/preinst;
+cat ./src/preinst > tmp/DEBIAN/preinst;
+chmod +x tmp/DEBIAN/preinst;
+
 touch tmp/DEBIAN/postinst;
-cat ./src/install.sh > tmp/DEBIAN/postinst;
+cat ./src/postinst > tmp/DEBIAN/postinst;
 chmod +x tmp/DEBIAN/postinst;
+
+touch tmp/DEBIAN/postrm;
+cat ./src/postrm > tmp/DEBIAN/postrm;
+chmod +x tmp/DEBIAN/postrm;
 #==================================
 # copy icon
 cp iconst.png ./tmp/usr/share/pixmaps/$name.png;
