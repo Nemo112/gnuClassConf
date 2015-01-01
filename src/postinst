@@ -7,9 +7,11 @@ if [[ -d "$TDIR" ]];then
 	# Pokud konfigurační soubory focus/installed.cfg, configuration/shared
 	# a configuration/interfaces existují, nepřepisovat
 	d="/tmp/gnuClI";
-	echo "Načítám konfiguraci";
-	cat "$d/interfaces" > "$TDIR/configuration/interfaces";
-	cat "$d/shared" > "$TDIR/configuration/shared";
-	cat "$d/installed.cfg" > "$TDIR/focus/installed.cfg";
-	rm -r $d;
+	if [[ -d $d ]];then
+		echo "Načítám konfiguraci";
+		cat "$d/interfaces" > "$TDIR/configuration/interfaces";
+		cat "$d/shared" > "$TDIR/configuration/shared";
+		cat "$d/installed.cfg" > "$TDIR/focus/installed.cfg";
+		rm -r $d;
+	fi
 fi
