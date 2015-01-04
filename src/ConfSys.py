@@ -492,13 +492,42 @@ echo 2 > /run/shm/hlt;
 			tar = open ("/etc/default/tftpd-hpa", 'a')
 			tar.write("\n# DUCKED changed\n")
 			tar.close()
-		# upravení halt a restart v 
-		#rc0.d
-		#if os.path.isfile("/NFSROOT/class/etc/rc0.d/K09halt"):
-		#	os.rename("/NFSROOT/class/etc/rc0.d/K09halt","/NFSROOT/class/etc/rc0.d/K00halt")
-		#rc6.d
-		#if os.path.isfile("/NFSROOT/class/etc/rc6.d/K09reboot"):
-		#	os.rename("/NFSROOT/class/etc/rc6.d/K09reboot","/NFSROOT/class/etc/rc0.d/K00reboot")
+		# upravení halt
+		name = "/NFSROOT/class/etc/init.d/halt"
+		f=open(name,"r")
+		cont=f.read().split("\n")
+		f.close()
+		sv=""
+		for line in cont:
+			l = ""
+			if "NETDOWN=yes" == line:
+				l = "NETDOWN=no"
+			else:
+				l = line
+			l += "\n"
+			sv += l
+		f=open(name,"w")
+		f.write(sv)
+		f.close()
+		os.chmod(name,0755)
+		# upravení reboot
+		name = "/NFSROOT/class/etc/init.d/reboot"
+		f=open(name,"r")
+		cont=f.read().split("\n")
+		f.close()
+		sv=""
+		for line in cont:
+			l = ""
+			if "reboot -d -f -i" in line:
+				l = "\treboot -d -f"
+			else:
+				l = line
+			l += "\n"
+			sv += l
+		f=open(name,"w")
+		f.write(sv)
+		f.close()
+		os.chmod(name,0755)
 	def tftpdCon(self,qo=None):
 		""" Nastavuje tftp konfiguraci
 		\param self Ukazatel na objekt
