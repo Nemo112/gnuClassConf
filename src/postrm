@@ -16,6 +16,7 @@ if [[ $DEBIAN_FRONTEND != "noninteractive" ]]; then
 		if [[ "$y" == "a" ]];then
 			cat /etc/network/interfaces_ducked_back > /etc/network/interfaces;
 		fi
+		rm "$bck";
 	fi
 	# Odstranění balíčků
 	#echo "Odstraňuji balíčky, které prostředí nainstalovalo";
@@ -40,7 +41,7 @@ if [[ $DEBIAN_FRONTEND != "noninteractive" ]]; then
 		done < "/etc/dhcp/dhcpd.conf";
 		cat $tm > "/etc/dhcp/dhcpd.conf";
 		rm $tm;
-		service isc-dhcp-server restart
+		service isc-dhcp-server restart;
 	fi
 	# Mazání exports NFS
 	if [[ -f "/etc/exports" ]];then
@@ -61,7 +62,7 @@ if [[ $DEBIAN_FRONTEND != "noninteractive" ]]; then
 		rm /srv/tftp/vmlinuz-*;
 		rm -r /srv/tftp/pxelinux.cfg;
 		rm /srv/tftp/pxelinux.0;
-		service tftpd-hpa restart
+		service tftpd-hpa restart;
 	fi
 	# Mazání obrazu
 	if [[ -d "/NFSROOT/" ]]; then
