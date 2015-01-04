@@ -1,1 +1,3877 @@
 
+[14:48:21 04.01.2015]
+Čtu seznamy balíků...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:21 04.01.2015]
+Vytváří se strom závislostí...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:21 04.01.2015]
+Čtu stavové informace...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+Následující balíky budou aktualizovány:
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  bind9-host bsd-mailx cpio dbus dbus-x11 dnsutils file host
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  icedtea-6-jre-cacao icedtea-6-jre-jamvm iceweasel iceweasel-l10n-cs
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  libbind9-80 libcurl3 libcurl3-gnutls libcurl4-openssl-dev libdbus-1-3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  libdns88 libflac8 libgcrypt11 libgcrypt11-dev libisc84 libisccc80
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  libisccfg82 libjasper1 liblwres80 libmagic1 libnss3 libnss3-1d libyaml-0-2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  linux-headers-3.2.0-4-686-pae linux-headers-3.2.0-4-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  linux-image-3.2.0-4-686-pae linux-libc-dev mime-support mutt openjdk-6-jre
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  openjdk-6-jre-headless openjdk-6-jre-lib ppp unzip wget xnest xserver-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+  xserver-xorg-core
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+45 aktualizováno, 0 nově instalováno, 0 k odstranění a 0 neaktualizováno.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+Potřebuji stáhnout 118 MB archivů.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+Po této operaci bude na disku uvolněno 647 kB.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+Mám:1 http://security.debian.org/ wheezy/updates/main libgcrypt11-dev i386 1.5.0-5+deb7u2 [401 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:22 04.01.2015]
+Mám:2 http://security.debian.org/ wheezy/updates/main libgcrypt11 i386 1.5.0-5+deb7u2 [301 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:23 04.01.2015]
+Mám:3 http://security.debian.org/ wheezy/updates/main file i386 5.11-2+deb7u6 [52,4 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:23 04.01.2015]
+Mám:4 http://security.debian.org/ wheezy/updates/main libmagic1 i386 5.11-2+deb7u6 [205 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:24 04.01.2015]
+Mám:5 http://security.debian.org/ wheezy/updates/main libcurl4-openssl-dev i386 7.26.0-1+wheezy11 [1 229 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:27 04.01.2015]
+Mám:6 http://security.debian.org/ wheezy/updates/main libcurl3 i386 7.26.0-1+wheezy11 [336 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:28 04.01.2015]
+Mám:7 http://security.debian.org/ wheezy/updates/main libcurl3-gnutls i386 7.26.0-1+wheezy11 [326 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:29 04.01.2015]
+Mám:8 http://security.debian.org/ wheezy/updates/main libdbus-1-3 i386 1.6.8-1+deb7u5 [176 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:29 04.01.2015]
+Mám:9 http://security.debian.org/ wheezy/updates/main libflac8 i386 1.2.1-6+deb7u1 [159 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:29 04.01.2015]
+Mám:10 http://security.debian.org/ wheezy/updates/main libjasper1 i386 1.900.1-13+deb7u2 [159 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:30 04.01.2015]
+Mám:11 http://security.debian.org/ wheezy/updates/main libnss3-1d i386 2:3.14.5-1+deb7u3 [20,4 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:30 04.01.2015]
+Mám:12 http://security.debian.org/ wheezy/updates/main libnss3 i386 2:3.14.5-1+deb7u3 [1 045 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:33 04.01.2015]
+Mám:13 http://security.debian.org/ wheezy/updates/main libyaml-0-2 i386 0.1.4-2+deb7u5 [56,3 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:48:33 04.01.2015]
+Mám:14 http://security.debian.org/ wheezy/updates/main linux-image-3.2.0-4-686-pae i386 3.2.63-2+deb7u2 [22,9 MB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:49:28 04.01.2015]
+Mám:15 http://security.debian.org/ wheezy/updates/main icedtea-6-jre-cacao i386 6b33-1.13.5-2~deb7u1 [793 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:49:30 04.01.2015]
+Mám:16 http://security.debian.org/ wheezy/updates/main openjdk-6-jre i386 6b33-1.13.5-2~deb7u1 [237 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:49:31 04.01.2015]
+Mám:17 http://security.debian.org/ wheezy/updates/main icedtea-6-jre-jamvm i386 6b33-1.13.5-2~deb7u1 [637 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:49:33 04.01.2015]
+Mám:18 http://security.debian.org/ wheezy/updates/main openjdk-6-jre-headless i386 6b33-1.13.5-2~deb7u1 [35,1 MB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:50:59 04.01.2015]
+Mám:19 http://security.debian.org/ wheezy/updates/main openjdk-6-jre-lib all 6b33-1.13.5-2~deb7u1 [6 221 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:00 04.01.2015]
+Mám:20 http://security.debian.org/ wheezy/updates/main cpio i386 2.11+dfsg-0.1+deb7u1 [267 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:01 04.01.2015]
+Mám:21 http://security.debian.org/ wheezy/updates/main wget i386 1.13.4-3+deb7u2 [764 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:03 04.01.2015]
+Mám:22 http://security.debian.org/ wheezy/updates/main dnsutils i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [162 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:03 04.01.2015]
+Mám:23 http://security.debian.org/ wheezy/updates/main bind9-host i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [72,0 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:04 04.01.2015]
+Mám:24 http://security.debian.org/ wheezy/updates/main libisc84 i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [184 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:04 04.01.2015]
+Mám:25 http://security.debian.org/ wheezy/updates/main libdns88 i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [752 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:06 04.01.2015]
+Mám:26 http://security.debian.org/ wheezy/updates/main libisccc80 i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [36,7 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:06 04.01.2015]
+Mám:27 http://security.debian.org/ wheezy/updates/main libisccfg82 i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [60,5 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:06 04.01.2015]
+Mám:28 http://security.debian.org/ wheezy/updates/main liblwres80 i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [56,0 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:06 04.01.2015]
+Mám:29 http://security.debian.org/ wheezy/updates/main host all 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [20,4 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:06 04.01.2015]
+Mám:30 http://security.debian.org/ wheezy/updates/main libbind9-80 i386 1:9.8.4.dfsg.P1-6+nmu2+deb7u3 [42,6 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:07 04.01.2015]
+Mám:31 http://security.debian.org/ wheezy/updates/main bsd-mailx i386 8.1.2-0.20111106cvs-1+deb7u1 [83,5 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:07 04.01.2015]
+Mám:32 http://security.debian.org/ wheezy/updates/main mime-support all 3.52-1+deb7u1 [35,5 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:07 04.01.2015]
+Mám:33 http://security.debian.org/ wheezy/updates/main mutt i386 1.5.21-6.2+deb7u3 [1 376 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:10 04.01.2015]
+Mám:34 http://security.debian.org/ wheezy/updates/main dbus i386 1.6.8-1+deb7u5 [410 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:11 04.01.2015]
+Mám:35 http://security.debian.org/ wheezy/updates/main dbus-x11 i386 1.6.8-1+deb7u5 [58,9 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:11 04.01.2015]
+Mám:36 http://security.debian.org/ wheezy/updates/main iceweasel-l10n-cs all 1:31.3.0esr-1~deb7u1 [426 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:51:12 04.01.2015]
+Mám:37 http://security.debian.org/ wheezy/updates/main iceweasel i386 31.3.0esr-1~deb7u1 [32,7 MB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:31 04.01.2015]
+Mám:38 http://security.debian.org/ wheezy/updates/main linux-headers-3.2.0-4-686-pae i386 3.2.63-2+deb7u2 [619 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:33 04.01.2015]
+Mám:39 http://security.debian.org/ wheezy/updates/main linux-headers-3.2.0-4-common i386 3.2.63-2+deb7u2 [3 586 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:42 04.01.2015]
+Mám:40 http://security.debian.org/ wheezy/updates/main linux-libc-dev i386 3.2.63-2+deb7u2 [831 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:44 04.01.2015]
+Mám:41 http://security.debian.org/ wheezy/updates/main ppp i386 2.4.5-5.1+deb7u1 [370 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:44 04.01.2015]
+Mám:42 http://security.debian.org/ wheezy/updates/main unzip i386 6.0-8+deb7u1 [186 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:45 04.01.2015]
+Mám:43 http://security.debian.org/ wheezy/updates/main xserver-common all 2:1.12.4-6+deb7u5 [1 397 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:45 04.01.2015]
+Mám:44 http://security.debian.org/ wheezy/updates/main xnest i386 2:1.12.4-6+deb7u5 [828 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:48 04.01.2015]
+Mám:45 http://security.debian.org/ wheezy/updates/main xserver-xorg-core i386 2:1.12.4-6+deb7u5 [1 735 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:52:52 04.01.2015]
+Načítám soubory se změnami...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+wget (1.13.4-3+deb7u2) stable-security; urgency=high
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  From 18b0979357ed7dc4e11d4f2b1d7e0f5932d82aa7 Mon Sep 17 00:00:00 2001
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  From: Darshit Shah <darnir@gmail.com>
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  Date: Sun, 07 Sep 2014 19:11:17 +0000
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  Subject: CVE-2014-4877: Arbitrary Symlink Access
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  Wget was susceptible to a symlink attack which could create arbitrary
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  files, directories or symbolic links and set their permissions when
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  retrieving a directory recursively through FTP. This commit changes the
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  default settings in Wget such that Wget no longer creates local symbolic
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  links, but rather traverses them and retrieves the pointed-to file in
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  such a retrieval.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  The old behaviour can be attained by passing the --retr-symlinks=no
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+  option to the Wget invokation command.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 29 Oct 2014 19:00:14 +0100
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:01 04.01.2015]
+apt-listchanges: Zasílám root: apt-listchanges: novinky pro ucitel
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:02 04.01.2015]
+Extrahuji z balíků šablony: 66%Extrahuji z balíků šablony: 100%
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:02 04.01.2015]
+Přednastavuji balíky…
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:02 04.01.2015]
+Staženo 118 MB za 4min 30s (435 kB/s)
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+(Čtu databázi … (Čtu databázi … 5%(Čtu databázi … 10%(Čtu databázi … 15%(Čtu databázi … 20%(Čtu databázi … 25%(Čtu databázi … 30%(Čtu databázi … 35%(Čtu databázi … 40%(Čtu databázi … 45%(Čtu databázi … 50%(Čtu databázi … 55%(Čtu databázi … 60%(Čtu databázi … 65%(Čtu databázi … 70%(Čtu databázi … 75%(Čtu databázi … 80%(Čtu databázi … 85%(Čtu databázi … 90%(Čtu databázi … 95%(Čtu databázi … 100%(Čtu databázi … nyní je nainstalováno 137219 souborů a adresářů.)
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libgcrypt11-dev 1.5.0-5+deb7u1 (pomocí …/libgcrypt11-dev_1.5.0-5+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libgcrypt11-dev …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libgcrypt11:i386 1.5.0-5+deb7u1 (pomocí …/libgcrypt11_1.5.0-5+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libgcrypt11:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení file 5.11-2+deb7u5 (pomocí …/file_5.11-2+deb7u6_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu file …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libmagic1:i386 5.11-2+deb7u5 (pomocí …/libmagic1_5.11-2+deb7u6_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libmagic1:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libcurl4-openssl-dev 7.26.0-1+wheezy10 (pomocí …/libcurl4-openssl-dev_7.26.0-1+wheezy11_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libcurl4-openssl-dev …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libcurl3:i386 7.26.0-1+wheezy10 (pomocí …/libcurl3_7.26.0-1+wheezy11_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libcurl3:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libcurl3-gnutls:i386 7.26.0-1+wheezy10 (pomocí …/libcurl3-gnutls_7.26.0-1+wheezy11_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libcurl3-gnutls:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Připravuji nahrazení libdbus-1-3:i386 1.6.8-1+deb7u4 (pomocí …/libdbus-1-3_1.6.8-1+deb7u5_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:03 04.01.2015]
+Rozbaluji náhradu libdbus-1-3:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Připravuji nahrazení libflac8:i386 1.2.1-6 (pomocí …/libflac8_1.2.1-6+deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Rozbaluji náhradu libflac8:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Připravuji nahrazení libjasper1:i386 1.900.1-13 (pomocí …/libjasper1_1.900.1-13+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Rozbaluji náhradu libjasper1:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Připravuji nahrazení libnss3-1d:i386 2:3.14.5-1+deb7u2 (pomocí …/libnss3-1d_2%3a3.14.5-1+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Rozbaluji náhradu libnss3-1d:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Připravuji nahrazení libnss3:i386 2:3.14.5-1+deb7u2 (pomocí …/libnss3_2%3a3.14.5-1+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Rozbaluji náhradu libnss3:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Připravuji nahrazení libyaml-0-2:i386 0.1.4-2+deb7u4 (pomocí …/libyaml-0-2_0.1.4-2+deb7u5_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Rozbaluji náhradu libyaml-0-2:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Připravuji nahrazení linux-image-3.2.0-4-686-pae 3.2.63-2+deb7u1 (pomocí …/linux-image-3.2.0-4-686-pae_3.2.63-2+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:04 04.01.2015]
+Rozbaluji náhradu linux-image-3.2.0-4-686-pae …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Examining /etc/kernel/postrm.d .
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+run-parts: executing /etc/kernel/postrm.d/initramfs-tools 3.2.0-4-686-pae /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+run-parts: executing /etc/kernel/postrm.d/zz-update-grub 3.2.0-4-686-pae /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Připravuji nahrazení icedtea-6-jre-cacao:i386 6b32-1.13.4-1~deb7u1 (pomocí …/icedtea-6-jre-cacao_6b33-1.13.5-2~deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Rozbaluji náhradu icedtea-6-jre-cacao:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Připravuji nahrazení openjdk-6-jre:i386 6b32-1.13.4-1~deb7u1 (pomocí …/openjdk-6-jre_6b33-1.13.5-2~deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Rozbaluji náhradu openjdk-6-jre:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Připravuji nahrazení icedtea-6-jre-jamvm:i386 6b32-1.13.4-1~deb7u1 (pomocí …/icedtea-6-jre-jamvm_6b33-1.13.5-2~deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Rozbaluji náhradu icedtea-6-jre-jamvm:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Připravuji nahrazení openjdk-6-jre-headless:i386 6b32-1.13.4-1~deb7u1 (pomocí …/openjdk-6-jre-headless_6b33-1.13.5-2~deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:10 04.01.2015]
+Rozbaluji náhradu openjdk-6-jre-headless:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení openjdk-6-jre-lib 6b32-1.13.4-1~deb7u1 (pomocí …/openjdk-6-jre-lib_6b33-1.13.5-2~deb7u1_all.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu openjdk-6-jre-lib …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení cpio 2.11+dfsg-0.1 (pomocí …/cpio_2.11+dfsg-0.1+deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu cpio …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení wget 1.13.4-3+deb7u1 (pomocí …/wget_1.13.4-3+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu wget …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení dnsutils 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/dnsutils_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu dnsutils …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení bind9-host 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/bind9-host_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu bind9-host …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení libisc84 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/libisc84_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu libisc84 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení libdns88 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/libdns88_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu libdns88 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Připravuji nahrazení libisccc80 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/libisccc80_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:12 04.01.2015]
+Rozbaluji náhradu libisccc80 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení libisccfg82 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/libisccfg82_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu libisccfg82 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení liblwres80 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/liblwres80_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu liblwres80 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení host 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/host_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_all.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu host …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení libbind9-80 1:9.8.4.dfsg.P1-6+nmu2+deb7u2 (pomocí …/libbind9-80_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu libbind9-80 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení bsd-mailx 8.1.2-0.20111106cvs-1 (pomocí …/bsd-mailx_8.1.2-0.20111106cvs-1+deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu bsd-mailx …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení mime-support 3.52-1 (pomocí …/mime-support_3.52-1+deb7u1_all.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu mime-support …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení mutt 1.5.21-6.2+deb7u2 (pomocí …/mutt_1.5.21-6.2+deb7u3_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu mutt …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Připravuji nahrazení dbus 1.6.8-1+deb7u4 (pomocí …/dbus_1.6.8-1+deb7u5_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:13 04.01.2015]
+Rozbaluji náhradu dbus …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Připravuji nahrazení dbus-x11 1.6.8-1+deb7u4 (pomocí …/dbus-x11_1.6.8-1+deb7u5_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Rozbaluji náhradu dbus-x11 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Připravuji nahrazení iceweasel-l10n-cs 1:31.2.0esr-2~deb7u1 (pomocí …/iceweasel-l10n-cs_1%3a31.3.0esr-1~deb7u1_all.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Rozbaluji náhradu iceweasel-l10n-cs …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Připravuji nahrazení iceweasel 31.2.0esr-2~deb7u1 (pomocí …/iceweasel_31.3.0esr-1~deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Opouštím „odklonění /usr/bin/firefox do /usr/bin/firefox.real balíkem iceweasel“
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:14 04.01.2015]
+Rozbaluji náhradu iceweasel …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:19 04.01.2015]
+Připravuji nahrazení linux-headers-3.2.0-4-686-pae 3.2.63-2+deb7u1 (pomocí …/linux-headers-3.2.0-4-686-pae_3.2.63-2+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:19 04.01.2015]
+Rozbaluji náhradu linux-headers-3.2.0-4-686-pae …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:21 04.01.2015]
+Připravuji nahrazení linux-headers-3.2.0-4-common 3.2.63-2+deb7u1 (pomocí …/linux-headers-3.2.0-4-common_3.2.63-2+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:21 04.01.2015]
+Rozbaluji náhradu linux-headers-3.2.0-4-common …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:23 04.01.2015]
+Připravuji nahrazení linux-libc-dev:i386 3.2.63-2+deb7u1 (pomocí …/linux-libc-dev_3.2.63-2+deb7u2_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:23 04.01.2015]
+Rozbaluji náhradu linux-libc-dev:i386 …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Připravuji nahrazení ppp 2.4.5-5.1+b1 (pomocí …/ppp_2.4.5-5.1+deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Rozbaluji náhradu ppp …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Připravuji nahrazení unzip 6.0-8 (pomocí …/unzip_6.0-8+deb7u1_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Rozbaluji náhradu unzip …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Připravuji nahrazení xserver-common 2:1.12.4-6+deb7u2 (pomocí …/xserver-common_2%3a1.12.4-6+deb7u5_all.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Rozbaluji náhradu xserver-common …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Připravuji nahrazení xnest 2:1.12.4-6+deb7u2 (pomocí …/xnest_2%3a1.12.4-6+deb7u5_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Rozbaluji náhradu xnest …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Připravuji nahrazení xserver-xorg-core 2:1.12.4-6+deb7u2 (pomocí …/xserver-xorg-core_2%3a1.12.4-6+deb7u5_i386.deb) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:24 04.01.2015]
+Rozbaluji náhradu xserver-xorg-core …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:25 04.01.2015]
+Zpracování spouštěčů pro balík man-db …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:28 04.01.2015]
+Zpracování spouštěčů pro balík desktop-file-utils …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:28 04.01.2015]
+Zpracování spouštěčů pro balík hicolor-icon-theme …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:28 04.01.2015]
+Zpracování spouštěčů pro balík install-info …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:28 04.01.2015]
+Zpracování spouštěčů pro balík menu …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:29 04.01.2015]
+Nastavuji balík libgcrypt11:i386 (1.5.0-5+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:29 04.01.2015]
+Nastavuji balík libgcrypt11-dev (1.5.0-5+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:29 04.01.2015]
+Nastavuji balík libmagic1:i386 (5.11-2+deb7u6) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:29 04.01.2015]
+Nastavuji balík file (5.11-2+deb7u6) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:29 04.01.2015]
+Nastavuji balík libcurl3:i386 (7.26.0-1+wheezy11) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libcurl4-openssl-dev (7.26.0-1+wheezy11) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libcurl3-gnutls:i386 (7.26.0-1+wheezy11) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libdbus-1-3:i386 (1.6.8-1+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libflac8:i386 (1.2.1-6+deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libjasper1:i386 (1.900.1-13+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libnss3:i386 (2:3.14.5-1+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libnss3-1d:i386 (2:3.14.5-1+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík libyaml-0-2:i386 (0.1.4-2+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Nastavuji balík linux-image-3.2.0-4-686-pae (3.2.63-2+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:30 04.01.2015]
+Running depmod.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:32 04.01.2015]
+Examining /etc/kernel/postinst.d.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:32 04.01.2015]
+run-parts: executing /etc/kernel/postinst.d/dkms 3.2.0-4-686-pae /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:32 04.01.2015]
+run-parts: executing /etc/kernel/postinst.d/initramfs-tools 3.2.0-4-686-pae /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:32 04.01.2015]
+update-initramfs: Generating /boot/initrd.img-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:37 04.01.2015]
+run-parts: executing /etc/kernel/postinst.d/pm-utils 3.2.0-4-686-pae /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:37 04.01.2015]
+run-parts: executing /etc/kernel/postinst.d/zz-update-grub 3.2.0-4-686-pae /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:37 04.01.2015]
+Generating grub.cfg ...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:39 04.01.2015]
+Found background image: /usr/share/images/desktop-base/desktop-grub.png
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:39 04.01.2015]
+Found linux image: /boot/vmlinuz-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:39 04.01.2015]
+Found initrd image: /boot/initrd.img-3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+done
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík cpio (2.11+dfsg-0.1+deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík wget (1.13.4-3+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík libisc84 (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík libdns88 (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík libisccc80 (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík libisccfg82 (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík libbind9-80 (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík liblwres80 (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík bind9-host (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík host (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík dnsutils (1:9.8.4.dfsg.P1-6+nmu2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík bsd-mailx (8.1.2-0.20111106cvs-1+deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík mime-support (3.52-1+deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík mutt (1.5.21-6.2+deb7u3) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík dbus (1.6.8-1+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Instaluji novou verzi konfiguračního souboru /etc/init.d/dbus …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+insserv: warning: script 'italc.sh' missing LSB tags and overrides
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+[....] system message bus already started; not starting.[?25l7[1G[[32m ok [39;49m8[?12l[?25h.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:40 04.01.2015]
+Nastavuji balík dbus-x11 (1.6.8-1+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík iceweasel (31.3.0esr-1~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík iceweasel-l10n-cs (1:31.3.0esr-1~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík linux-headers-3.2.0-4-common (3.2.63-2+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík linux-headers-3.2.0-4-686-pae (3.2.63-2+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Examining /etc/kernel/header_postinst.d.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+run-parts: executing /etc/kernel/header_postinst.d/dkms 3.2.0-4-686-pae
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík linux-libc-dev:i386 (3.2.63-2+deb7u2) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík ppp (2.4.5-5.1+deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+insserv: warning: script 'italc.sh' missing LSB tags and overrides
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík unzip (6.0-8+deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík xserver-common (2:1.12.4-6+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík xnest (2:1.12.4-6+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík xserver-xorg-core (2:1.12.4-6+deb7u5) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Nastavuji balík openjdk-6-jre-headless:i386 (6b33-1.13.5-2~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:41 04.01.2015]
+Instaluji novou verzi konfiguračního souboru /etc/java-6-openjdk/fontconfig.properties …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:43 04.01.2015]
+Nastavuji balík openjdk-6-jre-lib (6b33-1.13.5-2~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:43 04.01.2015]
+Nastavuji balík icedtea-6-jre-cacao:i386 (6b33-1.13.5-2~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:43 04.01.2015]
+Nastavuji balík openjdk-6-jre:i386 (6b33-1.13.5-2~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:43 04.01.2015]
+Nastavuji balík icedtea-6-jre-jamvm:i386 (6b33-1.13.5-2~deb7u1) …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:43 04.01.2015]
+Zpracování spouštěčů pro balík menu …
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:44 04.01.2015]
+Čtu seznamy balíků...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:44 04.01.2015]
+Vytváří se strom závislostí...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:44 04.01.2015]
+Čtu stavové informace...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+apache2 je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+debootstrap je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+expect je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+iptables-persistent je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+isc-dhcp-server je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+nfs-kernel-server je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+syslinux je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+tftpd-hpa je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:45 04.01.2015]
+0 aktualizováno, 0 nově instalováno, 0 k odstranění a 0 neaktualizováno.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:56 04.01.2015]
+Running /etc/init.d/networking restart is deprecated because it may not re-enable some interfaces ... (warning).
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:56 04.01.2015]
+Reconfiguring network interfaces...done.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:56 04.01.2015]
+Čtu seznamy balíků...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:56 04.01.2015]
+Vytváří se strom závislostí...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:56 04.01.2015]
+Čtu stavové informace...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+iptables-persistent je již nejnovější verze.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+0 aktualizováno, 0 nově instalováno, 0 k odstranění a 0 neaktualizováno.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+I: Retrieving Release
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+I: Retrieving Release.gpg
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+I: Checking Release signature
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+I: Valid Release signature (key id ED6D65271AACF0FF15D123036FB2A1C265FFB764)
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:57 04.01.2015]
+I: Retrieving Packages
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:53:58 04.01.2015]
+I: Validating Packages
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:03 04.01.2015]
+I: Resolving dependencies of required packages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:12 04.01.2015]
+I: Resolving dependencies of base packages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:26 04.01.2015]
+I: Found additional required dependencies: insserv libbz2-1.0 libdb5.1 libsemanage-common libsemanage1 libslang2 libustr-1.0-1 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:26 04.01.2015]
+I: Found additional base dependencies: libept1.4.12 libgcrypt11 libgnutls26 libgpg-error0 libidn11 libnfnetlink0 libp11-kit0 libsqlite3-0 libtasn1-3 libxapian22 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:26 04.01.2015]
+I: Checking component main on http://ftp.cz.debian.org/debian...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Retrieving libacl1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Validating libacl1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Retrieving adduser
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Validating adduser
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Retrieving apt
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Validating apt
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Retrieving apt-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Validating apt-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Retrieving libapt-inst1.5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Validating libapt-inst1.5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:28 04.01.2015]
+I: Retrieving libapt-pkg4.12
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Validating libapt-pkg4.12
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Retrieving aptitude
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Validating aptitude
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Retrieving aptitude-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Validating aptitude-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Retrieving libattr1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Validating libattr1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Retrieving base-files
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Validating base-files
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Retrieving base-passwd
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Validating base-passwd
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:29 04.01.2015]
+I: Retrieving bash
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Validating bash
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Retrieving libboost-iostreams1.49.0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Validating libboost-iostreams1.49.0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Retrieving bsdmainutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Validating bsdmainutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Retrieving libbz2-1.0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Validating libbz2-1.0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:30 04.01.2015]
+I: Retrieving coreutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating coreutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving cpio
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating cpio
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving cron
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating cron
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving libcwidget3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating libcwidget3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving dash
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating dash
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving libdb5.1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating libdb5.1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving debconf
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating debconf
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving debconf-i18n
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating debconf-i18n
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving debian-archive-keyring
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating debian-archive-keyring
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving debianutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating debianutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving diffutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating diffutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving dmidecode
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Validating dmidecode
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:31 04.01.2015]
+I: Retrieving dpkg
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Validating dpkg
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Retrieving e2fslibs
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Validating e2fslibs
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Retrieving e2fsprogs
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Validating e2fsprogs
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Retrieving libcomerr2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Validating libcomerr2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Retrieving libss2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Validating libss2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Retrieving libc-bin
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Validating libc-bin
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:32 04.01.2015]
+I: Retrieving libc6
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating libc6
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving multiarch-support
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating multiarch-support
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving findutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating findutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving gcc-4.7-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating gcc-4.7-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving libgcc1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating libgcc1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving libstdc++6
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating libstdc++6
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving libgdbm3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Validating libgdbm3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:33 04.01.2015]
+I: Retrieving gnupg
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating gnupg
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving gpgv
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating gpgv
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving libgnutls26
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating libgnutls26
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving grep
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating grep
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving groff-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating groff-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving gzip
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating gzip
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving hostname
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating hostname
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Retrieving ifupdown
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:34 04.01.2015]
+I: Validating ifupdown
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving insserv
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating insserv
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving iproute
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating iproute
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving iptables
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating iptables
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving iputils-ping
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating iputils-ping
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving isc-dhcp-client
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating isc-dhcp-client
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving isc-dhcp-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating isc-dhcp-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving kmod
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating kmod
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving libkmod2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating libkmod2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving libept1.4.12
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating libept1.4.12
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving libgcrypt11
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating libgcrypt11
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving libgpg-error0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating libgpg-error0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving libidn11
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating libidn11
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving liblocale-gettext-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Validating liblocale-gettext-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:35 04.01.2015]
+I: Retrieving libnfnetlink0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libnfnetlink0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libpipeline1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libpipeline1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libselinux1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libselinux1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libsemanage-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libsemanage-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libsemanage1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libsemanage1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libsepol1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libsepol1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libsigc++-2.0-0c2a
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libsigc++-2.0-0c2a
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libtasn1-3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libtasn1-3
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libtext-charwidth-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libtext-charwidth-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libtext-iconv-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libtext-iconv-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libtext-wrapi18n-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libtext-wrapi18n-perl
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libusb-0.1-4
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating libusb-0.1-4
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving logrotate
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating logrotate
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving lsb-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating lsb-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving man-db
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating man-db
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving manpages
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating manpages
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving mawk
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating mawk
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving nano
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Validating nano
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:36 04.01.2015]
+I: Retrieving libncurses5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating libncurses5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving libncursesw5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating libncursesw5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving libtinfo5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating libtinfo5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving ncurses-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating ncurses-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving ncurses-bin
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating ncurses-bin
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving net-tools
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating net-tools
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving netbase
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating netbase
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving netcat-traditional
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating netcat-traditional
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving libnewt0.52
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating libnewt0.52
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving whiptail
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Validating whiptail
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:37 04.01.2015]
+I: Retrieving libssl1.0.0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libssl1.0.0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libp11-kit0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libp11-kit0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libpam-modules
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libpam-modules
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libpam-modules-bin
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libpam-modules-bin
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libpam-runtime
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libpam-runtime
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libpam0g
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libpam0g
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving perl-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating perl-base
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libpopt0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libpopt0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libprocps0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libprocps0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving procps
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating procps
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving libreadline6
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating libreadline6
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving readline-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Validating readline-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:38 04.01.2015]
+I: Retrieving rsyslog
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating rsyslog
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving sed
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating sed
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving sensible-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating sensible-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving login
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating login
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving passwd
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating passwd
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving libslang2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating libslang2
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving libsqlite3-0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating libsqlite3-0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving initscripts
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating initscripts
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving sysv-rc
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating sysv-rc
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving sysvinit
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating sysvinit
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving sysvinit-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Validating sysvinit-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:39 04.01.2015]
+I: Retrieving tar
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating tar
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving tasksel
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating tasksel
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving tasksel-data
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating tasksel-data
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving info
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating info
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving install-info
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating install-info
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving traceroute
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating traceroute
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving tzdata
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating tzdata
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving libudev0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating libudev0
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving udev
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating udev
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving libustr-1.0-1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating libustr-1.0-1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving bsdutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating bsdutils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving libblkid1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating libblkid1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving libmount1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating libmount1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving libuuid1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating libuuid1
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving mount
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Validating mount
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:40 04.01.2015]
+I: Retrieving util-linux
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating util-linux
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving vim-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating vim-common
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving vim-tiny
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating vim-tiny
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving wget
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating wget
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving libxapian22
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating libxapian22
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving liblzma5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating liblzma5
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving xz-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating xz-utils
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Retrieving zlib1g
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Validating zlib1g
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Chosen extractor for .deb packages: dpkg-deb
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Extracting libacl1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Extracting libattr1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Extracting base-files...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Extracting base-passwd...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:41 04.01.2015]
+I: Extracting bash...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libbz2-1.0...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting coreutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting dash...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libdb5.1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting debconf...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting debconf-i18n...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting debianutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting diffutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting dpkg...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting e2fslibs...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting e2fsprogs...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libcomerr2...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libss2...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libc-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libc6...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting multiarch-support...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting findutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting gcc-4.7-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libgcc1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting grep...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting gzip...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting hostname...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting insserv...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting liblocale-gettext-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libselinux1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libsemanage-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libsemanage1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libsepol1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libtext-charwidth-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libtext-iconv-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libtext-wrapi18n-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting lsb-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting mawk...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libncurses5...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting libtinfo5...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:42 04.01.2015]
+I: Extracting ncurses-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting ncurses-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libpam-modules...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libpam-modules-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libpam-runtime...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libpam0g...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting perl-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting sed...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting sensible-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting login...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting passwd...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libslang2...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting initscripts...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting sysv-rc...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting sysvinit...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting sysvinit-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting tar...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting tzdata...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libustr-1.0-1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting bsdutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libblkid1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libmount1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting libuuid1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting mount...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting util-linux...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting liblzma5...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting xz-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Extracting zlib1g...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:43 04.01.2015]
+I: Installing core packages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:47 04.01.2015]
+I: Unpacking required packages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:47 04.01.2015]
+I: Unpacking libacl1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:47 04.01.2015]
+I: Unpacking libattr1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:47 04.01.2015]
+I: Unpacking base-files...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:47 04.01.2015]
+I: Unpacking base-passwd...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:47 04.01.2015]
+I: Unpacking bash...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking libbz2-1.0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking coreutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking dash...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking libdb5.1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking debconf...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking debconf-i18n...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking debianutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:48 04.01.2015]
+I: Unpacking diffutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking dpkg...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking e2fslibs:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking e2fsprogs...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking libcomerr2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking libss2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking libc-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking libc6:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking multiarch-support...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:49 04.01.2015]
+I: Unpacking findutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking gcc-4.7-base:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libgcc1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking grep...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking gzip...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking hostname...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking insserv...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking liblocale-gettext-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libselinux1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libsemanage-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libsemanage1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libsepol1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libtext-charwidth-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libtext-iconv-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libtext-wrapi18n-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking lsb-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking mawk...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libncurses5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libtinfo5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking ncurses-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking ncurses-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libpam-modules:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libpam-modules-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:50 04.01.2015]
+I: Unpacking libpam-runtime...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:51 04.01.2015]
+I: Unpacking libpam0g:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:51 04.01.2015]
+I: Unpacking perl-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:51 04.01.2015]
+I: Unpacking sed...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:51 04.01.2015]
+I: Unpacking sensible-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:51 04.01.2015]
+I: Unpacking login...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:51 04.01.2015]
+I: Unpacking passwd...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking libslang2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking initscripts...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking sysv-rc...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking sysvinit...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking sysvinit-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking tar...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking tzdata...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking libustr-1.0-1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking bsdutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking libblkid1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking libmount1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking libuuid1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:52 04.01.2015]
+I: Unpacking mount...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Unpacking util-linux...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Unpacking liblzma5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Unpacking xz-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Unpacking zlib1g:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring required packages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring lsb-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring ncurses-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring sensible-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring libsemanage-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring gcc-4.7-base:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring libc-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:53 04.01.2015]
+I: Configuring libc6:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring debianutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring bsdutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring tar...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring base-passwd...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring mawk...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring hostname...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring insserv...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring multiarch-support...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:54 04.01.2015]
+I: Configuring libselinux1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:55 04.01.2015]
+I: Configuring libustr-1.0-1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:55 04.01.2015]
+I: Configuring libsepol1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring zlib1g:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring libgcc1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring base-files...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring libattr1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring e2fslibs:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring libcomerr2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:56 04.01.2015]
+I: Configuring libacl1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libslang2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libss2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring liblzma5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libdb5.1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libbz2-1.0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libtinfo5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring sysvinit-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring ncurses-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libsemanage1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libncurses5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring xz-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring dpkg...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring dash...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring coreutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring perl-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring diffutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libtext-iconv-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring sed...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring grep...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring findutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring gzip...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring liblocale-gettext-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring bash...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libtext-charwidth-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libtext-wrapi18n-perl...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring debconf...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libpam0g:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring sysv-rc...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring tzdata...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring debconf-i18n...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libpam-modules-bin...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring libpam-modules:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:57 04.01.2015]
+I: Configuring passwd...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring libpam-runtime...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring login...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring libuuid1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring libblkid1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring libmount1...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring mount...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:58 04.01.2015]
+I: Configuring initscripts...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:59 04.01.2015]
+I: Configuring util-linux...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:59 04.01.2015]
+I: Configuring sysvinit...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:59 04.01.2015]
+I: Configuring e2fsprogs...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:54:59 04.01.2015]
+I: Unpacking the base system...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:00 04.01.2015]
+I: Unpacking adduser...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:00 04.01.2015]
+I: Unpacking apt...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:01 04.01.2015]
+I: Unpacking apt-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:01 04.01.2015]
+I: Unpacking libapt-inst1.5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:01 04.01.2015]
+I: Unpacking libapt-pkg4.12:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:01 04.01.2015]
+I: Unpacking aptitude...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:01 04.01.2015]
+I: Unpacking aptitude-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking libboost-iostreams1.49.0...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking bsdmainutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking cpio...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking cron...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking libcwidget3...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking debian-archive-keyring...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking dmidecode...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking libstdc++6:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking libgdbm3:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking gnupg...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking gpgv...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking libgnutls26:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking groff-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking ifupdown...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:02 04.01.2015]
+I: Unpacking iproute...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking iptables...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking iputils-ping...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking isc-dhcp-client...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking isc-dhcp-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking kmod...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libkmod2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libept1.4.12...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libgcrypt11:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libgpg-error0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libidn11:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libnfnetlink0...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libpipeline1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libsigc++-2.0-0c2a:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libtasn1-3:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking libusb-0.1-4:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking logrotate...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking man-db...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:03 04.01.2015]
+I: Unpacking manpages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking nano...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libncursesw5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking net-tools...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking netbase...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking netcat-traditional...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libnewt0.52...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking whiptail...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libssl1.0.0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libp11-kit0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libpopt0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libprocps0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking procps...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking libreadline6:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking readline-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:04 04.01.2015]
+I: Unpacking rsyslog...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking libsqlite3-0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking tasksel...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking tasksel-data...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking info...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking install-info...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking traceroute...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking libudev0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking udev...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking vim-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking vim-tiny...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking wget...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Unpacking libxapian22...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Configuring the base system...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Configuring gpgv...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:05 04.01.2015]
+I: Configuring libssl1.0.0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libgdbm3:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring isc-dhcp-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libtasn1-3:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libpopt0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libusb-0.1-4:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libgpg-error0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring install-info...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring vim-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libprocps0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring netbase...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring dmidecode...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libudev0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libkmod2:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring adduser...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring traceroute...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring manpages...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libsqlite3-0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring iproute...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libidn11:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libnewt0.52...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring net-tools...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:06 04.01.2015]
+I: Configuring libpipeline1:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring bsdmainutils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring netcat-traditional...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring debian-archive-keyring...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libncursesw5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring info...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring iputils-ping...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring aptitude-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring cron...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring nano...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libp11-kit0:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring rsyslog...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring cpio...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libstdc++6:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring isc-dhcp-client...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring vim-tiny...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring readline-common...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libnfnetlink0...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libgcrypt11:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring procps...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libxapian22...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring whiptail...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring ifupdown...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring kmod...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libapt-pkg4.12:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libept1.4.12...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:07 04.01.2015]
+I: Configuring libapt-inst1.5:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring libreadline6:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring logrotate...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring libboost-iostreams1.49.0...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring groff-base...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring gnupg...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring libsigc++-2.0-0c2a:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring libgnutls26:i386...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring apt-utils...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring udev...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring iptables...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:08 04.01.2015]
+I: Configuring man-db...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Configuring apt...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Configuring wget...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Configuring libcwidget3...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Configuring aptitude...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Configuring tasksel...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Configuring tasksel-data...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:11 04.01.2015]
+I: Base system installed successfully.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:33 04.01.2015]
+Čtu seznamy balíků...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:33 04.01.2015]
+Vytváří se strom závislostí...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:33 04.01.2015]
+Čtu stavové informace...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:33 04.01.2015]
+Inicializuji stavy balíků...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:33 04.01.2015]
+Zapisuji rozšířené stavové informace...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:33 04.01.2015]
+Načítám popisy úloh...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+Následující NOVÉ balíky budou instalovány:
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  apt-listchanges at bash-completion bc bind9-host bsd-mailx bzip2 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  ca-certificates{a} db5.1-util dc debian-faq dmsetup{a} dnsutils 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  doc-debian exim4 exim4-base exim4-config exim4-daemon-light file ftp 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  geoip-database{a} gettext-base host iso-codes{a} krb5-locales less 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libasprintf0c2 libbind9-80 libbsd0{a} libcap2 libclass-isa-perl 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libdevmapper1.02.1{a} libdns88 libedit2 libevent-2.0-5 libexpat1{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libgc1c2 libgeoip1{a} libgnutls-openssl27 libgpgme11{a} libgpm2 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libgssapi-krb5-2 libgssglue1 libgssrpc4 libisc84 libisccc80{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libisccfg82{a} libk5crypto3 libkadm5clnt-mit8 libkadm5srv-mit8 libkdb5-6 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2 liblockfile-bin 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  liblockfile1 liblwres80 libmagic1 libnfsidmap2 libpci3 libpcre3 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libpth20{a} librpcsecgss3 libsasl2-2 libsasl2-modules{a} libswitch-perl 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libtirpc1 libtokyocabinet9 libwrap0 libx11-6{a} libx11-data{a} libxau6{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  libxcb1{a} libxdmcp6{a} libxext6{a} libxml2 libxmuu1{a} lsb-release{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  lsof m4 mime-support mlocate mutt ncurses-term nfs-common 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  openssh-blacklist{a} openssh-blacklist-extra{a} openssh-client openssl{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  patch pciutils perl perl-modules procmail psmisc{a} python python-apt 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  python-apt-common{a} python-chardet{a} python-debian{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  python-debianbts{a} python-fpconst{a} python-minimal python-reportbug 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  python-soappy{a} python-support python2.6{a} python2.6-minimal python2.7 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  python2.7-minimal{a} reportbug rpcbind sgml-base{a} tcpd{a} telnet 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+  texinfo time ucf w3m wamerican whois xauth{a} xml-core{a} 
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+0 balíků aktualizováno, 124 nově instalováno, 0 k odstranění a 0 neaktualizováno.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+Potřebuji stáhnout 45,8 MB archivů. Po rozbalení bude použito 140 MB.
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+Zapisuji rozšířené stavové informace...
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:34 04.01.2015]
+Mám: 1 http://ftp.cz.debian.org/debian/ wheezy/main bash-completion all 1:2.0-1 [193 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:35 04.01.2015]
+Mám: 2 http://ftp.cz.debian.org/debian/ wheezy/main libasprintf0c2 i386 0.18.1.1-9 [26,7 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:35 04.01.2015]
+Mám: 3 http://ftp.cz.debian.org/debian/ wheezy/main libcap2 i386 1:2.22-1.2 [14,0 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:35 04.01.2015]
+Mám: 4 http://ftp.cz.debian.org/debian/ wheezy/main libbsd0 i386 0.4.2-1 [60,3 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:35 04.01.2015]
+Mám: 5 http://ftp.cz.debian.org/debian/ wheezy/main libedit2 i386 2.11-20080614-5 [71,5 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:35 04.01.2015]
+Mám: 6 http://ftp.cz.debian.org/debian/ wheezy/main libevent-2.0-5 i386 2.0.19-stable-3 [171 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:36 04.01.2015]
+Mám: 7 http://ftp.cz.debian.org/debian/ wheezy/main libgnutls-openssl27 i386 2.12.20-8+deb7u2 [221 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:37 04.01.2015]
+Mám: 8 http://ftp.cz.debian.org/debian/ wheezy/main libgpm2 i386 1.20.4-6 [35,9 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:37 04.01.2015]
+Mám: 9 http://ftp.cz.debian.org/debian/ wheezy/main libkeyutils1 i386 1.5.5-3+deb7u1 [8 678 B]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:37 04.01.2015]
+Mám: 10 http://ftp.cz.debian.org/debian/ wheezy/main libkrb5support0 i386 1.10.1+dfsg-5+deb7u2 [49,6 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:37 04.01.2015]
+Mám: 11 http://ftp.cz.debian.org/debian/ wheezy/main libk5crypto3 i386 1.10.1+dfsg-5+deb7u2 [109 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:37 04.01.2015]
+Mám: 12 http://ftp.cz.debian.org/debian/ wheezy/main libkrb5-3 i386 1.10.1+dfsg-5+deb7u2 [402 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:39 04.01.2015]
+Mám: 13 http://ftp.cz.debian.org/debian/ wheezy/main libgssapi-krb5-2 i386 1.10.1+dfsg-5+deb7u2 [149 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:39 04.01.2015]
+Mám: 14 http://ftp.cz.debian.org/debian/ wheezy/main libgssglue1 i386 0.4-2 [26,1 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:39 04.01.2015]
+Mám: 15 http://ftp.cz.debian.org/debian/ wheezy/main libgssrpc4 i386 1.10.1+dfsg-5+deb7u2 [87,2 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:40 04.01.2015]
+Mám: 16 http://ftp.cz.debian.org/debian/ wheezy/main libkadm5clnt-mit8 i386 1.10.1+dfsg-5+deb7u2 [67,6 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:40 04.01.2015]
+Mám: 17 http://ftp.cz.debian.org/debian/ wheezy/main libkdb5-6 i386 1.10.1+dfsg-5+deb7u2 [66,8 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:40 04.01.2015]
+Mám: 18 http://ftp.cz.debian.org/debian/ wheezy/main libkadm5srv-mit8 i386 1.10.1+dfsg-5+deb7u2 [85,0 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:40 04.01.2015]
+Mám: 19 http://ftp.cz.debian.org/debian/ wheezy/main libsasl2-2 i386 2.1.25.dfsg1-6+deb7u1 [120 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:41 04.01.2015]
+Mám: 20 http://ftp.cz.debian.org/debian/ wheezy/main libldap-2.4-2 i386 2.4.31-1+nmu2 [242 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:42 04.01.2015]
+Mám: 21 http://ftp.cz.debian.org/debian/ wheezy/main liblockfile-bin i386 1.09-5 [18,6 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:42 04.01.2015]
+Mám: 22 http://ftp.cz.debian.org/debian/ wheezy/main liblockfile1 i386 1.09-5 [15,5 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:42 04.01.2015]
+Mám: 23 http://ftp.cz.debian.org/debian/ wheezy/main libmagic1 i386 5.11-2+deb7u5 [205 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:42 04.01.2015]
+Mám: 24 http://ftp.cz.debian.org/debian/ wheezy/main libnfsidmap2 i386 0.25-4 [36,6 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:43 04.01.2015]
+Mám: 25 http://ftp.cz.debian.org/debian/ wheezy/main libpci3 i386 1:3.1.9-6 [58,3 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:43 04.01.2015]
+Mám: 26 http://ftp.cz.debian.org/debian/ wheezy/main libpcre3 i386 1:8.30-5 [240 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:44 04.01.2015]
+Mám: 27 http://ftp.cz.debian.org/debian/ wheezy/main librpcsecgss3 i386 0.19-5 [36,7 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:44 04.01.2015]
+Mám: 28 http://ftp.cz.debian.org/debian/ wheezy/main libtirpc1 i386 0.2.2-5 [87,9 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:44 04.01.2015]
+Mám: 29 http://ftp.cz.debian.org/debian/ wheezy/main libtokyocabinet9 i386 1.4.47-2 [297 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:46 04.01.2015]
+Mám: 30 http://ftp.cz.debian.org/debian/ wheezy/main libwrap0 i386 7.6.q-24 [62,2 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:46 04.01.2015]
+Mám: 31 http://ftp.cz.debian.org/debian/ wheezy/main libxml2 i386 2.8.0+dfsg1-7+wheezy1 [893 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:49 04.01.2015]
+Mám: 32 http://ftp.cz.debian.org/debian/ wheezy/main geoip-database all 20130213-1 [1 466 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:53 04.01.2015]
+Mám: 33 http://ftp.cz.debian.org/debian/ wheezy/main dmsetup i386 2:1.02.74-8 [68,2 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:54 04.01.2015]
+Mám: 34 http://ftp.cz.debian.org/debian/ wheezy/main libdevmapper1.02.1 i386 2:1.02.74-8 [125 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:54 04.01.2015]
+Mám: 35 http://ftp.cz.debian.org/debian/ wheezy/main libexpat1 i386 2.1.0-1+deb7u1 [139 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:55 04.01.2015]
+Mám: 36 http://ftp.cz.debian.org/debian/ wheezy/main libxau6 i386 1:1.0.7-1 [18,6 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:55 04.01.2015]
+Mám: 37 http://ftp.cz.debian.org/debian/ wheezy/main libxdmcp6 i386 1:1.1.1-1 [27,0 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:55 04.01.2015]
+Mám: 38 http://ftp.cz.debian.org/debian/ wheezy/main libxcb1 i386 1.8.1-2+deb7u1 [54,2 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:55 04.01.2015]
+Mám: 39 http://ftp.cz.debian.org/debian/ wheezy/main libx11-data all 2:1.5.0-1+deb7u1 [189 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:56 04.01.2015]
+Mám: 40 http://ftp.cz.debian.org/debian/ wheezy/main libx11-6 i386 2:1.5.0-1+deb7u1 [907 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:59 04.01.2015]
+Mám: 41 http://ftp.cz.debian.org/debian/ wheezy/main libxext6 i386 2:1.3.1-2+deb7u1 [54,8 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:59 04.01.2015]
+Mám: 42 http://ftp.cz.debian.org/debian/ wheezy/main libxmuu1 i386 2:1.1.1-1 [23,7 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:55:59 04.01.2015]
+Mám: 43 http://ftp.cz.debian.org/debian/ wheezy/main openssh-blacklist all 0.4.1+nmu1 [1 835 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:56:05 04.01.2015]
+Mám: 44 http://ftp.cz.debian.org/debian/ wheezy/main openssh-blacklist-extra all 0.4.1+nmu1 [1 835 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:56:10 04.01.2015]
+Mám: 45 http://ftp.cz.debian.org/debian/ wheezy/main libswitch-perl all 2.16-2 [21,0 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:56:11 04.01.2015]
+Mám: 46 http://ftp.cz.debian.org/debian/ wheezy/main libclass-isa-perl all 0.36-3 [12,3 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++
+[14:56:11 04.01.2015]
+Mám: 47 http://ftp.cz.debian.org/debian/ wheezy/main perl-modules all 5.14.2-21+deb7u2 [3 442 kB]
+
+++++++++++++++++++++++++++++++++++++++++++++

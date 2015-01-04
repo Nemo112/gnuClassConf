@@ -356,10 +356,14 @@ class ConfSys:
 		f.write("if [[ \"$1\" == \"--logout\" ]]; then\n")
 		f.write("	echo \"Nope!\";\n")
 		f.write("else\n")
-		f.write("	/usr/bin/xfce4logoutEdit $1 $2 $3 $4 $5;\n")
+		f.write("	/addons/logoutDis.py;\n")
+		f.write("#	/usr/bin/xfce4logoutEdit $1 $2 $3 $4 $5;\n")
 		f.write("fi\n")
 		f.close()
 		os.chmod("/NFSROOT/class/usr/bin/xfce4-session-logout",0555)
+		# Kopie skriptu pro logout
+		self.sy.copyLargeFile("./data/logoutDis.py","/NFSROOT/class/addons/logoutDis.py")
+		self.sy.copyLargeFile("./data/gnusk.xbm","/NFSROOT/class/addons/gnusk.xbm")
 	def installStand(self,qo=None):
 		""" Instaluje standardní systém
 		\param self Ukazatel na objekt
