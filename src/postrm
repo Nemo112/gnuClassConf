@@ -18,17 +18,41 @@ if [[ $DEBIAN_FRONTEND != "noninteractive" ]]; then
 		fi
 	fi
 	# Odstranění balíčků
-	echo "Odstraňuji balíčky, které prostředí nainstalovalo";
+	#echo "Odstraňuji balíčky, které prostředí nainstalovalo";
 	# optání se, zdali se maj purgnout
-	echo "Konfigurační prostředí nainstalovalo služby, které potřebuje pro svou činnost.";
-	echo "Mají se také s odinstalací odsranit?";
-	read -p "Zvolte (a) pro odstranění (p) pro odstranění i s konfiguračními soubory, (n) pro nic: " y
-	y=${y:-n}
-	if [[ "$y" == "a" ]];then
-		apt-get remove isc-dhcp-server tftpd-hpa apache2 nfs-kernel-server tftpd-hpa syslinux debootstrap expect;
-	elif [[ "$y" == "p" ]];then
-		apt-get remove --purge isc-dhcp-server tftpd-hpa apache2 nfs-kernel-server tftpd-hpa syslinux debootstrap expect;
-	fi
+	#echo "Konfigurační prostředí nainstalovalo služby, které potřebuje pro svou činnost.";
+	#echo "Mají se také s odinstalací odsranit?";
+	#read -p "Zvolte (a) pro odstranění (p) pro odstranění i s konfiguračními soubory, (n) pro nic: " y
+	#y=${y:-n}
+	#if [[ "$y" == "a" ]];then
+	#	apt-get remove isc-dhcp-server tftpd-hpa apache2 nfs-kernel-server tftpd-hpa syslinux debootstrap expect;
+	#elif [[ "$y" == "p" ]];then
+	#	apt-get remove --purge isc-dhcp-server tftpd-hpa apache2 nfs-kernel-server tftpd-hpa syslinux debootstrap expect;
+	#fi
+	# Mazání DHCP configuračního souboru
+	rm /etc/dhcp/class.conf;
+	tm=`mktemp`;
+	while read -r line;do
+		if [[ $line != "include \"/etc/dhcp/class.conf\";" ]] && [[ $line != "# DUCKED changed" ]];then
+			echo $line >> $tm;
+		fi
+	done < "/etc/dhcp/dhcpd.conf";
+	cat $tm > "/etc/dhcp/dhcpd.conf";
+	rm $tm;
+	# Mazání exports NFS
+	tm=`mktemp`;
+	while read -r line;do
+		if [[ $line != "/NFSROOT/class *(rw,crossmnt,sync,no_root_squash,no_subtree_check)" ]] && [[ $line != "# DUCKED changed" ]];then
+			echo $line >> $tm;
+		fi
+	done < "/etc/exports";
+	cat $tm > "/etc/exports";
+	rm $tm;
+	# Mazání TFTP serveru
+	rm /srv/tftp/initrd*;
+	rm /srv/tftp/vmlinuz-*;
+	rm -r /srv/tftp/pxelinux.cfg;
+	rm /srv/tftp/pxelinux.0;
 	# Mazání obrazu
 	if [[ -d "/NFSROOT/" ]]; then
 		echo "Při správě učebny bylo potřeba pracovat se složkou obsahující soubory pro třídu";
@@ -38,4 +62,9 @@ if [[ $DEBIAN_FRONTEND != "noninteractive" ]]; then
 			rm -r "/NFSROOT";
 		fi
 	fi
+	# restart TFTPD, NFS, DHCP
+	service tftpd-hpa restart
+	service nfs-common restart
+	service nfs-kernel-server  restart
+	service isc-dhcp-server restart
 fi

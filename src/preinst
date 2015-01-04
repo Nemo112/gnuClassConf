@@ -9,7 +9,10 @@ if [[ -d "$TDIR" ]];then
 	d="/tmp/gnuClI";
 	mkdir $d;
 	echo "Zálohuji konfiguraci";
-	mv "$TDIR/configuration/interfaces" $d;
-	mv "$TDIR/configuration/shared" $d;
-	mv "$TDIR/focus/installed.cfg" $d;
+	t="$TDIR/configuration/interfaces";
+	[[ -f $t ]] && mv $t $d;
+	t="$TDIR/configuration/shared";
+	[[ -f $t ]] && mv $t $d;
+	t="$TDIR/focus/installed.cfg";
+	[[ -f $t ]] && mv $t $d;
 fi

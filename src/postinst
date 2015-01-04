@@ -9,9 +9,9 @@ if [[ -d "$TDIR" ]];then
 	d="/tmp/gnuClI";
 	if [[ -d $d ]];then
 		echo "Načítám konfiguraci";
-		cat "$d/interfaces" > "$TDIR/configuration/interfaces";
-		cat "$d/shared" > "$TDIR/configuration/shared";
-		cat "$d/installed.cfg" > "$TDIR/focus/installed.cfg";
+		[[ -f "$d/interfaces" ]] && cat "$d/interfaces" > "$TDIR/configuration/interfaces";
+		[[ -f "$d/shared" ]] && cat "$d/shared" > "$TDIR/configuration/shared";
+		[[ -f "$d/installed.cfg" ]] && cat "$d/installed.cfg" > "$TDIR/focus/installed.cfg";
 		rm -r $d;
 	fi
 fi
