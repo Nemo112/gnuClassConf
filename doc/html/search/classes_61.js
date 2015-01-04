@@ -9,5 +9,6 @@ var searchData=
   ['app',['App',['../dc/dd1/classmnClean_1_1App.html',1,'mnClean']]],
   ['app',['App',['../d7/df4/classtestsServices_1_1App.html',1,'testsServices']]],
   ['app',['App',['../d0/dec/classtestsConf_1_1App.html',1,'testsConf']]],
-  ['app',['App',['../da/dc1/classitWindow_1_1App.html',1,'itWindow']]]
+  ['app',['App',['../da/dc1/classitWindow_1_1App.html',1,'itWindow']]],
+  ['app',['App',['../d9/d5a/classlogoutDis_1_1App.html',1,'logoutDis']]]
 ];

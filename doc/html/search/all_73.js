@@ -27,6 +27,8 @@ var searchData=
   ['shr',['shr',['../d2/dbc/classmnShare_1_1App.html#a847aac470df4bb5878802a99eb58ec58',1,'mnShare::App']]],
   ['shrfol',['ShrFol',['../d1/dce/classShrFol_1_1ShrFol.html',1,'ShrFol']]],
   ['shrfol_2epy',['ShrFol.py',['../dd/d08/ShrFol_8py.html',1,'']]],
+  ['shur',['shur',['../d9/d5a/classlogoutDis_1_1App.html#a1e2930c579a7ec2a4a97f8979724461d',1,'logoutDis::App']]],
+  ['shut',['shut',['../d9/d5a/classlogoutDis_1_1App.html#ad5aafe1ce8c3cebe625780595fd0a3bd',1,'logoutDis::App']]],
   ['sl',['sl',['../da/ddf/classmnRepair_1_1App.html#af80db154ea45d463c153b24e58fadb8b',1,'mnRepair.App.sl()'],['../d4/d8e/classmnWindow_1_1App.html#a9fdba8388fc8ca57e9a47c75a3aafeaa',1,'mnWindow.App.sl()']]],
   ['sm',['sm',['../df/df9/classcloseSetup_1_1App.html#a5e7484b9da3c7ae7afe40b188427fc9c',1,'closeSetup::App']]],
   ['sme',['sme',['../df/df9/classcloseSetup_1_1App.html#ab6981aced3f923450b62a2ccfae0c886',1,'closeSetup::App']]],

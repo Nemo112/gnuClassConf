@@ -363,6 +363,7 @@ class ConfSys:
 		os.chmod("/NFSROOT/class/usr/bin/xfce4-session-logout",0555)
 		# Kopie skriptu pro logout
 		self.sy.copyLargeFile("./data/logoutDis.py","/NFSROOT/class/addons/logoutDis.py")
+		os.chmod("/NFSROOT/class/addons/logoutDis.py",0777)
 		self.sy.copyLargeFile("./data/gnusk.xbm","/NFSROOT/class/addons/gnusk.xbm")
 	def installStand(self,qo=None):
 		""" Instaluje standardní systém
@@ -649,6 +650,7 @@ echo 2 > /run/shm/hlt;
 		tar.write("apt-get install --allow-unauthenticated mousepad -y --force-yes\n")
 		tar.write("apt-get install --allow-unauthenticated xpdf -y --force-yes\n")
 		tar.write("apt-get install --allow-unauthenticated synaptic -y --force-yes\n")
+		tar.write("apt-get install --allow-unauthenticated python-tk -y --force-yes\n")
 		tar.close()
 		os.chmod("/NFSROOT/class/addons/installIce.sh",0755)
 		tos='chroot /NFSROOT/class /bin/bash -c ./addons/installIce.sh'

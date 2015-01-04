@@ -20,6 +20,8 @@ var searchData=
   ['setupnfs',['setUpNFS',['../d0/d38/classConfSys_1_1ConfSys.html#a787b4f7c745fb7523086a6a97a79eecf',1,'ConfSys::ConfSys']]],
   ['setupxh',['setUpXh',['../d0/d38/classConfSys_1_1ConfSys.html#a9f6f935bb49c6cbdf8dab640c0b9b33f',1,'ConfSys::ConfSys']]],
   ['shlist',['shList',['../d1/dce/classShrFol_1_1ShrFol.html#a9c6d9419ead704adaa83dd00209f7d8d',1,'ShrFol::ShrFol']]],
+  ['shur',['shur',['../d9/d5a/classlogoutDis_1_1App.html#a1e2930c579a7ec2a4a97f8979724461d',1,'logoutDis::App']]],
+  ['shut',['shut',['../d9/d5a/classlogoutDis_1_1App.html#ad5aafe1ce8c3cebe625780595fd0a3bd',1,'logoutDis::App']]],
   ['sme',['sme',['../df/df9/classcloseSetup_1_1App.html#ab6981aced3f923450b62a2ccfae0c886',1,'closeSetup::App']]],
   ['stawin',['staWin',['../dc/de8/classiTaHand_1_1iTaHand.html#a457b5b5eea69bc89feedccd9d9c284ea',1,'iTaHand::iTaHand']]],
   ['stcle',['stCle',['../d4/d8e/classmnWindow_1_1App.html#adc58e827583658bb4a0ffa7289c53b83',1,'mnWindow::App']]],
