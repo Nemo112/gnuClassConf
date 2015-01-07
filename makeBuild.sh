@@ -2,6 +2,10 @@
 name="gnuClassConf";
 version="0.01.`git rev-list --count HEAD`";
 desc="Aplikace pro správu síťové učebny v rámci LAN.";
+rel="pxelinux.0";
+if [[ "$1" == "vb" ]];then
+	rel="virtualbox";
+fi
 #==================================
 # directory structure build
 mkdir tmp;
@@ -73,7 +77,7 @@ toi=$(cat <<EOF
 # Cesta k PXE souboru, který je popsán v DCHP konfiguračním souboru.
 # Pokud je path nastavena na virtualbox, prostředí vyplní parametry PXE
 # pro testování ve virtualboxu.
-path=pxelinux.0
+path=$rel
 EOF
 )
 printf "%s\n" "$toi" > ./tmp/opt/${name}/configuration/tftpath;
@@ -107,6 +111,11 @@ mv bckman $name.1;
 #==================================
 # making deb
 sudo chown -hR root:root ./tmp;
-sudo dpkg-deb -b ./tmp ${name}_${version}_all.deb 1>/dev/null;
+if [[ "$1" == "vb" ]];then
+	sudo dpkg-deb -b ./tmp ${name}_${version}_all_vb.deb 1>/dev/null;
+	echo ${name}_${version}_all_vb.deb;
+else
+	sudo dpkg-deb -b ./tmp ${name}_${version}_all.deb 1>/dev/null;
+	echo ${name}_${version}_all.deb;
+fi
 rm -r ./tmp;
-echo ${name}_${version}_all.deb;
