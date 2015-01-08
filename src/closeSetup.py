@@ -502,7 +502,7 @@ if __name__ == "__main__":
 						# mění IP pro tftpd server
 						setUNt.tftpdCon(qo)
 					if ib == 1:
-						qo.put("Připravuji nástrojů")
+						qo.put("Připravuji nástroje")
 						setUNt.installIce()
 						qo.put("Hotovo")
 					if ig == 1:
