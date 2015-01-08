@@ -68,11 +68,11 @@ if __name__ == "__main__":
 			Pročistí mounty a t.d.
 			\param self Ukazatel na objekt
 			"""
-			tos='umount /NFSROOT/class/proc'
+			tos='umount -l /NFSROOT/class/proc'
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)
-			tos='umount /NFSROOT/class/sys'
+			tos='umount -l /NFSROOT/class/sys'
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)

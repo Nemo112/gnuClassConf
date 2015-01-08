@@ -87,11 +87,11 @@ class inFocus:
 			print line,
 			self.log.write(line)
 		if mn == True:
-			tos='umount /NFSROOT/class/proc'
+			tos='umount -l /NFSROOT/class/proc'
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)
-			tos='umount /NFSROOT/class/sys'
+			tos='umount -l /NFSROOT/class/sys'
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)
@@ -125,11 +125,11 @@ class inFocus:
 			print line,
 			self.log.write(line)
 		if mn == True:
-			tos='umount /NFSROOT/class/proc'
+			tos='umount -l /NFSROOT/class/proc'
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)
-			tos='umount /NFSROOT/class/sys'
+			tos='umount -l /NFSROOT/class/sys'
 			for line in self.sy.runProcess(tos):
 				print line,
 				self.log.write(line)
