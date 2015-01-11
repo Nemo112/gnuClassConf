@@ -1,2 +1,2 @@
-/root/test1;rw
-/root/test2;ro
+/root/test1;ro
+/root/test2;rw
