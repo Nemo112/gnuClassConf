@@ -200,7 +200,10 @@ if __name__ == "__main__":
 			if it.tstItalc():
 				subprocess.Popen("italc", shell=True)
 			else:
-				subprocess.Popen("./itWindow.py", shell=True)
+				if os.path.isfile("/NFSROOT/class/etc/hosts") and os.path.isfile("/NFSROOT/class/etc/resolv.conf"):
+					subprocess.Popen("./itWindow.py", shell=True)
+				else:
+					tkMessageBox.showinfo("Chyba", "Zdá se, že třída ještě není nastavena. Použijte \"Základní nastavení učebny\"")					
 		def qquit(self):
 			""" Metoda pro ukončení okna
 			Je nutné vypnout vlákno, které vykonává příkazy na pozadí okna
