@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['s',['s',['../df/df9/classcloseSetup_1_1App.html#a9762b9f2129fd5df0bd4e67c71dd9e9a',1,'closeSetup::App']]],
-  ['savedpath',['savedPath',['../d2/dbd/classmain_1_1Chdir.html#a8fcc4e44e462eb780f7694ba60f226d9',1,'main::Chdir']]],
   ['serv',['serv',['../d9/d30/classConsSys_1_1ConsSys.html#aeb3c2474c312e9c4aa5b10fd26c39474',1,'ConsSys::ConsSys']]],
   ['setclisc',['setCliSc',['../dc/de8/classiTaHand_1_1iTaHand.html#af0efe4524aaf862e6edc470c970bdfec',1,'iTaHand::iTaHand']]],
   ['setdeb',['setDeb',['../d3/d66/classEnDisDiag_1_1EnDisDiag.html#a90eb72639d531ca887c8dde3af71152f',1,'EnDisDiag.EnDisDiag.setDeb()'],['../db/d2a/classShDiag_1_1ShDiag.html#a5803da989606f48cf128980d2d35dd38',1,'ShDiag.ShDiag.setDeb()']]],
@@ -22,15 +20,10 @@ var searchData=
   ['setupnfs',['setUpNFS',['../d0/d38/classConfSys_1_1ConfSys.html#a787b4f7c745fb7523086a6a97a79eecf',1,'ConfSys::ConfSys']]],
   ['setupxh',['setUpXh',['../d0/d38/classConfSys_1_1ConfSys.html#a9f6f935bb49c6cbdf8dab640c0b9b33f',1,'ConfSys::ConfSys']]],
   ['shdiag',['ShDiag',['../db/d2a/classShDiag_1_1ShDiag.html',1,'ShDiag']]],
-  ['shdiag_2epy',['ShDiag.py',['../d6/d13/ShDiag_8py.html',1,'']]],
   ['shlist',['shList',['../d1/dce/classShrFol_1_1ShrFol.html#a9c6d9419ead704adaa83dd00209f7d8d',1,'ShrFol::ShrFol']]],
-  ['shr',['shr',['../d2/dbc/classmnShare_1_1App.html#a847aac470df4bb5878802a99eb58ec58',1,'mnShare::App']]],
   ['shrfol',['ShrFol',['../d1/dce/classShrFol_1_1ShrFol.html',1,'ShrFol']]],
-  ['shrfol_2epy',['ShrFol.py',['../dd/d08/ShrFol_8py.html',1,'']]],
   ['shur',['shur',['../d9/d5a/classlogoutDis_1_1App.html#a1e2930c579a7ec2a4a97f8979724461d',1,'logoutDis::App']]],
   ['shut',['shut',['../d9/d5a/classlogoutDis_1_1App.html#ad5aafe1ce8c3cebe625780595fd0a3bd',1,'logoutDis::App']]],
-  ['sl',['sl',['../da/ddf/classmnRepair_1_1App.html#af80db154ea45d463c153b24e58fadb8b',1,'mnRepair.App.sl()'],['../d4/d8e/classmnWindow_1_1App.html#a9fdba8388fc8ca57e9a47c75a3aafeaa',1,'mnWindow.App.sl()']]],
-  ['sm',['sm',['../df/df9/classcloseSetup_1_1App.html#a5e7484b9da3c7ae7afe40b188427fc9c',1,'closeSetup::App']]],
   ['sme',['sme',['../df/df9/classcloseSetup_1_1App.html#ab6981aced3f923450b62a2ccfae0c886',1,'closeSetup::App']]],
   ['stawin',['staWin',['../dc/de8/classiTaHand_1_1iTaHand.html#a457b5b5eea69bc89feedccd9d9c284ea',1,'iTaHand::iTaHand']]],
   ['stcle',['stCle',['../d4/d8e/classmnWindow_1_1App.html#adc58e827583658bb4a0ffa7289c53b83',1,'mnWindow::App']]],
@@ -45,8 +38,5 @@ var searchData=
   ['stu',['stu',['../da/ddf/classmnRepair_1_1App.html#ad5cc6771937862ebd8110a614a411d61',1,'mnRepair::App']]],
   ['swbn',['swBN',['../d3/d4e/classmnEnDis_1_1App.html#a0dec9c73d259d0826a1bf2fea42358db',1,'mnEnDis::App']]],
   ['swi',['swi',['../df/df9/classcloseSetup_1_1App.html#ad423eb22965d036bfc941a3d1f5eefc0',1,'closeSetup::App']]],
-  ['sy',['sy',['../d5/d13/classclImaOs_1_1clImaOs.html#a269176bf9e06df5c8ed6a4d322cb2268',1,'clImaOs.clImaOs.sy()'],['../d0/d38/classConfSys_1_1ConfSys.html#a2af86ea0867572d5198dcf34487956cb',1,'ConfSys.ConfSys.sy()'],['../d3/d33/classinFocus_1_1inFocus.html#ae2b30d87560fa79d4676507a0edc476e',1,'inFocus.inFocus.sy()'],['../dc/de8/classiTaHand_1_1iTaHand.html#a926ddaf1090328b21386ed76edc484c5',1,'iTaHand.iTaHand.sy()'],['../db/d36/classmnFocus_1_1App.html#a8325d418dcc46c36b37fc7160d0291fb',1,'mnFocus.App.sy()'],['../d1/dce/classShrFol_1_1ShrFol.html#a1d8ffe5f8cdb2cb4d0a0fe4b0455e6ea',1,'ShrFol.ShrFol.sy()']]],
-  ['sys',['sys',['../df/df9/classcloseSetup_1_1App.html#a29e3a5f52ef638873f13f1e1dc3b03f2',1,'closeSetup::App']]],
-  ['sysload',['SysLoad',['../d0/d3a/classSysLoad_1_1SysLoad.html',1,'SysLoad']]],
-  ['sysload_2epy',['SysLoad.py',['../d5/df0/SysLoad_8py.html',1,'']]]
+  ['sysload',['SysLoad',['../d0/d3a/classSysLoad_1_1SysLoad.html',1,'SysLoad']]]
 ];

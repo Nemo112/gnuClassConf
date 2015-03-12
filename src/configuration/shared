@@ -1,2 +1,2 @@
-/root/test1;ro
-/root/test2;rw
+/home/ucitel/test;rw
+/home/ucitel/materialy;ro

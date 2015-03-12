@@ -232,8 +232,10 @@ if __name__ == "__main__":
             """ Metoda pro zobrazení pdf manuálové stránky
             \param self Ukazatel na objekt
             """
-            c = ["xdg-open", "./man/man.pdf"]
-            proc = subprocess.Popen(c)
+            import webbrowser
+            webbrowser.open("./man/man.pdf")
+            #c = ["xdg-open", "./man/man.pdf"]
+            #proc = subprocess.Popen(c)
 
         def loadProgs(self, qc):
             """ Metoda pro načítání progressbaru a vyplování listu

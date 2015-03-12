@@ -1,6 +1,6 @@
 #!/bin/bash
-umount -l "/NFSROOT/class/class_shares/test1";
-rmdir "/NFSROOT/class/class_shares/test1";
-umount -l "/NFSROOT/class/class_shares/test2";
-rmdir "/NFSROOT/class/class_shares/test2";
+umount -l "/NFSROOT/class/class_shares/test";
+rmdir "/NFSROOT/class/class_shares/test";
+umount -l "/NFSROOT/class/class_shares/materialy";
+rmdir "/NFSROOT/class/class_shares/materialy";
 exit 0;

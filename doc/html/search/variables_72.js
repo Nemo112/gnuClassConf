@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rig',['rig',['../db/d2a/classShDiag_1_1ShDiag.html#a70201d441b2456467d01fb97f81301b1',1,'ShDiag::ShDiag']]],
-  ['root',['root',['../df/df9/classcloseSetup_1_1App.html#aa89fd74d63463734d14e222fe2296815',1,'closeSetup.App.root()'],['../d9/d5a/classlogoutDis_1_1App.html#a30d7ab81a34629dcc42d0548216866b1',1,'logoutDis.App.root()'],['../da/dc1/classitWindow_1_1App.html#a5117ced114af19bfb2c3bca4e358fecf',1,'itWindow.App.root()'],['../dc/dd1/classmnClean_1_1App.html#ae2c3e708349860bf01847f7d91a6b68c',1,'mnClean.App.root()'],['../d3/d4e/classmnEnDis_1_1App.html#ace76e4f1ae369e83cd7f8f827b1615f6',1,'mnEnDis.App.root()'],['../db/d36/classmnFocus_1_1App.html#a6ae4c2d831003d43d843f73c6a00008f',1,'mnFocus.App.root()'],['../da/ddf/classmnRepair_1_1App.html#a6625cd61e8f5be57f55b7b665d74e371',1,'mnRepair.App.root()'],['../d2/dbc/classmnShare_1_1App.html#ac1089ed9f41a88914852422abffc27f9',1,'mnShare.App.root()'],['../d4/d8e/classmnWindow_1_1App.html#a9b8f027f874a31feb1e35ade7cab8d50',1,'mnWindow.App.root()'],['../d0/dec/classtestsConf_1_1App.html#aebdb04ba52c87ce6a318f84c8a684739',1,'testsConf.App.root()'],['../d7/df4/classtestsServices_1_1App.html#ae057ca5e1d4127096617c14c615a5cd7',1,'testsServices.App.root()']]]
+  ['root',['root',['../d9/d5a/classlogoutDis_1_1App.html#a30d7ab81a34629dcc42d0548216866b1',1,'logoutDis::App']]]
 ];
